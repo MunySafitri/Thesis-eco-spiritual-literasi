@@ -1,5 +1,5 @@
 <template>
-    <div id="Komponen" class="process-style-area ptb-100">
+    <div id="Komponen" class="process-style-area3 ptb-100">
       <div class="container">
         <div class="main-section-title">
           <span class="sub-title"># STEPS & PROCESS</span>

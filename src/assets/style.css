@@ -63,6 +63,13 @@
   animation-duration: 3s;
   animation-duration: calc(var(--animate-duration) * 3);
 }
+video {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid blue; */
+  border-radius: 50px;
+}
+
 @media (prefers-reduced-motion: reduce), print {
   .animate__animated {
     animation-duration: 1ms !important;
@@ -10461,7 +10468,7 @@ button:focus {
   z-index: -1;
 }
 .overview-area {
-  background-image: url(../assets/img/overview-bg.jpg);
+  background-image: url(../assets/img/BackGround-no-1.jpeg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10609,7 +10616,19 @@ button:focus {
   color: #fff;
   border: 1px solid #00c195;
 }
-.process-style-area {
+.process-style-area1 {
+  background-image: url(../assets/img/img-bg-1.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.process-style-area2 {
+  background-image: url(../assets/img/img-bg-1.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.process-style-area3 {
   background-image: url(../assets/img/img-bg-1.jpg);
   background-position: 50%;
   background-size: cover;
@@ -10631,7 +10650,7 @@ button:focus {
   z-index: -1;
   left: 25px;
   top: 0;
-  background-color: #d42953;
+  background-color: #79d1ff;
 }
 .process-style-accordion .accordion-item:last-child .accordion-button {
   padding-bottom: 0;
@@ -10658,7 +10677,7 @@ button:focus {
   width: 50px;
   line-height: 50px;
   text-align: center;
-  background-color: #d42953;
+  background-color: #65a8d7;
   color: #fff;
   border-radius: 50px;
   margin-right: 10px;

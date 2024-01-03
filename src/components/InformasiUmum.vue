@@ -1,6 +1,10 @@
 <template>
-  <div id="Informasi" class="process-style-area ptb-100">
+  <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
+      <video autoplay muted loop id="myVideo">
+        <source src="../assets/img/VideoLatarBelakang.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
       <div class="main-section-title">
         <span class="sub-title"># STEPS & PROCESS</span>
         <h2>Informasi Umum</h2>
@@ -26,30 +30,43 @@
                   data-bs-parent="#ProcessAccordion"
                 >
                   <div class="accordion-body">
-                    <p class="bold">
-                      Nama Perancang Modul  : Muhammad Khairul 
-                      <br />NAMA GURU       : …. 
-                      <br />SEKOLAH         : MAN 1 Pidie Jaya, Prov. Aceh 
-                      <br />MATA PELAJARAN  : Geografi 
-                      <br />ALOKASI WAKTU   : 2 x 45 Menit / Petemuan                   
-                      <br />KELAS/ FASE     : X / Fase F 
-                      <br />SEMESTER        : 2 (semeserter genap)
-                    </p>
-                    <p>
-                      After considering various factors such as project scope,
-                      team expertise, and performance considerations, finalize
-                      the programming language that will be the foundation of
-                      your application development.
-                    </p>
-                    <ul class="list">
-                <li>
-                  <i class="bi-check-circle"></i> Nama Perancang Modul  : Muhammad Khairul  
-                </li>
-                <li><i class="bi-check-circle"></i> SEMESTER        : 2 (semeserter genap)</li>
-                <li>
-                  <i class="bi-check-circle"></i> Get your access today
-                </li>
-              </ul>
+                    <table class="bold" style="width: 100%">
+                      <tr>
+                        <td style="width: 35%">Perancang Modul</td>
+                        <td style="width: 5%">:</td>
+                        <td style="width: 60%">Muhammad Khairul</td>
+                      </tr>
+                      <tr>
+                        <td>NAMA GURU</td>
+                        <td>:</td>
+                        <td>.....</td>
+                      </tr>
+                      <tr>
+                        <td>SEKOLAH</td>
+                        <td>:</td>
+                        <td>MAN 1 Pidie Jaya, Prov. Aceh</td>
+                      </tr>
+                      <tr>
+                        <td>MATA PELAJARAN</td>
+                        <td>:</td>
+                        <td>Geografi</td>
+                      </tr>
+                      <tr>
+                        <td>ALOKASI WAKTU</td>
+                        <td>:</td>
+                        <td>2 x 45 Menit / Petemuan</td>
+                      </tr>
+                      <tr>
+                        <td>KELAS/ FASE</td>
+                        <td>:</td>
+                        <td>X / Fase F</td>
+                      </tr>
+                      <tr>
+                        <td>SEMESTER</td>
+                        <td>:</td>
+                        <td>2 (semeserter genap)</td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -198,12 +215,8 @@
                   data-bs-parent="#ProcessAccordion"
                 >
                   <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology 
-                    </p>
-                    <p>
-                      By defining the topology,
-                    </p>
+                    <p class="bold">Configure the topology</p>
+                    <p>By defining the topology,</p>
                   </div>
                 </div>
               </div>
@@ -224,12 +237,8 @@
                   data-bs-parent="#ProcessAccordion"
                 >
                   <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology 
-                    </p>
-                    <p>
-                      By defining the topology,
-                    </p>
+                    <p class="bold">Configure the topology</p>
+                    <p>By defining the topology,</p>
                   </div>
                 </div>
               </div>
@@ -250,12 +259,8 @@
                   data-bs-parent="#ProcessAccordion"
                 >
                   <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology 
-                    </p>
-                    <p>
-                      By defining the topology,
-                    </p>
+                    <p class="bold">Configure the topology</p>
+                    <p>By defining the topology,</p>
                   </div>
                 </div>
               </div>
@@ -292,7 +297,7 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="process-style-image">
-            <img src="../assets/img//Steps1.png" alt="image" />
+            <img src="../assets/img/TAHUKAH-KAMU-1.jpg" alt="image" />
           </div>
         </div>
       </div>
@@ -305,3 +310,12 @@ export default {
   name: "AppInformasi",
 };
 </script>
+<style>
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>

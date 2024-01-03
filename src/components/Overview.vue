@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
-            <div class="overview-video">
+            <div class="overview-img">
               <video autoplay muted loop width="600" plau>
                 <source src="../assets/Over-Viewnew.mp4" type="video/mp4" />
                 Your browser does not support HTML5 video.

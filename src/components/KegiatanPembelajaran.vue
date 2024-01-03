@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
-  <div id="Kegiatan" class="process-style-area ptb-100">
+  <div id="Kegiatan" class="process-style-area2 ptb-100">
     <div class="container">
       <div class="main-section-title">
         <span class="sub-title"># Keiatan</span>
