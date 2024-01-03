@@ -1,4 +1,80 @@
-# Thesis-eco-spiritual-literasi-(Siklus Hidrologi)
-Proyek ini untuk membangun website e-modul siklus hidrologi integrasi ayat AL-QUR'AN dan isu lingkungan.<br>Tugas kak khairul<br>
-referensi : dalam gdrive <br>
-Bahan : https://drive.google.com/drive/folders/1NmOfFfzQfQGslqzKyv1kVrTBMuHWgrMc?usp=sharing
+# Playcourt Landing Page
+
+Intern Project task from Telkom Indonesia (Digital Infrastructure & Security)
+
+![logo](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/logo.png)
+
+## Overview
+
+[PlayCourt](https://playcourt.id/) is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. PlayCourt is a comprehensive application development platform specifically designed for the development of Telkom Indonesia's digital products.
+
+## Project Plan
+
+![Project Plan](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/documentation/Project_Plan.png)
+
+## Prerequisites
+
+You will need [Node.js](https://nodejs.org/ja/blog/release/v16.16.0) version 16.16.0 or greater installed on your system.
+
+## Run as NodeJs
+
+Install dependencies, devDependencies, etc
+```sh
+npm install
+```
+
+Compiles and hot-reloads for development
+```sh
+npm run serve
+```
+
+Compile and Minify for Production
+```sh
+npm run build
+```
+
+Lint with [ESLint](https://eslint.org/)
+```sh
+npm run lint
+```
+
+## Run as Docker
+
+Build image docker
+```sh
+docker build -t playcourt .
+```
+
+Run container docker    
+```sh
+docker run -p 8080:80 -it --name playcourt playcourt
+```
+
+## Testing Unit
+
+Run unit test component
+```sh
+npm run test:unit
+```
+
+Run unit test with coverage
+```sh
+npm run coverage
+```
+
+Output of Unit testing:
+
+![Output Testing](src/assets/img/documentation/Testing.png)
+
+## Deployment
+
+### Netlify
+
+You can see link deploy with Netlify (NodeJs) in [here](https://playcourt.netlify.app/)
+
+### Google Kubernetes Engine
+
+- You can see link deploy with GKE (Docker) in [here](http://34.128.94.126/#/)
+
+How to deploy on [Google Kubernetes Engine](k8s/deploy.md)
+
