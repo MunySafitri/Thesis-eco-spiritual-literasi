@@ -1,16 +1,19 @@
 <template>
   <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
-      <video autoplay muted loop id="myVideo">
+      <!-- <video autoplay muted loop width="500" id="myVideo">
         <source src="../assets/img/VideoLatarBelakang.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
-      </video>
+      </video> -->
       <div class="main-section-title">
+        <div class="card">
         <span class="sub-title"># STEPS & PROCESS</span>
         <h2>Informasi Umum</h2>
       </div>
+      </div>
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
+          <div class="card">
           <div class="process-style-accordion">
             <div class="accordion" id="ProcessAccordion">
               <div class="accordion-item">
@@ -292,6 +295,7 @@
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
