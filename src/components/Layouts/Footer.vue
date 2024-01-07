@@ -9,7 +9,7 @@
                 <img src="../../assets/img/logoupimerah.png" alt="Logo"  />
               </a>
               <p>
-                PlayCourt is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. 
+                Supporter.C is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. 
               </p>
               <ul class="footer-social">
                 <li>
@@ -38,7 +38,7 @@
         </div>
         <div class="col-sm-6 col-lg-2">
           <div class="single-footer-widget ps-3">
-            <h3>PlayCourt</h3>
+            <h3>Supporter.C</h3>
             <ul class="quick-link">
               <li>
                 <a  @click="scroll('Overview')" :href="'javascript:void(0)'">Overview</a>
@@ -73,7 +73,7 @@
             <h3>About Us</h3>
             <ul class="quick-link">
               <li>
-                <a @click="scroll('Overview')" :href="'javascript:void(0)'">PlayCourt</a>
+                <a @click="scroll('Overview')" :href="'javascript:void(0)'">Supporter.C</a>
               </li>
               <li>
                 <a :href="''" target="_blank">IndigoHub Bandung</a>
