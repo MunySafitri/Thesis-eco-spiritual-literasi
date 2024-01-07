@@ -1,9 +1,10 @@
 <template>
   <div id="Features" class="four-expect-area pt-100 pb-70">
     <div class="container">
+      <div class="card">
       <div class="one-section-title three-section-title">
         <span class="sub-title"># WHAT'S THE FEATURES</span>
-        <h2>All About Features Of Playcourt</h2>
+        <h2>Feature</h2>
       </div>
       <div class="row">
         <div class="col-sm-6 col-lg-6">
@@ -11,7 +12,7 @@
             <div class="features-icon">
               <i class="bi bi-bag-plus"></i>
             </div>
-            <h3>Self Healing</h3>
+            <h3>Regulasi Air</h3>
             <p>
               Restarts containers that fail, replaces and reschedules containers
               when nodes die, kills containers that don't respond to your
@@ -25,7 +26,7 @@
             <div class="features-icon">
               <i class="bi bi-box"></i>
             </div>
-            <h3>Automatic Binpacking</h3>
+            <h3>Simulasi Siklus Air</h3>
             <p>
               Automatically places containers based on their resource
               requirements and other constraints, while not sacrificing
@@ -39,7 +40,7 @@
             <div class="features-icon">
               <i class="bi bi-rulers"></i>
             </div>
-            <h3>Service Load Balancing</h3>
+            <h3>Ayat-ayat Al-Qur'an</h3>
             <p>
               No need to modify your application to use an unfamiliar service
               discovery mechanism. Playcourt gives containers their own IP
@@ -53,7 +54,7 @@
             <div class="features-icon">
               <i class="bi bi-arrow-repeat"></i>
             </div>
-            <h3>Automated Rollout & Rollback</h3>
+            <h3>Next Stage</h3>
             <p>
               Progressively rolls out changes to your application or its
               configuration, while monitoring application health to ensure it
@@ -63,6 +64,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>

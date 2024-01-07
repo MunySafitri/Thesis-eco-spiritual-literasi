@@ -74,8 +74,8 @@
         </ul>
       </div>
       <!-- <div class="side-nav">
-        <a class="side-nav-left log-in" href="https://dashboard.playcourt.id/login">Login</a>
-        <a class="side-nav-right cd-signup sign-up" href="https://dashboard.playcourt.id/register">Register</a>
+        <a class="side-nav-left log-in" href="">Login</a>
+        <a class="side-nav-right cd-signup sign-up" href="">Register</a>
       </div> -->
     </div>
   </nav>

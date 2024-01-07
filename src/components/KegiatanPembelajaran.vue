@@ -3,11 +3,15 @@
   <div id="Kegiatan" class="process-style-area2 ptb-100">
     <div class="container">
       <div class="main-section-title">
+        <div class="card">
         <span class="sub-title"># Keiatan</span>
         <h2>Kegiatan Pembelajaran</h2>
       </div>
+    </div>
+    
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
+          <div class="card">
           <div class="process-style-accordion">
             <div class="accordion" id="ProcessAccordion">
               <div class="accordion-item">
@@ -27,37 +31,7 @@
                   data-bs-parent="#ProcessAccordion"
                 >
                   <div class="accordion-body">
-                    <row>
-                      <Col :md="2">Nama Perancang Modul</Col>
-                      <Col :md="1">:</Col>
-                      <Col :md="9">Muhammad Khairul</Col>
-                    </row>
-                    <p class="bold">
-                      Nama Perancang Modul : Muhammad Khairul
-                      <br />NAMA GURU : …. <br />SEKOLAH : MAN 1 Pidie Jaya,
-                      Prov. Aceh <br />MATA PELAJARAN : Geografi <br />ALOKASI
-                      WAKTU : 2 x 45 Menit / Petemuan <br />KELAS/ FASE : X /
-                      Fase F <br />SEMESTER : 2 (semeserter genap)
-                    </p>
-                    <p>
-                      After considering various factors such as project scope,
-                      team expertise, and performance considerations, finalize
-                      the programming language that will be the foundation of
-                      your application development.
-                    </p>
-                    <ul class="list">
-                      <li>
-                        <i class="bi-check-circle"></i> Nama Perancang Modul :
-                        Muhammad Khairul
-                      </li>
-                      <li>
-                        <i class="bi-check-circle"></i> SEMESTER : 2 (semeserter
-                        genap)
-                      </li>
-                      <li>
-                        <i class="bi-check-circle"></i> Get your access today
-                      </li>
-                    </ul>
+                    
                   </div>
                 </div>
               </div>
@@ -220,12 +194,16 @@
             </div>
           </div>
         </div>
+      </div>
         <div class="col-lg-6 col-md-12">
+          <div class="card">
           <div class="process-style-image">
-            <img src="../assets/img//Steps1.png" alt="image" />
+            <img src="../assets/img//no2.jpg" alt="image" />
           </div>
         </div>
       </div>
+      </div>
+   
     </div>
   </div>
 </template>

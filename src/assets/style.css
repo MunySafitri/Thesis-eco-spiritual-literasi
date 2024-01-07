@@ -9868,7 +9868,7 @@ button:focus {
   font-size: 40px;
 }
 .four-expect-area {
-  background-image: url(../assets/img/img-bg-2.jpg);
+  background-image: url(../assets/img/Background3.jpg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10166,7 +10166,7 @@ button:focus {
 }
 .why-choose-us-item {
   border-radius: 5px;
-  background-color: #f5f7fb;
+  background-color: rgba(98, 92, 204, 0.40);
   padding: 35px;
   margin-bottom: 30px;
   transition: all 0.5s ease;
@@ -10212,8 +10212,8 @@ button:focus {
   display: inline-block;
   padding: 15px 30px;
   border-radius: 5px;
-  background: #d42953;
-  color: #fff;
+  background: rgba(101, 214, 118);
+  color: black;
   transition: all 0.5s ease;
 }
 .choose-btn {
@@ -10221,7 +10221,7 @@ button:focus {
 }
 
 .choose-content .choose-btn:hover {
-  background-color: #fcaeae;
+  background-color: rgba(101, 203, 214);
   transform: translateY(-5px);
 }
 
@@ -10230,7 +10230,7 @@ button:focus {
   padding-right: 270px;
 }
 .footer-style-area {
-  background: #0d1820;
+  background: white;
 }
 .footer-style-area .copyright-style-area {
   margin-top: 70px;
@@ -10286,7 +10286,7 @@ button:focus {
   margin-bottom: 20px;
 }
 .single-footer-widget .footer-logo p {
-  color: #fff;
+  color: black;
   margin-bottom: 20px;
   font-size: 15px;
 }
@@ -10323,7 +10323,7 @@ button:focus {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #fff;
+  color: black;
 }
 .single-footer-widget .quick-link {
   padding: 0 0 0 0;
@@ -10340,7 +10340,7 @@ button:focus {
   margin-bottom: 0;
 }
 .single-footer-widget .quick-link li a {
-  color: #fff;
+  color: black;
 }
 .single-footer-widget .quick-link li a:hover {
   color: #d42953;
@@ -10364,7 +10364,7 @@ button:focus {
   list-style-type: none;
   margin-bottom: 15px;
   font-size: 15px;
-  color: #fff;
+  color: black;
   position: relative;
   padding-left: 22px;
 }
@@ -10379,7 +10379,7 @@ button:focus {
   transform: translateY(-50%);
 }
 .single-footer-widget .address-info li a {
-  color: #fff;
+  color: black;
   font-size: 15px;
 }
 .single-footer-widget .address-info li a:hover {
@@ -10483,8 +10483,10 @@ button:focus {
   box-shadow: 0 10px 18px 0 #f9fafb;
   margin: auto;
   transition: 0.3s;
-  background-color: rgba(48, 152, 206, 0.18);
+  background-color: rgba(255,255,255,0.55);
   padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   border-radius: 30px;
 }
 .card:hover {
@@ -10640,7 +10642,7 @@ button:focus {
   background-repeat: no-repeat;
 }
 .process-style-area3 {
-  background-image: url(../assets/img/img-bg-1.jpg);
+  background-image: url(../assets/img/Background-no2.jpeg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10964,6 +10966,7 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
+    border-radius: 30;
   }
   .overview-area-wrap {
     border-radius: 0;
@@ -11212,14 +11215,15 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
+    border-radius: 30;
   }
   .overview-area-wrap {
-    border-radius: 0;
+    border-radius: 30;
     padding-top: 255px;
     padding-bottom: 100px;
   }
   .overview-area-wrap:before {
-    border-radius: 0;
+    border-radius: 30;
   }
   .overview-wrap-content h1 {
     font-size: 30px;
@@ -11494,14 +11498,15 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
+    border-radius: 30;
   }
   .overview-area-wrap {
-    border-radius: 0;
+    border-radius: 30;
     padding-top: 255px;
     padding-bottom: 100px;
   }
   .overview-area-wrap:before {
-    border-radius: 0;
+    border-radius: 30;
   }
   .overview-wrap-content h1 {
     font-size: 65px;

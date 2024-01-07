@@ -6,29 +6,29 @@
           <div class="single-footer-widget">
             <div class="footer-logo" >
               <a :href="'#'">
-                <img src="../../assets/img/logo2.png" alt="Logo"  />
+                <img src="../../assets/img/logoupimerah.png" alt="Logo"  />
               </a>
               <p>
                 PlayCourt is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. 
               </p>
               <ul class="footer-social">
                 <li>
-                  <a :href="'https://www.facebook.com/TelkomIndonesia'">
+                  <a :href="''">
                     <i class="bi-facebook" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a :href="'https://twitter.com/telkomindonesia'">
+                  <a :href="''">
                     <i class="bi-twitter" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a :href="'https://www.linkedin.com/company/telekomunikasi-indonesia/'">
+                  <a :href="''">
                     <i class="bi-linkedin" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a :href="'https://www.instagram.com/telkomindonesia'">
+                  <a :href="''">
                     <i class="bi-instagram" style=" padding-left: 1px"></i>
                   </a>
                 </li>
@@ -60,10 +60,10 @@
             <h3>Company</h3>
             <ul class="quick-link">
               <li>
-                <a :href="'https://www.telkom.co.id/sites'" target="_blank">Telkom Indonesia</a>
+                <a :href="''" target="_blank">Telkom Indonesia</a>
               </li>
               <li>
-                <a :href="'https://www.telkom.co.id/sites/about-telkom/id_ID/page/profil-dan-riwayat-singkat-22'" target="_blank">About Telkom</a>
+                <a :href="''" target="_blank">About Telkom</a>
               </li>
             </ul>
           </div>
@@ -76,10 +76,10 @@
                 <a @click="scroll('Overview')" :href="'javascript:void(0)'">PlayCourt</a>
               </li>
               <li>
-                <a :href="'https://indigo.id/'" target="_blank">IndigoHub Bandung</a>
+                <a :href="''" target="_blank">IndigoHub Bandung</a>
               </li>
               <li>
-                <a :href="'https://goo.gl/maps/ueSL6AgzaXVetdw8A'"
+                <a :href="''"
                   >Jl. Gegerkalong Hilir No.47 Kota Bandung, Jawa Barat 40152</a
                 >
               </li>
@@ -96,13 +96,13 @@
               </li>
               <li>
                 <i class="bi-book"></i>
-                <a :href="'mailto:Helpdeskdxb@telkom.co.id'"
+                <a :href="''"
                   >Helpdeskdxb@telkom.co.id</a
                 >
               </li>
               <li>
                 <i class="bi bi-telegram"></i>
-                <a :href="'https://t.me/helpdeskdb_bot'">helpdeskdb_bot</a>
+                <a :href="''">helpdeskdb_bot</a>
               </li>
             </ul>
           </div>
@@ -113,7 +113,7 @@
           <div class="col-lg-6 col-md-6">
             <div class="copyright-item">
               <p>
-                &copy; Copyright {{ currentYear }} By <a href="#">PlayCourt</a>
+                &copy; Copyright {{ currentYear }} By <a href="#">Supporter.C</a>
               </p>
             </div>
           </div>
