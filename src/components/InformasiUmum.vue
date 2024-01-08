@@ -90,19 +90,59 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <button class="accordionp">CP :</button>
+                      <div class="panel1">
+                        <ul>
+                          <li>
+                            Mengidentifikasi keterkaitan antar gejala geosfer
+                            dari suatu peristiwa dalam kehidupan sehari-hari.
+                          </li>
+                          <li>
+                            Peserta didik mampu menyampaikan, mengomunikasikan
+                            ide antar mereka, dan mampu bekerja secara kelompok
+                            atau pun mandiri.
+                          </li>
+                        </ul>
+                        <button class="accordionp">Tujuan :</button>
+                        <div class="panel1">
+                          <ul>
+                            <li>
+                              Mengidentifikasi keterkaitan antar gejala geosfer
+                              dari suatu peristiwa dalam kehidupan sehari-hari.
+                            </li>
+                            <li>
+                              Menganalisis gejala geosfer (litosfer, hidrosfer,
+                              atmosfer) secara komprehensif dari suatu studi
+                              kasus peristiwa atau kejadian dalam kehidupan
+                              sehari-hari pada konteks keruangan dan kewilayahan
+                            </li>
+                          </ul>
+                          <button class="accordionp">
+                            Alur Tujuan Pembelajaran :
+                          </button>
+                          <div class="panel1">
+                            <ul>
+                              <li>
+                                Mengidentifikasi langkah-langkah penelitian
+                                geografi dari gejala-gejala geosfer dalam
+                                kehidupan sehari-hari.
+                              </li>
+                              <li>
+                                Mengidentifikasi keterkaitan antar gejala
+                                geosfer dari suatu peristiwa dalam kehidupan
+                                sehari-hari.
+                              </li>
+                              <li>
+                                Menganalisis gejala geosfer (litosfer,hidrosfer,
+                                atmosfer) secara komprehensif dari suatu studi
+                                kasus peristiwa atau kejadian dalam kehidupan
+                                sehari-hari pada konteks keruangan dan
+                                kewilayahan.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,10 +258,36 @@
                                   Elemen-elemen dari bernalar kritis adalah:
                                 </p>
                                 <ul>
-                                  <li>memperoleh dan memproses informasi dan gagasan,</li>
-                                  <li>menganalisis dan mengevaluasi penalaran,</li>
-                                  <li>merefleksikan pemikiran dan proses berpikir, dan</li>
+                                  <li>
+                                    memperoleh dan memproses informasi dan
+                                    gagasan,
+                                  </li>
+                                  <li>
+                                    menganalisis dan mengevaluasi penalaran,
+                                  </li>
+                                  <li>
+                                    merefleksikan pemikiran dan proses berpikir,
+                                    dan
+                                  </li>
                                   <li>mengambil keputusan.</li>
+                                </ul>
+                              </div>
+                              <button class="accordionp">6. Kreatif</button>
+                              <div class="panel1">
+                                <p>
+                                  Pelajar yang kreatif mampu memodifikasi dan
+                                  menghasilkan sesuatu yang orisinal, bermakna,
+                                  bermanfaat, dan berdampak. Elemen kunci dari
+                                  kreatif terdiri dari:
+                                </p>
+                                <ul>
+                                  <li>
+                                    menghasilkan gagasan yang orisinal, serta
+                                  </li>
+                                  <li>
+                                    menghasilkan karya dan tindakan yang
+                                    orisinal.
+                                  </li>
                                 </ul>
                               </div>
                             </div>
@@ -248,19 +314,13 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <ul class="bold">
+                        <li>Laptop, Android atau Perangkat elektronik</li>
+                        <li>LCD projector,</li>
+                        <li>Jaringan internet,</li>
+                        <li>papan tulis,</li>
+                        <li>alat tulis.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -281,19 +341,24 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <button class="accordionp">1. UU Hidrologi</button>
+                      <div class="panel1">
+                        <ol type="a">
+                          <li>Daya guna,</li>
+                          <li>Daya Rusak,</li>
+                          <li>Konservasi</li>
+                        </ol>
+                        <button class="accordionp">2. Ayat-ayat Alquran</button>
+                        <div class="panel1">
+                          <ol type="a">
+                            <li>Ayat....</li>
+                            <li>Ayat....</li>
+                          </ol>
+                          <button class="accordionp">
+                            3. Lingkungan Aspek Perilaku
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -314,8 +379,7 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">Configure the topology</p>
-                      <p>By defining the topology,</p>
+                      <p class="bold">Siswa reguler</p>
                     </div>
                   </div>
                 </div>
@@ -336,8 +400,122 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">Configure the topology</p>
-                      <p>By defining the topology,</p>
+                      <button class="accordionp">1. Siklus Air:</button>
+                      <div class="panel1">
+                        <ol type="a">
+                          <li>
+                            Evaporasi: Proses perubahan air dari bentuk cair
+                            menjadi uap air akibat panas matahari.
+                          </li>
+                          <li>
+                            Transpirasi: Pelepasan uap air oleh tanaman melalui
+                            stomata pada daun.
+                          </li>
+                          <li>
+                            Konveksi: Perpindahan panas melalui pergerakan massa
+                            udara atau air.
+                          </li>
+                          <li>
+                            Presipitasi: Bentuk pengembalian air ke permukaan
+                            bumi melalui hujan, salju, embun, atau bentuk
+                            presipitasi lainnya.
+                          </li>
+                          <li>
+                            Infiltrasi: Proses air yang meresap ke dalam tanah
+                            setelah presipitasi.
+                          </li>
+                        </ol>
+                        <button class="accordionp">2. Ekoliterasi:</button>
+                        <div class="panel1">
+                          <ol type="a">
+                            <li>
+                              Sistem: Komunitas organisme hidup dan
+                              lingkungannya yang saling mempengaruhi.
+                            </li>
+                            <li>
+                              Biodiversitas: Keanekaragaman hayati dalam suatu
+                              ekosistem, mencakup keanekaragaman jenis, genetik,
+                              dan ekosistem.
+                            </li>
+                            <li>
+                              Konservasi: Upaya untuk melindungi dan
+                              mempertahankan sumber daya alam serta ekosistem
+                              agar tetap lestari.
+                            </li>
+                            <li>
+                              Ekologi: Ilmu yang mempelajari interaksi antara
+                              organisme dan lingkungannya.
+                            </li>
+                            <li>
+                              Daur Biogeokimia: Pergerakan unsur-unsur kimia
+                              melalui komponen biotik dan abiotik dalam
+                              ekosistem.
+                            </li>
+                          </ol>
+                          <button class="accordionp">
+                            3. Sumber Daya Air:
+                          </button>
+                          <div class="panel1">
+                            <ol type="a">
+                              <li>
+                                Akuifer: Lapisan tanah atau batuan yang dapat
+                                menyimpan dan mengalirkan air tanah.
+                              </li>
+
+                              <li>
+                                Tanggul: Struktur buatan manusia untuk
+                                mengendalikan aliran air, seperti tanggul sungai
+                                atau bendungan.
+                              </li>
+                              <li>
+                                Air Tanah: Air yang terdapat di dalam pori-pori
+                                tanah di bawah permukaan tanah.
+                              </li>
+                              <li>
+                                Air Permukaan: Air yang terdapat di sungai,
+                                danau, atau laut.
+                              </li>
+                            </ol>
+                            <button class="accordionp">
+                              4. Pencemaran Air:
+                            </button>
+                            <div class="panel1">
+                              <ol type="a">
+                                <li>
+                                  Eutrofikasi: Peningkatan nutrien dalam air
+                                  yang dapat menyebabkan pertumbuhan alga yang
+                                  berlebihan.
+                                </li>
+                                <li>
+                                  Limbah Industri: Zat-zat berbahaya yang
+                                  dibuang oleh kegiatan industri ke dalam air.
+                                </li>
+                              </ol>
+                              <button class="accordionp">
+                                5. Pengelolaan Air:
+                              </button>
+                              <div class="panel1">
+                                <ol type="a">
+                                  <li>
+                                    Irigrasi: Pengaturan aliran air untuk
+                                    meningkatkan produksi tanaman.
+                                  </li>
+                                  <li>
+                                    Pengolahan Air: Proses membersihkan air dari
+                                    kontaminan untuk membuatnya aman untuk
+                                    dikonsumsi atau dikembalikan ke lingkungan.
+                                  </li>
+                                  <li>
+                                    Konservasi Air: Praktik untuk mengurangi
+                                    penggunaan air dan mempertahankan kualitas
+                                    air.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -397,22 +575,18 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="card">
-          <div class="process-style-image">
-            <img src="../assets/img/TAHUKAH-KAMU-1.jpg" alt="image" />
+            <div class="process-style-image">
+              <img src="../assets/img/TAHUKAH-KAMU-1.jpg" alt="image" />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   name: "AppInformasi",
 };
-
 </script>
-<style>
-
-</style>
+<style></style>
