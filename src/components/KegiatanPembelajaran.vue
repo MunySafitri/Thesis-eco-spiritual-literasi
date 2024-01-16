@@ -19,14 +19,14 @@
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
+                  data-bs-target="#Collapse1"
                   aria-expanded="true"
-                  aria-controls="collapseOne"
+                  aria-controls="Collapse1"
                 >
                   <span>01</span> Pertemuan I
                 </button>
                 <div
-                  id="collapseOne"
+                  id="Collapse1"
                   class="accordion-collapse collapse show"
                   data-bs-parent="#ProcessAccordion"
                 >
@@ -40,14 +40,14 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
+                  data-bs-target="#Collapse2"
                   aria-expanded="false"
-                  aria-controls="collapseTwo"
+                  aria-controls="Collapse2"
                 >
                   <span>02</span> Pertemuan II
                 </button>
                 <div
-                  id="collapseTwo"
+                  id="Collapse2"
                   class="accordion-collapse collapse"
                   data-bs-parent="#ProcessAccordion"
                 >
@@ -72,14 +72,14 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapsethree"
+                  data-bs-target="#collapse3"
                   aria-expanded="false"
-                  aria-controls="collapsethree"
+                  aria-controls="collapse3"
                 >
                   <span>03</span> Pertemuan III
                 </button>
                 <div
-                  id="collapsethree"
+                  id="collapse3"
                   class="accordion-collapse collapse"
                   data-bs-parent="#ProcessAccordion"
                 >
@@ -104,14 +104,14 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
+                  data-bs-target="#collapse4"
                   aria-expanded="false"
-                  aria-controls="collapseFour"
+                  aria-controls="collapse4"
                 >
                   <span>04</span> Pertemuan IV
                 </button>
                 <div
-                  id="collapseFour"
+                  id="collapse4"
                   class="accordion-collapse collapse"
                   data-bs-parent="#ProcessAccordion"
                 >
@@ -136,14 +136,14 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive"
+                  data-bs-target="#collapse5"
                   aria-expanded="false"
-                  aria-controls="collapseFive"
+                  aria-controls="collapse5"
                 >
                   <span>05</span> Pengayaan dan Remedi
                 </button>
                 <div
-                  id="collapseFive"
+                  id="collapse5"
                   class="accordion-collapse collapse"
                   data-bs-parent="#ProcessAccordion"
                 >
@@ -168,14 +168,14 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseSeven"
+                  data-bs-target="#collapse6"
                   aria-expanded="false"
-                  aria-controls="collapseSeven"
+                  aria-controls="collapse6"
                 >
                   <span>06</span> Refleksi
                 </button>
                 <div
-                  id="collapseSeven"
+                  id="collapse6"
                   class="accordion-collapse collapse"
                   data-bs-parent="#ProcessAccordion"
                 >

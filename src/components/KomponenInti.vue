@@ -18,14 +18,14 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
+                    data-bs-target="#collapseA"
                     aria-expanded="true"
-                    aria-controls="collapseOne"
+                    aria-controls="collapseA"
                   >
                     <span>01</span> Tujuan Pembelajaran
                   </button>
                   <div
-                    id="collapseOne"
+                    id="collapseA"
                     class="accordion-collapse collapse show"
                     data-bs-parent="#ProcessAccordion"
                   >
@@ -39,14 +39,14 @@
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
+                    data-bs-target="#collapseB"
                     aria-expanded="false"
-                    aria-controls="collapseTwo"
+                    aria-controls="collapseB"
                   >
                     <span>02</span> Pemahaman Bermakna
                   </button>
                   <div
-                    id="collapseTwo"
+                    id="collapseB"
                     class="accordion-collapse collapse"
                     data-bs-parent="#ProcessAccordion"
                   >
@@ -71,14 +71,14 @@
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapsethree"
+                    data-bs-target="#collapseC"
                     aria-expanded="false"
-                    aria-controls="collapsethree"
+                    aria-controls="collapseC"
                   >
                     <span>03</span> Persiapan Pembelajaran
                   </button>
                   <div
-                    id="collapsethree"
+                    id="collapseC"
                     class="accordion-collapse collapse"
                     data-bs-parent="#ProcessAccordion"
                   >
@@ -199,14 +199,14 @@
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven"
+                    data-bs-target="#collapseD"
                     aria-expanded="false"
-                    aria-controls="collapseSeven"
+                    aria-controls="collapseD"
                   >
                     <span>04</span> Bacaan Peserta Didik dan Guru
                   </button>
                   <div
-                    id="collapseSeven"
+                    id="collapseD"
                     class="accordion-collapse collapse"
                     data-bs-parent="#ProcessAccordion"
                   >

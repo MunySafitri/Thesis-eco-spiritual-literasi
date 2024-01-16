@@ -172,7 +172,7 @@
                         mulia
                       </button>
                       <div class="panel1">
-                        <p>
+                        <p class="bold">
                           Pelajar Indonesia mempertahankan budaya luhur,
                           lokalitas dan identitasnya, dan tetap berpikiran
                           terbuka dalam berinteraksi dengan budaya lain,
@@ -193,7 +193,7 @@
                           2. Berkebinekaan Global
                         </button>
                         <div class="panel1">
-                          <p>
+                          <p class="bold">
                             Pelajar Indonesia mempertahankan budaya luhur,
                             lokalitas dan identitasnya, dan tetap berpikiran
                             terbuka dalam berinteraksi dengan budaya lain,
