@@ -9559,6 +9559,7 @@ a {
 }
 img {
   max-width: 100%;
+  border-radius: 30px;
 }
 .d-table {
   width: 100%;
@@ -10481,13 +10482,14 @@ button:focus {
 }
 .card {
   box-shadow: 0 10px 18px 0 #f9fafb;
-  margin: auto;
   transition: 0.3s;
   background-color: rgba(255,255,255,0.55);
   padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
   border-radius: 30px;
+  margin-top: 25px;
 }
 .card:hover {
   box-shadow: 0 14px 24px 0 rgba(0,0,0,0.2);
@@ -10966,15 +10968,15 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
-    border-radius: 30;
+    border-radius: 30px;
   }
   .overview-area-wrap {
-    border-radius: 0;
+    border-radius: 30px;
     padding-top: 255px;
     padding-bottom: 100px;
   }
   .overview-area-wrap:before {
-    border-radius: 0;
+    border-radius: 30px;
   }
   .overview-wrap-content h1 {
     font-size: 30px;
@@ -11215,15 +11217,15 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
-    border-radius: 30;
+    border-radius: 30px;
   }
   .overview-area-wrap {
-    border-radius: 30;
+    border-radius: 30px;
     padding-top: 255px;
     padding-bottom: 100px;
   }
   .overview-area-wrap:before {
-    border-radius: 30;
+    border-radius: 30px;
   }
   .overview-wrap-content h1 {
     font-size: 30px;
@@ -11498,15 +11500,15 @@ button:focus {
   .process-style-image {
     text-align: center;
     margin-top: 35px;
-    border-radius: 30;
+    border-radius: 30px;
   }
   .overview-area-wrap {
-    border-radius: 30;
+    border-radius: 30px;
     padding-top: 255px;
     padding-bottom: 100px;
   }
   .overview-area-wrap:before {
-    border-radius: 30;
+    border-radius: 30px;
   }
   .overview-wrap-content h1 {
     font-size: 65px;

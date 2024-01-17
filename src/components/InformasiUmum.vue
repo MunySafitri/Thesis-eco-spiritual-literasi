@@ -93,56 +93,74 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <button class="accordionp">CP :</button>
-                      <div class="panel1">
-                        <ul>
-                          <li>
-                            Mengidentifikasi keterkaitan antar gejala geosfer
-                            dari suatu peristiwa dalam kehidupan sehari-hari.
-                          </li>
-                          <li>
-                            Peserta didik mampu menyampaikan, mengomunikasikan
-                            ide antar mereka, dan mampu bekerja secara kelompok
-                            atau pun mandiri.
-                          </li>
-                        </ul>
-                        <button class="accordionp">Tujuan :</button>
-                        <div class="panel1">
+                      <div class="accordion-item">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseCP"
+                          aria-expanded="true"
+                          aria-controls="collapseCP"
+                        >
+                          <span> Cp</span>
+                        </button>
+
+                        <div
+                          id="collapseCP"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#ProcessAccordion"
+                        >
                           <ul>
                             <li>
                               Mengidentifikasi keterkaitan antar gejala geosfer
                               dari suatu peristiwa dalam kehidupan sehari-hari.
                             </li>
                             <li>
-                              Menganalisis gejala geosfer (litosfer, hidrosfer,
-                              atmosfer) secara komprehensif dari suatu studi
-                              kasus peristiwa atau kejadian dalam kehidupan
-                              sehari-hari pada konteks keruangan dan kewilayahan
+                              Peserta didik mampu menyampaikan, mengomunikasikan
+                              ide antar mereka, dan mampu bekerja secara
+                              kelompok atau pun mandiri.
                             </li>
                           </ul>
-                          <button class="accordionp">
-                            Alur Tujuan Pembelajaran :
-                          </button>
+                          <button class="accordionp">Tujuan :</button>
                           <div class="panel1">
                             <ul>
-                              <li>
-                                Mengidentifikasi langkah-langkah penelitian
-                                geografi dari gejala-gejala geosfer dalam
-                                kehidupan sehari-hari.
-                              </li>
                               <li>
                                 Mengidentifikasi keterkaitan antar gejala
                                 geosfer dari suatu peristiwa dalam kehidupan
                                 sehari-hari.
                               </li>
                               <li>
-                                Menganalisis gejala geosfer (litosfer,hidrosfer,
-                                atmosfer) secara komprehensif dari suatu studi
-                                kasus peristiwa atau kejadian dalam kehidupan
-                                sehari-hari pada konteks keruangan dan
-                                kewilayahan.
+                                Menganalisis gejala geosfer (litosfer,
+                                hidrosfer, atmosfer) secara komprehensif dari
+                                suatu studi kasus peristiwa atau kejadian dalam
+                                kehidupan sehari-hari pada konteks keruangan dan
+                                kewilayahan
                               </li>
                             </ul>
+                            <button class="accordionp">
+                              Alur Tujuan Pembelajaran :
+                            </button>
+                            <div class="panel1">
+                              <ul>
+                                <li>
+                                  Mengidentifikasi langkah-langkah penelitian
+                                  geografi dari gejala-gejala geosfer dalam
+                                  kehidupan sehari-hari.
+                                </li>
+                                <li>
+                                  Mengidentifikasi keterkaitan antar gejala
+                                  geosfer dari suatu peristiwa dalam kehidupan
+                                  sehari-hari.
+                                </li>
+                                <li>
+                                  Menganalisis gejala geosfer
+                                  (litosfer,hidrosfer, atmosfer) secara
+                                  komprehensif dari suatu studi kasus peristiwa
+                                  atau kejadian dalam kehidupan sehari-hari pada
+                                  konteks keruangan dan kewilayahan.
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
