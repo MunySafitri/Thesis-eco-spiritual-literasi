@@ -5,6 +5,9 @@
         <source src="../assets/img/VideoLatarBelakang.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
+      <RouterLink to="/">
+        <button>awikwok</button>
+      </RouterLink>
       <div class="main-section-title">
         <div class="card">
           <span class="sub-title"># STEPS & PROCESS</span>

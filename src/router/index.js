@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../components/Tampilan.vue'
 import HomeView from '../views/HomeView.vue'
 import Overview from '../components/Overview.vue'; 
 import Features from '../components/Features.vue';
@@ -9,6 +10,11 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    component: Home
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
     component: HomeView
   },
   {
