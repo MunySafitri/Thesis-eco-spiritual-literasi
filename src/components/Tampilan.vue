@@ -3,36 +3,33 @@
     <div id="Overview" class="overview-area">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12">
-            <div class="overview-content">
-              <div class="card">
-                <span class="sub-title"
-                  >Selamat Belajar & Jangan Lupa Berdo'a</span
-                >
-                <h1>
-                  E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an &
-                  Lingkungan
-                </h1>
-              </div>
+          <div class="overview-content">
+            <div class="card">
+              <span class="sub-title"
+                >Selamat Belajar & Jangan Lupa Berdo'a</span
+              >
+              <h1>
+                E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an &
+                Lingkungan
+              </h1>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="overview-img">
-              <div class="card">
-                <video autoplay muted loop width="300" play>
-                  <source src="../assets/Over-Viewnew.mp4" type="video/mp4" />
-                  Your browser does not support HTML5 video.
-                </video>
-              </div>
-            </div>
-          </div>
-          <RouterLink to="/dashboard">
-            <button>tombol</button>
-          </RouterLink>
 
-          <RouterLink to="/Informasi">
-            <button>awikwok</button>
-          </RouterLink>
+          <div class="card">
+            <RouterLink to="/dashboard">
+              <center><button class="row align-items-center">open registration</button></center>
+            </RouterLink>
+          </div>
+          <div class="card">
+            <RouterLink to="/Features">
+              <center><button>pretest</button></center>
+            </RouterLink>
+          </div>
+          <div class="card">
+            <RouterLink to="/Informasi">
+              <center><button>selamat belajar</button></center>
+            </RouterLink>
+          </div>
         </div>
       </div>
     </div>
