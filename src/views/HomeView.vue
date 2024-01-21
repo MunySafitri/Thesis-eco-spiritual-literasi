@@ -3,8 +3,8 @@
     <Navbar />
     <Overview />
     <Informasi/>
-    <Kegiatan/>
     <Komponen/>
+    <Kegiatan/>
     <features />
     <Order/>
     <Footer/>
