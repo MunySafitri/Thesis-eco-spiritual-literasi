@@ -4,206 +4,207 @@
     <div class="container">
       <div class="main-section-title">
         <div class="card">
-        <span class="sub-title"># Keiatan</span>
-        <h2>Kegiatan Pembelajaran</h2>
+          <span class="sub-title"># Keiatan</span>
+          <h2>Kegiatan Pembelajaran</h2>
+        </div>
       </div>
-    </div>
-    
+
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
           <div class="card">
-          <div class="process-style-accordion">
-            <div class="accordion" id="ProcessAccordion">
-              <div class="accordion-item">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#Collapse1"
-                  aria-expanded="true"
-                  aria-controls="Collapse1"
-                >
-                  <span>01</span> Pertemuan I
-                </button>
-                <div
-                  id="Collapse1"
-                  class="accordion-collapse collapse show"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    
+            <div class="process-style-accordion">
+              <div class="accordion" id="ProcessAccordion">
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Collapse1"
+                    aria-expanded="true"
+                    aria-controls="Collapse1"
+                  >
+                    <span>01</span> Pertemuan I
+                  </button>
+                  <div
+                    id="Collapse1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body"></div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#Collapse2"
-                  aria-expanded="false"
-                  aria-controls="Collapse2"
-                >
-                  <span>02</span> Pertemuan II
-                </button>
-                <div
-                  id="Collapse2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology of your application's
-                      infrastructure. This includes setting up the network
-                      architecture, defining the relationship between different
-                      components, and establishing the communication protocols.
-                    </p>
-                    <p>
-                      By defining the topology, you ensure that your
-                      application's components are properly connected and
-                      function as a cohesive system, optimizing performance and
-                      resource utilization.
-                    </p>
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Collapse2"
+                    aria-expanded="false"
+                    aria-controls="Collapse2"
+                  >
+                    <span>02</span> Pertemuan II
+                  </button>
+                  <div
+                    id="Collapse2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="bold">
+                        Configure the topology of your application's
+                        infrastructure. This includes setting up the network
+                        architecture, defining the relationship between
+                        different components, and establishing the communication
+                        protocols.
+                      </p>
+                      <p>
+                        By defining the topology, you ensure that your
+                        application's components are properly connected and
+                        function as a cohesive system, optimizing performance
+                        and resource utilization.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse3"
-                  aria-expanded="false"
-                  aria-controls="collapse3"
-                >
-                  <span>03</span> Pertemuan III
-                </button>
-                <div
-                  id="collapse3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology of your application's
-                      infrastructure. This includes setting up the network
-                      architecture, defining the relationship between different
-                      components, and establishing the communication protocols.
-                    </p>
-                    <p>
-                      By defining the topology, you ensure that your
-                      application's components are properly connected and
-                      function as a cohesive system, optimizing performance and
-                      resource utilization.
-                    </p>
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    <span>03</span> Pertemuan III
+                  </button>
+                  <div
+                    id="collapse3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="bold">
+                        Configure the topology of your application's
+                        infrastructure. This includes setting up the network
+                        architecture, defining the relationship between
+                        different components, and establishing the communication
+                        protocols.
+                      </p>
+                      <p>
+                        By defining the topology, you ensure that your
+                        application's components are properly connected and
+                        function as a cohesive system, optimizing performance
+                        and resource utilization.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse4"
-                  aria-expanded="false"
-                  aria-controls="collapse4"
-                >
-                  <span>04</span> Pertemuan IV
-                </button>
-                <div
-                  id="collapse4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology of your application's
-                      infrastructure. This includes setting up the network
-                      architecture, defining the relationship between different
-                      components, and establishing the communication protocols.
-                    </p>
-                    <p>
-                      By defining the topology, you ensure that your
-                      application's components are properly connected and
-                      function as a cohesive system, optimizing performance and
-                      resource utilization.
-                    </p>
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                  >
+                    <span>04</span> Pertemuan IV
+                  </button>
+                  <div
+                    id="collapse4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="bold">
+                        Configure the topology of your application's
+                        infrastructure. This includes setting up the network
+                        architecture, defining the relationship between
+                        different components, and establishing the communication
+                        protocols.
+                      </p>
+                      <p>
+                        By defining the topology, you ensure that your
+                        application's components are properly connected and
+                        function as a cohesive system, optimizing performance
+                        and resource utilization.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse5"
-                  aria-expanded="false"
-                  aria-controls="collapse5"
-                >
-                  <span>05</span> Pengayaan dan Remedi
-                </button>
-                <div
-                  id="collapse5"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    <p class="bold">
-                      Configure the topology of your application's
-                      infrastructure. This includes setting up the network
-                      architecture, defining the relationship between different
-                      components, and establishing the communication protocols.
-                    </p>
-                    <p>
-                      By defining the topology, you ensure that your
-                      application's components are properly connected and
-                      function as a cohesive system, optimizing performance and
-                      resource utilization.
-                    </p>
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                  >
+                    <span>05</span> Pengayaan dan Remedi
+                  </button>
+                  <div
+                    id="collapse5"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="bold">
+                        Configure the topology of your application's
+                        infrastructure. This includes setting up the network
+                        architecture, defining the relationship between
+                        different components, and establishing the communication
+                        protocols.
+                      </p>
+                      <p>
+                        By defining the topology, you ensure that your
+                        application's components are properly connected and
+                        function as a cohesive system, optimizing performance
+                        and resource utilization.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse6"
-                  aria-expanded="false"
-                  aria-controls="collapse6"
-                >
-                  <span>06</span> Refleksi
-                </button>
-                <div
-                  id="collapse6"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#ProcessAccordion"
-                >
-                  <div class="accordion-body">
-                    <p class="bold"></p>
-                    <p>
-                      By carefully managing CPU and RAM limitations, you can
-                      prevent resource contention and maintain stability in your
-                      application's execution environment. This step ensures
-                      that each container operates efficiently within its
-                      allocated resources.
-                    </p>
+                <div class="accordion-item">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="false"
+                    aria-controls="collapse6"
+                  >
+                    <span>06</span> Refleksi
+                  </button>
+                  <div
+                    id="collapse6"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#ProcessAccordion"
+                  >
+                    <div class="accordion-body">
+                      <p class="bold"></p>
+                      <p>
+                        By carefully managing CPU and RAM limitations, you can
+                        prevent resource contention and maintain stability in
+                        your application's execution environment. This step
+                        ensures that each container operates efficiently within
+                        its allocated resources.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
         <div class="col-lg-6 col-md-12">
           <div class="card">
-          <div class="process-style-image">
-            <img src="../assets/img//no2.jpg" alt="image" />
+            <div class="process-style-image">
+              <img src="../assets/img//no2.jpg" alt="image" />
+            </div>
           </div>
         </div>
       </div>
-      </div>
-   
     </div>
   </div>
 </template>

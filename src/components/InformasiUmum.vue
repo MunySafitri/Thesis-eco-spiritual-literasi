@@ -110,7 +110,7 @@
                           class="accordion-collapse collapse"
                           data-bs-parent="#ProcessAccordion"
                         >
-                          <ul>
+                          <ul class="bold">
                             <li>
                               Mengidentifikasi keterkaitan antar gejala geosfer
                               dari suatu peristiwa dalam kehidupan sehari-hari.
@@ -123,7 +123,7 @@
                           </ul>
                           <button class="accordionp">Tujuan :</button>
                           <div class="panel1">
-                            <ul>
+                            <ul class="bold">
                               <li>
                                 Mengidentifikasi keterkaitan antar gejala
                                 geosfer dari suatu peristiwa dalam kehidupan
@@ -141,7 +141,7 @@
                               Alur Tujuan Pembelajaran :
                             </button>
                             <div class="panel1">
-                              <ul>
+                              <ul class="bold">
                                 <li>
                                   Mengidentifikasi langkah-langkah penelitian
                                   geografi dari gejala-gejala geosfer dalam
@@ -203,7 +203,7 @@
                           dengan budaya luhur bangsa. Elemen dan kunci
                           kebinekaan global meliputi:
                         </p>
-                        <ul>
+                        <ul class="bold">
                           <li>akhlak beragama;</li>
                           <li>akhlak pribadi;</li>
                           <li>akhlak kepada manusia;</li>
@@ -223,7 +223,7 @@
                             positif dan tidak bertentangan dengan budaya luhur
                             bangsa. Elemen dan kunci kebinekaan global meliputi:
                           </p>
-                          <ul>
+                          <ul class="bold">
                             <li>mengenal dan menghargai budaya;</li>
                             <li>
                               kemampuan komunikasi interkultural dalam
@@ -236,13 +236,13 @@
                           </ul>
                           <button class="accordionp">3. Mandiri</button>
                           <div class="panel1">
-                            <p>
+                            <p class="bold">
                               Pelajar Indonesia merupakan pelajar mandiri, yaitu
                               pelajar yang bertanggung jawab atas proses dan
                               hasil belajarnya. Elemen kunci dari mandiri
                               terdiri dari:
                             </p>
-                            <ul>
+                            <ul class="bold">
                               <li>
                                 kesadaran akan diri dan situasi yang dihadapi;
                                 serta
@@ -253,7 +253,7 @@
                               4. Bergotong royong
                             </button>
                             <div class="panel1">
-                              <p>
+                              <p class="bold">
                                 Pelajar Indonesia memiliki kemampuan
                                 bergotong-royong, yaitu kemampuan untuk
                                 melakukan kegiatan secara bersama-sama dengan
@@ -261,7 +261,7 @@
                                 berjalan lancar, mudah dan ringan. Elemen-elemen
                                 dari bergotong royong adalah:
                               </p>
-                              <ul>
+                              <ul class="bold">
                                 <li>kolaborasi,</li>
                                 <li>kepedulian, dan</li>
                                 <li>berbagi.</li>
@@ -270,7 +270,7 @@
                                 5. Bernalar kritis
                               </button>
                               <div class="panel1">
-                                <p>
+                                <p class="bold">
                                   Pelajar yang bernalar kritis mampu secara
                                   objektif memproses informasi baik kualitatif
                                   maupun kuantitatif, membangun keterkaitan
@@ -278,7 +278,7 @@
                                   informasi, mengevaluasi dan menyimpulkannya.
                                   Elemen-elemen dari bernalar kritis adalah:
                                 </p>
-                                <ul>
+                                <ul class="bold">
                                   <li>
                                     memperoleh dan memproses informasi dan
                                     gagasan,
@@ -295,13 +295,13 @@
                               </div>
                               <button class="accordionp">6. Kreatif</button>
                               <div class="panel1">
-                                <p>
+                                <p class="bold">
                                   Pelajar yang kreatif mampu memodifikasi dan
                                   menghasilkan sesuatu yang orisinal, bermakna,
                                   bermanfaat, dan berdampak. Elemen kunci dari
                                   kreatif terdiri dari:
                                 </p>
-                                <ul>
+                                <ul class="bold">
                                   <li>
                                     menghasilkan gagasan yang orisinal, serta
                                   </li>
@@ -364,14 +364,14 @@
                     <div class="accordion-body">
                       <button class="accordionp">1. UU Hidrologi</button>
                       <div class="panel1">
-                        <ol type="a">
+                        <ol type="a" class="bold">
                           <li>Daya guna,</li>
                           <li>Daya Rusak,</li>
                           <li>Konservasi</li>
                         </ol>
                         <button class="accordionp">2. Ayat-ayat Alquran</button>
                         <div class="panel1">
-                          <ol type="a">
+                          <ol type="a" class="bold">
                             <li>Ayat....</li>
                             <li>Ayat....</li>
                           </ol>
@@ -423,7 +423,7 @@
                     <div class="accordion-body">
                       <button class="accordionp">1. Siklus Air:</button>
                       <div class="panel1">
-                        <ol type="a">
+                        <ol type="a" class="bold">
                           <li>
                             Evaporasi: Proses perubahan air dari bentuk cair
                             menjadi uap air akibat panas matahari.
@@ -448,7 +448,7 @@
                         </ol>
                         <button class="accordionp">2. Ekoliterasi:</button>
                         <div class="panel1">
-                          <ol type="a">
+                          <ol type="a" class="bold">
                             <li>
                               Sistem: Komunitas organisme hidup dan
                               lingkungannya yang saling mempengaruhi.
@@ -477,12 +477,11 @@
                             3. Sumber Daya Air:
                           </button>
                           <div class="panel1">
-                            <ol type="a">
+                            <ol type="a" class="bold">
                               <li>
                                 Akuifer: Lapisan tanah atau batuan yang dapat
                                 menyimpan dan mengalirkan air tanah.
                               </li>
-
                               <li>
                                 Tanggul: Struktur buatan manusia untuk
                                 mengendalikan aliran air, seperti tanggul sungai
@@ -501,7 +500,7 @@
                               4. Pencemaran Air:
                             </button>
                             <div class="panel1">
-                              <ol type="a">
+                              <ol type="a" class="bold">
                                 <li>
                                   Eutrofikasi: Peningkatan nutrien dalam air
                                   yang dapat menyebabkan pertumbuhan alga yang
@@ -516,7 +515,7 @@
                                 5. Pengelolaan Air:
                               </button>
                               <div class="panel1">
-                                <ol type="a">
+                                <ol type="a" class="bold">
                                   <li>
                                     Irigrasi: Pengaturan aliran air untuk
                                     meningkatkan produksi tanaman.
