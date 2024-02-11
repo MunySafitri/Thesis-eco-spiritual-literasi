@@ -1,80 +1,91 @@
-# Playcourt Landing Page
+### Instalation
 
-Intern Project task from Telkom Indonesia (Digital Infrastructure & Security)
-
-![logo](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/logo.png)
-
-## Overview
-
-[PlayCourt](https://playcourt.id/) is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. PlayCourt is a comprehensive application development platform specifically designed for the development of Telkom Indonesia's digital products.
-
-## Project Plan
-
-![Project Plan](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/documentation/Project_Plan.png)
-
-## Prerequisites
-
-You will need [Node.js](https://nodejs.org/ja/blog/release/v16.16.0) version 16.16.0 or greater installed on your system.
-
-## Run as NodeJs
-
-Install dependencies, devDependencies, etc
-```sh
-npm install
+``` bash
+$ npm install
 ```
 
-Compiles and hot-reloads for development
-```sh
-npm run serve
+or
+
+``` bash
+$ yarn install
 ```
 
-Compile and Minify for Production
-```sh
-npm run build
+### Basic usage
+
+``` bash
+# dev server with hot reload at http://localhost:3000
+$ npm run serve
 ```
 
-Lint with [ESLint](https://eslint.org/)
-```sh
-npm run lint
+or 
+
+``` bash
+# dev server with hot reload at http://localhost:3000
+$ yarn serve
 ```
 
-## Run as Docker
+Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
 
-Build image docker
-```sh
-docker build -t playcourt .
+#### Build
+
+Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
+
+```bash
+# build for production with minification
+$ npm run build
 ```
 
-Run container docker    
-```sh
-docker run -p 8080:80 -it --name playcourt playcourt
+or
+
+```bash
+# build for production with minification
+$ yarn build
 ```
 
-## Testing Unit
+## What's included
 
-Run unit test component
-```sh
-npm run test:unit
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+
+```
+coreui-free-vue-admin-template
+├── public/          # static files
+│   └── index.html   # html template
+│
+├── src/             # project root
+│   ├── assets/      # images, icons, etc.
+│   ├── components/  # common components - header, footer, sidebar, etc.
+│   ├── layouts/     # layout containers
+│   ├── scss/        # scss styles
+│   ├── router       # routes config
+│   └── store        # template state example 
+│   ├── views/       # application views
+│   ├── _nav.js      # sidebar navigation config
+│   ├── App.vue
+│   ├── ...
+│   └── main.js
+│
+└── package.json
 ```
 
-Run unit test with coverage
-```sh
-npm run coverage
-```
+## Documentation
 
-Output of Unit testing:
+<!-- The documentation for the CoreUI Admin Template is hosted at our website [CoreUI for Vue](https://coreui.io/vue/) -->
 
-![Output Testing](src/assets/img/documentation/Testing.png)
+## Creators
+<!-- 
+**Łukasz Holeczek**
+* <https://twitter.com/lukaszholeczek>
+* <https://github.com/mrholek>
+* <https://github.com/coreui> -->
 
-## Deployment
+**CoreUI team**
+<!-- * https://github.com/orgs/coreui/people -->
 
-### Netlify
+## Community
 
-You can see link deploy with Netlify (NodeJs) in [here](https://playcourt.netlify.app/)
+<!-- Get updates on CoreUI's development and chat with the project maintainers and community members.
 
-### Google Kubernetes Engine
+- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
+- Read and subscribe to [CoreUI Blog](https://coreui.io/blog/). -->
 
-- You can see link deploy with GKE (Docker) in [here](http://34.128.94.126/#/)
-
-How to deploy on [Google Kubernetes Engine](k8s/deploy.md)
-
+copyright 2024 Supporter.c.   

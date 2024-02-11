@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div id="Features" class="four-expect-area pt-100 pb-70">
     <div class="container">
@@ -32,6 +33,7 @@
               requirements and other constraints, while not sacrificing
               availability. Mix critical and best-effort workloads in order to
               drive up utilization and save even more resources
+              adada
             </p>
           </div>
         </div>
@@ -68,7 +70,7 @@
     </div>
   </div>
 </template>
-
+<!-- eslint-disable prettier/prettier -->
 <script>
 export default {
   name: "AppFeatures",

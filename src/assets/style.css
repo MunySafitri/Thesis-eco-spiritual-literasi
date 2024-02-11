@@ -66,8 +66,20 @@
 video {
   width: 100%;
   height: auto;
-  /* border: 2px solid blue; */
-  border-radius: 30px;
+}
+.vid1 {
+  border-radius: 50%;
+}
+.vid2 {
+  border-radius: 50px;
+}
+.fontregis {
+  font-size: 13px;
+}
+.panel2{
+  text-align: left;
+  padding: 10px 20px 0px 20px;
+  font-size: large;
 }
 
 @media (prefers-reduced-motion: reduce), print {
@@ -3591,11 +3603,11 @@ fieldset:disabled .btn {
   --bs-btn-border-radius: 0.25rem;
 }
 .fade {
-  transition: opacity 0.15s linear;
+  transition: opacity 1s linear;
 }
 @media (prefers-reduced-motion: reduce) {
   .fade {
-    transition: none;
+    transition: 0.8s linear;
   }
 }
 .fade:not(.show) {
@@ -3607,21 +3619,21 @@ fieldset:disabled .btn {
 .collapsing {
   height: 0;
   overflow: hidden;
-  transition: height 0.35s ease;
+  transition: height 0.55s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
-    transition: none;
+    transition: 1.2s ease;
   }
 }
 .collapsing.collapse-horizontal {
   width: 0;
   height: auto;
-  transition: width 0.35s ease;
+  transition: width 1.2s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing.collapse-horizontal {
-    transition: none;
+    transition: 1.2s ease;
   }
 }
 .dropdown,
@@ -4134,7 +4146,7 @@ fieldset:disabled .btn {
 }
 .nav-fill .nav-item .nav-link,
 .nav-justified .nav-item .nav-link {
-  width: 100%;
+  width: 90%;
 }
 .tab-content > .tab-pane {
   display: none;
@@ -9612,11 +9624,15 @@ button:focus {
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .show > .nav-link {
-  color: #d42953;
+  color: #67E0D6;
+  border: 1px;
+  border-color: #67E0AD;
+  border-style: dashed;
 }
 .navbar-light .navbar-nav {
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 .navbar-light .side-nav {
   text-align: right;
@@ -9627,6 +9643,7 @@ button:focus {
 }
 .navbar-light .side-nav .side-nav-left {
   margin-right: 14px;
+  text-align: right;
 }
 .navbar-light .side-nav .side-nav-left:hover {
   color: #d42953;
@@ -10241,7 +10258,7 @@ button:focus {
 }
 .footer-style-area .copyright-style-area .copyright-item p {
   margin-bottom: 0;
-  color: #e3e9ed;
+  color: black;
   font-size: 15px;
 }
 .footer-style-area .copyright-style-area .copyright-item p a {
@@ -10481,7 +10498,7 @@ button:focus {
   padding-right: 30px;
 }
 
-.card1 {
+.card {
   box-shadow: 0 10px 18px 0 #f9fafb;
   transition: 0.3s;
   background-color: rgba(255,255,255,0.55);
@@ -10491,9 +10508,9 @@ button:focus {
   padding-top: 10px;
   border-radius: 30px;
   margin-top: 25px;
-  align-items: center;
+  align-items: left;
 }
-.card1:hover {
+.card:hover {
   box-shadow: 0 14px 24px 0 rgba(0,0,0,0.2);
 }
 .overview-content {
@@ -10653,7 +10670,7 @@ button:focus {
 }
 .process-style-accordion .accordion-item {
   border: none;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   border-radius: 0;
   position: relative;
   z-index: 1;
@@ -11530,7 +11547,7 @@ button:focus {
   }
   .navbar-light .navbar-nav {
     margin-left: auto;
-    margin-right: 300px;
+    margin-right: 250px;
   }
   .navbar-light .navbar-nav .nav-link {
     margin-right: 10px;

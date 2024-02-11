@@ -1,25 +1,29 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div>
     <Navbar />
     <Overview />
-    <Informasi/>
-    <Komponen/>
-    <Kegiatan/>
+    <Informasi />
+    <ProfilPancasila/>
+    <Komponen />
+    <Kegiatan />
     <features />
-    <Order/>
-    <Footer/>
+    <Order />
+    <Futer />
   </div>
 </template>
-<script >
+<!-- eslint-disable prettier/prettier -->
+<script>
 // @ is an alias to /src
-import Navbar from '@/components/Layouts/Navbar'
-import Footer from '@/components/Layouts/Footer'
-import Overview from '../components/Overview.vue'
-import Features from '../components/Features.vue'
-import Informasi from '../components/InformasiUmum.vue'
-import Order from '../components/Order.vue'
-import Kegiatan from '../components/KegiatanPembelajaran.vue'
-import Komponen from '../components/KomponenInti.vue'
+import Navbar from '@/components/Layouts/Navbar.vue'
+import Futer from '@/components/Layouts/Footer.vue'
+import Overview from '@/components/Overview.vue'
+import Features from '@/components/Features.vue'
+import Informasi from '@/components/InformasiUmum.vue'
+import Order from '@/components/Order.vue'
+import Kegiatan from '@/components/KegiatanPembelajaran.vue'
+import Komponen from '@/components/KomponenInti.vue'
+import ProfilPancasila from '@/components/P5.vue'
 
 export default {
   name: 'HomeView',
@@ -27,11 +31,12 @@ export default {
     Navbar,
     Overview,
     Informasi,
-    Footer,
+    Futer,
     Features,
     Komponen,
     Kegiatan,
     Order,
-  }
+    ProfilPancasila,
+  },
 }
 </script>

@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div id="Komponen" class="process-style-area3 ptb-100">
     <div class="container">

@@ -1,20 +1,21 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
-      <video autoplay muted loop width="500" id="myVideo">
+      <video class="vid2" autoplay muted loop width="500" id="myVideo">
         <source src="../assets/img/VideoLatarBelakang.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
-      <RouterLink to="/">
+      <!-- <RouterLink to="/">
         <button>awikwok</button>
-      </RouterLink>
+      </RouterLink> -->
       <div class="main-section-title">
         <div class="card">
           <span class="sub-title"># STEPS & PROCESS</span>
           <h2>Informasi Umum</h2>
         </div>
       </div>
-      <div class="row align-items-center">
+      <div class="row align-items-start">
         <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="process-style-accordion">
@@ -110,7 +111,7 @@
                           class="accordion-collapse collapse"
                           data-bs-parent="#ProcessAccordion"
                         >
-                          <ul class="bold">
+                          <ul>
                             <li>
                               Mengidentifikasi keterkaitan antar gejala geosfer
                               dari suatu peristiwa dalam kehidupan sehari-hari.
@@ -123,7 +124,7 @@
                           </ul>
                           <button class="accordionp">Tujuan :</button>
                           <div class="panel1">
-                            <ul class="bold">
+                            <ul>
                               <li>
                                 Mengidentifikasi keterkaitan antar gejala
                                 geosfer dari suatu peristiwa dalam kehidupan
@@ -141,7 +142,7 @@
                               Alur Tujuan Pembelajaran :
                             </button>
                             <div class="panel1">
-                              <ul class="bold">
+                              <ul>
                                 <li>
                                   Mengidentifikasi langkah-langkah penelitian
                                   geografi dari gejala-gejala geosfer dalam
@@ -176,7 +177,7 @@
                     aria-expanded="false"
                     aria-controls="collapsethree"
                   >
-                    <span>03</span> Profil Pelajar Pancasila
+                    <span>03</span> Materi Esensial
                   </button>
                   <div
                     id="collapsethree"
@@ -184,135 +185,22 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Profil Pelajar Pancasila memiliki 6 dimensi dan beberapa
-                        elemen di dalamnya.
-                      </p>
-                      <button class="accordionp">
-                        1. Beriman, bertakwa kepada Tuhan YME, dan berakhlak
-                        mulia
-                      </button>
+                      <button class="accordionp">1. UU Hidrologi</button>
                       <div class="panel1">
-                        <p class="bold">
-                          Pelajar Indonesia mempertahankan budaya luhur,
-                          lokalitas dan identitasnya, dan tetap berpikiran
-                          terbuka dalam berinteraksi dengan budaya lain,
-                          sehingga menumbuhkan rasa saling menghargai sehingga
-                          karakter positif dapat berkembang dan juga tumbuhnya
-                          budaya luhur yang positif dan tidak bertentangan
-                          dengan budaya luhur bangsa. Elemen dan kunci
-                          kebinekaan global meliputi:
-                        </p>
-                        <ul class="bold">
-                          <li>akhlak beragama;</li>
-                          <li>akhlak pribadi;</li>
-                          <li>akhlak kepada manusia;</li>
-                          <li>akhlak kepada alam; dan</li>
-                          <li>akhlak bernegara.</li>
-                        </ul>
-                        <button class="accordionp">
-                          2. Berkebinekaan Global
-                        </button>
+                        <ol type="a">
+                          <li>Daya guna,</li>
+                          <li>Daya Rusak,</li>
+                          <li>Konservasi</li>
+                        </ol>
+                        <button class="accordionp">2. Ayat-ayat Alquran</button>
                         <div class="panel1">
-                          <p class="bold">
-                            Pelajar Indonesia mempertahankan budaya luhur,
-                            lokalitas dan identitasnya, dan tetap berpikiran
-                            terbuka dalam berinteraksi dengan budaya lain,
-                            sehingga menumbuhkan rasa saling menghargai dan
-                            kemungkinan terbentuknya dengan budaya luhur yang
-                            positif dan tidak bertentangan dengan budaya luhur
-                            bangsa. Elemen dan kunci kebinekaan global meliputi:
-                          </p>
-                          <ul class="bold">
-                            <li>mengenal dan menghargai budaya;</li>
-                            <li>
-                              kemampuan komunikasi interkultural dalam
-                              berinteraksi dengan sesama; dan
-                            </li>
-                            <li>
-                              refleksi dan tanggung jawab terhadap pengalaman
-                              kebinekaan.
-                            </li>
-                          </ul>
-                          <button class="accordionp">3. Mandiri</button>
-                          <div class="panel1">
-                            <p class="bold">
-                              Pelajar Indonesia merupakan pelajar mandiri, yaitu
-                              pelajar yang bertanggung jawab atas proses dan
-                              hasil belajarnya. Elemen kunci dari mandiri
-                              terdiri dari:
-                            </p>
-                            <ul class="bold">
-                              <li>
-                                kesadaran akan diri dan situasi yang dihadapi;
-                                serta
-                              </li>
-                              <li>regulasi diri.</li>
-                            </ul>
-                            <button class="accordionp">
-                              4. Bergotong royong
-                            </button>
-                            <div class="panel1">
-                              <p class="bold">
-                                Pelajar Indonesia memiliki kemampuan
-                                bergotong-royong, yaitu kemampuan untuk
-                                melakukan kegiatan secara bersama-sama dengan
-                                suka rela agar kegiatan yang dikerjakan dapat
-                                berjalan lancar, mudah dan ringan. Elemen-elemen
-                                dari bergotong royong adalah:
-                              </p>
-                              <ul class="bold">
-                                <li>kolaborasi,</li>
-                                <li>kepedulian, dan</li>
-                                <li>berbagi.</li>
-                              </ul>
-                              <button class="accordionp">
-                                5. Bernalar kritis
-                              </button>
-                              <div class="panel1">
-                                <p class="bold">
-                                  Pelajar yang bernalar kritis mampu secara
-                                  objektif memproses informasi baik kualitatif
-                                  maupun kuantitatif, membangun keterkaitan
-                                  antara berbagai informasi, menganalisis
-                                  informasi, mengevaluasi dan menyimpulkannya.
-                                  Elemen-elemen dari bernalar kritis adalah:
-                                </p>
-                                <ul class="bold">
-                                  <li>
-                                    memperoleh dan memproses informasi dan
-                                    gagasan,
-                                  </li>
-                                  <li>
-                                    menganalisis dan mengevaluasi penalaran,
-                                  </li>
-                                  <li>
-                                    merefleksikan pemikiran dan proses berpikir,
-                                    dan
-                                  </li>
-                                  <li>mengambil keputusan.</li>
-                                </ul>
-                              </div>
-                              <button class="accordionp">6. Kreatif</button>
-                              <div class="panel1">
-                                <p class="bold">
-                                  Pelajar yang kreatif mampu memodifikasi dan
-                                  menghasilkan sesuatu yang orisinal, bermakna,
-                                  bermanfaat, dan berdampak. Elemen kunci dari
-                                  kreatif terdiri dari:
-                                </p>
-                                <ul class="bold">
-                                  <li>
-                                    menghasilkan gagasan yang orisinal, serta
-                                  </li>
-                                  <li>
-                                    menghasilkan karya dan tindakan yang
-                                    orisinal.
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
+                          <ol type="a">
+                            <li>Ayat....</li>
+                            <li>Ayat....</li>
+                          </ol>
+                          <button class="accordionp">
+                            3. Lingkungan Aspek Perilaku
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -327,7 +215,7 @@
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                    <span>04</span> Sarana dan Prasarana
+                    <span>04</span> Sarana & Prasarana
                   </button>
                   <div
                     id="collapseFour"
@@ -350,49 +238,11 @@
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive"
-                    aria-expanded="false"
-                    aria-controls="collapseFive"
-                  >
-                    <span>05</span> Materi Esensial
-                  </button>
-                  <div
-                    id="collapseFive"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#ProcessAccordion"
-                  >
-                    <div class="accordion-body">
-                      <button class="accordionp">1. UU Hidrologi</button>
-                      <div class="panel1">
-                        <ol type="a" class="bold">
-                          <li>Daya guna,</li>
-                          <li>Daya Rusak,</li>
-                          <li>Konservasi</li>
-                        </ol>
-                        <button class="accordionp">2. Ayat-ayat Alquran</button>
-                        <div class="panel1">
-                          <ol type="a" class="bold">
-                            <li>Ayat....</li>
-                            <li>Ayat....</li>
-                          </ol>
-                          <button class="accordionp">
-                            3. Lingkungan Aspek Perilaku
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
                     data-bs-target="#collapseSix"
                     aria-expanded="false"
                     aria-controls="collapseSix"
                   >
-                    <span>06</span> Target Peserta Didik
+                    <span>05</span> Target PD dan Model Pheno BL
                   </button>
                   <div
                     id="collapseSix"
@@ -400,7 +250,10 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
+                      <button class="accordionp">Target Peserta Didik</button>
                       <p class="bold">Siswa reguler</p>
+                      <button class="accordionp">Model Pembelajaran</button>
+                      <p class="bold">Model 1</p>
                     </div>
                   </div>
                 </div>
@@ -413,7 +266,7 @@
                     aria-expanded="false"
                     aria-controls="collapseSeven"
                   >
-                    <span>07</span> Glosarium
+                    <span>06</span> Glosarium dan Daftar Pustaka
                   </button>
                   <div
                     id="collapseSeven"
@@ -423,7 +276,7 @@
                     <div class="accordion-body">
                       <button class="accordionp">1. Siklus Air:</button>
                       <div class="panel1">
-                        <ol type="a" class="bold">
+                        <ol type="a">
                           <li>
                             Evaporasi: Proses perubahan air dari bentuk cair
                             menjadi uap air akibat panas matahari.
@@ -448,7 +301,7 @@
                         </ol>
                         <button class="accordionp">2. Ekoliterasi:</button>
                         <div class="panel1">
-                          <ol type="a" class="bold">
+                          <ol type="a">
                             <li>
                               Sistem: Komunitas organisme hidup dan
                               lingkungannya yang saling mempengaruhi.
@@ -477,11 +330,12 @@
                             3. Sumber Daya Air:
                           </button>
                           <div class="panel1">
-                            <ol type="a" class="bold">
+                            <ol type="a">
                               <li>
                                 Akuifer: Lapisan tanah atau batuan yang dapat
                                 menyimpan dan mengalirkan air tanah.
                               </li>
+
                               <li>
                                 Tanggul: Struktur buatan manusia untuk
                                 mengendalikan aliran air, seperti tanggul sungai
@@ -500,7 +354,7 @@
                               4. Pencemaran Air:
                             </button>
                             <div class="panel1">
-                              <ol type="a" class="bold">
+                              <ol type="a">
                                 <li>
                                   Eutrofikasi: Peningkatan nutrien dalam air
                                   yang dapat menyebabkan pertumbuhan alga yang
@@ -515,7 +369,7 @@
                                 5. Pengelolaan Air:
                               </button>
                               <div class="panel1">
-                                <ol type="a" class="bold">
+                                <ol type="a">
                                   <li>
                                     Irigrasi: Pengaturan aliran air untuk
                                     meningkatkan produksi tanaman.
@@ -532,60 +386,12 @@
                                   </li>
                                 </ol>
                               </div>
+                              <p class="bold">Daftar Pustaka</p>
+                              <p>By defining the topology,</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight"
-                    aria-expanded="false"
-                    aria-controls="collapseEight"
-                  >
-                    <span>08</span> Daftar Pustaka
-                  </button>
-                  <div
-                    id="collapseEight"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#ProcessAccordion"
-                  >
-                    <div class="accordion-body">
-                      <p class="bold">Configure the topology</p>
-                      <p>By defining the topology,</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseNini"
-                    aria-expanded="false"
-                    aria-controls="collapseNini"
-                  >
-                    <span>09</span> Model Pembelajaran
-                  </button>
-                  <div
-                    id="collapseNini"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#ProcessAccordion"
-                  >
-                    <div class="accordion-body">
-                      <p class="bold"></p>
-                      <p>
-                        By carefully managing CPU and RAM limitations, you can
-                        prevent resource contention and maintain stability in
-                        your application's execution environment. This step
-                        ensures that each container operates efficiently within
-                        its allocated resources.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -604,9 +410,9 @@
     </div>
   </div>
 </template>
+<!-- eslint-disable prettier/prettier -->
 <script>
 export default {
-  name: "AppInformasi",
-};
+  name: 'AppInformasi',
+}
 </script>
-<style></style>

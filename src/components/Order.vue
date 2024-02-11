@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div id="Order" class="Order-bg pt-100 pb-70">
     <div class="container">
@@ -33,7 +34,7 @@
     </div>
   </div>
 </template>
-
+<!-- eslint-disable prettier/prettier -->
 <script >
 export default {
   name: "AppOrder",

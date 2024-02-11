@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <nav
     :class="[
@@ -7,7 +8,12 @@
   >
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
-        <img class="black-logo" style="height: 50px;" src="../../assets/img/logo.png" alt="Logo" />
+        <img
+          class="black-logo"
+          style="height: 50px"
+          src="../../assets/img/logo.png"
+          alt="Logo"
+        />
       </router-link>
 
       <div
@@ -35,8 +41,21 @@
             <a
               class="nav-link"
               @click="scroll('Informasi')"
-              href="javascript:void(1)"    
-              >Informasi Umum E-Modul</a
+              href="javascript:void(1)"
+              >Informasi Umum
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" @click="scroll('P5')" href="javascript:void(6)"
+              >P5
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              @click="scroll('Komponen')"
+              href="javascript:void(5)"
+              >Komponen Inti</a
             >
           </li>
           <li class="nav-item">
@@ -45,14 +64,6 @@
               @click="scroll('Kegiatan')"
               href="javascript:void(2)"
               >Kegiatan Pembelajaran</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              @click="scroll('Komponen')"
-              href="javascript:void(5)"
-              >Komponen Inti</a
             >
           </li>
           <li class="nav-item">
@@ -74,41 +85,48 @@
         </ul>
       </div>
       <!-- <div class="side-nav">
+        <CHeaderNav> <AppHeaderDropdownAccnt /></CHeaderNav>
+      </div> -->
+      <!-- <div class="side-nav">
         <a class="side-nav-left log-in" href="">Login</a>
         <a class="side-nav-right cd-signup sign-up" href="">Register</a>
       </div> -->
     </div>
   </nav>
 </template>
-
-<script >
+<!-- eslint-disable prettier/prettier -->
+<script>
+// import AppHeaderDropdownAccnt from '@/Pertemuan1/components/AppHeaderDropdownAccnt.vue'
 export default {
-  name: "AppNavbar",
+  name: 'AppNavbar',
+  components: {
+    // AppHeaderDropdownAccnt,
+  },
   data() {
     return {
       isSticky: false,
       active: false,
       button_active_state: false,
-    };
-  },
-  mounted() {
-    const that = this;
-    window.addEventListener("scroll", () => {
-      let scrollPos = window.scrollY;
-      if (scrollPos >= 100) {
-        that.isSticky = true;
-      } else {
-        that.isSticky = false;
-      }
-    });
-  },
-  methods: {
-  scroll(refName) {
-    const element = document.getElementById(refName);
-    if (element) {
-      element.scrollIntoView({behavior: "smooth" });
     }
   },
-},
-};
+  mounted() {
+    const that = this
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY
+      if (scrollPos >= 100) {
+        that.isSticky = true
+      } else {
+        that.isSticky = false
+      }
+    })
+  },
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    },
+  },
+}
 </script>

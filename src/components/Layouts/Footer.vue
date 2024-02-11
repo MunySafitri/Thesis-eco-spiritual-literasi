@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <footer class="footer-style-area pt-100">
     <div class="container">
@@ -60,10 +61,10 @@
             <h3>Company</h3>
             <ul class="quick-link">
               <li>
-                <a :href="''" target="_blank">Telkom Indonesia</a>
+                <a :href="''" target="_blank">Universitas Pendidikan Indonesia</a>
               </li>
               <li>
-                <a :href="''" target="_blank">About Telkom</a>
+                <a :href="''" target="_blank">About Universitas Pendidikan Indonesia</a>
               </li>
             </ul>
           </div>
@@ -122,7 +123,7 @@
     </div>
   </footer>
 </template>
-
+<!-- eslint-disable prettier/prettier -->
 <script>
 export default {
   name: "AppFooter",
