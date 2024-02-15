@@ -10550,8 +10550,8 @@ button:focus {
   color: #d42953;
 }
 .overview-content h1 {
-  font-size: 85px;
-  margin-bottom: 12px;
+  font-size: 80px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 .overview-content p {
@@ -10563,7 +10563,7 @@ button:focus {
   padding: 0;
   display: inline-flex;
   margin-top: 30px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .overview-content .overview-btn li {
   display: inline-block;

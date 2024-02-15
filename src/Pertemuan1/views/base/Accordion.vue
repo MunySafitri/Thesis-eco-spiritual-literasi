@@ -3,61 +3,85 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Accordion</strong>
+          <strong>Fenomena Hujan (Element Daya Rusak Air) </strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Click the accordions below to expand/collapse the accordion content.
-          </p>
-          <DocsExample href="components/accordion.html">
-            <CAccordion>
-              <CAccordionItem :item-key="1">
-                <CAccordionHeader> Accordion Item #1 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the first item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-              <CAccordionItem :item-key="2">
-                <CAccordionHeader> Accordion Item #2 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-              <CAccordionItem :item-key="3">
-                <CAccordionHeader> Accordion Item #3 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-            </CAccordion>
-          </DocsExample>
+          <CAccordion>
+            <CAccordionItem :item-key="1">
+              <CAccordionHeader>
+                ⮚ Apa yang pertama kali terlintas dalam pikiran kita ketika
+                mendengar kata air dan hujan?
+              </CAccordionHeader>
+              <CAccordionBody>
+                <strong>Dalam Al-Qur'an dijelaskan.</strong>
+                <br />
+                “Telah tampak kerusakan di darat dan di laut disebabkan karena
+                perbuatan tangan manusia; Allah menghendaki agar mereka
+                merasakan sebagian dari (akibat) perbuatan mereka, agar mereka
+                kembali (ke jalan yang benar). Katakanlah (Muhammad),
+                “Bepergianlah di bumi lalu lihatlah bagaimana kesudahan
+                orang-orang dahulu. Kebanyakan dari mereka adalah orang-orang
+                yang mempersekutukan (Allah).” (QS. Ar-rum (30) : Ayat 41-42)
+              </CAccordionBody>
+            </CAccordionItem>
+            <CAccordionItem :item-key="2">
+              <CAccordionHeader>
+                ⮚ Apakah kita sering beranggapan bahwa hujan itu sebagai suatu
+                bencana? Atau sebagai rasa syukur atas nikmat Allah sebagai sang
+                pencipta.
+              </CAccordionHeader>
+              <CAccordionBody>
+                <strong>Dalam Al-Qur'an dijelaskan.</strong>
+                <br />
+                "Lalu Kami bukakan pintu-pintu langit dengan (menurunkan) air
+                yang tercurah, dan Kami jadikan bumi menyemburkan mata-mata air
+                maka bertemulah (air-air) itu sehingga (meluap menimbulkan)
+                keadaan (bencana) yang telah ditetapkan. Dan Kami angkut dia
+                (Nuh) ke atas (kapal) yang terbuat dari papan dan pasak.
+                (al-Qamar (54) : ayat 11-13)
+              </CAccordionBody>
+            </CAccordionItem>
+            <CAccordionItem :item-key="3">
+              <CAccordionHeader> ⮚ Apa yang bisa kita amati? </CAccordionHeader>
+              <CAccordionBody>
+                Bila kita amati, pada saat musim hujan air sangat berlimpah
+                bahkan menimbulkan banjir di beberapa daerah. Sebaliknya,
+                apabila musim kemarau datang banyak tempat di sekitar kita yang
+                kekurangan air, kemanakah air tersebut? apakah jumlah air dari
+                semenjak diciptakan oleh Tuhan YME hingga sekarang berkurang
+                jumlahnya?<br /><br />
+                <strong>Dalam Al-Qur'an dijelaskan.</strong><br />
+                Dia (anaknya) menjawab, “Aku akan mencari perlindungan ke gunung
+                yang dapat menghindarkan aku dari air bah!” (Nuh) berkata,
+                “Tidak ada yang melindungi dari siksaan Allah pada hari ini
+                selain Allah yang Maha Penyayang.” Dan gelombang menjadi
+                penghalang antara keduanya; maka dia (anak itu) termasuk orang
+                yang ditenggelamkan. (QS Hud : ayat 43)
+              </CAccordionBody>
+            </CAccordionItem>
+            <br />
+            <strong>
+              <p class="bold">
+                Mari, kita cari tahu lebih banyak tentang keistimewaan air
+                melalui e-modul ini. Agar dapat membantu kita menemukan
+                fakta-fakta ilmiah yang menarik seputar air dan air dijelasakan
+                di dalam Al-Qur’an.
+              </p>
+            </strong>
+            <div>
+              <p>(+ Video Pendek tentang Banjir dan kekeringan)</p>
+              <video class="vid2" autoplay muted loop width="300" id="myVideo">
+                <source
+                  src="@/Pertemuan1/assets/VideoLatarBelakang.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+          </CAccordion>
         </CCardBody>
       </CCard>
-      <CCard class="mb-4">
+      <!-- <CCard class="mb-4">
         <CCardHeader>
           <strong>Vue Accordion</strong> <small>Flush</small>
         </CCardHeader>
@@ -115,64 +139,7 @@
             </CAccordion>
           </DocsExample>
         </CCardBody>
-      </CCard>
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Accordion</strong> <small>Always open</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>always-open</code> property to make accordion items stay
-            open when another item is opened.
-          </p>
-          <DocsExample href="components/accordion.html#always-open">
-            <CAccordion :active-item-key="2" always-open>
-              <CAccordionItem :item-key="1">
-                <CAccordionHeader> Accordion Item #1 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the first item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-              <CAccordionItem :item-key="2">
-                <CAccordionHeader> Accordion Item #2 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-              <CAccordionItem :item-key="3">
-                <CAccordionHeader> Accordion Item #3 </CAccordionHeader>
-                <CAccordionBody>
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </CAccordionBody>
-              </CAccordionItem>
-            </CAccordion>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
+      </CCard> -->
     </CCol>
   </CRow>
 </template>

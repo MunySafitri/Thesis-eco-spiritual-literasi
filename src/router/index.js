@@ -67,9 +67,14 @@ const routes = [
         component: () => import('@/Pertemuan1/views/Dashboard.vue'),
       },
       {
-        path: '/theme',
-        name: 'Theme',
-        redirect: '/theme/typography',
+        path: '/pertemuan1',
+        name: 'Penutup',
+        redirect: '/pertemuan1/penutup',
+      },
+      {
+        path: '/pertemuan1/kesimpulan',
+        name: 'Kesimpulan',
+        component: () => import('@/Pertemuan1/views/charts/Charts.vue'),
       },
       {
         path: '/theme/colors',
@@ -77,87 +82,87 @@ const routes = [
         component: () => import('@/Pertemuan1/views/theme/Colors.vue'),
       },
       {
-        path: '/theme/typography',
-        name: 'Typography',
-        component: () => import('@/Pertemuan1/views/theme/Typography.vue'),
+        path: '/pertemuan1/penutup',
+        name: 'Penutup',
+        component: () => import('@/Pertemuan1/views/theme/Penutup.vue'),
       },
       {
-        path: '/base',
-        name: 'Base',
+        path: '/pertemuan1',
+        name: 'Pertemuan1',
         component: {
           render() {
             return h(resolveComponent('router-view'))
           },
         },
-        redirect: '/base/breadcrumbs',
+        redirect: '/pertemuan1/elementair',
         children: [
           {
-            path: '/base/accordion',
-            name: 'Accordion',
+            path: '/pertemuan1/elementair',
+            name: 'Elementair',
             component: () => import('@/Pertemuan1/views/base/Accordion.vue'),
           },
           {
-            path: '/base/breadcrumbs',
-            name: 'Breadcrumbs',
+            path: '/pertemuan1/manfaat',
+            name: 'Manfaat',
             component: () => import('@/Pertemuan1/views/base/Breadcrumbs.vue'),
           },
           {
-            path: '/base/cards',
+            path: '/pertemuan1/cards',
             name: 'Cards',
             component: () => import('@/Pertemuan1/views/base/Cards.vue'),
           },
           {
-            path: '/base/carousels',
+            path: '/pertemuan1/carousels',
             name: 'Carousels',
             component: () => import('@/Pertemuan1/views/base/Carousels.vue'),
           },
           {
-            path: '/base/collapses',
+            path: '/pertemuan1/collapses',
             name: 'Collapses',
             component: () => import('@/Pertemuan1/views/base/Collapses.vue'),
           },
           {
-            path: '/base/list-groups',
+            path: '/pertemuan1/list-groups',
             name: 'List Groups',
             component: () => import('@/Pertemuan1/views/base/ListGroups.vue'),
           },
           {
-            path: '/base/navs',
+            path: '/pertemuan1/navs',
             name: 'Navs',
             component: () => import('@/Pertemuan1/views/base/Navs.vue'),
           },
           {
-            path: '/base/paginations',
+            path: '/pertemuan1/paginations',
             name: 'Paginations',
             component: () => import('@/Pertemuan1/views/base/Paginations.vue'),
           },
           {
-            path: '/base/placeholders',
+            path: '/pertemuan1/placeholders',
             name: 'Placeholders',
             component: () => import('@/Pertemuan1/views/base/Placeholders.vue'),
           },
           {
-            path: '/base/popovers',
+            path: '/pertemuan1/popovers',
             name: 'Popovers',
             component: () => import('@/Pertemuan1/views/base/Popovers.vue'),
           },
           {
-            path: '/base/progress',
+            path: '/pertemuan1/progress',
             name: 'Progress',
             component: () => import('@/Pertemuan1/views/base/Progress.vue'),
           },
           {
-            path: '/base/spinners',
+            path: '/pertemuan1/spinners',
             name: 'Spinners',
             component: () => import('@/Pertemuan1/views/base/Spinners.vue'),
           },
           {
-            path: '/base/tables',
+            path: '/bpertemuan1ase/tables',
             name: 'Tables',
             component: () => import('@/Pertemuan1/views/base/Tables.vue'),
           },
           {
-            path: '/base/tooltips',
+            path: '/pertemuan1/tooltips',
             name: 'Tooltips',
             component: () => import('@/Pertemuan1/views/base/Tooltips.vue'),
           },
@@ -244,11 +249,6 @@ const routes = [
             component: () => import('@/Pertemuan1/views/forms/Validation.vue'),
           },
         ],
-      },
-      {
-        path: '/charts',
-        name: 'Charts',
-        component: () => import('@/Pertemuan1/views/charts/Charts.vue'),
       },
       {
         path: '/icons',

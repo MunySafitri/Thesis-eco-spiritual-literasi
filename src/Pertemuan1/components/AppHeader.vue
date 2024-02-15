@@ -15,7 +15,7 @@
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
         <CNavItem>
-          <CNavLink href="/dashboard"> Dashboard </CNavLink>
+          <h5 style="padding-top: 8px">Pertemuan 1</h5>
         </CNavItem>
         <!-- <CNavItem>
           <CNavLink href="#">Users</CNavLink>
@@ -44,20 +44,20 @@
       </CHeaderNav>
     </CContainer>
     <CHeaderDivider />
-    <CContainer fluid>
+    <!-- <CContainer fluid>
       <AppBreadcrumb />
-    </CContainer>
+    </CContainer> -->
   </CHeader>
 </template>
 
 <script>
-import AppBreadcrumb from './AppBreadcrumb'
+// import AppBreadcrumb from './AppBreadcrumb'
 import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
 
 export default {
   name: 'AppHeader',
   components: {
-    AppBreadcrumb,
+    // AppBreadcrumb,
     AppHeaderDropdownAccnt,
   },
 }

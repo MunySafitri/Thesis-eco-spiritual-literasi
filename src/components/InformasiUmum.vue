@@ -2,8 +2,8 @@
 <template>
   <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
-      <video class="vid2" autoplay muted loop width="400" id="myVideo">
-        <source src="../assets/img/VideoLatarBelakang.mp4" type="video/mp4" />
+      <video class="vid2" autoplay loop width="400" id="myVideo">
+        <source src="../assets/Surat-ALbaqarah.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
       <!-- <RouterLink to="/">

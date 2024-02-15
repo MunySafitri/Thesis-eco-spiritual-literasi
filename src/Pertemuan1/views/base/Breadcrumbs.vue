@@ -3,52 +3,15 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Breadcrumb</strong>
+          <strong>Manfaat Hujan Bagi Tumbuhan (element Daya Guna Air) </strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            The breadcrumb navigation provides links back to each previous page
-            the user navigated through and shows the current location in a
-            website or an application. You don’t have to add separators, because
-            they automatically added in CSS through
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">
-              <code>::before</code>
-            </a>
-            and
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
-              <code>content</code>
-            </a>
-            .
+          <p>
+            Berkat turunnya air hujan, segala macam tumbuh-tumbuhan itu bisa
+            hidup menjadi banyak daunya, maupun buahnya. Sehingga semua itu
+            menjadi sumber rezeki bagi manusia. (+Video Pendek tumbuhan
+            subur/tumbuh dengan kena air hujan)
           </p>
-          <DocsExample href="components/breadcrumb.html">
-            <CBreadcrumb>
-              <CBreadcrumbItem>
-                <CLink href="#">Home</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem active>Library</CBreadcrumbItem>
-            </CBreadcrumb>
-            <CBreadcrumb>
-              <CBreadcrumbItem>
-                <CLink href="#">Home</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem>
-                <CLink href="#">Library</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem active>Data</CBreadcrumbItem>
-            </CBreadcrumb>
-            <CBreadcrumb>
-              <CBreadcrumbItem>
-                <CLink href="#">Home</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem>
-                <CLink href="#">Library</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem>
-                <CLink href="#">Data</CLink>
-              </CBreadcrumbItem>
-              <CBreadcrumbItem active>Bootstrap</CBreadcrumbItem>
-            </CBreadcrumb>
-          </DocsExample>
         </CCardBody>
       </CCard>
     </CCol>
