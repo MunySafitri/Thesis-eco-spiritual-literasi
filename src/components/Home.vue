@@ -19,17 +19,17 @@
           </div>
           <RouterLink to="/login">
             <div class="d-grid">
-              <CButton color="success">Registration</CButton>
+              <CButton color="primary">Registration</CButton>
             </div>
           </RouterLink>
           <RouterLink to="/pretest">
             <div class="d-grid">
-              <CButton color="success">Pretest</CButton>
+              <CButton color="primary">Pretest</CButton>
             </div>
           </RouterLink>
           <RouterLink to="/overview">
             <div class="d-grid">
-              <CButton color="success">Selamat Belajar</CButton>
+              <CButton color="primary">Selamat Belajar</CButton>
             </div>
           </RouterLink>
         </div>

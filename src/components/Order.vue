@@ -1,6 +1,6 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
-  <div id="Order" class="Order-bg pt-100 pb-70">
+  <div id="Order" class="bgmix">
     <div class="container">
       <div :class="'main-section-title'">
         <span class="sub-title"># CHOOSE YOUR ASSESSMENT</span>
