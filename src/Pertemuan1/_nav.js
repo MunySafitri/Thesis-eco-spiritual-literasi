@@ -7,7 +7,7 @@ export default [
     component: 'CNavGroup',
     name: 'Fenomena Hujan',
     to: '/base',
-    icon: 'cil-puzzle',
+    icon: 'cilRain',
     items: [
       {
         component: 'CNavItem',
@@ -16,14 +16,14 @@ export default [
       },
       {
         component: 'CNavItem',
-        name: 'Manfaat Hujan',
+        name: 'Element Daya Guna Air',
         to: '/pertemuan1/manfaat',
       },
-      {
-        component: 'CNavItem',
-        name: 'Element Konservasi',
-        to: '/base/cards',
-      },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Element Konservasi',
+      //   to: '/base/cards',
+      // },
       // {
       //   component: 'CNavItem',
       //   name: 'Tables',
@@ -37,15 +37,56 @@ export default [
     ],
   },
   {
-    component: 'CNavItem',
-    name: 'Penutup',
-    to: '/pertemuan1/penutup',
-    icon: 'cil-chart-pie',
+    component: 'CNavGroup',
+    name: 'Siklus Air',
+    to: '/base',
+    icon: 'cilRecycle',
+    items: [
+      {
+        component: 'CNavItem',
+        name: 'Penjelasan siklus air',
+        to: '/base/cards',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Tahapan siklus air',
+        to: '/base/tables',
+      },
+    ],
   },
   {
     component: 'CNavItem',
-    name: 'Kesimpulan',
-    to: '/pertemuan1/kesimpulan',
-    icon: 'cil-chart-pie',
+    name: 'Manfaat Siklus Air',
+    to: '/base/Navs',
+    icon: 'cilTask',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Element Konservasi Air',
+    to: '/pertemuan1/penutup',
+    icon: 'cilShareAlt',
+  },
+  {
+    component: 'CNavGroup',
+    name: 'Penutup',
+    to: '/base',
+    icon: 'cilDrop',
+    items: [
+      {
+        component: 'CNavItem',
+        name: 'Rangkuman',
+        to: '/base/cards',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Kesimpulan',
+        to: '/base/tables',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Saran',
+        to: '/base/tooltips',
+      },
+    ],
   },
 ]

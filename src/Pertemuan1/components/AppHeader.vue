@@ -4,7 +4,7 @@
       <CHeaderToggler class="ps-1" @click="$store.commit('toggleSidebar')">
         <CIcon icon="cil-menu" size="lg" />
       </CHeaderToggler>
-      <CHeaderBrand class="mx-auto d-lg-none" to="/">
+      <CHeaderBrand class="mx-auto d-lg-none" to="/overview">
         <!-- <CIcon :icon="logo" height="48" alt="Logo" /> -->
         <img
           class="black-logo"
@@ -14,9 +14,12 @@
         />
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
-        <CNavItem>
-          <h5 style="padding-top: 8px">Pertemuan 1</h5>
-        </CNavItem>
+        <CNavLink to="/overview">
+          <CNavItem
+            ><CIcon icon="cil-arrow-bottom" size="xxl" />
+            <h5 style="padding-top: 8px">Pertemuan 1</h5>
+          </CNavItem>
+        </CNavLink>
         <!-- <CNavItem>
           <CNavLink href="#">Users</CNavLink>
         </CNavItem>
@@ -52,6 +55,7 @@
 
 <script>
 // import AppBreadcrumb from './AppBreadcrumb'
+import { CNavLink } from '@coreui/vue'
 import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
 
 export default {
@@ -59,6 +63,7 @@ export default {
   components: {
     // AppBreadcrumb,
     AppHeaderDropdownAccnt,
+    CNavLink,
   },
 }
 </script>

@@ -7,10 +7,12 @@
       <CDropdownHeader component="h6" class="bg-light fw-semibold py-2">
         Account Settings
       </CDropdownHeader>
-      <CDropdownItem> <CIcon icon="cil-user" /> Profile </CDropdownItem>
-      <CDropdownItem> <CIcon icon="cil-settings" /> Settings </CDropdownItem>
+      <!-- <CDropdownItem> <CIcon icon="cil-user" /> Profile </CDropdownItem>
+      <CDropdownItem> <CIcon icon="cil-settings" /> Settings </CDropdownItem> -->
       <RouterLink to="/overview">
-        <CDropdownItem> <CIcon icon="cil-file" /> Overview </CDropdownItem>
+        <CDropdownItem>
+          <CIcon icon="cilArrowThickToLeft" /> Overview
+        </CDropdownItem>
       </RouterLink>
       <CDropdownDivider />
       <RouterLink to="/home">
