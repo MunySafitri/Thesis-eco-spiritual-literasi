@@ -17,21 +17,32 @@
               </center>
             </div>
           </div>
-          <RouterLink to="/login">
-            <div class="d-grid">
-              <CButton color="primary">Registration</CButton>
-            </div>
-          </RouterLink>
-          <RouterLink to="/pretest">
-            <div class="d-grid">
-              <CButton color="primary">Pretest</CButton>
-            </div>
-          </RouterLink>
-          <RouterLink to="/overview">
-            <div class="d-grid">
-              <CButton color="primary">Selamat Belajar</CButton>
-            </div>
-          </RouterLink>
+          <center>
+            <RouterLink to="/login">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Registration</CButton>
+              </div>
+            </RouterLink>
+            <RouterLink to="/pretest">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Pretest</CButton>
+              </div>
+            </RouterLink>
+            <RouterLink to="/overview">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Selamat Belajar</CButton>
+              </div>
+            </RouterLink>
+          </center>
         </div>
       </div>
     </div>

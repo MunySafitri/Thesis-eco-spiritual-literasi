@@ -6,18 +6,18 @@ export default [
   {
     component: 'CNavGroup',
     name: 'Fenomena Hujan',
-    to: '/base',
+    to: '/pertemuan1',
     icon: 'cilRain',
     items: [
       {
         component: 'CNavItem',
         name: 'Elemen daya rusak air',
-        to: '/pertemuan1/elementair',
+        to: 'pertemuan1/element-daya-rusak-air',
       },
       {
         component: 'CNavItem',
         name: 'Element Daya Guna Air',
-        to: '/pertemuan1/manfaat',
+        to: '/pertemuan1/element-daya-guna-air',
       },
       // {
       //   component: 'CNavItem',
@@ -39,53 +39,53 @@ export default [
   {
     component: 'CNavGroup',
     name: 'Siklus Air',
-    to: '/base',
+    to: '/pertemuan1',
     icon: 'cilRecycle',
     items: [
       {
         component: 'CNavItem',
         name: 'Penjelasan siklus air',
-        to: '/base/cards',
+        to: '/pertemuan1/penjelasan-siklus',
       },
       {
         component: 'CNavItem',
         name: 'Tahapan siklus air',
-        to: '/base/tables',
+        to: '/pertemuan1/tahapan-siklus',
       },
     ],
   },
   {
     component: 'CNavItem',
     name: 'Manfaat Siklus Air',
-    to: '/base/Navs',
+    to: '/pertemuan1/manfaat',
     icon: 'cilTask',
   },
   {
     component: 'CNavItem',
     name: 'Element Konservasi Air',
-    to: '/pertemuan1/penutup',
+    to: '/pertemuan1/elemen-konservasi',
     icon: 'cilShareAlt',
   },
   {
     component: 'CNavGroup',
     name: 'Penutup',
-    to: '/base',
+    to: '/pertemuan1',
     icon: 'cilDrop',
     items: [
       {
         component: 'CNavItem',
         name: 'Rangkuman',
-        to: '/base/cards',
+        to: '/pertemuan1/rangkuman',
       },
       {
         component: 'CNavItem',
         name: 'Kesimpulan',
-        to: '/base/tables',
+        to: '/pertemuan1/kesimpulan',
       },
       {
         component: 'CNavItem',
         name: 'Saran',
-        to: '/base/tooltips',
+        to: '/pertemuan1/saran',
       },
     ],
   },

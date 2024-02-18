@@ -33,7 +33,7 @@
                   >
                     <div class="accordion-body">
                       <div class="choose-content">
-                        <a :href="'/pertemuan1/elementair'" :class="'choose-btn'"
+                        <a :href="'/pertemuan1/element-daya-rusak-air'" :class="'choose-btn'"
                           >Kerjakan Sekarang</a
                         >
                       </div>

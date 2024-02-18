@@ -15,9 +15,13 @@
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
         <CNavLink to="/overview">
-          <CNavItem
-            ><CIcon icon="cil-arrow-bottom" size="xxl" />
-            <h5 style="padding-top: 8px">Pertemuan 1</h5>
+          <CNavItem>
+            <a :href="'/overview'">
+              <i class="bi bi-arrow-bar-left"></i>
+              Pertemuan 1</a
+            >
+            <!-- <CIcon icon="cil-arrow-bottom" size="xxl" />
+            <h5 style="padding-top: 8px">Pertemuan 1</h5> -->
           </CNavItem>
         </CNavLink>
         <!-- <CNavItem>
