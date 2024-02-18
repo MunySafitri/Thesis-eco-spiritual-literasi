@@ -12,7 +12,7 @@ export default [
       {
         component: 'CNavItem',
         name: 'Elemen daya rusak air',
-        to: 'pertemuan1/element-daya-rusak-air',
+        to: 'element-daya-rusak-air',
       },
       {
         component: 'CNavItem',

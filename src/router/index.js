@@ -59,11 +59,11 @@ const routes = [
     path: '/pertemuan1',
     name: 'Pertemuan1',
     component: DefaultLayout,
-    redirect: '/pertemuan1',
+    redirect: '/pertemuan1/element-daya-rusak-air',
     children: [
       {
-        path: '/pertemuan1',
-        name: 'Pertemuan1',
+        path: '/pertemuan1/element-daya-rusak-air',
+        name: 'Daya-Rusak',
         component: {
           render() {
             return h(resolveComponent('router-view'))

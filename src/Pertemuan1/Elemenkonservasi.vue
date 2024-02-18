@@ -3,353 +3,177 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue List Group</strong> <small>Basic example</small>
+          <strong>Penanaman Sikap Spiritual </strong>
+          <small>(Element Konservasi Air)</small>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            The default list group is an unordered list with items and the
-            proper CSS classes. Build upon it with the options that follow, or
-            with your CSS as required.
+          <h6>
+            ⮚ Apakah yang akan terjadi dengan makhluk hidup jika tidak ada
+            siklus air dibumi?
+          </h6>
+          <br />
+          <ul style="list-style-type: square">
+            <li>
+              Jika tidak ada siklus air maka air di permukaan akan segera kotor,
+              keruh dan berwarna hijau. Air seperti ini tidak layak konsumsi dan
+              menjadi sumber penyakit bagi makhluk hidup, sehingga makhluk hidup
+              akan segera punah.
+            </li>
+            <li>
+              Jika tidak ada siklus air maka tidak ada pasokan air bersih ke
+              daerah dataran tinggi, sehingga semua makhluk hidup di sana akan
+              segera punah juga karena kebutuhan airnya tidak dapat tercukupi.
+            </li>
+            <li>
+              Siklus air bukan semata fenomena alam, melainkan suatu mekanisme
+              yang sengaja diciptakan oleh Allah YME dalam rangka memelihara
+              makhluknya yang ditebarkan di muka Bumi. Sebab jika tidak ada
+              mekanisme itu maka semua makhluk hidup di Bumi tidak akan bisa
+              bertahan lama hidup di muka Bumi dan akan segera punah.
+            </li>
+            <li>Secara geografi dalam penggunaan daya serap.</li>
+          </ul>
+          <h6>
+            ⮚ Bagaimana effek pada tanamanam jika tidak ada lagi saya serap atau
+            semuanya dibeton???
+          </h6>
+          <br />
+          <p>
+            Kemampuan tanah untuk menyerap air berpengaruh pada pertumbuhan
+            tanaman. Tanah yang mampu menyimpan air lebih lama memberikan
+            dukungan lebih baik bagi tanaman selama periode kering.
           </p>
-          <DocsExample href="components/list-group.html">
-            <CListGroup>
-              <CListGroupItem>Cras justo odio</CListGroupItem>
-              <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-              <CListGroupItem>Morbi leo risus</CListGroupItem>
-              <CListGroupItem>Porta ac consectetur ac</CListGroupItem>
-              <CListGroupItem>Vestibulum at eros</CListGroupItem>
-            </CListGroup>
-          </DocsExample>
         </CCardBody>
       </CCard>
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue List Group</strong> <small>Active items</small>
+          <strong>Fungsi Tumbuhan</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>active</code> boolean property to a
-            <code>&lt;CListGroupItem&gt;</code> to show the current active
-            selection.
+          <p>
+            <strong>⮚ Mengurangi Risiko Erosi:</strong><br />
+            Tanah dengan daya serap yang baik cenderung lebih stabil dan mampu
+            menahan air hujan, mengurangi risiko erosi tanah yang dapat terjadi
+            ketika air hujan mengalir permukaan.<br />
+            <strong>⮚ Menjaga Keseimbangan Ekosistem:</strong> <br />Daya serap
+            tanah dan vegetasi memainkan peran kunci dalam menjaga keseimbangan
+            ekosistem. Tanah yang dapat menyerap air dengan baik membantu
+            menciptakan lingkungan yang sesuai untuk berbagai bentuk kehidupan.
+            <br />
+            <strong>⮚ Mengurangi Risiko Kekeringan:</strong><br />
+            Tanah dengan daya serap yang baik dapat menyimpan air lebih lama,
+            yang dapat membantu mengurangi risiko kekeringan di wilayah-wilayah
+            yang mengalami musim kering.<br />
+            <strong>⮚ Peningkatan Kualitas Air:</strong><br />
+            Tanah yang mampu menyerap air dengan baik juga dapat berperan dalam
+            menyaring dan membersihkan air yang meresap ke dalam tanah,
+            meningkatkan kualitas air tanah.
           </p>
-          <DocsExample href="components/list-group.html#active-items">
-            <CListGroup>
-              <CListGroupItem active>Cras justo odio</CListGroupItem>
-              <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-              <CListGroupItem>Morbi leo risus</CListGroupItem>
-              <CListGroupItem>Porta ac consectetur ac</CListGroupItem>
-              <CListGroupItem>Vestibulum at eros</CListGroupItem>
-            </CListGroup>
-          </DocsExample>
         </CCardBody>
       </CCard>
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue List Group</strong> <small>Disabled items</small>
+          <strong>Kaitan dengan Al-Qur'an</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>disabled</code> boolean property to a
-            <code>&lt;CListGroupItem&gt;</code> to make it appear disabled.
-          </p>
-          <DocsExample href="components/list-group.html#disabled-items">
-            <CListGroup>
-              <CListGroupItem disabled>Cras justo odio</CListGroupItem>
-              <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-              <CListGroupItem>Morbi leo risus</CListGroupItem>
-              <CListGroupItem>Porta ac consectetur ac</CListGroupItem>
-              <CListGroupItem>Vestibulum at eros</CListGroupItem>
-            </CListGroup>
-          </DocsExample>
+          <h6>
+            ⮚ Ayat 17 surat Ar-Ra’du meliputi kejadian merupakan proses
+            terbentuknya sumber-sumber air dibumi yang terbagi menjadi 2 bagian.
+          </h6>
+          <ol type="1">
+            <li>
+              Mata air yang tersimpan dalam perut bumi.Kedua, air sungai dan air
+              yang berasal dari sumur. Dalam komponen hidrologi, air yang
+              pertama disebut air tanah.
+            </li>
+            <li>Air yang kedua disebut air permukaan.</li>
+          </ol>
+          <h6>
+            ⮚ Kemukjizatan Imiah lain mengenai siklus hidrologi dalam Al-Qur’an
+            adalah:
+          </h6>
+          <ol type="1">
+            <li>Air Hujan Terasa Tawar, Bukan Asin.</li>
+            <li>Manusia Tidak Mampu Menyimpan Air Hujan Di Bumi.</li>
+            <li>Gunung-gunung Tinggi Penyebab Turunnya Hujan</li>
+          </ol>
+          <br />
+          <strong
+            >"Sesungguhnya Aku hendak menjadikan seorang khalifah di muka bumi."
+            (Surat Al-Baqarah Ayat 30)</strong
+          >
         </CCardBody>
       </CCard>
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue List Group</strong> <small>Links and buttons</small>
+          <strong>Contoh Lain</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Use <code>&lt;a&gt;</code>s or <code>&lt;button&gt;</code>s to
-            create <em>actionable</em> list group items with hover, disabled,
-            and active states by adding
-            <code>component=&#34;a|button&#34;</code>. We separate these
-            pseudo-classes to ensure list groups made of non-interactive
-            elements (like <code>&lt;li&gt;</code>s or
-            <code>&lt;div&gt;</code>
-            s) don&#39;tprovide a click or tap affordance.
-          </p>
-          <DocsExample href="components/list-group.html#links-and-buttons">
-            <CListGroup>
-              <CListGroupItem component="a" href="#" active>
-                Cras justo odio
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#">
-                Dapibus ac facilisis in
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#">
-                Morbi leo risus
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#">
-                Porta ac consectetur ac
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#" disabled>
-                Vestibulum at eros
-              </CListGroupItem>
-            </CListGroup>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>Flush</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>flush</code> boolean property to remove some borders and
-            rounded corners to render list group items edge-to-edge in a parent
-            container (e.g., cards).
-          </p>
-          <DocsExample href="components/list-group.html#flush">
-            <CListGroup flush>
-              <CListGroupItem>Cras justo odio</CListGroupItem>
-              <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-              <CListGroupItem>Morbi leo risus</CListGroupItem>
-              <CListGroupItem>Porta ac consectetur ac</CListGroupItem>
-              <CListGroupItem>Vestibulum at eros</CListGroupItem>
-            </CListGroup>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>Horizontal</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>layout=&#34;horizontal&#34;</code> to change the layout of
-            list group items from vertical to horizontal across all breakpoints.
-            Alternatively, choose a responsive variant
-            <code
-              >.layout=&#34;horizontal-&#123;sm | md | lg | xl |
-              xxl&#125;&#34;</code
-            >
-            to make a list group horizontal starting at that breakpoint&#39;s
-            <code>min-width</code>. Currently
-            <strong
-              >horizontal list groups cannot be combined with flush list
-              groups.</strong
-            >
-          </p>
-          <DocsExample href="components/list-group.html#flush">
-            <template
-              v-for="item in ['', '-sm', '-md', '-lg', '-xl', '-xxl']"
-              :key="item"
-            >
-              <CListGroup class="mb-2" :layout="'horizontal' + item">
-                <CListGroupItem>Cras justo odio</CListGroupItem>
-                <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-                <CListGroupItem>Morbi leo risus</CListGroupItem>
-              </CListGroup>
-            </template>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>Contextual classes</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Use contextual classes to style list items with a stateful
-            background and color.
-          </p>
-          <DocsExample href="components/list-group.html#contextual-classes">
-            <CListGroup>
-              <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
-              <CListGroupItem
-                v-for="item in [
-                  'primary',
-                  'secondary',
-                  'success',
-                  'danger',
-                  'warning',
-                  'info',
-                  'light',
-                  'dark',
-                ]"
-                :key="item"
-                :color="item"
-                >A simple {{ item }} list group item</CListGroupItem
-              >
-            </CListGroup>
-          </DocsExample>
-          <p class="text-medium-emphasis small">
-            Contextual classes also work with <code>&lt;a&gt;</code>s or
-            <code>&lt;button&gt;</code>s. Note the addition of the hover styles
-            here not present in the previous example. Also supported is the
-            <code>active</code> state; apply it to indicate an active selection
-            on a contextual list group item.
-          </p>
-          <DocsExample href="components/list-group.html#contextual-classes">
-            <CListGroup>
-              <CListGroupItem component="a" href="#"
-                >Dapibus ac facilisis in</CListGroupItem
-              >
-              <CListGroupItem
-                v-for="item in [
-                  'primary',
-                  'secondary',
-                  'success',
-                  'danger',
-                  'warning',
-                  'info',
-                  'light',
-                  'dark',
-                ]"
-                :key="item"
-                component="a"
-                href="#"
-                :color="item"
-                >A simple {{ item }} list group item</CListGroupItem
-              >
-            </CListGroup>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>With badges</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add badges to any list group item to show unread counts, activity,
-            and more.
-          </p>
-          <DocsExample href="components/list-group.html#with-badges">
-            <CListGroup>
-              <CListGroupItem
-                class="d-flex justify-content-between align-items-center"
-              >
-                Cras justo odio
-                <CBadge color="primary" shape="rounded-pill"> 14 </CBadge>
-              </CListGroupItem>
-              <CListGroupItem
-                class="d-flex justify-content-between align-items-center"
-              >
-                Dapibus ac facilisis in
-                <CBadge color="primary" shape="rounded-pill"> 2 </CBadge>
-              </CListGroupItem>
-              <CListGroupItem
-                class="d-flex justify-content-between align-items-center"
-              >
-                Morbi leo risus
-                <CBadge color="primary" shape="rounded-pill"> 1 </CBadge>
-              </CListGroupItem>
-            </CListGroup>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>Custom content</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add nearly any HTML within, even for linked list groups like the one
-            below, with the help of
-            <a href="https://coreui.io/docs/utilities/flex/"
-              >flexbox utilities</a
-            >.
-          </p>
-          <DocsExample href="components/list-group.html#custom-content">
-            <CListGroup>
-              <CListGroupItem component="a" href="#" active>
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">
-                  Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                  diam eget risus varius blandit.
-                </p>
-                <small>Donec id elit non mi porta.</small>
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small class="text-medium-emphasis">3 days ago</small>
-                </div>
-                <p class="mb-1">
-                  Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                  diam eget risus varius blandit.
-                </p>
-                <small class="text-medium-emphasis"
-                  >Donec id elit non mi porta.</small
-                >
-              </CListGroupItem>
-              <CListGroupItem component="a" href="#">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">List group item heading</h5>
-                  <small class="text-medium-emphasis">3 days ago</small>
-                </div>
-                <p class="mb-1">
-                  Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                  diam eget risus varius blandit.
-                </p>
-                <small class="text-medium-emphasis"
-                  >Donec id elit non mi porta.</small
-                >
-              </CListGroupItem>
-            </CListGroup>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue List Group</strong> <small>Checkboxes and radios</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            Place CoreUI&#39;s checkboxes and radios within list group items and
-            customize as needed.
-          </p>
-          <DocsExample href="components/list-group.html#checkboxes-and-radios">
-            <CListGroup>
-              <CListGroupItem>
-                <CFormCheck label="Cras justo odio" />
-              </CListGroupItem>
-              <CListGroupItem>
-                <CFormCheck label="Dapibus ac facilisis in" checked />
-              </CListGroupItem>
-              <CListGroupItem>
-                <CFormCheck label="Morbi leo risus" checked />
-              </CListGroupItem>
-              <CListGroupItem>
-                <CFormCheck label="orta ac consectetur ac" />
-              </CListGroupItem>
-              <CListGroupItem>
-                <CFormCheck label="Vestibulum at eros" />
-              </CListGroupItem>
-            </CListGroup>
-          </DocsExample>
+          <h6>
+            <ul style="list-style-type: circle">
+              <li>
+                Ketika kita didalam pesawat terbang kita merasakan kedinginan,
+                padahal sudah mencapai ketinggian tertentu dengan suhu diluar
+                pesawat mencapai – 0C dan ternyata suhunya sangatlah rendah.
+                Pesawat terbang tersebut sudah terbang mendekati sumber kalor
+                yaitu matahari.
+              </li>
+              <li>
+                Dengan merenungkan tanda-tanda kebesaran Allah dalam alam
+                semesta, manusia diharapkan untuk berperilaku bijaksana dan
+                menjaga keseimbangan ekosistem sebagai wujud rasa syukur dan
+                ketaatan kepada Sang Pencipta.
+              </li>
+              <li>
+                keberadaan daya serap tanah yang baik adalah kunci untuk
+                mengurangi risiko banjir dan menjaga kestabilan lingkungan.
+                Tanah yang mampu menyerap air dengan baik membantu meredam air
+                hujan, mencegah aliran permukaan yang cepat, dan menjaga
+                keseimbangan ekosistem.
+              </li>
+              <li>
+                Kondisi ini harus terjadi meskipun terkesan janggal, sebab jika
+                tidak maka uap air yang dihasilkan dari proses evaporasi dan
+                transpirasi tidak akan bisa naik ke atmosfer atas secara
+                konveksi dan tidak akan terjadi kondensasi yang menghasilkan
+                awan. Jika tidak ada awan maka sudah pasti tidak akan turun
+                hujan untuk mengirim air bersih ke seluruh makhluk hidup yang
+                ada di muka bumi ini.
+              </li>
+              <ul style="list-style-type: circle">
+                <li>Sungguh Allah maha mengetahui</li>
+                <li>Sungguh Allah maha Adil</li>
+                <li>Sungguh Allah maha pemberi segalanya</li>
+              </ul>
+              <li>
+                Bagi kita manusia yang memiliki keterbatasan ilmu, tidak akan
+                terpikir bagaimana kondisi ini dapat diciptakan, bagaimana
+                membuat suhu udara makin rendah saat mendekati sumbernya yaitu
+                matahari?
+              </li>
+            </ul>
+          </h6>
+          <h6>
+            ⮚ Begitulah ciptaan Tuhan YME yang harus kita yakini, yang harus
+            kita syukuri.
+          </h6>
+          <h6>
+            ⮚ Tetapi bagi Allah YME yang ilmunya maha luas, tentunya tidak sulit
+            untuk menciptakan kondisi ini.
+          </h6>
+          <h6>
+            ⮚ Daya serap tanah menjadi bagian dari tata cara Allah dalam
+            menyediakan air sebagai sumber kehidupan. Manusia, sebagai khalifah
+            di bumi, memiliki tanggung jawab untuk menjaga dan merawat alam,
+            termasuk menjaga daya serap tanah agar dapat berfungsi sebagaimana
+            mestinya.
+          </h6>
         </CCardBody>
       </CCard>
     </CCol>

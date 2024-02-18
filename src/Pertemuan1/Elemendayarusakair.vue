@@ -3,7 +3,8 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Fenomena Hujan (Element Daya Rusak Air) </strong>
+          <strong>Fenomena Hujan </strong
+          ><small>(Element Daya Rusak Air) </small>
         </CCardHeader>
         <CCardBody>
           <h6>
@@ -21,6 +22,7 @@
             mereka adalah orang-orang yang mempersekutukan (Allah).” (QS. Ar-rum
             (30) : Ayat 41-42)
           </p>
+          <br />
           <h6>
             ⮚ Apakah kita sering beranggapan bahwa hujan itu sebagai suatu
             bencana? Atau sebagai rasa syukur atas nikmat Allah sebagai sang
@@ -37,6 +39,7 @@
               (kapal) yang terbuat dari papan dan pasak. (al-Qamar (54) : ayat
               11-13)
             </p>
+            <br />
             <h6>⮚ Apa yang bisa kita amati?</h6>
             <p>
               Bila kita amati, pada saat musim hujan air sangat berlimpah bahkan
@@ -62,12 +65,20 @@
               </p>
             </strong>
             <div>
-              <p>(+ Video Pendek tentang Banjir dan kekeringan)</p>
+              <p>+ Video Pendek tentang Banjir</p>
               <video class="vid2" autoplay muted loop width="300" id="myVideo">
                 <source
-                  src="@/Pertemuan1/assets/VideoLatarBelakang.mp4"
+                  src="@/assets/img/VideoLatarBelakang.mp4"
                   type="video/mp4"
                 />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <br />
+            <div>
+              <p>+ Video Pendek tentang kekeringan</p>
+              <video class="vid2" autoplay muted loop width="300" id="myVideo">
+                <source src="@/assets/video/infiltrasi.mp4" type="video/mp4" />
                 Your browser does not support HTML5 video.
               </video>
             </div>

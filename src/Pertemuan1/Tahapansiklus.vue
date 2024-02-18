@@ -3,173 +3,186 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>Slide only</small>
+          <strong>Tahapan Terjadinya Hujan</strong>
+          <small>(Siklus hujan)</small>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Here’s a carousel with slides
-          </p>
-          <DocsExample href="components/carousel.html#slides-only">
-            <CCarousel>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <h6>
+            Hujan terjadi ketika Air naik dari muka Bumi ke Atmosfer dan turun
+            kembali ke muka Bumi melalui beberapa proses:
+          </h6>
+          <table class="bold" style="width: 100%">
+            <tr>
+              <td style="width: 50%">Urutan fase siklus air:</td>
+              <td style="width: 50%">Urutan proses siklus air:</td>
+            </tr>
+            <tr>
+              <td>⮚ Air permukaan</td>
+              <td>• Evaporasi/transpirasi</td>
+            </tr>
+            <tr>
+              <td>⮚ Uap air</td>
+              <td>• Kondensasi</td>
+            </tr>
+            <tr>
+              <td>⮚ Tetes awan</td>
+              <td>• Presipitasi</td>
+            </tr>
+            <tr>
+              <td>⮚Tetes hujan</td>
+              <td>• Infiltrasi</td>
+            </tr>
+            <tr>
+              <td>⮚ kemudian kembali lagi dalam bentuk Air permukaan</td>
+              <td>• Koleksi</td>
+            </tr>
+          </table>
+          <br />
+          <strong>Beberapa ayat Al-Qur'an menjelaskan.</strong>
+          <br />
+          <ol type="1">
+            <li>Penguapan (Evaporasi) terdapat dalam surat Ar-Ruum ayat 48</li>
+            <li>Hujan (Presipitasi) dalam surat An-Nuur ayat 43</li>
+            <li>Infiltrasi dalam surat Al-Mukminun ayat 18</li>
+            <li>Limpasan Permukaan pada Surat Ar-Ra’du ayat 17</li>
+            <li>Kadar hujan terdapat dalam surat Az-Zukhruf ayat 11</li>
+          </ol>
         </CCardBody>
       </CCard>
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>With controls</small>
+          <strong>Evaporasi</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Adding in the previous and next controls by
-            <code>controls</code> property.
+          <h6>⮚ Apa itu evaporasi?</h6>
+          <p>
+            Evaporasi terjadi saat terkena sinar matahari dan menyerap kalor,
+            maka molekul-molekul air yang ada dipermukaan perairan akan terlepas
+            dari ikatannya dan masuk ke atmosfer bawah. Peristiwa ini disebut
+            sebagai menguap atau evaporasi yang menghasilkan uap air.
           </p>
-          <DocsExample href="components/carousel.html#with-controls">
-            <CCarousel controls>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <br />
+          <p>Video Evaporasi</p>
+          <div>
+            <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <source
+                src="@/assets/video/Evaporasilautan.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </CCardBody>
       </CCard>
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>With indicators</small>
+          <strong>Transpirasi</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            You can attach the indicators to the carousel, lengthwise the
-            controls, too.
+          <h6>⮚ Apa itu transpirasi?</h6>
+          <p>
+            Transpirasi terjadi saat kumpulan molekul-molekul air (uap air) juga
+            dapat dilepaskan ke atmosfer dari daun-daun pepohonan. Peristiwa ini
+            disebut sebagai transpirasi.
           </p>
-          <DocsExample href="components/carousel.html#with-indicators">
-            <CCarousel controls indicators>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <br />
+          <p>Video Transpirasi</p>
+          <div>
+            <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <source
+                src="@/assets/video/Evatranspirasi.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </CCardBody>
       </CCard>
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>With captions</small>
+          <strong>Kondensasi</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            You can add captions to slides with the
-            <code>&lt;CCarouselCaption&gt;</code> element within any
-            <code>&lt;CCarouselItem&gt;</code>. They can be immediately hidden
-            on smaller viewports, as shown below, with optional
-            <a href="https://coreui.io/4.0/utilities/display"
-              >display utilities</a
-            >. We hide them with <code>.d-none</code> and draw them back on
-            medium-sized devices with <code>.d-md-block</code>.
+          <h6>⮚ Apa itu kondensasi?</h6>
+          <p>
+            Kondensasi terjadi Ketika uap air hangat sampai di atas yang dingin,
+            maka uap air akan melepaskan kalor ke lingkungan sehingga wujudnya
+            akan berubah menjadi tetes air yang ukurannya amat kecil dan disebut
+            sebagai tetes awan.
           </p>
-          <DocsExample href="components/carousel.html#with-captions">
-            <CCarousel controls indicators>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-                <CCarouselCaption class="d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </CCarouselCaption>
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-                <CCarouselCaption class="d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </CCarouselCaption>
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-                <CCarouselCaption class="d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </CCarouselCaption>
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <br />
+          <strong>Dalam Al-Qur'an dijelaskan.</strong>
+          <br />
+          <p>
+            Pada ayat 43 Surat An-Nuur menjelaskan mengenai turunnya hujan, yang
+            dimulai dengan Allah menggerakkan awan, lalu mengumpulkan antara
+            bagian-bagiannya dan menjadikannya bergumpal-gumpal, dan keluarlah
+            hujan dari langit. Pada ayat tersebut, Allah menghendaki pada tempat
+            jatuhnya air di daerah beriklim dingin menjadi salju sedangkan
+            jatuhnya air di iklim tropis menjadi air hujan.
+          </p>
+          <br />
+          <p>Video Kondensasi</p>
+          <div>
+            <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <source src="@/assets/video/Kondensasi.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </CCardBody>
       </CCard>
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>Crossfade</small>
+          <strong>Presipitasi</strong> <small>(Hujan)</small>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>transition=&#34;crossfade&#34;</code> to your carousel to
-            animate slides with a fade transition instead of a slide.
+          <h6>⮚ Apa itu presipitasi?</h6>
+          <p>
+            Presipitasi/ hujan terjadi setelah ukuran tetes cukup besar dengan
+            ukuran diameter dalam milimeter, maka tetes-tetes tersebut bisa
+            jatuh ke muka Bumi. Tetes yang jatuh itu disebut sebagai tetes
+            hujan. Proses jatuhnya hujan disebut sebagai presipitasi.
           </p>
-          <DocsExample href="components/carousel.html#crossfade">
-            <CCarousel controls indicators transition="crossfade">
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <br />
+          <strong>Dalam Al-Qur'an dijelaskan.</strong>
+          <br />
+          <p>
+            Surat Ar-Ruum ayat 48 menjelaskan bahwa Allah menghembuskan angin di
+            permukaan bumi yang selanjutnya mendorong awan hingga berkumpul,
+            menumpuk, menjadi mendung, dan akhirnya akan menjadi hujan.
+          </p>
+          <br />
+          <p>Video Presipitasi</p>
+          <div>
+            <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <source src="@/assets/video/Presipitasi.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </CCardBody>
       </CCard>
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Carousels</strong> <small>Dark variant</small>
+          <strong>Infiltrasi</strong> <small>(Air menyerap ke tanah)</small>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            Add <code>dark</code> property to the <code>CCarousel</code> for
-            darker controls, indicators, and captions. Controls have been
-            inverted from their default white fill with the
-            <code>filter</code> CSS property. Captions and controls have
-            additional Sass variables that customize the <code>color</code> and
-            <code>background-color</code>.
+          <h6>⮚ Apa itu infiltrasi?</h6>
+          <p>
+            Infiltrasi adalah Air hujan yang jatuh ke daratan akhirnya akan
+            bergerak menuju dataran yang lebih rendah dan dikoleksi kembali di
+            lautan. Proses pergerakan air menuju lautan bisa ditempuh melalui
+            jalur permukaan (mengalir melalui sungai) maupun melalui pergerakan
+            air di bawah tanah, setelah air dari permukaan meresap ke dalam
+            tanah (infiltrasi).
           </p>
-          <DocsExample href="components/carousel.html#dark-variant">
-            <CCarousel controls indicators dark>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="VueImg" alt="slide 1" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="ReactImg" alt="slide 2" />
-              </CCarouselItem>
-              <CCarouselItem>
-                <img class="d-block w-100" :src="AngularImg" alt="slide 3" />
-              </CCarouselItem>
-            </CCarousel>
-          </DocsExample>
+          <br />
+          <p>Video Infiltrasi</p>
+          <div>
+            <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <source src="@/assets/video/infiltrasi.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </CCardBody>
       </CCard>
     </CCol>

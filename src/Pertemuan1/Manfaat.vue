@@ -3,119 +3,55 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Vue Collapse</strong>
+          <strong>Manfaat Siklus Air</strong>
         </CCardHeader>
         <CCardBody>
-          <p class="text-medium-emphasis small">
-            You can use a link or a button component.
+          <h6>Begitu besar manfaat dari Siklus Hidrologi</h6>
+          <br />
+          <p>
+            ⮚ Terjadinya siklus air memberikan manfaat bagi makhluk hidup:
+            manusia, hewan dan tumbuhan, yaitu:
           </p>
-          <DocsExample href="components/collapse.html#example">
-            <CButton color="primary" href="#" @click="visible = !visible"
-              >Link</CButton
-            >
-            <CButton color="primary" @click="visible = !visible"
-              >Button</CButton
-            >
-            <CCollapse :visible="visible">
-              <CCard class="mt-3">
-                <CCardBody>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid. Nihil anim keffiyeh
-                  helvetica, craft beer labore wes anderson cred nesciunt
-                  sapiente ea proident.
-                </CCardBody>
-              </CCard>
-            </CCollapse>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Collapse</strong> <small> Horizontal</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            The collapse plugin also supports horizontal collapsing. Add the
-            <code>horizontal</code> property to transition the
-            <code>width</code> instead of <code>height</code> and set a
-            <code>width</code> on the immediate child element.
+          <ul style="list-style-type: disc">
+            <li>
+              Untuk merjaga ketersediaan air di bumi, mendistribusikan air
+              keseluruh penjuru muka bumi baik yang berada di dataran tinggi
+              maupun dataran rendah. Menyediakan air bersih yang sangat
+              dibutuhkan untuk kehidupan makhluk hidup.
+            </li>
+            <li>
+              Pada tumbuhan menghasilkan berbagai macam buah-buahan, biji-bijian
+              dan tanaman lain, hal ini adalah rezeki pemberian Tuhan yang Maha
+              pemurah dan kuasa kepada Makhluk lainnya baik dimnafaatkan manusia
+              atau ternak.
+            </li>
+            <li>
+              Selain itu air hujan akan menyerap ke dalam tanam, dan mengalir
+              membentuk sungai dari daratan tinggi (gunung) menuju ke daerah
+              rendah kemudian terkumpul yaitu terbentuk danau dan air laut.
+            </li>
+            <li>
+              Yang menariknya dari siklus hidrologi ini yaitu bahwa hujan tidak
+              akan pernah berhenti. Dari proses tersebut hujan dapat diprediksi
+              kapan akan turunnya dan kapan akan berakhirnya. Namun hujan tidak
+              akan berhenti selamanya. Karena hujan meruapan salah satu ciptaan
+              Tuhan yang Maha Besar untuk alam semesta ini.
+            </li>
+          </ul>
+          <p>
+            ⮚ Hal ini bearti air senantiasa berputar dalam suatu siklus yang
+            seimbang menurut ukuran dan kadarnya. Sehingga kehidupan di Bumi
+            bergantung pada siklus air ini.
           </p>
-          <DocsExample href="components/collapse.html#horizontal">
-            <CButton
-              class="mb-3"
-              color="primary"
-              aria-expanded="{visible}"
-              aria-controls="collapseWidthExample"
-              @click="visibleHorizontal = !visibleHorizontal"
-              >Button</CButton
-            >
-            <div style="min-height: 120px">
-              <CCollapse horizontal :visible="visibleHorizontal">
-                <CCard style="width: 300px">
-                  <CCardBody>
-                    This is some placeholder content for a horizontal collapse.
-                    It's hidden by default and shown when triggered.
-                  </CCardBody>
-                </CCard>
-              </CCollapse>
-            </div>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Collapse</strong> <small> multi target</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-medium-emphasis small">
-            A <code>&lt;CButton&gt;</code> can show and hide multiple elements.
-          </p>
-          <h4 class="mt-4">Toggle multiple targets</h4>
-          <DocsExample href="components/collapse.html#multiple-targets">
-            <CButton color="primary" @click="visibleA = !visibleA"
-              >Toggle first element</CButton
-            >
-            <CButton color="primary" @click="visibleB = !visibleB"
-              >Toggle second element</CButton
-            >
-            <CButton
-              color="primary"
-              @click="
-                () => {
-                  visibleA = !visibleA
-                  visibleB = !visibleB
-                }
-              "
-            >
-              Toggle both elements
-            </CButton>
-            <CRow>
-              <CCol :xs="6">
-                <CCollapse :visible="visibleA">
-                  <CCard class="mt-3">
-                    <CCardBody>
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident.
-                    </CCardBody>
-                  </CCard>
-                </CCollapse>
-              </CCol>
-              <CCol :xs="6">
-                <CCollapse :visible="visibleB">
-                  <CCard class="mt-3">
-                    <CCardBody>
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life
-                      accusamus terry richardson ad squid. Nihil anim keffiyeh
-                      helvetica, craft beer labore wes anderson cred nesciunt
-                      sapiente ea proident.
-                    </CCardBody>
-                  </CCard>
-                </CCollapse>
-              </CCol>
-            </CRow>
-          </DocsExample>
+          <br />>
+          <strong>Manfaat siklus hidrologi terdapat dalam surat :</strong>
+          <br />
+          <ol type="A">
+            <li>Al-A’raf ayat 57</li>
+            <li>Al- Anfal ayat 11</li>
+            <li>An-Nahl ayat 10</li>
+            <li>Az-Zukhruf ayat 11</li>
+          </ol>
         </CCardBody>
       </CCard>
     </CCol>
