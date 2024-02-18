@@ -1,44 +1,66 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
-    <div>
-      <div id="Overview" class="overview-area">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-              <div class="overview-content">
-                <div class="card">
-                <span class="sub-title">Selamat Belajar & Jangan Lupa Berdo'a</span>
-                <h1>
-                  E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an &
-                  Lingkungan
-                </h1>
-              </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="overview-img">
-                <div class="card">
-                <video autoplay muted loop width="300" play>
-                  <source src="../assets/Over-Viewnew.mp4" type="video/mp4" />
-                  Your browser does not support HTML5 video.
-                </video>
-              </div>
-              </div>
+  <div>
+    <div id="Overview" class="overview-area">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="overview-content">
+            <div class="card">
+              <!-- <span class="sub-title"
+                >Selamat Belajar & Jangan Lupa Berdo'a</span
+              > -->
+              <center>
+                <h1>E-Modul Siklus</h1>
+                <h1>Hidrology</h1>
+                <br />
+                <h2>Periode 2023-2024</h2>
+              </center>
             </div>
           </div>
+          <center>
+            <RouterLink to="/login">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Registration</CButton>
+              </div>
+            </RouterLink>
+            <RouterLink to="/pretest">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Pretest</CButton>
+              </div>
+            </RouterLink>
+            <RouterLink to="/overview">
+              <div
+                class="d-grid gap-2 col-6 mx-auto"
+                style="padding-bottom: 10px"
+              >
+                <CButton color="primary">Selamat Belajar</CButton>
+              </div>
+            </RouterLink>
+          </center>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "AppHome",
-  
-    data() {
-      return {
-        time: 0,
-      };
-    },
-    };
-  </script>
-  
+    <Futer />
+  </div>
+</template>
+<!-- eslint-disable prettier/prettier -->
+<script>
+import Futer from '@/components/Layouts/Footer.vue'
+export default {
+  name: 'AppTampilan',
+  components: {
+    Futer,
+  },
+  data() {
+    return {
+      time: 0,
+    }
+  },
+}
+</script>

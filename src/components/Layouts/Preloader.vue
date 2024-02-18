@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div class="loader">
     <div class="d-table">
@@ -8,7 +9,7 @@
     </div>
   </div>
 </template>
-
+<!-- eslint-disable prettier/prettier -->
 <script>
 export default {
   name: "AppPreloader",

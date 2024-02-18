@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div id="app">
       <Preloader v-if="isLoading" />
@@ -7,6 +8,7 @@
       <BackToTop />
   </div>
 </template>
+<!-- eslint-disable prettier/prettier -->
 
 <script >
 import Preloader from './components/Layouts/Preloader'
@@ -30,3 +32,7 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+// Import Main styles for this application
+@import 'styles/style';
+</style>

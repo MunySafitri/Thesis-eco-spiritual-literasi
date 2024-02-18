@@ -1,11 +1,10 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
-    <div 
-        @click="scrollToTop()" 
-        :class="['back-to-top-btn', {'go-top': isTop}]"
-    >
-        <i class="bi bi-arrow-up-short"></i>
-    </div>
+  <div @click="scrollToTop()" :class="['back-to-top-btn', { 'go-top': isTop }]">
+    <i class="bi bi-arrow-up-short"></i>
+  </div>
 </template>
+<!-- eslint-disable prettier/prettier -->
 <script>
 
 export default {

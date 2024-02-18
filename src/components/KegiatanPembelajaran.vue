@@ -1,10 +1,11 @@
+<!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
   <div id="Kegiatan" class="process-style-area2 ptb-100">
     <div class="container">
       <div class="main-section-title">
         <div class="card">
-          <span class="sub-title"># Keiatan</span>
+          <span class="sub-title"># Kegiatan</span>
           <h2>Kegiatan Pembelajaran</h2>
         </div>
       </div>
@@ -30,7 +31,13 @@
                     class="accordion-collapse collapse show"
                     data-bs-parent="#ProcessAccordion"
                   >
-                    <div class="accordion-body"></div>
+                    <div class="accordion-body">
+                      <div class="choose-content">
+                        <a :href="'/pertemuan1/element-daya-rusak-air'" :class="'choose-btn'"
+                          >Kerjakan Sekarang</a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-item">
@@ -50,19 +57,9 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <div class="choose-content">
+                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -83,19 +80,9 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <div class="choose-content">
+                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,19 +103,9 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <div class="choose-content">
+                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -149,19 +126,9 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold">
-                        Configure the topology of your application's
-                        infrastructure. This includes setting up the network
-                        architecture, defining the relationship between
-                        different components, and establishing the communication
-                        protocols.
-                      </p>
-                      <p>
-                        By defining the topology, you ensure that your
-                        application's components are properly connected and
-                        function as a cohesive system, optimizing performance
-                        and resource utilization.
-                      </p>
+                      <div class="choose-content">
+                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -182,14 +149,9 @@
                     data-bs-parent="#ProcessAccordion"
                   >
                     <div class="accordion-body">
-                      <p class="bold"></p>
-                      <p>
-                        By carefully managing CPU and RAM limitations, you can
-                        prevent resource contention and maintain stability in
-                        your application's execution environment. This step
-                        ensures that each container operates efficiently within
-                        its allocated resources.
-                      </p>
+                      <div class="choose-content">
+                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -208,9 +170,9 @@
     </div>
   </div>
 </template>
-
+<!-- eslint-disable prettier/prettier -->
 <script>
 export default {
-  name: "AppKegiatan",
-};
+  name: 'AppKegiatan',
+}
 </script>
