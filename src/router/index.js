@@ -131,4 +131,14 @@ const router = createRouter({
   },
 })
 
+//navigation guard
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
+  // to and from are both route objects. must call `next`.
+  if (to.name !== 'Login' && !isAuthenticated) next({ name: 'Login' })
+  if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
+  if (to.name === 'Register' && isAuthenticated) next({ name: 'Overview' })
+  else next()
+})
+
 export default router

@@ -1,0 +1,41 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "email": "munysafitri@gmail.com",
+      "name": "Muny Safitri",
+      "semester": "1 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi"
+    },
+    {
+      "id": "2",
+      "email": "miaw@gmail.com",
+      "name": "Miaw_73",
+      "semester": "3 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi"
+    },
+    {
+      "id": "bc00ce80-d619-11ee-b55c-870577f52661",
+      "email": "munysafitri02@gmail.com",
+      "name": "aadad",
+      "pelajaran": "Geografi",
+      "semester": 1,
+      "kelas": "X-IPS-1",
+      "password": "1234"
+    },
+    {
+      "id": "a3e845e0-d645-11ee-ae4e-8b889f2b1846",
+      "email": "mizanulclever@gmail.com",
+      "name": "Mizanul",
+      "pelajaran": "geografi",
+      "semester": 2,
+      "kelas": "X-",
+      "password": "1234"
+    }
+    
+  ]
+}

@@ -82,6 +82,11 @@
               >Assessment</a
             >
           </li>
+          <li @click="logout" class="nav-item">
+            <a
+              class="nav-link"
+              >Logout</a>
+          </li>
         </ul>
       </div>
       <!-- <div class="side-nav">
@@ -96,7 +101,10 @@
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script>
+import router from '@/router'
+
 // import AppHeaderDropdownAccnt from '@/Pertemuan1/components/AppHeaderDropdownAccnt.vue'
+
 export default {
   name: 'AppNavbar',
   components: {
@@ -121,6 +129,10 @@ export default {
     })
   },
   methods: {
+    logout(){
+      localStorage.setItem('isLogin', false)
+      router.push({name : 'Login' })
+    },
     scroll(refName) {
       const element = document.getElementById(refName)
       if (element) {
