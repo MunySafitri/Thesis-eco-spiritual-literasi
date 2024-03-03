@@ -72,19 +72,20 @@
 
               </div> -->
 
-              <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+              <b-form class="p-3" @submit="onSubmit" @reset="onReset" v-if="show">
                 <!-- nama -->
                 <b-row class="my-1">
                   <b-col sm="3">
                     <label for="type-name"><code>Nama</code>:</label>
                   </b-col>
                   <b-col sm="9">
-                    <b-form-input trim id="type-name" aria-describedby="input-live-help input-live-feedback"  :state="errors.includes('name_required') ? false : none"
-                      v-model="form.name"  placeholder="Masukkan Nama.."></b-form-input>
+                    <b-form-input trim id="type-name" aria-describedby="input-live-help input-live-feedback"
+                      :state="errors.includes('name_required') ? false : none" v-model="form.name"
+                      placeholder="Masukkan Nama.."></b-form-input>
                     <!-- {{errors.includes('name_required') ? false : true}} -->
                     <b-form-invalid-feedback id="type-name">
                       Nama Perlu ditambahkan
-                      </b-form-invalid-feedback> 
+                    </b-form-invalid-feedback>
                   </b-col>
                 </b-row>
                 <!-- email -->
@@ -93,15 +94,17 @@
                     <label for="`type-email`"><code>Email</code>:</label>
                   </b-col>
                   <b-col sm="9">
-                    <b-form-input trim id="type-email" v-model="form.email" type="email" aria-describedby="input-live-help input-live-feedback"  :state="errors.includes('email_required') || errors.includes('Email_exist') ? false : none"
+                    <b-form-input trim id="type-email" v-model="form.email" type="email"
+                      aria-describedby="input-live-help input-live-feedback"
+                      :state="errors.includes('email_required') || errors.includes('Email_exist') ? false : none"
                       placeholder="Masukkan Email.."></b-form-input>
-                      
-                      <b-form-invalid-feedback v-if="errors.includes('Email_exist')" id="type-email">
+
+                    <b-form-invalid-feedback v-if="errors.includes('Email_exist')" id="type-email">
                       Email Sudah Terdaftar
-                      </b-form-invalid-feedback> 
-                      <b-form-invalid-feedback v-if="errors.includes('email_required')" id="type-email">
+                    </b-form-invalid-feedback>
+                    <b-form-invalid-feedback v-if="errors.includes('email_required')" id="type-email">
                       Email Perlu ditambahkan
-                      </b-form-invalid-feedback> 
+                    </b-form-invalid-feedback>
                   </b-col>
                 </b-row>
                 <b-row class="my-2">
@@ -109,11 +112,13 @@
                     <label for="`type-kelas`"><code>Kelas</code>:</label>
                   </b-col>
                   <b-col sm="9">
-                    <b-form-input trim id="type-kelas" v-model="form.kelas" type="text" aria-describedby="input-live-help input-live-feedback"  :state="errors.includes('kelas_required') ? false : none"
+                    <b-form-input trim id="type-kelas" v-model="form.kelas" type="text"
+                      aria-describedby="input-live-help input-live-feedback"
+                      :state="errors.includes('kelas_required') ? false : none"
                       placeholder="Contoh: X IPS 1"></b-form-input>
-                      <b-form-invalid-feedback id="type-kelas">
+                    <b-form-invalid-feedback id="type-kelas">
                       Kelas Perlu ditambahkan
-                      </b-form-invalid-feedback> 
+                    </b-form-invalid-feedback>
                   </b-col>
                 </b-row>
                 <b-row class="my-2">
@@ -121,11 +126,13 @@
                     <label for="`type-pelajaran`"><code>Mata Pelajaran</code>:</label>
                   </b-col>
                   <b-col sm="9">
-                    <b-form-input trim id="type-pelajaran" v-model="form.pelajaran" type="text" aria-describedby="input-live-help input-live-feedback"  :state="errors.includes('pelajaran_required') ? false : none"
+                    <b-form-input trim id="type-pelajaran" v-model="form.pelajaran" type="text"
+                      aria-describedby="input-live-help input-live-feedback"
+                      :state="errors.includes('pelajaran_required') ? false : none"
                       placeholder="Contoh: Geografi"></b-form-input>
-                      <b-form-invalid-feedback id="type-pelajaran">
+                    <b-form-invalid-feedback id="type-pelajaran">
                       Pelajaran Perlu ditambahkan
-                      </b-form-invalid-feedback> 
+                    </b-form-invalid-feedback>
                   </b-col>
                 </b-row>
                 <!-- password -->
@@ -134,11 +141,13 @@
                     <label for="type-password"><code>password</code>:</label>
                   </b-col>
                   <b-col sm="9">
-                    <b-form-input  id="type-password" v-model="form.password" type="password" aria-describedby="input-live-help input-live-feedback"  :state="errors.includes('password_required') ? false : none"
+                    <b-form-input id="type-password" v-model="form.password" type="password"
+                      aria-describedby="input-live-help input-live-feedback"
+                      :state="errors.includes('password_required') ? false : none"
                       placeholder="Masukkan Password.."></b-form-input>
-                      <b-form-invalid-feedback id="type-password">
+                    <b-form-invalid-feedback id="type-password">
                       Password Perlu ditambahkan
-                      </b-form-invalid-feedback>
+                    </b-form-invalid-feedback>
                   </b-col>
                 </b-row>
                 <b-row class="my-2">
@@ -149,14 +158,16 @@
                     <b-form-input id="type-password-confirm" v-model="form.passwordConfirm" type="password"
                       placeholder="Masukkan Konfirmasi Password.." aria-describedby="input-live-help input-live-feedback"
                       :state="errors.includes('passwordConfirm_required') || form.password !== form.passwordConfirm ? false : none"></b-form-input>
-                    
-                      <b-form-invalid-feedback v-show ="errors.includes('passwordConfirm_not_same')" id="type-password-confirm">
+
+                    <b-form-invalid-feedback v-show="errors.includes('passwordConfirm_not_same')"
+                      id="type-password-confirm">
                       Konfirmasi Password yang anda Masukkan Salah.
-                      </b-form-invalid-feedback> 
-                      <b-form-invalid-feedback v-show ="errors.includes('passwordConfirm_required')" id="type-password-confirm">
+                    </b-form-invalid-feedback>
+                    <b-form-invalid-feedback v-show="errors.includes('passwordConfirm_required')"
+                      id="type-password-confirm">
                       Masukkan Konfirmasi Password
-                      </b-form-invalid-feedback>
-    </b-col>
+                    </b-form-invalid-feedback>
+                  </b-col>
                 </b-row>
                 <!-- semester -->
                 <b-row class="my-2">
@@ -165,13 +176,13 @@
                   </b-col>
                   <b-col sm="9">
                     <b-form-group class="is-invalid" id="input-group-3" label-for="input-3">
-                      <b-form-select  id="input-3" v-model="form.semester" :options="semesters"></b-form-select>
+                      <b-form-select id="input-3" v-model="form.semester" :options="semesters"></b-form-select>
                     </b-form-group>
                     <div v-show="errors.includes('semester_required')" class="invalid-feedback">Masukkan Semester</div>
                     <!-- <b-form-invalid-feedback id="input-3">
                       Masukkan Semester
                     </b-form-invalid-feedback> -->
-    
+
                   </b-col>
                 </b-row>
 
@@ -179,6 +190,15 @@
                 <b-button class="mx-2" type="submit" variant="primary">Submit</b-button>
                 <b-button type="reset" variant="danger">Reset</b-button>
               </b-form>
+              <div class="px-1 pt-2 text-center card-footer px-lg-2">
+                  <p class="mx-auto mb-4 text-sm">
+                   Susah Punya Akun
+                    <a
+                      href="/login"
+                      class="text-success text-gradient font-weight-bold"
+                    >Masuk</a>
+                  </p>
+                </div>
               <!-- <b-card class="mt-3" header="Form Data Result">
                 <pre class="m-0">{{ form }}</pre>
                 {{ datas }}
@@ -190,7 +210,6 @@
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -203,9 +222,6 @@ export default {
     return {
       datas: [],
       errors: [],
-      name: null,
-      age: null,
-      movie: null,
       form: {
         id: uuid.v1(),
         email: '',
@@ -267,8 +283,8 @@ export default {
           .post('http://localhost:3000/user/', data)
           .then(() => console.log('Berhasil'))
           .catch((error) => console.log('Gagal : ', error))
-
-        alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
+        this.$router.push({ path: '/login' })
+        // alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
       }
     },
     onReset(event) {

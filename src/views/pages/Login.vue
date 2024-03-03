@@ -66,13 +66,13 @@
                   or</p>
               </div>
             </div>
-            <div class="card-body" style="font-size: 1.2em">
+            <div class="card-body p-3" style="font-size: 1.2em">
               <!-- <div v-for="err in errors" v-bind:key="err">
                 {{ err }}
 
               </div> -->
 
-              <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+              <b-form class="p-3" @submit="onSubmit" @reset="onReset" v-if="show">
 
                 <!-- email -->
                 <b-row class="my-2">
@@ -116,6 +116,15 @@
                 <b-button class="mx-2" type="submit" variant="primary">Submit</b-button>
                 <b-button type="reset" variant="danger">Reset</b-button>
               </b-form>
+              <div class="px-1 pt-2 text-center card-footer px-lg-2">
+                  <p class="mx-auto mb-4 text-sm">
+                   Tidak Punya Akun
+                    <a
+                      href="/register"
+                      class="text-success text-gradient font-weight-bold"
+                    >Daftar</a>
+                  </p>
+                </div>
               <!-- <b-card class="mt-3" header="Form Data Result">
                 <div v-for="err in errors" :key="err"> {{ err }}</div>
                 <pre class="m-0">

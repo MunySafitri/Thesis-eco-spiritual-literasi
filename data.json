@@ -35,7 +35,15 @@
       "semester": 2,
       "kelas": "X-",
       "password": "1234"
+    },
+    {
+      "id": "59957f90-d7bb-11ee-9d5e-ad2473da7c01",
+      "email": "munysafitri23@gmail.com",
+      "name": "miaw",
+      "pelajaran": "Geografi",
+      "semester": 1,
+      "kelas": "X-IPS-1",
+      "password": "1234"
     }
-    
   ]
 }

@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
+
 <template>
-  <nav
+  <nav toggleable="lg"
     :class="[
       'main-navbar navbar navbar-expand-md navbar-light',
       { 'is-sticky': isSticky },
@@ -15,6 +16,8 @@
           alt="Logo"
         />
       </router-link>
+
+      <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
       <div
         class="navbar-toggler"
@@ -89,13 +92,6 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="side-nav">
-        <CHeaderNav> <AppHeaderDropdownAccnt /></CHeaderNav>
-      </div> -->
-      <!-- <div class="side-nav">
-        <a class="side-nav-left log-in" href="">Login</a>
-        <a class="side-nav-right cd-signup sign-up" href="">Register</a>
-      </div> -->
     </div>
   </nav>
 </template>
@@ -129,9 +125,9 @@ export default {
     })
   },
   methods: {
-    logout(){
+    logout() {
       localStorage.setItem('isLogin', false)
-      router.push({name : 'Login' })
+      router.push({ name: 'Login' })
     },
     scroll(refName) {
       const element = document.getElementById(refName)
