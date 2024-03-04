@@ -141,8 +141,14 @@ router.beforeEach((to, from, next) => {
     next()
   if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated)
     next({ name: 'Login' })
-  if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
-  if (to.name === 'Register' && isAuthenticated) next({ name: 'Overview' })
+  if (
+    (to.name === 'Login' && isAuthenticated) ||
+    (to.name === 'Register' && isAuthenticated)
+  ) {
+    next({ name: 'Overview' })
+    // console.log('ini laman login: ', to.name === 'Login' && isAuthenticated)
+  }
+  // if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
   else next()
 })
 

@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     logout() {
-      localStorage.setItem('isLogin', false)
+      localStorage.clear()
       router.push({ name: 'Login' })
     },
     scroll(refName) {

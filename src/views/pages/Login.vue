@@ -183,23 +183,28 @@ export default {
         }
       })
       //cek apakah ada di dalam email database return ke halaman overview dn jangan lupa buat session dengan local storages untuk middleware
+
+      if (
+        !this.datas.find((o) => o.email === this.form.email) &&
+        this.form.email !== ''
+      ) {
+        this.errors.push('email_wrong')
+      }
       if (
         this.datas.find(
           (o) =>
-            o.email === this.form.email &&
-            o.password !== this.form.password &&
-            this.form.password !== '',
+            o.email === this.form.email && o.password !== this.form.password,
         )
       ) {
         this.errors.push('password_wrong')
       }
-      if (!this.datas.find((o) => o.email === this.form.email)) {
-        this.errors.push('email_wrong')
-      }
       //jika tidak ada error
       if (this.errors.length === 0) {
+        let user = this.datas.find((o) => o.email === this.form.email)
+
         // alert(JSON.stringify(this.form)) //tampilkan notif toast atau navbar bahwa aberhasil di daftrkan
         localStorage.setItem('isLogin', true)
+        localStorage.setItem('user', JSON.stringify(user.name))
         this.$router.push({ path: '/overview' })
       }
     },
