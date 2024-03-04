@@ -1,11 +1,19 @@
 <!-- eslint-disable prettier/prettier -->
+<style scoped>
+video {
+    width: 65%;
+    height: auto;
+}
+</style>
 <template>
   <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
-      <video class="vid2" autoplay loop controls width="400" id="myVideo">
-        <source src="../assets/Surat-ALbaqarah.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
+      <div class="d-flex justify-content-center">
+        <video class="vid2" autoplay loop controls id="myVideo">
+          <source src="../assets/Surat-ALbaqarah.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
       <!-- <RouterLink to="/">
         <button>awikwok</button>
       </RouterLink> -->
