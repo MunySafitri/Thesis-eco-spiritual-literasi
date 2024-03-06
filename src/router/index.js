@@ -29,6 +29,16 @@ const routes = [
         component: () => import('@/components/Pretes.vue'),
       },
       {
+        path: 'kognitif',
+        name: 'Kognitif',
+        component: () => import('@/components/Test/Kognitif.vue'),
+      },
+      {
+        path: 'ppl',
+        name: 'PPL',
+        component: () => import('@/components/Test/Ppl.vue'),
+      },
+      {
         path: 'login',
         name: 'Login',
         component: () => import('@/views/pages/Login.vue'),
@@ -134,9 +144,7 @@ const router = createRouter({
 //navigation guard
 router.beforeEach((to, from, next) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
-  // to and from are both route objects. must call `next`.
-  // if (to.name === 'Register' && !isAuthenticated)
-  //   return next({ name: 'Register' })
+
   if (to.name === 'Login' && !isAuthenticated) {
     next()
   }
@@ -147,9 +155,8 @@ router.beforeEach((to, from, next) => {
     (to.name === 'Login' && isAuthenticated) ||
     (to.name === 'Register' && isAuthenticated)
   ) {
-    //nnti kita buat kondisional jika user blum pretest dan sudah []
+    //nnti kita buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
     next({ name: 'Overview' })
-    // console.log('ini laman login: ', to.name === 'Login' && isAuthenticated)
   }
   if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated) {
     next({ name: 'Login' })
