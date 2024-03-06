@@ -137,16 +137,22 @@ router.beforeEach((to, from, next) => {
   // to and from are both route objects. must call `next`.
   // if (to.name === 'Register' && !isAuthenticated)
   //   return next({ name: 'Register' })
-  if (to.name === 'Login' || (to.name === 'Register' && !isAuthenticated))
+  if (to.name === 'Login' && !isAuthenticated) {
     next()
-  if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated)
-    next({ name: 'Login' })
+  }
+  if (to.name === 'Register' && !isAuthenticated) {
+    next()
+  }
   if (
     (to.name === 'Login' && isAuthenticated) ||
     (to.name === 'Register' && isAuthenticated)
   ) {
+    //nnti kita buat kondisional jika user blum pretest dan sudah []
     next({ name: 'Overview' })
     // console.log('ini laman login: ', to.name === 'Login' && isAuthenticated)
+  }
+  if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated) {
+    next({ name: 'Login' })
   }
   // if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
   else next()

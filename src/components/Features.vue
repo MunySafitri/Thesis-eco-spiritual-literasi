@@ -485,6 +485,7 @@
 </template>
 
 <!-- eslint-disable prettier/prettier -->
+
 <script>
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
@@ -499,8 +500,8 @@ export default {
         id: uuid.v1(),
         username: '',
         komentar: '',
-        date : null
-      }, 
+        date: null
+      },
     }
   },
   methods: {
@@ -511,9 +512,9 @@ export default {
       this.postKomentar.username = name
       this.user = name
     },
-    onSubmit(event) {
-      event.preventDefault()
-      
+    onSubmit() {
+      // event.preventDefault()
+
       if (this.postKomentar.komentar !== '') {
         let data = this.postKomentar
         // delete data.passwordConfirm
@@ -522,8 +523,12 @@ export default {
           .post('http://localhost:3000/komentar/', data)
           .then(() => console.log('Berhasil'))
           .catch((error) => console.log('Gagal : ', error))
-          this.postKomentar.komentar = ''
-      
+        this.postKomentar.komentar = '' //permasalahan sekrang, tidak secara realtime ia mengubah
+        // axios
+        //   .get('http://localhost:3000/komentar')
+        //   .then((response) => this.setKomentar(response.data))
+        //   .catch((error) => console.log('Gagal : ', error))
+
         // this.$router.push({ path: '/overview' })
         // alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
       }
@@ -538,7 +543,7 @@ export default {
       .get('http://localhost:3000/komentar')
       .then((response) => this.setKomentar(response.data))
       .catch((error) => console.log('Gagal : ', error))
-      this.postKomentar.date =  Date.now() //nanti kita pikirkan giman cara konversi ke waktu secara realtime
+    this.postKomentar.date = Date.now() //nanti kita pikirkan giman cara konversi ke waktu secara realtime
 
   }
 };
