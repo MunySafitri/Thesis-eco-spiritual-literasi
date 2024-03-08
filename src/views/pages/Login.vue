@@ -205,6 +205,13 @@ export default {
         // alert(JSON.stringify(this.form)) //tampilkan notif toast atau navbar bahwa aberhasil di daftrkan
         localStorage.setItem('isLogin', true)
         localStorage.setItem('user', JSON.stringify(user.name))
+        localStorage.setItem('id_user', JSON.stringify(user.id))
+        localStorage.setItem('isKognitif', JSON.stringify(user.isKognitif))
+        // localStorage.setItem(
+        //   'isKognitif',
+        //   this.datas.filter((d) => d.id === JSON.stringify(user.id)).isKognitif,
+        // )
+        // localStorage.setItem('isPss', JSON.stringify(user.isPss ? true : false))
         this.$router.push({ path: '/overview' })
       }
     },

@@ -1,4 +1,5 @@
 <!-- eslint-disable prettier/prettier -->
+<!-- //assesment -->
 <template>
   <div id="Order" class="bgmix">
     <div class="container">
@@ -13,7 +14,8 @@
               <img src="../assets/img/1_2.png" alt="image" />
             </div>
             <div class="choose-content">
-              <a href="" class="choose-btn"
+
+              <a href="" class="choose-btn"  
                 >Kerjakan sekarang</a
               >
             </div>
@@ -25,7 +27,11 @@
               <img src="../assets/img/2_2.png" alt="image" />
             </div>
             <div class="choose-content">
-              <a :href="''" :class="'choose-btn'"
+              <!-- <div v-show="JSON.parse(localStorage.getItem('isLogin'))">
+
+                masuk sini
+              </div> -->
+              <a :href="'/kognitif'" :class="'choose-btn'"
                 >Kerjakan sekarang</a>
             </div>
           </div>
@@ -36,10 +42,14 @@
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script >
+
 export default {
   name: "AppOrder",
   data() {
     
   },
-};
+  mounted(){
+    // console.log("si kognitif",JSON.parse(localStorage.getItem('isKognitif')))
+  }
+}
 </script>

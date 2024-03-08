@@ -1,15 +1,6 @@
 {
   "user": [
     {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi"
-    },
-    {
       "id": "2",
       "email": "miaw@gmail.com",
       "name": "Miaw_73",
@@ -44,7 +35,40 @@
       "semester": 1,
       "kelas": "X-IPS-1",
       "password": "1234"
+    },
+    {
+      "id": "1",
+      "email": "munysafitri@gmail.com",
+      "name": "Muny Safitri",
+      "semester": "1 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi",
+      "kognitif": [
+        [
+          "1",
+          "b"
+        ],
+        [
+          "2",
+          "b"
+        ],
+        [
+          "3",
+          "b"
+        ],
+        [
+          "4",
+          "b"
+        ],
+        [
+          "5",
+          "b"
+        ]
+      ],
+      "isKognitif": "true"
     }
+    
   ],
   "komentar": [
     {
@@ -108,28 +132,10 @@
       "komentar": "Keren-keren, ditingkatkan lagi yak bagian desain visualnya XD"
     },
     {
-      "id": "559eb7a0-d9e4-11ee-a02b-45de8d4d595f",
-      "created_at": "2011-07-14 11:23:00",
+      "id": "fb92d3e0-dd2b-11ee-ac9e-2f24f7bc9da0",
       "username": "Muny Safitri",
-      "komentar": "Halo sobar sehat yang indah"
-    },
-    {
-      "id": "f12c2920-d9e7-11ee-bff1-eba0b56591df",
-      "username": "Muny Safitri",
-      "komentar": "testing kembali, apkaah berhasil?",
-      "date": 1709530070243
-    },
-    {
-      "id": "b0fe3080-d9e9-11ee-bff1-eba0b56591df",
-      "username": "Muny Safitri",
-      "komentar": "test lagiii",
-      "date": 1709530821520
-    },
-    {
-      "id": "dcc35420-d9e9-11ee-bff1-eba0b56591df",
-      "username": "Muny Safitri",
-      "komentar": "tes ulang",
-      "date": 1709530895031
+      "komentar": "hello",
+      "date": null
     }
   ],
   "kognitif": [
@@ -155,7 +161,7 @@
           "isi": "3, 4, 1, dan 2"
         }
       ],
-      "jawaban" : "a"
+      "jawaban": "a"
     },
     {
       "id": "2",
@@ -179,7 +185,7 @@
           "isi": "Infiltrasi:  Perembesan atau pergerakan air ke dalam tanah melalui pori-pori tanah"
         }
       ],
-      "jawaban" : "d"
+      "jawaban": "d"
     },
     {
       "id": "3",
@@ -203,7 +209,7 @@
           "isi": "Siklus temporer"
         }
       ],
-      "jawaban" : "a"
+      "jawaban": "a"
     },
     {
       "id": "4",
@@ -227,11 +233,11 @@
           "isi": "Tidak, karena uap air tersebut akan kembali ke sungai "
         }
       ],
-      "jawaban" : "b"
+      "jawaban": "b"
     },
     {
-      "id": "4",
-      "gambar": "4.jpg",
+      "id": "5",
+      "gambar": "5.jpg",
       "pertanyaan": "Ketika hujan turun kaca rumah Thaha basah padahal atap rumah cukup panjang sehingga kaca rumah tidak terkena air hujan. Mengapa hal itu terjadi?",
       "opsi": [
         {
@@ -251,7 +257,7 @@
           "isi": "Kaca rumah bagian luar basah kerena suhu udara di dalam rumah lebih tinggi dari di luar"
         }
       ],
-      "jawaban" : "a"
+      "jawaban": "a"
     }
   ]
 }

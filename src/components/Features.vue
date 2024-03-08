@@ -129,7 +129,7 @@
         </div>
       </div>
       <div style="height: 400px; width: auto" class="overflow-auto">
-        <div class="card p-3 mt-2">
+        <!-- <div class="card p-3 mt-2">
           <div class="row d-flex justify-content-between align-items-center">
             <div
               class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
@@ -158,7 +158,7 @@
               <small>3 days ago</small>
             </div>
           </div>
-        </div>
+        </div> -->
         <div v-for="komen in Komentar" :key="komen.id" class="card p-3 mt-2">
           <div class="row d-flex justify-content-between align-items-center">
             <div
@@ -184,258 +184,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">Thanks </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div> -->
       </div>
       <b-form class="p-3" @submit="onSubmit" @reset="onReset">
         <div class="card p-3 mt-2">
@@ -539,11 +287,13 @@ export default {
     // console.log(JSON.parse(localStorage.getItem('user')))
     // this.user = JSON.parse(localStorage.getItem('user'))
     this.setUsername(JSON.parse(localStorage.getItem('user')))
-    axios
-      .get('http://localhost:3000/komentar')
-      .then((response) => this.setKomentar(response.data))
-      .catch((error) => console.log('Gagal : ', error))
-    this.postKomentar.date = Date.now() //nanti kita pikirkan giman cara konversi ke waktu secara realtime
+    setInterval(() => {
+      axios
+        .get('http://localhost:3000/komentar')
+        .then((response) => this.setKomentar(response.data))
+        .catch((error) => console.log('Gagal : ', error))
+	}, 3000)
+    // this.postKomentar.date = Date.now() //nanti kita pikirkan giman cara konversi ke waktu secara realtime
 
   }
 };
