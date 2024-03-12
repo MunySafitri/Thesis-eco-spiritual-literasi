@@ -43,11 +43,20 @@
       "semester": "1 (satu) / Ganjil",
       "password": "1234",
       "kelas": "x ips 1",
+      "pelajaran": "Geografi"
+    },
+    {
+      "id": "bc00ce80-d619-11ee-b55c-870577f52661",
+      "email": "munysafitri02@gmail.com",
+      "name": "aadad",
       "pelajaran": "Geografi",
+      "semester": 1,
+      "kelas": "X-IPS-1",
+      "password": "1234",
       "kognitif": [
         [
           "1",
-          "b"
+          "a"
         ],
         [
           "2",
@@ -67,66 +76,97 @@
         ]
       ],
       "isKognitif": "true"
+    },
+    {
+      "id": "1",
+      "email": "munysafitri@gmail.com",
+      "name": "Muny Safitri",
+      "semester": "1 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi",
+      "kognitif": [
+        [
+          "1",
+          "c"
+        ],
+        [
+          "2",
+          "b"
+        ],
+        [
+          "3",
+          "c"
+        ],
+        [
+          "4",
+          "b"
+        ],
+        [
+          "5",
+          "b"
+        ]
+      ],
+      "isKognitif": "true"
     }
-    
   ],
   "komentar": [
     {
-      "id": 1,
+      "id": "1",
       "created_at": "2011-07-14 11:23:00",
       "username": "Muny",
       "komentar": "Hwaah aplikasi yang keren"
     },
     {
-      "id": 2,
+      "id": "2",
       "created_at": "2011-07-14 11:23:00",
       "username": "Mizanul",
       "komentar": "Hwaah aplikasi  sangat membantu"
     },
     {
-      "id": 3,
+      "id": "3",
       "created_at": "2011-07-14 11:23:00",
       "username": "Aohana",
       "komentar": "Aplikasi ini memberi ilmu ynag bermanfaat, semnagat developer!"
     },
     {
-      "id": 4,
+      "id": "4",
       "created_at": "2011-07-14 11:23:00",
       "username": "Fitri",
       "komentar": "Nice Job Dveloper"
     },
     {
-      "id": 5,
+      "id": "5",
       "created_at": "2011-07-14 11:23:00",
       "username": "Naufal",
       "komentar": "da kami bilang, bakal beres aplikasi ini"
     },
     {
-      "id": 6,
+      "id": "6",
       "created_at": "2011-07-14 11:23:00",
       "username": "Angkasah",
       "komentar": "da betul aplikasi nya tu.. jangan lupa cuan :u"
     },
     {
-      "id": 7,
+      "id": "7",
       "created_at": "2011-07-14 11:23:00",
       "username": "Safira",
       "komentar": "Keren bet dah, cetar"
     },
     {
-      "id": 8,
+      "id": "8",
       "created_at": "2011-07-14 11:23:00",
       "username": "Anonimous",
       "komentar": "Ishh wak, mantep kali produk lokal kitaaa, aceh ini boss"
     },
     {
-      "id": 9,
+      "id": "9",
       "created_at": "2011-07-14 11:23:00",
       "username": "Yulia",
       "komentar": "waduh-waduh, ga komen deng. nice job developer"
     },
     {
-      "id": 10,
+      "id": "10",
       "created_at": "2011-07-14 11:23:00",
       "username": "Fikrul",
       "komentar": "Keren-keren, ditingkatkan lagi yak bagian desain visualnya XD"
@@ -135,6 +175,12 @@
       "id": "fb92d3e0-dd2b-11ee-ac9e-2f24f7bc9da0",
       "username": "Muny Safitri",
       "komentar": "hello",
+      "created_at": null
+    },
+    {
+      "id": "f2cfc1f0-dd53-11ee-8346-9958abd3c92e",
+      "username": "aadad",
+      "komentar": "keyeen gaes",
       "date": null
     }
   ],

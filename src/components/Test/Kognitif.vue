@@ -4,7 +4,7 @@
   <!-- <div>{{ kognitif[0]}}</div> -->
   <div v-if="kognitif[questionIndex]">
 
-    {{ console.log("ini data:", this.jawaban) }}
+    <!-- {{ console.log("ini data:", this.jawaban) }} -->
     <!-- <div v-for="kog in kognitif" :key="kog.id"> -->
     <div class="container">
 
@@ -26,17 +26,17 @@
             </div>
 
           </div>
-          <strong> Jawaban yang benar {{ kognitif[questionIndex].jawaban }}</strong>
+          <!-- <strong> Jawaban yang benar {{ kognitif[questionIndex].jawaban }}</strong> -->
         </div>
       </div>
     </div>
   </div>
   <!-- coba kita simpan datanya -->
   <div v-else>
-    <button class="btn btn-danger" @click="addData"> Coba simpan data nya</button>
+    <h1>klik ke overview</h1>
+    <button class="btn btn-danger" @click="addData"> Data hasil jawabn disimpan</button>
   </div>
   <div v-if="user">
-    <!-- {{ user[0].name }} -->
     {{ user[0] }}
   </div>
   <!-- {{ user[0] }} -->
@@ -122,8 +122,8 @@ export default {
     addData() {
       this.user[0]['kognitif'] = this.jawaban
       this.user[0]['isKognitif'] = "true"
-      // menghapus yang lama
-      axios.delete('http://localhost:3000/user/',this.user[0].id )
+      // menghapus yang lama (masih gagal)
+      axios.get('http://localhost:3000/user/'+this.user[0].id )
         .then(response => {
           console.log(response.data);
         })

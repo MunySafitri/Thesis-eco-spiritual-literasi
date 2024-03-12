@@ -206,7 +206,7 @@ export default {
         localStorage.setItem('isLogin', true)
         localStorage.setItem('user', JSON.stringify(user.name))
         localStorage.setItem('id_user', JSON.stringify(user.id))
-        localStorage.setItem('isKognitif', JSON.stringify(user.isKognitif))
+        // localStorage.setItem('isKognitif', JSON.stringify(user.isKognitif))
         // localStorage.setItem(
         //   'isKognitif',
         //   this.datas.filter((d) => d.id === JSON.stringify(user.id)).isKognitif,
@@ -233,6 +233,8 @@ export default {
       .get('http://localhost:3000/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
+
+    alert('ini pop up yang isinya aturan modul')
   },
 }
 </script>

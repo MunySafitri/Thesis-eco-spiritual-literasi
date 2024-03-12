@@ -26,7 +26,9 @@ const routes = [
       {
         path: 'pretest',
         name: 'Pretest',
-        component: () => import('@/components/Pretes.vue'),
+        // component: () => import('@/components/Pretes.vue'),
+        //diganti semnetara dengan contoh kognitif
+        component: () => import('@/components/Test/Kognitif.vue'),
       },
       {
         path: 'kognitif',
@@ -156,7 +158,7 @@ router.beforeEach((to, from, next) => {
     (to.name === 'Register' && isAuthenticated)
   ) {
     //nnti kita buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
-    next({ name: 'Overview' })
+    next({ name: 'Pretest' }) // kit buat kondisional semnetara ke Pretest dulu
   }
   if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated) {
     next({ name: 'Login' })

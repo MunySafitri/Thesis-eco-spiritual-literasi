@@ -15,9 +15,8 @@
             </div>
             <div class="choose-content">
 
-              <a href="" class="choose-btn"  
-                >Kerjakan sekarang</a
-              >
+              <a :href="'/ppl'" class="choose-btn"  
+                >Kerjakan sekarang</a>
             </div>
           </div>
         </div>
