@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 
 <template>
+  <Navbar />
   <!-- <div>{{ kognitif[0]}}</div> -->
   <div v-if="kognitif[questionIndex]">
 
@@ -92,6 +93,7 @@
 <!-- eslint-disable prettier/prettier -->
 
 <script>
+import Navbar from '@/components/Layouts/Navbar.vue'
 import axios from 'axios'
 // import { ref } from "vue";
 // import { uuid } from 'vue-uuid'
@@ -107,6 +109,9 @@ export default {
       jawaban: [],
       user: null
     }
+  },
+  components: {
+    Navbar,
   },
   methods: {
     setKognitif(data) {
@@ -133,6 +138,8 @@ export default {
           .post('http://localhost:3000/user/', this.user[0])
           .then(() => console.log('Berhasil'))
           .catch((error) => console.log('Gagal : ', error))
+          //kita coba set true dulu nnti di akalin dengan make api
+          localStorage.setItem('isPretest', true)
         this.$router.push({ path: '/overview' })
     }
 

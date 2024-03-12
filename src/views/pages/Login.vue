@@ -204,6 +204,10 @@ export default {
 
         // alert(JSON.stringify(this.form)) //tampilkan notif toast atau navbar bahwa aberhasil di daftrkan
         localStorage.setItem('isLogin', true)
+
+        //kita coba set false dulu nnti diganti
+        localStorage.setItem('isPretest', false)
+
         localStorage.setItem('user', JSON.stringify(user.name))
         localStorage.setItem('id_user', JSON.stringify(user.id))
         // localStorage.setItem('isKognitif', JSON.stringify(user.isKognitif))
@@ -229,12 +233,11 @@ export default {
   },
   mounted() {
     // Make a request for a user with a given ID
+    // alert('ini pop up yang isinya aturan modul')
     axios
       .get('http://localhost:3000/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
-
-    alert('ini pop up yang isinya aturan modul')
   },
 }
 </script>

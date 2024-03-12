@@ -144,8 +144,10 @@ const router = createRouter({
 })
 
 //navigation guard
+// let isPretest = false // ini perlu kita buat dalam field "ispretest" di user nya inisialisasi false smua untuk pengguna baru
 router.beforeEach((to, from, next) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
+  const isPretest = JSON.parse(localStorage.getItem('isPretest'))
 
   if (to.name === 'Login' && !isAuthenticated) {
     next()
@@ -158,11 +160,27 @@ router.beforeEach((to, from, next) => {
     (to.name === 'Register' && isAuthenticated)
   ) {
     //nnti kita buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
-    next({ name: 'Pretest' }) // kit buat kondisional semnetara ke Pretest dulu
+    next({ name: 'Overview' }) // kita buat kondisional semnetara ke Pretest dulu
   }
   if ((to.name !== 'Login' || to.name !== 'Register') && !isAuthenticated) {
-    next({ name: 'Login' })
+    //buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
+    next({ name: 'Login' }) // kita buat kondisional semnetara ke Pretest dulu
   }
+  if (to.name === 'Overview' && !isPretest) {
+    next({ name: 'Pretest' })
+  }
+  if (to.name === 'Pretest' && isPretest) {
+    // isPretest = true
+    next({ name: 'Overview' })
+  }
+  // if (
+  //   (to.name !== 'Login' || to.name !== 'Register') &&
+  //   isAuthenticated &&
+  //   !isPretest
+  // ) {
+  //   //buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
+  //   next({ name: 'Pretest' }) // kita buat kondisional semnetara ke Pretest dulu
+  // }
   // if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
   else next()
 })
