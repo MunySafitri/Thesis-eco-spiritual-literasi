@@ -364,6 +364,38 @@
         ]
       ],
       "isKognitif": "true"
+    },
+    {
+      "id": "2",
+      "email": "miaw@gmail.com",
+      "name": "Miaw_73",
+      "semester": "3 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi",
+      "kognitif": [
+        [
+          "1",
+          "b"
+        ],
+        [
+          "2",
+          "c"
+        ],
+        [
+          "3",
+          "b"
+        ],
+        [
+          "4",
+          "a"
+        ],
+        [
+          "5",
+          "a"
+        ]
+      ],
+      "isKognitif": "true"
     }
   ],
   "komentar": [

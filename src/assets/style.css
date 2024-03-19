@@ -10002,7 +10002,7 @@ button:focus {
   z-index: 10;
 }
 .back-to-top-btn i {
-  background: #eb455f;
+  background: #13DEE0;
   color: #fff;
   height: 50px;
   width: 50px;
@@ -10015,7 +10015,7 @@ button:focus {
   margin-right: 28px;
 }
 .back-to-top-btn i:hover {
-  background: #ff8989;
+  background: #77E0DD;
   color: #fff;
 }
 .back-to-top-btn.go-top {
@@ -10023,7 +10023,7 @@ button:focus {
   transition: all 0.5s ease;
 }
 .back-to-top-btn.go-top i {
-  box-shadow: 0 0 14px 0 #d42953;
+  box-shadow: 0 0 14px 0 #B3E0E0;
 }
 
 .main-section-title {
