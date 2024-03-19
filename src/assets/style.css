@@ -10531,14 +10531,14 @@ button:focus {
   border-radius: 30px;
   margin-top: 25px;
   align-items: left;
-  background: rgba(255,255,255,0.55);
+  background: rgba(76, 210, 224,0.15);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 3px solid rgba(67, 174, 250, 0.18);
 }
 .card:hover {
-  box-shadow: 30px 24px 30px 0 rgba(255, 255, 255, 0.55);
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
 }
 .overview-content {
   position: relative;
@@ -10678,19 +10678,22 @@ button:focus {
   border: 1px solid #00c195;
 }
 .process-style-area1 {
-  background-image: url(../assets/img/Background-no2.jpeg);
+  /* background-image: url(../assets/img/Background-no2.jpeg); */
+  background-color: #f3f5e7;
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .process-style-area2 {
-  background-image: url(../assets/img/Background3.jpg);
+  /* background-image: url(../assets/img/Background3.jpg); */
+  background-color: #f3f5e7;
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .process-style-area3 {
-  background-image: url(../assets/img/Background-no2.jpeg);
+  /* background-image: url(../assets/img/Background-no2.jpeg); */
+  background-color: #f3f5e7;
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
