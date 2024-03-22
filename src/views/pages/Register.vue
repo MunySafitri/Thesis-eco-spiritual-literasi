@@ -231,6 +231,8 @@ export default {
         kelas: '',
         password: '',
         passwordConfirm: '',
+        isPretest: false,
+        isPosttest: false,
       },
       semesters: [
         { text: 'Pilih Salah satu', value: null },

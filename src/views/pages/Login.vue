@@ -291,7 +291,7 @@ export default {
         localStorage.setItem('isLogin', true)
 
         //kita coba set false dulu nnti diganti
-        localStorage.setItem('isPretest', false)
+        localStorage.setItem('isPretest', user.isPretest)
 
         localStorage.setItem('user', JSON.stringify(user.name))
         localStorage.setItem('id_user', JSON.stringify(user.id))

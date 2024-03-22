@@ -7,56 +7,56 @@
       "semester": "3 (satu) / Ganjil",
       "password": "1234",
       "kelas": "x ips 1",
-      "pelajaran": "Geografi"
-    },
-    {
-      "id": "bc00ce80-d619-11ee-b55c-870577f52661",
-      "email": "munysafitri02@gmail.com",
-      "name": "aadad",
       "pelajaran": "Geografi",
-      "semester": 1,
-      "kelas": "X-IPS-1",
-      "password": "1234"
+      "isPretest": false,
+      "isPosttest": false,
+      "isAdmin": false
     },
     {
-      "id": "a3e845e0-d645-11ee-ae4e-8b889f2b1846",
-      "email": "mizanulclever@gmail.com",
-      "name": "Mizanul",
+      "id": "1",
+      "email": "munysafitri@gmail.com",
+      "name": "Muny Safitri",
+      "semester": "1 (satu) / Ganjil",
+      "password": "1234",
+      "kelas": "x ips 1",
+      "pelajaran": "Geografi",
+      "isPretest": false,
+      "isPosttest": false,
+      "isAdmin": false
+    },
+    {
+      "id": "5cf22300-e6ac-11ee-b00a-c718ff9fa639",
+      "email": "munysafitri02@gmail.com",
+      "name": "Muny Safitri",
       "pelajaran": "geografi",
-      "semester": 2,
-      "kelas": "X-",
-      "password": "1234"
-    },
-    {
-      "id": "59957f90-d7bb-11ee-9d5e-ad2473da7c01",
-      "email": "munysafitri23@gmail.com",
-      "name": "miaw",
-      "pelajaran": "Geografi",
       "semester": 1,
-      "kelas": "X-IPS-1",
-      "password": "1234"
+      "kelas": "xips1",
+      "password": "1234",
+      "isPretest": false,
+      "isPosttest": false,
+      "isAdmin": false
     },
+    {
+      "id": "5cf22300-e6ac-11ee-b00a-c718ff9f9",
+      "email": "admin@admin.co.id",
+      "name": "ADMIN",
+      "pelajaran": "-",
+      "semester": 0,
+      "kelas": "-",
+      "password": "-",
+      "isPretest": false,
+      "isPosttest": false,
+      "isAdmin": true
+    }
+  ],
+  "jawabanKognitif": [
     {
       "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi"
-    },
-    {
-      "id": "bc00ce80-d619-11ee-b55c-870577f52661",
-      "email": "munysafitri02@gmail.com",
-      "name": "aadad",
-      "pelajaran": "Geografi",
-      "semester": 1,
-      "kelas": "X-IPS-1",
-      "password": "1234",
-      "kognitif": [
+      "id_user": "1",
+      "jawabanKognitif": [
         [
           "1",
-          "a"
+          "b"
         ],
         [
           "2",
@@ -73,314 +73,21 @@
         [
           "5",
           "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "c"
-        ],
-        [
-          "2",
-          "b"
-        ],
-        [
-          "3",
-          "c"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "a"
-        ],
-        [
-          "3",
-          "c"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "a"
-        ],
-        [
-          "2",
-          "b"
-        ],
-        [
-          "3",
-          "c"
-        ],
-        [
-          "4",
-          "a"
-        ],
-        [
-          "5",
-          "b"
-        ]
-      ],
-      "isKognitif": "true"
-    },
-    {
-      "id": "1",
-      "email": "munysafitri@gmail.com",
-      "name": "Muny Safitri",
-      "semester": "1 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
-        [
-          "1",
-          "b"
-        ],
-        [
-          "2",
-          "c"
-        ],
-        [
-          "3",
-          "b"
-        ],
-        [
-          "4",
-          "b"
-        ],
-        [
-          "5",
-          "c"
         ]
       ],
       "isKognitif": "true"
     },
     {
       "id": "2",
-      "email": "miaw@gmail.com",
-      "name": "Miaw_73",
-      "semester": "3 (satu) / Ganjil",
-      "password": "1234",
-      "kelas": "x ips 1",
-      "pelajaran": "Geografi",
-      "kognitif": [
+      "id_user": "2",
+      "jawabanKognitif": [
         [
           "1",
           "b"
         ],
         [
           "2",
-          "c"
+          "b"
         ],
         [
           "3",
@@ -388,16 +95,237 @@
         ],
         [
           "4",
-          "a"
+          "b"
         ],
         [
           "5",
-          "a"
+          "b"
         ]
       ],
       "isKognitif": "true"
+    },
+    {
+      "id": "183a5fc0-e85f-11ee-9ebb-99f227a86621",
+      "id_user": "1",
+      "jawabanKognitif": [
+        [
+          [
+            1,
+            "a"
+          ]
+        ],
+        [
+          [
+            2,
+            "b"
+          ]
+        ],
+        [
+          [
+            3,
+            "d"
+          ]
+        ],
+        [
+          [
+            4,
+            "c"
+          ]
+        ],
+        [
+          [
+            5,
+            "c"
+          ]
+        ],
+        [
+          [
+            6,
+            "c"
+          ]
+        ],
+        [
+          [
+            7,
+            "a"
+          ]
+        ],
+        [
+          [
+            8,
+            "c"
+          ]
+        ],
+        [
+          [
+            9,
+            "b"
+          ]
+        ],
+        [
+          [
+            10,
+            "c"
+          ]
+        ],
+        [
+          [
+            11,
+            "c"
+          ]
+        ],
+        [
+          [
+            12,
+            "d"
+          ]
+        ],
+        [
+          [
+            13,
+            "b"
+          ]
+        ],
+        [
+          [
+            14,
+            "b"
+          ]
+        ],
+        [
+          [
+            15,
+            "d"
+          ]
+        ],
+        [
+          [
+            16,
+            "d"
+          ]
+        ],
+        [
+          [
+            17,
+            "d"
+          ]
+        ],
+        [
+          [
+            18,
+            "c"
+          ]
+        ],
+        [
+          [
+            19,
+            "a"
+          ]
+        ]
+      ],
+      "isKognitif": true
     }
   ],
+  "jawabanPPL": [
+    {
+      "id": "2d087450-e85f-11ee-9ebb-99f227a86621",
+      "id_user": "1",
+      "jawabanPPL": [
+        [
+          [
+            1,
+            "a"
+          ]
+        ],
+        [
+          [
+            2,
+            "c"
+          ]
+        ],
+        [
+          [
+            3,
+            "d"
+          ]
+        ],
+        [
+          [
+            4,
+            "d"
+          ]
+        ],
+        [
+          [
+            5,
+            "d"
+          ]
+        ],
+        [
+          [
+            6,
+            "d"
+          ]
+        ],
+        [
+          [
+            7,
+            "c"
+          ]
+        ],
+        [
+          [
+            8,
+            "d"
+          ]
+        ],
+        [
+          [
+            9,
+            "d"
+          ]
+        ],
+        [
+          [
+            10,
+            "d"
+          ]
+        ],
+        [
+          [
+            11,
+            "d"
+          ]
+        ],
+        [
+          [
+            12,
+            "d"
+          ]
+        ],
+        [
+          [
+            13,
+            "d"
+          ]
+        ],
+        [
+          [
+            14,
+            "d"
+          ]
+        ],
+        [
+          [
+            15,
+            "d"
+          ]
+        ]
+      ],
+      "isPPL": true
+    }
+  ],
+  "jawabanSpritual": [],
   "komentar": [
     {
       "id": "1",

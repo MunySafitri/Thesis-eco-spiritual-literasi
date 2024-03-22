@@ -5,7 +5,7 @@ import DefaultLayout from '@/Pertemuan1/layouts/DefaultLayout'
 const routes = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/overview',
     name: 'Pages',
     component: {
       render() {
@@ -13,32 +13,42 @@ const routes = [
       },
     },
     children: [
-      {
-        path: 'home',
-        name: 'Home',
-        component: () => import('@/components/Home.vue'),
-      },
+      // {
+      //   path: 'home',
+      //   name: 'Home',
+      //   component: () => import('@/components/Home.vue'),
+      // },
       {
         path: 'overview',
         name: 'Overview',
         component: () => import('@/views/HomeView.vue'),
       },
+      // {
+      //   path: 'pretest',
+      //   name: 'Pretest',
+      //   // component: () => import('@/components/Pretes.vue'),
+      //   //diganti semnetara dengan contoh kognitif
+      //   component: () => import('@/components/Test/Kognitif.vue'),
+      // },
       {
         path: 'pretest',
         name: 'Pretest',
-        // component: () => import('@/components/Pretes.vue'),
-        //diganti semnetara dengan contoh kognitif
-        component: () => import('@/components/Test/Kognitif.vue'),
+        component: () => import('@/components/Pretest/Base.vue'),
       },
       {
         path: 'kognitif',
         name: 'Kognitif',
-        component: () => import('@/components/Test/Kognitif.vue'),
+        component: () => import('@/components/Pretest/Kognitif.vue'),
       },
       {
         path: 'ppl',
         name: 'PPL',
-        component: () => import('@/components/Test/Ppl.vue'),
+        component: () => import('@/components/Pretest/Ppl.vue'),
+      },
+      {
+        path: 'spritual',
+        name: 'Spritual',
+        component: () => import('@/components/Pretest/Spritual.vue'),
       },
       {
         path: 'login',
@@ -148,6 +158,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
   const isPretest = JSON.parse(localStorage.getItem('isPretest'))
+  // const isPretest = true
 
   if (to.name === 'Login' && !isAuthenticated) {
     next()
@@ -168,11 +179,10 @@ router.beforeEach((to, from, next) => {
   }
   if (to.name === 'Overview' && !isPretest) {
     next({ name: 'Pretest' })
-  }
-  if (to.name === 'Pretest' && isPretest) {
+  } else if (to.name === 'Pretest' && isPretest) {
     // isPretest = true
     next({ name: 'Overview' })
-  }
+  } else next()
   // if (
   //   (to.name !== 'Login' || to.name !== 'Register') &&
   //   isAuthenticated &&
@@ -182,7 +192,6 @@ router.beforeEach((to, from, next) => {
   //   next({ name: 'Pretest' }) // kita buat kondisional semnetara ke Pretest dulu
   // }
   // if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
-  else next()
 })
 
 export default router

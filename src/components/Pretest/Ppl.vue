@@ -1,0 +1,1091 @@
+<!-- eslint-disable prettier/prettier -->
+<template>
+  <Navbar />
+  <div class="container pb-5">
+    <h1>Perilaku Peduli Lingkungan</h1>
+    <div class="row ">
+      <section class="radio-section">
+        <div class="col-10 px-2">
+
+          <div class="radio-list" style="font-size:2vw;">
+            <img src="../../assets/img/logo.png" alt="" width="400">
+
+            <div v-for="(ppl, index) in ekoliterasi" :key="ppl.id" class="question-content">
+              <div v-show="index === questionIndex" class="question question-box">
+                <h4>{{ index + 1 }}. {{ ppl.pernyataan }}</h4>
+                <ul>
+                  <li class="radio-item " v-for="(response) in ppl.opsi" :key="response.id">
+
+                    <input @click="emitSelectedOption(index + 1, response.id)" :id="response.id + ppl.pernyataan"
+                      type="radio" v-bind:value="response.isi" v-bind:name="response.isi"
+                      v-model="userResponses[index]">
+                    <label :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
+                    </label>
+
+                  </li>
+                </ul>
+                <div class="col d-flex justify-content-between">
+                  <!-- <div class="p-2">
+
+                    <button class="btn btn-lg btn-secondary " v-if="questionIndex > 0" v-on:click="prev">
+                      Prev
+                    </button>
+                  </div> -->
+
+                  <!-- <div class="row" v-if="questionIndex === ekoliterasi.length - 1">
+                    <div class="col d-flex justify-content-sm-end pt-5">
+                      <button class="btn btn-lg btn-success " @click="addData"> Submit</button>
+                    </div>
+                  </div>
+
+                  <div v-else class="ml-auto p-2">
+                    <button class="ml-auto btn btn-lg btn-secondary " :class="choose ? '': 'disabled'" v-on:click="next">
+                      Berikutnya &#8250;
+                    </button>
+                  </div> -->
+                  <div v-if="questionIndex === ekoliterasi.length - 1" class="d-flex justify-content-sm-end pt-5">
+                   
+                    <CButton color="success" class="btn-lg" :class="choose ? '' : 'disabled'" @click="() => {
+              visibleScrollableDemo = true
+            }
+              ">Selesai &#8250;</CButton>
+
+                    <!-- modal -->
+                    <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+              visibleScrollableDemo = false
+            }
+              " aria-labelledby="ScrollingLongContentExampleLabel2">
+                      <CModalHeader>
+                        <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
+                      </CModalHeader>
+                      <CModalBody>
+                        <div class="accordion-body">
+                          <p> Lanjut Aspek Perilaku Spritual?</p>
+                          <p> 17 soal</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+                          <button type="button" @click="addData" class="btn btn-primary">Mulai</button>
+                        </div>
+                      </CModalBody>
+                    </CModal>
+                    <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
+                  </div>
+                  <div v-else class="row d-flex justify-content-sm-end pt-5">
+                    <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
+                      v-on:click="next">Berikutnya &#8250;</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <div v-if="jawaban">
+    {{ jawaban }}
+  </div>
+  <!-- </div> -->
+  <!-- <div v-for="p in ppl" :key ="p.id" class="question-content">
+
+<h4>{{ p.pernyataan }}</h4>
+<ol>
+  <li v-for="response in p.opsi" :key ="response">
+    <label>
+      <input type="radio" v-bind:value="response.text" v-bind:name="response.text" v-model="userResponses[index]" v-bind:checked="response.correct==true"> {{response.text}}
+    </label>
+  </li>
+</ol>
+<button v-if="questionIndex > 0" v-on:click="prev">
+  Prev
+</button>
+<button v-on:click="next">
+  Next
+</button>
+
+</div>
+<div v-show="questionIndex === quiz.questions.length">
+<h2>
+  Quiz finished
+</h2>
+<p>
+Total score: {{ score() }} / {{ quiz.questions.length }}
+</p>
+<button v-on:click="start">
+Restart
+</button>
+
+</div> -->
+  <!-- <table class="table table-responsive table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th rowspan="2">Pernyataan</th>
+        <th colspan="4">Jawaban</th>
+      </tr>
+      <tr>
+        <td>Selalu</td>
+        <td>Sering</td>
+        <td>Jarang</td>
+        <td>Tidak Pernah</td>
+      </tr>
+    </thead>
+    <tbody > -->
+
+
+  <!-- <tr v-for="p in ppl" :key="p.id">
+          <th  scope="row">
+            {{ p.pernyataan }}
+          </th>
+         
+          <td>
+            <input class="better-radio" type="radio" name="z" :id="p.pernyataan + '1'"   />
+            <label :for="p.pernyataan + '1'" class="btn btn-outline-primary" >1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" :id="p.pernyataan +'2'"  />
+            <label :for="p.pernyataan +'2'" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" :id="p.pernyataan + '3'"  />
+            <label :for="p.pernyataan + '3'" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" :id="p.pernyataan+'4'"  />
+            <label :for="p.pernyataan+'4'" class="btn btn-outline-primary">4</label>
+          </td>
+        </tr> -->
+  <!-- <ButtonPpl :choices="ppl" v-model="userResponses[index]"/>  -->
+
+  <!-- <tr>
+        <th scope="row">Saya menutup keran air jika menemukan aliran air yang tidak diperlukan</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya menegur teman yang tidak menghabiskan air minum kemasan sewaktu ada kegiatan</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya lebih memilih mandi dengan shower dibandingkan dengan gayung agar lebih hemat dalam
+          penggunaan air
+
+        </th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya membiarkan air mengalir dengan percuma meskipun dikarenakan kebocoran pipa merupakan
+          salah satu bentuk pemborosan terhadap air.</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya berusaha keras penghematan penggunaan air pada waktu mencuci pakaian, mencuci alat
+          makan/minum ataupun mencuci sayuran/buah</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya berusaha Memeliharan kran air agar tidak cepat rusak dan segera menggantinya bila
+          rusak/bocor.
+
+        </th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Menampung air yang tetap mengalir saat berwudhu. Jika setiap berwudhu air yang dapat
+          ditampung sekitar 1 - 1,5 liter/orang
+
+        </th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya tidak membuang sampah ke daerah aliran sungai, sehingga tidak terjadi pencemaran air
+        </th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya ikut serta menjadi anggota komuditas peduli lingkungan seperti program penghijauan
+          yang bertujuan menjaga ketersediaan air bersih?</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya berusaha memilah limbah seperti bahan kimia berbahaya atau obat-obatan agar tidak
+          mencemari air bersih?</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya menyarankan kepada keluarga agar memperhatikan limbah dari mencuci mobil atau
+          membersihkan halaman tidak mencemari saluran air atau sungai disekitar yang dijadikan sebagai sumber
+          air.</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya mencoba memanfaatkan air bekas pakai (greywater) untuk menyiram tanaman</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya berusaha manfaatkan air bilasan terakhir cucian untuk mengepel lantai atau
+          membersihkan kamar mandi</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya menyarankan kepada semua pihak agar menanam pohon disekitar area rumah atau sekolah
+          untuk membantu penyerapan air ke dalam tanah.</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">Saya menyarankan kepada teman agar setiap rumah mereka menyediakan area resapan air,
+          sehingga air hujan tidak langsung terbuang ke saluran air, namun meresap kembali ke tanah sebagai sumber
+          air bersih.</th>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop1" value="0.15" />
+            <label for="zop1" class="btn btn-outline-primary">1</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop2" value="0.25" />
+            <label for="zop2" class="btn btn-outline-primary">2</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop3" value="0.30" />
+            <label for="zop3" class="btn btn-outline-primary">3</label>
+          </td>
+          <td>
+            <input class="better-radio" type="radio" name="z" id="zop4" value="0.35" />
+            <label for="zop4" class="btn btn-outline-primary">4</label>
+          </td>
+        </div>
+      </tr> -->
+  <!-- </tbody>
+  </table> -->
+</template>
+<!-- eslint-disable prettier/prettier -->
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
+
+
+
+
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Averia Serif Libre", cursive;
+  background-color: rgb(19, 18, 21);
+  color: #ffffff;
+}
+
+.radio-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.radio-item [type="radio"] {
+  display: none;
+  /* width: 80%; */
+}
+
+.radio-item+.radio-item {
+  margin-top: 15px;
+}
+
+.radio-item label {
+  display: block;
+  padding: 15px 60px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(244, 239, 239);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  min-width: 250px;
+  white-space: nowrap;
+  position: relative;
+  transition: 0.4s ease-in-out 0s;
+}
+
+.radio-item label:after,
+.radio-item label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.radio-item label:after {
+  height: 19px;
+  width: 19px;
+  border: 2px solid rgb(0, 0, 0);
+  ;
+  left: 19px;
+  top: calc(50% - 12px);
+}
+
+.radio-item label:before {
+  background: rgb(161, 100, 100);
+  border-color: rgb(244, 239, 239);
+  ;
+  height: 20px;
+  width: 20px;
+  left: 21px;
+  top: calc(50%-5px);
+  transform: scale(5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out 0s;
+}
+
+
+
+.radio-item [type="radio"]:checked~label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* .?? */
+.question-container {
+  margin-top: 20px;
+}
+
+.question {
+  font-size: 16px;
+  margin-bottom: 20px;
+  /* width: 80%; */
+}
+
+/* .option {
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.option-label {
+  background-color: bisque;
+  width: 50px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-value {
+  
+  width: 80%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  
+  padding: 0 20px
+}
+
+.option-value:hover {
+  background-color: rgb(244, 239, 239);
+}
+
+.active {
+  background-color: rgb(244, 239, 239);
+  color: red; */
+
+/* } */
+</style>
+<!-- eslint-disable prettier/prettier -->
+<script>
+
+import Navbar from '@/components/Pretest/Navbar.vue'
+import axios from 'axios'
+import { uuid } from 'vue-uuid'
+//import ButtonPpl from '@/components/Test/pplChoice.vue'
+
+var ppl = [
+  {
+    "id": 1,
+    "pernyataan": "Saya berupaya keras menghemat penggunaan air di rumah agar pompa air di rumah tidak sering bekerja",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 2,
+    "pernyataan": "Saya menutup keran air jika menemukan aliran air yang tidak diperlukan",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 3,
+    "pernyataan": "Saya menegur teman yang tidak menghabiskan air minum kemasan sewaktu ada kegiatan",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 4,
+    "pernyataan": "Saya lebih memilih mandi dengan shower dibandingkan dengan gayung agar lebih hemat dalam penggunaan air ",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 5,
+    "pernyataan": "Saya membiarkan air mengalir dengan percuma meskipun dikarenakan kebocoran pipa merupakan salah satu bentuk pemborosan terhadap air.",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 6,
+    "pernyataan": "Saya berusaha keras penghematan penggunaan air pada waktu mencuci pakaian, mencuci alat makan/minum ataupun mencuci sayuran/buah",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 7,
+    "pernyataan": "Saya berusaha Memeliharan kran air agar tidak cepat rusak dan segera menggantinya bila rusak/bocor. ",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 8,
+    "pernyataan": "Menampung air yang tetap mengalir saat berwudhu. Jika setiap berwudhu air yang dapat ditampung sekitar 1 - 1,5 liter/orang ",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 9,
+    "pernyataan": "Saya tidak membuang sampah ke daerah aliran sungai, sehingga tidak terjadi pencemaran air ",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 10,
+    "pernyataan": "Saya ikut serta menjadi anggota komuditas peduli lingkungan seperti program penghijauan yang bertujuan menjaga ketersediaan air bersih?",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 11,
+    "pernyataan": "Saya berusaha memilah limbah seperti bahan kimia berbahaya atau obat-obatan agar tidak mencemari air bersih?",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 12,
+    "pernyataan": "Saya menyarankan kepada keluarga agar memperhatikan limbah dari mencuci mobil atau membersihkan halaman tidak mencemari saluran air atau sungai disekitar yang dijadikan sebagai sumber air.	",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 13,
+    "pernyataan": "Saya mencoba memanfaatkan air bekas pakai (greywater) untuk menyiram tanaman",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 14,
+    "pernyataan": "Saya berusaha manfaatkan air bilasan terakhir cucian untuk mengepel lantai atau membersihkan kamar mandi	",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 15,
+    "pernyataan": "Saya menyarankan kepada semua pihak agar menanam pohon disekitar area rumah atau sekolah untuk membantu penyerapan air ke dalam tanah.",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+  {
+    "id": 16,
+    "pernyataan": "Saya menyarankan kepada teman agar setiap rumah mereka menyediakan area resapan air, sehingga air hujan tidak langsung terbuang ke saluran air, namun meresap kembali ke tanah sebagai sumber air bersih.",
+    "opsi": [
+      {
+        "id": "a",
+        "isi": "Selalu"
+      },
+      {
+        "id": "b",
+        "isi": "Sering "
+      },
+      {
+        "id": "c",
+        "isi": "Jarang "
+      },
+      {
+        "id": "d",
+        "isi": "Tidak Pernah"
+      }
+    ],
+  },
+
+]
+export default {
+  name: 'AppOverview',
+
+  data() {
+    return {
+      time: 0,
+      // Store current question index
+      questionIndex: 0,
+      temp: [],
+      visibleScrollableDemo: false,
+      show: true,
+      // An array initialized with "false" values for each question
+      // It means: "did the user answered correctly to the question n?" "no".
+      userResponses: Array(ppl.length).fill(false),
+      ekoliterasi: ppl,
+      jawaban: [],
+      choose: false
+    }
+  },
+  components: {
+    Navbar,
+    //ButtonPpl,
+  },
+  methods: {
+    async addData() {
+      const datas = {
+        id: uuid.v1(),
+        'id_user': JSON.parse(localStorage.getItem('id_user')),
+        "jawabanPPL": this.jawaban,
+        "isPPL": true
+      }
+      console.log(datas)
+
+      axios
+        .post('http://localhost:3000/jawabanPPL/', datas)
+        .then(() => console.log('Berhasil'))
+        .catch((error) => console.log('Gagal : ', error))
+      //kita coba set true dulu nnti di akalin dengan make api
+      // localStorage.setItem('isPretest', true)
+      this.$router.push({ path: '/spritual' })
+    },
+    emitSelectedOption(no, jawaban) {
+      this.temp = []
+      this.temp.push([no, jawaban])
+      // this.active = !this.active
+      this.choose = true
+      // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
+      // this.questionIndex++
+    },
+    next: function () {
+      this.questionIndex++;
+      this.jawaban.push(this.temp)
+      this.temp = []
+      this.choose = false
+    },
+    // prev: function () {
+    //   this.questionIndex--;
+    // },
+    // Return "true" count in userResponses
+    // score: function () {
+    //   let correctCount = 0;
+    //   let self = this;
+
+    //   this.quiz.questions.filter(function (val, i) {
+    //     val.userAnswerCorrect = false;
+    //     val.userAnswer = self.userResponses[i];
+
+    //     val.responses.filter(function (ans) {
+    //       if (ans.correct == true && val.userAnswer == ans.text) {
+    //         correctCount++;
+    //       }
+
+    //     })
+    //   });
+
+    //   return correctCount;
+    // },
+
+    // Restart quiz
+    start: function () {
+      this.userResponses = [];
+      this.questionIndex = 0;
+    },
+   
+  }
+}
+</script>
