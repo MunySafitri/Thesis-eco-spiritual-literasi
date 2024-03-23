@@ -36,19 +36,39 @@ const routes = [
         component: () => import('@/components/Pretest/Base.vue'),
       },
       {
-        path: 'kognitif',
-        name: 'Kognitif',
+        path: 'kognitif-pretest',
+        name: 'KognitifPretest',
         component: () => import('@/components/Pretest/Kognitif.vue'),
       },
       {
-        path: 'ppl',
-        name: 'PPL',
+        path: 'ppl-pretest',
+        name: 'PPLPretest',
         component: () => import('@/components/Pretest/Ppl.vue'),
       },
       {
-        path: 'spritual',
-        name: 'Spritual',
+        path: 'spritual-pretest',
+        name: 'SpritualPretest',
         component: () => import('@/components/Pretest/Spritual.vue'),
+      },
+      {
+        path: 'posttest',
+        name: 'Posttest',
+        component: () => import('@/components/Posttest/Base.vue'),
+      },
+      {
+        path: 'kognitif-posttest',
+        name: 'KognitifPosttest',
+        component: () => import('@/components/Posttest/Kognitif.vue'),
+      },
+      {
+        path: 'ppl-posttest',
+        name: 'PPLPosttest',
+        component: () => import('@/components/Posttest/Ppl.vue'),
+      },
+      {
+        path: 'spritual-posttest',
+        name: 'SpritualPosttest',
+        component: () => import('@/components/Posttest/Spritual.vue'),
       },
       {
         path: 'login',
@@ -158,7 +178,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
   const isPretest = JSON.parse(localStorage.getItem('isPretest'))
-  // const isPretest = true
+  // const isPosttest = JSON.parse(localStorage.getItem('isPosttest'))
+  // const isPretest = false
 
   if (to.name === 'Login' && !isAuthenticated) {
     next()
@@ -179,10 +200,29 @@ router.beforeEach((to, from, next) => {
   }
   if (to.name === 'Overview' && !isPretest) {
     next({ name: 'Pretest' })
-  } else if (to.name === 'Pretest' && isPretest) {
+  }
+  if (
+    (to.name === 'Pretest' ||
+      to.name === 'KognitifPretest' ||
+      to.name === 'PPLPretest' ||
+      to.name === 'SpritualPretest') &&
+    isPretest
+  ) {
     // isPretest = true
     next({ name: 'Overview' })
+  }
+  if (
+    (to.name === 'Posttest' ||
+      to.name === 'KognitifPosttest' ||
+      to.name === 'PPLPosttest' ||
+      to.name === 'SpritualPosttest') &&
+    !isPretest
+  ) {
+    // isPretest = true
+    next({ name: 'Pretest' })
   } else next()
+  //Sekarang ke tahap posttest
+
   // if (
   //   (to.name !== 'Login' || to.name !== 'Register') &&
   //   isAuthenticated &&

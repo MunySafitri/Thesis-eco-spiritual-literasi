@@ -2,7 +2,7 @@
 <template>
 <Navbar/>>
     <div class="container pb-5">
-        <h1> Anda Belum melakukan pretest!</h1>
+        <h1> Saatnya Anda melakukan Pretest untuk menguji kemampuan anda</h1>
         <div class="mt-5 row align-items-center">
             <h3><strong>Pemberitahuan</strong></h3>
             <ul>
@@ -85,7 +85,7 @@
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script>
-import Navbar from '@/components/Pretest/Navbar.vue'
+import Navbar from '@/components/Layouts/Navbar.vue'
 
 export default {
     name: "Pretest",
@@ -102,7 +102,7 @@ export default {
     methods:
     {
         startTest(){
-            this.$router.push({ path: '/kognitif-pretest' })
+            this.$router.push({ path: '/kognitif-posttest' })
         }
     },
     mounted() {

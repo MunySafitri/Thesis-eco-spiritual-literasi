@@ -292,6 +292,8 @@ export default {
 
         //kita coba set false dulu nnti diganti
         localStorage.setItem('isPretest', user.isPretest)
+        localStorage.setItem('isPosttest', user.isPosttest)
+        localStorage.setItem('isAdmin', user.isAdmin)
 
         localStorage.setItem('user', JSON.stringify(user.name))
         localStorage.setItem('id_user', JSON.stringify(user.id))

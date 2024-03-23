@@ -43,19 +43,8 @@
               }
                 ">Selesai &#8250;</CButton>
 
-                         
-            <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
-          </div>
-          <div v-else class="d-flex justify-content-sm-end pt-5">
-            <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
-              @click="nextQuestion">Berikutnya
-              &#8250;</button>
-          </div>
-      </div>
-    </div>
-  </div>
-   <!-- modal -->
-   <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+                          <!-- modal -->
+                          <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
                 visibleScrollableDemo = false
               }
                 " aria-labelledby="ScrollingLongContentExampleLabel2">
@@ -73,12 +62,23 @@
                 </div>
               </CModalBody>
             </CModal>
+            <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
+          </div>
+          <div v-else class="d-flex justify-content-sm-end pt-5">
+            <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
+              @click="nextQuestion">Berikutnya
+              &#8250;</button>
+          </div>
+      </div>
+    </div>
+  </div>
   </div>
   
 
   <div v-if="jawaban">
     {{ jawaban }}
   </div>
+
 
 </template>
 <!-- eslint-disable prettier/prettier -->
@@ -224,7 +224,7 @@ h1 {
 <!-- eslint-disable prettier/prettier -->
 
 <script>
-import Navbar from '@/components/Pretest/Navbar.vue'
+import Navbar from '@/components/Layouts/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 // import { ref } from "vue";
@@ -743,7 +743,7 @@ export default {
     emitSelectedOption(no, jawaban) {
       this.temp = []
       this.temp.push([no, jawaban])
-      this.choose = true
+      this.choose=true
       // this.active = !this.active
       // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
       // this.questionIndex++
@@ -753,14 +753,14 @@ export default {
       this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
       this.questionIndex++
       this.temp = []
-      this.choose = false
+      this.choose=false
     },
     async addData() {
       const datas = {
         id: uuid.v1(),
         'id_user': JSON.parse(localStorage.getItem('id_user')),
         "jawabanKognitif": this.jawaban,
-        "isKognitif": true
+        "isKognitifPosttest": true
       }
       console.log(datas)
 
@@ -770,7 +770,7 @@ export default {
         .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
       // localStorage.setItem('isPretest', true)
-      this.$router.push({ path: '/ppl-pretest' })
+      this.$router.push({ path: '/ppl-posttest' })
     }
 
   },
@@ -786,6 +786,7 @@ export default {
       .catch((error) => console.log('Gagal : ', error))
 
 
-  },
+  }
+  
 }
 </script>

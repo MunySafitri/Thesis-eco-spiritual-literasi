@@ -15,26 +15,23 @@
             </div>
             <div class="choose-content">
 
-              <a :href="'/ppl'" class="choose-btn"  
-                >Kerjakan sekarang</a>
+              <a :href="'/posttest'" class="choose-btn"  
+                >Kerjakan Posttest</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <!-- <div class="col-lg-4 col-md-6">
           <div class="why-choose-us-item">
             <div class="choose-image">
               <img src="../assets/img/2_2.png" alt="image" />
             </div>
             <div class="choose-content">
-              <!-- <div v-show="JSON.parse(localStorage.getItem('isLogin'))">
-
-                masuk sini
-              </div> -->
+             
               <a :href="'/kognitif'" :class="'choose-btn'"
                 >Kerjakan sekarang</a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

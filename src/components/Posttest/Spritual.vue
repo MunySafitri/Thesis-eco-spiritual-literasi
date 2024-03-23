@@ -1,14 +1,9 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <Navbar />
-  <div class="container pb-5 ">
+  <div class="container pb-5">
     <h1>Aspek Spritual</h1>
-    <br/>
-    <button type="button"  class="btn btn-secondary" @click="reload">
-   Reload Page
-</button>
-
-    <div class="row p-2">
+    <div class="row ">
       <section class="radio-section overflow-auto">
         <div class="px-2">
           <table class="table table-responsive table-bordered table-striped">
@@ -239,7 +234,7 @@ var spritual= [
     ]
   
 
-import Navbar from '@/components/Pretest/Navbar.vue'
+import Navbar from '@/components/Layouts/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 // var ppl =[]
@@ -272,9 +267,6 @@ export default {
     //ButtonPpl,
   },
   methods: {
-    reload(){
-      location.reload()
-    },
     fillJawaban(){
       this.error =[]
       for(let i  =0 ; i < this.data.length; i++) {
@@ -298,12 +290,12 @@ export default {
         id: uuid.v1(),
         'id_user': id_user,
         "jawabanSpritual": this.jawaban,
-        "isSpritual": true
+        "isSpritualPosttest": true
       }
       console.log(datas)
       axios.patch(`http://localhost:3000/user/${id_user}`, 
         { 
-          isPretest: true 
+          isPosttest: true 
         }
       )
       .then(() => console.log('Berhasil Update user'))
@@ -314,12 +306,9 @@ export default {
         .then(() => console.log('Berhasil tambahkan spritual'))
         .catch((error) => console.log('Gagal tambahkan spritual : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
-      localStorage.setItem('isPretest', true)
+      // localStorage.setItem('isPretest', true)
       this.$router.push({ path: '/overview' })
     },
-  },
-  mounted() {
-    
-  },
+  }
 }
 </script>

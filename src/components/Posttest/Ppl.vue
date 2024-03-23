@@ -35,26 +35,8 @@
               }
                 ">Selesai &#8250;</CButton>
 
-                     
-                      <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
-                    </div>
-                    <div v-else class="row d-flex justify-content-sm-end pt-5">
-                      <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
-                        v-on:click="next">Berikutnya &#8250;</button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </div>
-     <!-- modal -->
-     <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+                      <!-- modal -->
+                      <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
                 visibleScrollableDemo = false
               }
                 " aria-labelledby="ScrollingLongContentExampleLabel2">
@@ -72,6 +54,23 @@
                           </div>
                         </CModalBody>
                       </CModal>
+                      <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
+                    </div>
+                    <div v-else class="row d-flex justify-content-sm-end pt-5">
+                      <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
+                        v-on:click="next">Berikutnya &#8250;</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
 
   </div>
 
@@ -222,7 +221,7 @@ h1 {
 <!-- eslint-disable prettier/prettier -->
 <script>
 
-import Navbar from '@/components/Pretest/Navbar.vue'
+import Navbar from '@/components/Layouts/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 //import ButtonPpl from '@/components/Test/pplChoice.vue'
@@ -611,7 +610,7 @@ export default {
         id: uuid.v1(),
         'id_user': JSON.parse(localStorage.getItem('id_user')),
         "jawabanPPL": this.jawaban,
-        "isPPL": true
+        "isPPLPosttest": true
       }
       console.log(datas)
 
@@ -621,8 +620,7 @@ export default {
         .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
       // localStorage.setItem('isPretest', true)
-      this.$router.push({ path: '/spritual-pretest' })
-      // location.reload()
+      this.$router.push({ path: '/spritual-posttest' })
     },
     emitSelectedOption(no, jawaban) {
       this.temp = []
