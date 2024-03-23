@@ -7,7 +7,7 @@
     <button type="button"  class="btn btn-secondary" @click="reload">
    Reload Page
 </button>
-    <div class="row ">
+    <div class="row p-2">
       <section class="radio-section overflow-auto">
         <div class="px-2">
           <table class="table table-responsive table-bordered table-striped">
