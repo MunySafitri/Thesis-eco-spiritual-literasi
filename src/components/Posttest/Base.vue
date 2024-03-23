@@ -45,7 +45,7 @@
                 <CButton color="primary" @click="() => {
                         visibleScrollableDemo = true
                     }
-                    ">Mulai Pretest</CButton>
+                    ">Mulai Posttest</CButton>
                 <!-- <button class="btn btn-primary" @click="OnSubmit">Mulai Melakukan Pretest</button> -->
 
             </div>
