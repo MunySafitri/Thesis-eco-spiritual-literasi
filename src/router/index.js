@@ -178,7 +178,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isLogin'))
   const isPretest = JSON.parse(localStorage.getItem('isPretest'))
-  // const isPosttest = JSON.parse(localStorage.getItem('isPosttest'))
+  const isPosttest = JSON.parse(localStorage.getItem('isPosttest'))
   // const isPretest = false
 
   if (to.name === 'Login' && !isAuthenticated) {
@@ -220,6 +220,16 @@ router.beforeEach((to, from, next) => {
   ) {
     // isPretest = true
     next({ name: 'Pretest' })
+  }
+  if (
+    (to.name === 'Posttest' ||
+      to.name === 'KognitifPosttest' ||
+      to.name === 'PPLPosttest' ||
+      to.name === 'SpritualPosttest') &&
+    isPosttest
+  ) {
+    // isPretest = true
+    next({ name: 'Overview' })
   } else next()
   //Sekarang ke tahap posttest
 

@@ -313,7 +313,7 @@ export default {
         .then(() => console.log('Berhasil tambahkan spritual'))
         .catch((error) => console.log('Gagal tambahkan spritual : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
-      // localStorage.setItem('isPretest', true)
+      localStorage.setItem('isPosttest', true)
       this.$router.push({ path: '/overview' })
     },
   }

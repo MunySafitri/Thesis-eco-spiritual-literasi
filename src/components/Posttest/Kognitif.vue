@@ -43,7 +43,17 @@
               }
                 ">Selesai &#8250;</CButton>
 
-                          <!-- modal -->
+                 
+            <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
+          </div>
+          <div v-else class="d-flex justify-content-sm-end pt-5">
+            <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
+              @click="nextQuestion">Berikutnya
+              &#8250;</button>
+          </div>
+      </div>
+    </div>
+             <!-- modal -->
                           <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
                 visibleScrollableDemo = false
               }
@@ -62,15 +72,6 @@
                 </div>
               </CModalBody>
             </CModal>
-            <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
-          </div>
-          <div v-else class="d-flex justify-content-sm-end pt-5">
-            <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
-              @click="nextQuestion">Berikutnya
-              &#8250;</button>
-          </div>
-      </div>
-    </div>
   </div>
   </div>
   
@@ -786,7 +787,7 @@ export default {
       .catch((error) => console.log('Gagal : ', error))
 
 
-  }
+  },
   
 }
 </script>

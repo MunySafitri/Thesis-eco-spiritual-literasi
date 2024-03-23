@@ -15,7 +15,7 @@
             </div>
             <div class="choose-content">
 
-              <a :href="'/posttest'" class="choose-btn"  
+              <a :href="'/posttest'" class=" btn btn-success btn-lg " :class="postTest ? 'disabled' : '' "  
                 >Kerjakan Posttest</a>
             </div>
           </div>
@@ -42,7 +42,9 @@
 export default {
   name: "AppOrder",
   data() {
-    
+    return {
+     postTest: JSON.parse(localStorage.getItem('isPosttest'))
+    }
   },
   mounted(){
     // console.log("si kognitif",JSON.parse(localStorage.getItem('isKognitif')))

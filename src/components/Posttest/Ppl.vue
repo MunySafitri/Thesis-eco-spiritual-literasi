@@ -35,43 +35,43 @@
               }
                 ">Selesai &#8250;</CButton>
 
-                      <!-- modal -->
-                      <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
-                visibleScrollableDemo = false
-              }
-                " aria-labelledby="ScrollingLongContentExampleLabel2">
-                        <CModalHeader>
-                          <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
-                        </CModalHeader>
-                        <CModalBody>
-                          <div class="accordion-body">
-                            <p> Lanjut Aspek Perilaku Spritual?</p>
-                            <p> 17 soal</p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
-                            <button type="button" @click="addData" class="btn btn-primary">Mulai</button>
-                          </div>
-                        </CModalBody>
-                      </CModal>
-                      <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
+<!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
                     </div>
                     <div v-else class="row d-flex justify-content-sm-end pt-5">
                       <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
-                        v-on:click="next">Berikutnya &#8250;</button>
+                      v-on:click="next">Berikutnya &#8250;</button>
                     </div>
 
                   </div>
                 </div>
               </div>
-
+              
             </div>
           </div>
         </section>
-
+        
       </div>
     </div>
-
+    
+    <!-- modal -->
+    <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+    visibleScrollableDemo = false
+    }
+    " aria-labelledby="ScrollingLongContentExampleLabel2">
+      <CModalHeader>
+        <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
+      </CModalHeader>
+      <CModalBody>
+        <div class="accordion-body">
+          <p> Lanjut Aspek Perilaku Spritual?</p>
+          <p> 17 soal</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" @click="addData" class="btn btn-primary">Mulai</button>
+        </div>
+      </CModalBody>
+    </CModal>
   </div>
 
   <div v-if="jawaban">
