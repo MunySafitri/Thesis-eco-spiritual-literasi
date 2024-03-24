@@ -12,8 +12,8 @@
             <div class=" px-2">
 
               <div class="radio-list" style="font-size:2vw;">
-                <img v-if="kognitif[questionIndex].gambar !== null" :src="require(`../../assets/img/${kognitif[questionIndex].gambar}`)" alt="" width="400">
-
+                <img v-if="kognitif[questionIndex].gambar !== null" :src="require(`../../assets/img/ujian/${kognitif[questionIndex].gambar}`)" alt="" width="400">
+                <br />
                 <div v-for="(k, index) in kognitif" :key="k.id" class="question-content">
                   <div v-show="index === questionIndex" class="question question-box">
                     <h4>{{ index + 1 }}. {{ k.pertanyaan }}</h4>
@@ -225,7 +225,7 @@ h1 {
 <!-- eslint-disable prettier/prettier -->
 
 <script>
-import Navbar from '@/components/Layouts/Navbar.vue'
+import Navbar from '@/components/Posttest/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 // import { ref } from "vue";

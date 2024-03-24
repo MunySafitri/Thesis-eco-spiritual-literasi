@@ -97,7 +97,7 @@
             </CModal>
     <div class="container-fluid">
       <div class="row mt-lg-n10 mt-md-n11 mt-n10 justify-content-center">
-        <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+        <div class="col-xl-6 col-lg-5 col-md-7 mx-auto">
           <div class="card z-index-0">
             <div class="card-header text-center pt-4">
               <h5>Login with</h5>
@@ -127,7 +127,7 @@
                 <!-- email -->
                 <b-row class="my-2">
                   <b-col sm="3">
-                    <label for="`type-email`"><code>Email</code>:</label>
+                    <label for="`type-email`"><code>Email</code> :</label>
                   </b-col>
                   <b-col sm="9">
                     <b-form-input
@@ -165,7 +165,7 @@
                 <!-- password -->
                 <b-row class="my-2">
                   <b-col sm="3">
-                    <label for="type-password"><code>password</code>:</label>
+                    <label for="type-password"><code>password</code> :</label>
                   </b-col>
                   <b-col sm="9">
                     <b-form-input
@@ -206,7 +206,7 @@
                   Tidak Punya Akun
                   <a
                     href="/register"
-                    class="text-success text-gradient font-weight-bold"
+                    class="text-danger text-gradient font-weight-bold"
                     >Daftar</a
                   >
                 </p>

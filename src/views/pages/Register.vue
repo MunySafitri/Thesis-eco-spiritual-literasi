@@ -195,7 +195,7 @@
                    Susah Punya Akun
                     <a
                       href="/login"
-                      class="text-success text-gradient font-weight-bold"
+                      class="text-danger text-gradient font-weight-bold"
                     >Masuk</a>
                   </p>
                 </div>

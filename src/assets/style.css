@@ -10520,6 +10520,14 @@ button:focus {
   padding-right: 30px;
 }
 
+
+.kognitif{
+  color: #0d1820;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
+ 
+}
 .card {
   box-shadow: 0 10px 18px 0 #f9fafb;
   transition: 0.3s;
