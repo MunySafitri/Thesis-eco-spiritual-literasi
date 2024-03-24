@@ -281,7 +281,7 @@ var kognitif = [
   },
   {
     "id": "3",
-    "gambar": null,
+    "gambar": "no3.jpg",
     "pertanyaan": "Berdasarkan gambar dibawah ini, jenis siklus air yang terjadi adalah…",
     "opsi": [
       {
@@ -305,7 +305,7 @@ var kognitif = [
   },
   {
     "id": "4",
-    "gambar": null,
+    "gambar": "no4.jpg",
     "pertanyaan": "Saat matahari bersinar terang di atas sungai, panasnya memicu penguapan air dari permukaan sungai. Air ini berubah menjadi uap air dan naik ke atmosfer. | Apakah volume air sungai akan berkurang karena proses evaporasi ? ",
     "opsi": [
       {
@@ -329,7 +329,7 @@ var kognitif = [
   },
   {
     "id": "5",
-    "gambar": null,
+    "gambar": "no5.jpg",
     "pertanyaan": "Ketika hujan turun kaca rumah Thaha basah padahal atap rumah cukup panjang sehingga kaca rumah tidak terkena air hujan. Mengapa hal itu terjadi?",
     "opsi": [
       {
