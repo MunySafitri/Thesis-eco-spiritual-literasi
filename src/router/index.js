@@ -13,11 +13,6 @@ const routes = [
       },
     },
     children: [
-      // {
-      //   path: 'home',
-      //   name: 'Home',
-      //   component: () => import('@/components/Home.vue'),
-      // },
       {
         path: 'overview',
         name: 'Overview',
@@ -101,62 +96,52 @@ const routes = [
     path: '/pertemuan1',
     name: 'Pertemuan1',
     component: DefaultLayout,
-    redirect: '/pertemuan1/element-daya-rusak-air',
+    redirect: '/pertemuan1/fenomena',
     children: [
       {
-        path: '/pertemuan1/element-daya-rusak-air',
-        name: 'Daya-Rusak',
+        path: '/pertemuan1/fenomena',
+        name: 'Fenomena-hujan',
         component: {
           render() {
             return h(resolveComponent('router-view'))
           },
         },
-        redirect: '/pertemuan1/element-daya-rusak-air',
+        redirect: '/pertemuan1/fenomena',
         children: [
           {
-            path: '/pertemuan1/element-daya-rusak-air',
-            name: 'Daya-Rusak',
-            component: () => import('@/Pertemuan1/Elemendayarusakair.vue'),
+            path: '/pertemuan1/fenomena',
+            name: 'Fenomena-hujan',
+            component: () => import('@/Pertemuan1/Fenomena.vue'),
           },
           {
-            path: '/pertemuan1/element-daya-guna-air',
-            name: 'Daya-Guna',
-            component: () => import('@/Pertemuan1/Elemendayagunaair.vue'),
+            path: '/pertemuan1/manfaat-hujan',
+            name: 'Manfaat-Hujan',
+            component: () => import('@/Pertemuan1/ManfaatHujan.vue'),
           },
           {
-            path: '/pertemuan1/penjelasan-siklus',
-            name: 'Penjelasan-Siklus',
-            component: () => import('@/Pertemuan1/Penjelasansiklus.vue'),
+            path: '/pertemuan1/siklus-hydrology',
+            name: 'Siklus-hydrology',
+            component: () => import('@/Pertemuan1/SiklusHydrologi.vue'),
           },
           {
-            path: '/pertemuan1/tahapan-siklus',
-            name: 'Tahapan-Siklus',
-            component: () => import('@/Pertemuan1/Tahapansiklus.vue'),
+            path: '/pertemuan1/jenis-siklus',
+            name: 'Jenis-siklus',
+            component: () => import('@/Pertemuan1/JenisSiklus.vue'),
           },
           {
-            path: '/pertemuan1/manfaat',
-            name: 'Manfaat',
-            component: () => import('@/Pertemuan1/Manfaat.vue'),
+            path: '/pertemuan1/manfaat-siklus',
+            name: 'Manfaat-Siklus',
+            component: () => import('@/Pertemuan1/ManfaatSiklus.vue'),
           },
           {
-            path: '/pertemuan1/elemen-konservasi',
-            name: 'Elemen-Konservasi',
-            component: () => import('@/Pertemuan1/Elemenkonservasi.vue'),
+            path: '/pertemuan1/penanaman-sikap',
+            name: 'Penanaman-sikap',
+            component: () => import('@/Pertemuan1/PenanamanSikap.vue'),
           },
           {
-            path: '/pertemuan1/rangkuman',
-            name: 'Rangkuman',
-            component: () => import('@/Pertemuan1/Rangkuman.vue'),
-          },
-          {
-            path: '/pertemuan1/kesimpulan',
-            name: 'Kesimpulan',
-            component: () => import('@/Pertemuan1/Kesimpulan.vue'),
-          },
-          {
-            path: '/pertemuan1/saran',
-            name: 'Saran',
-            component: () => import('@/Pertemuan1/Saran.vue'),
+            path: '/pertemuan1/penutup',
+            name: 'Penutup',
+            component: () => import('@/Pertemuan1/Penutup.vue'),
           },
         ],
       },

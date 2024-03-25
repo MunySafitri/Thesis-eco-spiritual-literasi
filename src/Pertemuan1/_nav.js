@@ -4,89 +4,45 @@ export default [
     name: 'Pertemuan 1',
   },
   {
-    component: 'CNavGroup',
+    component: 'CNavItem',
     name: 'Fenomena Hujan',
-    to: '/pertemuan1',
+    to: '/pertemuan1/fenomena',
     icon: 'cilRain',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Elemen daya rusak air',
-        to: 'element-daya-rusak-air',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Element Daya Guna Air',
-        to: '/pertemuan1/element-daya-guna-air',
-      },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Element Konservasi',
-      //   to: '/base/cards',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Tables',
-      //   to: '/base/tables',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Tooltips',
-      //   to: '/base/tooltips',
-      // },
-    ],
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Siklus Air',
-    to: '/pertemuan1',
-    icon: 'cilRecycle',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Penjelasan siklus air',
-        to: '/pertemuan1/penjelasan-siklus',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Tahapan siklus air',
-        to: '/pertemuan1/tahapan-siklus',
-      },
-    ],
   },
   {
     component: 'CNavItem',
-    name: 'Manfaat Siklus Air',
-    to: '/pertemuan1/manfaat',
+    name: 'Manfaat Hujan',
+    to: '/pertemuan1/manfaat-hujan',
+    icon: 'cilBook',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Siklus Hydrology',
+    to: '/pertemuan1/siklus-hydrology',
+    icon: 'cilRecycle',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Jenis Siklus',
+    to: '/pertemuan1/jenis-siklus',
+    icon: 'cilCloudy',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Manfaat Siklus',
+    to: '/pertemuan1/manfaat-siklus',
     icon: 'cilTask',
   },
   {
     component: 'CNavItem',
-    name: 'Element Konservasi Air',
-    to: '/pertemuan1/elemen-konservasi',
+    name: 'Penanaman Sikap',
+    to: '/pertemuan1/penanaman-sikap',
     icon: 'cilShareAlt',
   },
   {
-    component: 'CNavGroup',
+    component: 'CNavItem',
     name: 'Penutup',
-    to: '/pertemuan1',
-    icon: 'cilDrop',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Rangkuman',
-        to: '/pertemuan1/rangkuman',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Kesimpulan',
-        to: '/pertemuan1/kesimpulan',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Saran',
-        to: '/pertemuan1/saran',
-      },
-    ],
+    to: '/pertemuan1/penutup',
+    icon: 'cilEducation',
   },
 ]
