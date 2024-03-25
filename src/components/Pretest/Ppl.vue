@@ -5,95 +5,127 @@
     <h1>Perilaku Peduli Lingkungan</h1>
 
     <div class="card">
-      <div class="row  p-5 card-body">
+      <div class="row p-5 card-body">
         <section class="radio-section">
           <div class="px-2">
-
-            <div class="radio-list" style="font-size:2vw;">
+            <div class="radio-list" style="font-size: 2vw">
               <!-- <img src="../../assets/img/logo.png" alt="" width="400"> -->
 
-              <div v-for="(ppl, index) in ekoliterasi" :key="ppl.id" class="question-content">
-                <div v-show="index === questionIndex" class="question question-box">
+              <div
+                v-for="(ppl, index) in ekoliterasi"
+                :key="ppl.id"
+                class="question-content"
+              >
+                <div
+                  v-show="index === questionIndex"
+                  class="question question-box"
+                >
                   <h4>{{ index + 1 }}. {{ ppl.pernyataan }}</h4>
                   <ul>
-                    <li class="radio-item " v-for="(response) in ppl.opsi" :key="response.id">
-
-                      <input @click="emitSelectedOption(index + 1, response.id)" :id="response.id + ppl.pernyataan"
-                        type="radio" v-bind:value="response.isi" v-bind:name="response.isi"
-                        v-model="userResponses[index]">
-                      <label :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
+                    <li
+                      class="radio-item"
+                      v-for="response in ppl.opsi"
+                      :key="response.id"
+                    >
+                      <input
+                        @click="emitSelectedOption(index + 1, response.id)"
+                        :id="response.id + ppl.pernyataan"
+                        type="radio"
+                        v-bind:value="response.isi"
+                        v-bind:name="response.isi"
+                        v-model="userResponses[index]"
+                      />
+                      <label :for="response.id + ppl.pernyataan"
+                        >{{ response.id }}. {{ response.isi }}
                       </label>
-
                     </li>
                   </ul>
                   <div class="col d-flex justify-content-between">
-                  
-                    <div v-if="questionIndex === ekoliterasi.length - 1" class="d-flex justify-content-sm-end pt-5">
-                    
-                      <CButton color="success" class="btn-lg" :class="choose ? '' : 'disabled'" @click="() => {
-                visibleScrollableDemo = true
-              }
-                ">Selesai &#8250;</CButton>
+                    <div
+                      v-if="questionIndex === ekoliterasi.length - 1"
+                      class="d-flex justify-content-sm-end pt-5"
+                    >
+                      <CButton
+                        color="success"
+                        class="btn-lg"
+                        :class="choose ? '' : 'disabled'"
+                        @click="
+                          () => {
+                            visibleScrollableDemo = true
+                          }
+                        "
+                        >Selesai &#8250;</CButton
+                      >
 
-                     
                       <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
                     </div>
                     <div v-else class="row d-flex justify-content-sm-end pt-5">
-                      <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'"
-                        v-on:click="next">Berikutnya &#8250;</button>
+                      <button
+                        class="btn btn-lg btn-secondary"
+                        :class="choose ? '' : 'disabled'"
+                        v-on:click="next"
+                      >
+                        Berikutnya &#8250;
+                      </button>
                     </div>
-
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
-
       </div>
     </div>
-     <!-- modal -->
-     <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
-                visibleScrollableDemo = false
-              }
-                " aria-labelledby="ScrollingLongContentExampleLabel2">
-                        <CModalHeader>
-                          <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
-                        </CModalHeader>
-                        <CModalBody>
-                          <div class="accordion-body">
-                            <p> Lanjut Aspek Perilaku Spritual?</p>
-                            <p> 17 soal</p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak</button>
-                            <button type="button" @click="addData" class="btn btn-primary">Mulai</button>
-                          </div>
-                        </CModalBody>
-                      </CModal>
-
+    <!-- modal -->
+    <CModal
+      scrollable
+      size="lg"
+      :visible="visibleScrollableDemo"
+      @close="
+        () => {
+          visibleScrollableDemo = false
+        }
+      "
+      aria-labelledby="ScrollingLongContentExampleLabel2"
+    >
+      <CModalHeader>
+        <CModalTitle id="ScrollingLongContentExampleLabel2"
+          >Peringatan</CModalTitle
+        >
+      </CModalHeader>
+      <CModalBody>
+        <div class="accordion-body">
+          <p>Lanjut Aspek Perilaku Spritual?</p>
+          <p>17 soal</p>
+        </div>
+        <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
+        <br />
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Tidak
+          </button>
+          <button type="button" @click="addData" class="btn btn-primary">
+            Mulai
+          </button>
+        </div>
+      </CModalBody>
+    </CModal>
   </div>
 
   <div v-if="jawaban">
     {{ jawaban }}
   </div>
-  
 </template>
 <!-- eslint-disable prettier/prettier -->
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap');
 
 ul {
   list-style-type: none;
 }
 
 body {
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Averia Serif Libre', cursive;
   background-color: rgb(19, 18, 21);
   color: #ffffff;
 }
@@ -109,12 +141,12 @@ h1 {
   margin-bottom: 20px;
 }
 
-.radio-item [type="radio"] {
+.radio-item [type='radio'] {
   display: none;
   /* width: 80%; */
 }
 
-.radio-item+.radio-item {
+.radio-item + .radio-item {
   margin-top: 15px;
 }
 
@@ -135,7 +167,7 @@ h1 {
 
 .radio-item label:after,
 .radio-item label:before {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 50%;
 }
@@ -144,7 +176,6 @@ h1 {
   height: 19px;
   width: 19px;
   border: 2px solid rgb(0, 0, 0);
-  ;
   left: 19px;
   top: calc(50% - 12px);
 }
@@ -152,7 +183,6 @@ h1 {
 .radio-item label:before {
   background: rgb(161, 100, 100);
   border-color: rgb(244, 239, 239);
-  ;
   height: 20px;
   width: 20px;
   left: 21px;
@@ -163,9 +193,7 @@ h1 {
   transition: 0.4s ease-in-out 0s;
 }
 
-
-
-.radio-item [type="radio"]:checked~label::before {
+.radio-item [type='radio']:checked ~ label::before {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
@@ -221,7 +249,6 @@ h1 {
 </style>
 <!-- eslint-disable prettier/prettier -->
 <script>
-
 import Navbar from '@/components/Pretest/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
@@ -229,358 +256,373 @@ import { uuid } from 'vue-uuid'
 
 var ppl = [
   {
-    "id": 1,
-    "pernyataan": "Saya berupaya keras menghemat penggunaan air di rumah agar pompa air di rumah tidak sering bekerja",
-    "opsi": [
+    id: 1,
+    pernyataan:
+      'Saya berupaya keras menghemat penggunaan air di rumah agar pompa air di rumah tidak sering bekerja',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 2,
-    "pernyataan": "Saya menutup keran air jika menemukan aliran air yang tidak diperlukan",
-    "opsi": [
+    id: 2,
+    pernyataan:
+      'Saya menutup keran air jika menemukan aliran air yang tidak diperlukan',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 3,
-    "pernyataan": "Saya menegur teman yang tidak menghabiskan air minum kemasan sewaktu ada kegiatan",
-    "opsi": [
+    id: 3,
+    pernyataan:
+      'Saya menegur teman yang tidak menghabiskan air minum kemasan sewaktu ada kegiatan',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 4,
-    "pernyataan": "Saya lebih memilih mandi dengan shower dibandingkan dengan gayung agar lebih hemat dalam penggunaan air ",
-    "opsi": [
+    id: 4,
+    pernyataan:
+      'Saya lebih memilih mandi dengan shower dibandingkan dengan gayung agar lebih hemat dalam penggunaan air ',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 5,
-    "pernyataan": "Saya membiarkan air mengalir dengan percuma meskipun dikarenakan kebocoran pipa merupakan salah satu bentuk pemborosan terhadap air.",
-    "opsi": [
+    id: 5,
+    pernyataan:
+      'Saya membiarkan air mengalir dengan percuma meskipun dikarenakan kebocoran pipa merupakan salah satu bentuk pemborosan terhadap air.',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 6,
-    "pernyataan": "Saya berusaha keras penghematan penggunaan air pada waktu mencuci pakaian, mencuci alat makan/minum ataupun mencuci sayuran/buah",
-    "opsi": [
+    id: 6,
+    pernyataan:
+      'Saya berusaha keras penghematan penggunaan air pada waktu mencuci pakaian, mencuci alat makan/minum ataupun mencuci sayuran/buah',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 7,
-    "pernyataan": "Saya berusaha Memeliharan kran air agar tidak cepat rusak dan segera menggantinya bila rusak/bocor. ",
-    "opsi": [
+    id: 7,
+    pernyataan:
+      'Saya berusaha Memeliharan kran air agar tidak cepat rusak dan segera menggantinya bila rusak/bocor. ',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 8,
-    "pernyataan": "Menampung air yang tetap mengalir saat berwudhu. Jika setiap berwudhu air yang dapat ditampung sekitar 1 - 1,5 liter/orang ",
-    "opsi": [
+    id: 8,
+    pernyataan:
+      'Menampung air yang tetap mengalir saat berwudhu. Jika setiap berwudhu air yang dapat ditampung sekitar 1 - 1,5 liter/orang ',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 9,
-    "pernyataan": "Saya tidak membuang sampah ke daerah aliran sungai, sehingga tidak terjadi pencemaran air ",
-    "opsi": [
+    id: 9,
+    pernyataan:
+      'Saya tidak membuang sampah ke daerah aliran sungai, sehingga tidak terjadi pencemaran air ',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 10,
-    "pernyataan": "Saya ikut serta menjadi anggota komuditas peduli lingkungan seperti program penghijauan yang bertujuan menjaga ketersediaan air bersih?",
-    "opsi": [
+    id: 10,
+    pernyataan:
+      'Saya ikut serta menjadi anggota komuditas peduli lingkungan seperti program penghijauan yang bertujuan menjaga ketersediaan air bersih?',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 11,
-    "pernyataan": "Saya berusaha memilah limbah seperti bahan kimia berbahaya atau obat-obatan agar tidak mencemari air bersih?",
-    "opsi": [
+    id: 11,
+    pernyataan:
+      'Saya berusaha memilah limbah seperti bahan kimia berbahaya atau obat-obatan agar tidak mencemari air bersih?',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 12,
-    "pernyataan": "Saya menyarankan kepada keluarga agar memperhatikan limbah dari mencuci mobil atau membersihkan halaman tidak mencemari saluran air atau sungai disekitar yang dijadikan sebagai sumber air.	",
-    "opsi": [
+    id: 12,
+    pernyataan:
+      'Saya menyarankan kepada keluarga agar memperhatikan limbah dari mencuci mobil atau membersihkan halaman tidak mencemari saluran air atau sungai disekitar yang dijadikan sebagai sumber air.	',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 13,
-    "pernyataan": "Saya mencoba memanfaatkan air bekas pakai (greywater) untuk menyiram tanaman",
-    "opsi": [
+    id: 13,
+    pernyataan:
+      'Saya mencoba memanfaatkan air bekas pakai (greywater) untuk menyiram tanaman',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 14,
-    "pernyataan": "Saya berusaha manfaatkan air bilasan terakhir cucian untuk mengepel lantai atau membersihkan kamar mandi	",
-    "opsi": [
+    id: 14,
+    pernyataan:
+      'Saya berusaha manfaatkan air bilasan terakhir cucian untuk mengepel lantai atau membersihkan kamar mandi	',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 15,
-    "pernyataan": "Saya menyarankan kepada semua pihak agar menanam pohon disekitar area rumah atau sekolah untuk membantu penyerapan air ke dalam tanah.",
-    "opsi": [
+    id: 15,
+    pernyataan:
+      'Saya menyarankan kepada semua pihak agar menanam pohon disekitar area rumah atau sekolah untuk membantu penyerapan air ke dalam tanah.',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
   {
-    "id": 16,
-    "pernyataan": "Saya menyarankan kepada teman agar setiap rumah mereka menyediakan area resapan air, sehingga air hujan tidak langsung terbuang ke saluran air, namun meresap kembali ke tanah sebagai sumber air bersih.",
-    "opsi": [
+    id: 16,
+    pernyataan:
+      'Saya menyarankan kepada teman agar setiap rumah mereka menyediakan area resapan air, sehingga air hujan tidak langsung terbuang ke saluran air, namun meresap kembali ke tanah sebagai sumber air bersih.',
+    opsi: [
       {
-        "id": "a",
-        "isi": "Selalu"
+        id: 'a',
+        isi: 'Selalu',
       },
       {
-        "id": "b",
-        "isi": "Sering "
+        id: 'b',
+        isi: 'Sering ',
       },
       {
-        "id": "c",
-        "isi": "Jarang "
+        id: 'c',
+        isi: 'Jarang ',
       },
       {
-        "id": "d",
-        "isi": "Tidak Pernah"
-      }
+        id: 'd',
+        isi: 'Tidak Pernah',
+      },
     ],
   },
-
 ]
 export default {
   name: 'AppOverview',
@@ -598,7 +640,7 @@ export default {
       userResponses: Array(ppl.length).fill(false),
       ekoliterasi: ppl,
       jawaban: [],
-      choose: false
+      choose: false,
     }
   },
   components: {
@@ -609,9 +651,9 @@ export default {
     async addData() {
       const datas = {
         id: uuid.v1(),
-        'id_user': JSON.parse(localStorage.getItem('id_user')),
-        "jawabanPPL": this.jawaban,
-        "isPPL": true
+        id_user: JSON.parse(localStorage.getItem('id_user')),
+        jawabanPPL: this.jawaban,
+        isPPL: true,
       }
       console.log(datas)
 
@@ -633,7 +675,7 @@ export default {
       // this.questionIndex++
     },
     next: function () {
-      this.questionIndex++;
+      this.questionIndex++
       this.jawaban.push(this.temp)
       this.temp = []
       this.choose = false
@@ -663,10 +705,9 @@ export default {
 
     // Restart quiz
     start: function () {
-      this.userResponses = [];
-      this.questionIndex = 0;
+      this.userResponses = []
+      this.questionIndex = 0
     },
-   
-  }
+  },
 }
 </script>

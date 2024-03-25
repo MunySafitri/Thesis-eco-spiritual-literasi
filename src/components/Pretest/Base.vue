@@ -1,5 +1,6 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
+   <Preloader v-if="isLoading" />
   <Navbar />
   <div class="container pb-5" style="padding: 10px">
     <h1>Anda Belum melakukan pretest!</h1>
@@ -93,6 +94,8 @@
         </tr>
       </table>
       <br />
+      <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
+      <br />
       <div class="accordion-body">
        <strong> <p>Mulai Pretest?</p></strong>
       </div>
@@ -117,17 +120,20 @@
 <!-- eslint-disable prettier/prettier -->
 <script>
 import Navbar from '@/components/Pretest/Navbar.vue'
+import Preloader from '@/components/Layouts/Preloader'
 
 export default {
   name: 'Pretest',
   data() {
     return {
+      isLoading: true,
       visibleStaticBackdropDemo: false,
       data: '',
     }
   },
   components: {
     Navbar,
+    Preloader,
   },
   methods: {
     startTest() {
@@ -135,6 +141,9 @@ export default {
     },
   },
   mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000)
     // setInterval(() => {
     //     this.setPopup()
     //     alert("ini")

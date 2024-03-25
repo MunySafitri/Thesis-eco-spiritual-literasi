@@ -1,40 +1,44 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
+  <Preloader v-if="isLoading" />
   <Navbar />
   <div class="container pb-5">
     <h1>Saatnya Anda melakukan Pretest untuk menguji kemampuan anda</h1>
     <div class="mt-5 row align-items-center">
       <h3><strong>Pemberitahuan</strong></h3>
-      <div style="padding: 1px;">
-      <ol>
-        <li>
-          Ketika anda baru melakukan registrasi, maka sistem terdetect sih bahwa
-          anda belum mengerjakan Pretest, Kerjakan Pretest terlebih dahulu
-        </li>
-        <li>Ujian pretest ini tidak ada batasan waktu untuk mengerjakannya</li>
-        <li>
-          Peserta diharuskan untuk fokus mengerjakan ini, Pretest dibagi menjadi
-          3 bagian uji test, yakni aspek kognitif yang terdiri dari 20 soal,
-          aspek perilaku ekoliterasi yan terdiri dari 16 soal dan aspek sikap
-          spritual yang terdiri dari 17 soal.
-        </li>
-        <li>Tidak ada penilaian benar dan salah</li>
-        <li>
-          Peserta hanya diperbolehkan menjawab sekali, peserta tidak dapat
-          kembali ke soal sebelumnya. Maka dari itu, peserta diharuskan teliti
-          dalam menjawab pertanyaan
-        </li>
-        <li>
-          Peserta akan di pantau oleh sistem atas telah mengerjakan test ini
-          atau tidaknya.
-        </li>
-        <li>
-          Peserta tidak boleh melakukan refresh ketika ujian sedang berlangsung,
-          peserta akan kehilangan jawaban dan mengulangi kembali dari awal.
-          Pastikan Koneksi internet lancar.
-        </li>
-      </ol>
-    </div>
+      <div style="padding: 1px">
+        <ol>
+          <li>
+            Ketika anda baru melakukan registrasi, maka sistem terdetect sih
+            bahwa anda belum mengerjakan Pretest, Kerjakan Pretest terlebih
+            dahulu
+          </li>
+          <li>
+            Ujian pretest ini tidak ada batasan waktu untuk mengerjakannya
+          </li>
+          <li>
+            Peserta diharuskan untuk fokus mengerjakan ini, Pretest dibagi
+            menjadi 3 bagian uji test, yakni aspek kognitif yang terdiri dari 20
+            soal, aspek perilaku ekoliterasi yan terdiri dari 16 soal dan aspek
+            sikap spritual yang terdiri dari 17 soal.
+          </li>
+          <li>Tidak ada penilaian benar dan salah</li>
+          <li>
+            Peserta hanya diperbolehkan menjawab sekali, peserta tidak dapat
+            kembali ke soal sebelumnya. Maka dari itu, peserta diharuskan teliti
+            dalam menjawab pertanyaan
+          </li>
+          <li>
+            Peserta akan di pantau oleh sistem atas telah mengerjakan test ini
+            atau tidaknya.
+          </li>
+          <li>
+            Peserta tidak boleh melakukan refresh ketika ujian sedang
+            berlangsung, peserta akan kehilangan jawaban dan mengulangi kembali
+            dari awal. Pastikan Koneksi internet lancar.
+          </li>
+        </ol>
+      </div>
       <strong>Good luck ^^</strong>
 
       <div class="mt-4">
@@ -44,7 +48,7 @@
           color="primary"
           @click="
             () => {
-                visibleStaticBackdropDemo = true
+              visibleStaticBackdropDemo = true
             }
           "
           >Mulai Posttest</CButton
@@ -67,13 +71,11 @@
     aria-labelledby="StaticBackdropExampleLabel"
   >
     <CModalHeader>
-      <CModalTitle id="StaticBackdropExampleLabel"
-        >Peringatan</CModalTitle
-      >
+      <CModalTitle id="StaticBackdropExampleLabel">Peringatan</CModalTitle>
     </CModalHeader>
     <CModalBody>
       <p>Ujian terdiri dari 3 aspek</p>
-       <table class="bold" style="width: 100%">
+      <table class="bold" style="width: 100%">
         <tr>
           <td style="width: 1%">⮚</td>
           <td style="width: 15%">Kognitif</td>
@@ -81,21 +83,23 @@
           <td style="width: 25%">20 soal</td>
         </tr>
         <tr>
-         <td>⮚</td>
+          <td>⮚</td>
           <td>Perilaku Ekoliterasi</td>
           <td>:</td>
           <td>16 soal</td>
         </tr>
         <tr>
-         <td>⮚</td>
+          <td>⮚</td>
           <td>Sikap Spritual</td>
           <td>:</td>
           <td>17 soal</td>
         </tr>
       </table>
       <br />
+      <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
+      <br />
       <div class="accordion-body">
-       <strong> <p>Mulai Pretest?</p></strong>
+        <strong> <p>Mulai Pretest?</p></strong>
       </div>
       <div class="modal-footer">
         <CButton
@@ -118,17 +122,20 @@
 <!-- eslint-disable prettier/prettier -->
 <script>
 import Navbar from '@/components/Posttest/Navbar.vue'
+import Preloader from '@/components/Layouts/Preloader'
 
 export default {
   name: 'Pretest',
   data() {
     return {
-        visibleStaticBackdropDemo: false,
+      isLoading: true,
+      visibleStaticBackdropDemo: false,
       data: '',
     }
   },
   components: {
     Navbar,
+    Preloader,
   },
   methods: {
     startTest() {
@@ -136,6 +143,9 @@ export default {
     },
   },
   mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000)
     // setInterval(() => {
     //     this.setPopup()
     //     alert("ini")

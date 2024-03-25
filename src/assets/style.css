@@ -10834,7 +10834,7 @@ button:focus {
   .navbar-light .side-nav {
     position: absolute;
     top: 23px;
-    right: 50px;
+    right: 30px;
   }
   .navbar-light .side-nav .side-nav-left {
     font-size: 12px;
@@ -11413,7 +11413,7 @@ button:focus {
     font-size: 32px;
   }
   .main-navbar.navbar.navbar-light .side-nav .side-nav-right {
-    padding: 7px 10px 8px;
+    padding: 7px 5px 8px;
     font-size: 13px;
   }
   .main-navbar .navbar .container-fluid {
@@ -11453,7 +11453,7 @@ button:focus {
     .others-option
     .option-item
     .sign-up {
-    background: #00c195;
+    background: #13DEE0;
     color: #fff;
   }
   .main-navbar .navbar.navbar-style-black-color.navbar-light .navbar-toggler {

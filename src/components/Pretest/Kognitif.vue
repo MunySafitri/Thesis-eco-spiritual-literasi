@@ -111,6 +111,8 @@
           <p>Lanjut Aspek Perilaku Ekoliterasi?</p>
           <p>16 soal</p>
         </div>
+        <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
+      <br />
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
             Tidak
