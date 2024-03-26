@@ -233,6 +233,7 @@ export default {
         passwordConfirm: '',
         isPretest: false,
         isPosttest: false,
+        isAdmin: false,
       },
       semesters: [
         { text: 'Pilih Salah satu', value: null },

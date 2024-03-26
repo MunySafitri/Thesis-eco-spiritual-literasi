@@ -15,6 +15,8 @@ import Vuelidate from 'vuelidate'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 // import VueSlider from 'vue-slider-component'
 // import 'vue-slider-component/theme/antd.css'
+import DataTable from 'datatables.net-vue3'
+import DataTablesCore from 'datatables.net'
 
 import '@/assets/style.css'
 
@@ -23,6 +25,7 @@ app.use(store)
 // untuk validasi
 app.use(Vuelidate)
 app.config.productionTip = false
+DataTable.use(DataTablesCore)
 
 app.use(router)
 app.use(CoreuiVue)
