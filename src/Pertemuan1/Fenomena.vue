@@ -1,4 +1,5 @@
 <template>
+  <Preloader v-if="isLoading" />
   <CRow>
     <CCol :xs="12">
       <CCard class="mb-4">
@@ -150,8 +151,22 @@
 
 <script>
 import { ref } from 'vue'
+import Preloader from '@/components/Layouts/Preloader'
 export default {
   name: 'Accordion',
+  components: {
+    Preloader,
+  },
+  data() {
+    return {
+      isLoading: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000)
+  },
   setup() {
     const activeKey = ref(1)
     const flushActiveKey = ref(1)

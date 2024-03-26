@@ -23,7 +23,7 @@
                   <div id="Collapse1" class="accordion-collapse collapse show" data-bs-parent="#ProcessAccordion">
                     <div class="accordion-body">
                       <div class="choose-content">
-                        <a :href="'/pertemuan1/element-daya-rusak-air'" :class="'choose-btn'">Kerjakan Sekarang</a>
+                        <a :href="'/pertemuan1'" :class="'choose-btn'">Kerjakan Sekarang</a>
                       </div>
                     </div>
                   </div>

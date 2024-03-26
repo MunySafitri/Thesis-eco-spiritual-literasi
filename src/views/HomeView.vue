@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <div>
+    <Preloader v-if="isLoading" />
     <Navbar />
     <Overview />
     <Informasi />
@@ -14,6 +15,7 @@
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script>
+import Preloader from '@/components/Layouts/Preloader'
 // @ is an alias to /src
 import Navbar from '@/components/Layouts/Navbar.vue'
 import Futer from '@/components/Layouts/Footer.vue'
@@ -28,6 +30,7 @@ import ProfilPancasila from '@/components/P5.vue'
 export default {
   name: 'HomeView',
   components: {
+    Preloader,
     Navbar,
     Overview,
     Informasi,
@@ -38,5 +41,15 @@ export default {
     Order,
     ProfilPancasila,
   },
+  data() {
+      return {
+          isLoading: true
+      }
+  },
+  mounted() {
+      setTimeout(() => {
+          this.isLoading = false
+      }, 2000)
+  }
 }
 </script>

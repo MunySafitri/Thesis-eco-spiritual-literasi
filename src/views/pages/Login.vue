@@ -1,103 +1,105 @@
 <!-- eslint-disable prettier/prettier -->
-
 <template>
+  <Preloader v-if="isLoading" />
   <div
     class="bg-light min-vh-100 d-flex flex-row align-items-center"
-    style="
-      background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg');
-      background-position: top;
-    "
+    style="background-color: antiquewhite; background-position: top"
   >
     <!-- <template> -->
-      <CModal
-              scrollable
-              size="lg"
-              :visible="visibleScrollableDemo"
-              @close="
-                () => {
-                  visibleScrollableDemo = false
-                }
-              "
-              aria-labelledby="ScrollingLongContentExampleLabel2"
-            >
-              <CModalHeader>
-                <CModalTitle id="ScrollingLongContentExampleLabel2"
-                  >Modal title</CModalTitle
-                >
-              </CModalHeader>
-              <CModalBody>
-                <p>
-                  Berikut adalah langkah-langkah yang lebih detail untuk
-                  menggunakan e-modul tentang siklus hidrologi:
-                </p>
-                <div class="accordion-body">
-                  <ol class="bold">
-                    <li>
-                      Registrasi:<br />
-                      Buka e-modul dan temukan opsi registrasi. Isi informasi
-                      yang diperlukan seperti nama, email, dan informasi lain
-                      yang diminta. Ikuti instruksi untuk menyelesaikan proses
-                      registrasi.
-                    </li><br />
-                    <li>
-                      Pretest :<br />
-                      Setelah registrasi selesai, cari dan pilih opsi untuk
-                      mengerjakan pretest. Kerjakan pretest sesuai dengan
-                      petunjuk yang diberikan. Pastikan untuk memahami
-                      pertanyaan dan memberikan jawaban dengan cermat.
-                    </li><br />
-                    <li>
-                      Halaman Utama :<br />Setelah selesai
-                      pretest, kembali ke halaman awal. Baca informasi yang
-                      ditampilkan di halaman utama secara menyeluruh. Luangkan
-                      waktu untuk membaca berbagai poin yang tersedia dengan
-                      seksama.
-                    </li><br />
-                    <li>
-                      Kegiatan Inti (Pertemuan I) :<br />Pilih opsi menuju ke kegiatan
-                      inti atau pertemuan I. Pada pertemuan I, cari dan klik
-                      tombol "Mulai" untuk memulai. Anda akan diarahkan ke
-                      materi tentang siklus hidrologi yang terintegrasi dengan
-                      ayat-ayat Alquran. Pelajari materi tersebut dengan seksama
-                      dan pahami keterkaitannya dengan konten Alquran yang
-                      disajikan.
-                    </li><br />
-                    <li>
-                      Aktifitas Siswa :<br />Setelah mengikuti materi tentang siklus
-                      hydrology berintegrasi Klik pada opsi aktifitas siswa dan
-                      lakukan aktivitas siswa yang ada pada modul.
-                    </li><br />
-                    <li>
-                      Pengayaan :<br />Setelah melakukan aktifitas siswa. Silahkan
-                      mengisi laporan pengamatan Kembali ke halaman utama dan
-                      masuk ke dalam materi pengayaan. Silahkan membaca
-                      materi-materi yang tersedia uantuk menambah berbagai
-                      informasi tambahan tentang siklus air.
-                    </li><br />
-                    <li>
-                      Refleksi : <br />Pada menu relfeksi, mari merenungkan kembali apa
-                      yang sudah kita pelajari dan Bersama-sama menyimpulkan
-                      pembelajaran
-                    </li><br />
-                    <li>
-                      Post Test :<br />Setelah melakukan serangkain kegiatan pada menu
-                      “kegiatan Inti”. kemudian, Silahkan mengerjakan Pretest.
-                      Setelah mengerjakan pre test. Maka selesai sudah pertemuan
-                      kita pada hari ini.
-                    </li><br />
-                    <p>
-                      Dengan mengikuti langkah-langkah ini secara rinci, Anda
-                      akan dapat menggunakan e-modul tentang siklus hidrologi
-                      terintegrasi ayat-ayat Al-Quran dengan lebih efektif dan
-                      memaksimalkan manfaatnya.
-                    </p>
-                  </ol>
-                </div>
-              </CModalBody>
-            </CModal>
+    <CModal
+      scrollable
+      size="lg"
+      :visible="visibleScrollableDemo"
+      @close="
+        () => {
+          visibleScrollableDemo = false
+        }
+      "
+      aria-labelledby="ScrollingLongContentExampleLabel2"
+    >
+      <CModalHeader>
+        <CModalTitle id="ScrollingLongContentExampleLabel2"
+          >Modal title</CModalTitle
+        >
+      </CModalHeader>
+      <CModalBody>
+        <p>
+          Berikut adalah langkah-langkah yang lebih detail untuk menggunakan
+          e-modul tentang siklus hidrologi:
+        </p>
+        <div class="accordion-body">
+          <ol class="bold">
+            <li>
+              Registrasi:<br />
+              Buka e-modul dan temukan opsi registrasi. Isi informasi yang
+              diperlukan seperti nama, email, dan informasi lain yang diminta.
+              Ikuti instruksi untuk menyelesaikan proses registrasi.
+            </li>
+            <br />
+            <li>
+              Pretest :<br />
+              Setelah registrasi selesai, cari dan pilih opsi untuk mengerjakan
+              pretest. Kerjakan pretest sesuai dengan petunjuk yang diberikan.
+              Pastikan untuk memahami pertanyaan dan memberikan jawaban dengan
+              cermat.
+            </li>
+            <br />
+            <li>
+              Halaman Utama :<br />Setelah selesai pretest, kembali ke halaman
+              awal. Baca informasi yang ditampilkan di halaman utama secara
+              menyeluruh. Luangkan waktu untuk membaca berbagai poin yang
+              tersedia dengan seksama.
+            </li>
+            <br />
+            <li>
+              Kegiatan Inti (Pertemuan I) :<br />Pilih opsi menuju ke kegiatan
+              inti atau pertemuan I. Pada pertemuan I, cari dan klik tombol
+              "Mulai" untuk memulai. Anda akan diarahkan ke materi tentang
+              siklus hidrologi yang terintegrasi dengan ayat-ayat Alquran.
+              Pelajari materi tersebut dengan seksama dan pahami keterkaitannya
+              dengan konten Alquran yang disajikan.
+            </li>
+            <br />
+            <li>
+              Aktifitas Siswa :<br />Setelah mengikuti materi tentang siklus
+              hydrology berintegrasi Klik pada opsi aktifitas siswa dan lakukan
+              aktivitas siswa yang ada pada modul.
+            </li>
+            <br />
+            <li>
+              Pengayaan :<br />Setelah melakukan aktifitas siswa. Silahkan
+              mengisi laporan pengamatan Kembali ke halaman utama dan masuk ke
+              dalam materi pengayaan. Silahkan membaca materi-materi yang
+              tersedia uantuk menambah berbagai informasi tambahan tentang
+              siklus air.
+            </li>
+            <br />
+            <li>
+              Refleksi : <br />Pada menu relfeksi, mari merenungkan kembali apa
+              yang sudah kita pelajari dan Bersama-sama menyimpulkan
+              pembelajaran
+            </li>
+            <br />
+            <li>
+              Post Test :<br />Setelah melakukan serangkain kegiatan pada menu
+              “kegiatan Inti”. kemudian, Silahkan mengerjakan Pretest. Setelah
+              mengerjakan pre test. Maka selesai sudah pertemuan kita pada hari
+              ini.
+            </li>
+            <br />
+            <p>
+              Dengan mengikuti langkah-langkah ini secara rinci, Anda akan dapat
+              menggunakan e-modul tentang siklus hidrologi terintegrasi
+              ayat-ayat Al-Quran dengan lebih efektif dan memaksimalkan
+              manfaatnya.
+            </p>
+          </ol>
+        </div>
+      </CModalBody>
+    </CModal>
     <div class="container-fluid">
       <div class="row mt-lg-n10 mt-md-n11 mt-n10 justify-content-center">
-        <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+        <div class="col-xl-6 col-lg-5 col-md-7 mx-auto">
           <div class="card z-index-0">
             <div class="card-header text-center pt-4">
               <h5>Login with</h5>
@@ -127,7 +129,7 @@
                 <!-- email -->
                 <b-row class="my-2">
                   <b-col sm="3">
-                    <label for="`type-email`"><code>Email</code>:</label>
+                    <label for="`type-email`"><code>Email</code> :</label>
                   </b-col>
                   <b-col sm="9">
                     <b-form-input
@@ -165,7 +167,7 @@
                 <!-- password -->
                 <b-row class="my-2">
                   <b-col sm="3">
-                    <label for="type-password"><code>password</code>:</label>
+                    <label for="type-password"><code>password</code> :</label>
                   </b-col>
                   <b-col sm="9">
                     <b-form-input
@@ -206,7 +208,7 @@
                   Tidak Punya Akun
                   <a
                     href="/register"
-                    class="text-success text-gradient font-weight-bold"
+                    class="text-danger text-gradient font-weight-bold"
                     >Daftar</a
                   >
                 </p>
@@ -227,6 +229,7 @@
 
 <script>
 import axios from 'axios'
+import Preloader from '@/components/Layouts/Preloader'
 // import { uuid } from 'vue-uuid'
 // import { useRouter } from 'vue-router'
 
@@ -235,8 +238,12 @@ import axios from 'axios'
 
 export default {
   name: 'Login',
+  components: {
+    Preloader,
+  },
   data() {
     return {
+      isLoading: true,
       visibleScrollableDemo: false,
       datas: [],
       errors: [],
@@ -321,12 +328,15 @@ export default {
     },
   },
   mounted() {
-    // Make a request for a user with a given ID
-    // alert('ini pop up yang isinya aturan modul')
-    axios
-      .get('http://localhost:3000/user')
-      .then((response) => this.setData(response.data))
-      .catch((error) => console.log('Gagal : ', error))
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000),
+      // Make a request for a user with a given ID
+      // alert('ini pop up yang isinya aturan modul')
+      axios
+        .get('http://localhost:3000/user')
+        .then((response) => this.setData(response.data))
+        .catch((error) => console.log('Gagal : ', error))
   },
 }
 </script>
