@@ -95,6 +95,11 @@ const routes = [
         name: 'Logout',
         component: () => import('@/views/pages/Logout.vue'),
       },
+      {
+        path: '/coba',
+        name: 'Coba',
+        component: () => import('@/components/Coba.vue'),
+      },
     ],
   },
   {

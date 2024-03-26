@@ -3,8 +3,26 @@
     <Navbar />
     <div class="container p-2">
         <div class="card bg-white overflow-auto">
-            <div class="card-header">
-                Halaman Administraror
+            <div class="card-header row justify-content-between">
+                <div class="col-4">
+                    Halaman Administrator
+                </div>
+                <div class="col-6 col-sm-8 col-lg-4">
+                    <div class="row justify-content-end overflow-auto">
+                        <div class="col-3">
+
+                            <button type="button" class="btn btn-secondary btn-sm disabled">Export Ekoliterasi</button>
+                        </div>
+                        <div class="col-3">
+    
+                            <button type="button" class="btn btn-info btn-sm" @click="ExportSpritual('xlsx')">Export Spritual</button>
+                        </div>
+                        <div class="col-3">
+    
+                            <button type="button" class="btn btn-dark btn-sm disabled">Export Kognitif</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card-body ">
                 <table class=" table table-responsive table-bordered table-striped" id="myTable">
@@ -21,33 +39,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr v-for="(siswa) in user" :key="siswa">
-                            <th scope="row">{{siswa.name}}</th>
-                            <td>Mark</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-     
-                        </tr> -->
+
                     </tbody>
                 </table>
-                <!-- <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
             </div>
-            <!-- <tr v-for="(siswa) in user" :key="siswa">
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr> -->
+
         </div>
         ini halaman admin btw
         {{ user }}
@@ -102,6 +99,9 @@ export default {
         },
         setPPL(data) {
             this.jawabanPPL = data
+        },
+        ExportSpritual(){
+            alert("export Spritual")
         }
     },
     mounted() {

@@ -35,14 +35,17 @@
     "datatables.net-vue3": "^3.0.1",
     "fs": "^0.0.1-security",
     "json-server": "^1.0.0-alpha.23",
+    "jszip": "^3.10.1",
     "vee-validate": "^4.12.5",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
     "vue-slider": "^0.0.1",
     "vue-slider-component": "^3.2.24",
     "vue-uuid": "^3.0.0",
+    "vue3-xlsx": "^1.1.2",
     "vuelidate": "^0.7.7",
-    "vuex": "^4.1.0"
+    "vuex": "^4.1.0",
+    "xlsx-js-style": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
