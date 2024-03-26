@@ -4,10 +4,7 @@
   <Preloader v-if="isLoading" />
   <div
     class="bg-light min-vh-100 d-flex flex-row align-items-center"
-    style="
-      background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg');
-      background-position: top;
-    "
+    style="background-color: antiquewhite; background-position: top"
   >
     <!-- <template> -->
     <div class="container-fluid">
