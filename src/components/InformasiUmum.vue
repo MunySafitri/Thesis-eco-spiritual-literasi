@@ -315,7 +315,6 @@ video {
             <b-button @click="tabIndex--">Previous</b-button>
             <b-button @click="tabIndex++">Next</b-button>
           </b-button-group>
-          <div class="text-muted">Current Tab: {{ tabIndex }}</div>
         </div>
       </div>
     </div>

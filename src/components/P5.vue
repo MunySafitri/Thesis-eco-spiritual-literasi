@@ -14,7 +14,7 @@
       </div>
       <div>
         <b-card no-body>
-          <b-tabs pills card vertical nav-wrapper-class="w-30" align="start">
+          <b-tabs pills card vertical nav-wrapper-class="w-35">
             <b-tab title="01. Beriman, bertakwa dan berakhlak mulia" active
               ><b-card-text>
                 <p class="bold">
