@@ -129,38 +129,10 @@
         </div>
       </div>
       <div style="height: 400px; width: auto" class="overflow-auto">
-        <!-- <div class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
-            <div
-              class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
-            >
-              <img
-                src="https://i.imgur.com/ZSkeqnd.jpg"
-                width="30"
-                class="user-img rounded-circle mr-2"
-              />
-              <span
-                ><small class="font-weight-bold text-primary"
-                  >simona_rnasi</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@macky_lones</small
-                >
-                <small class="font-weight-bold text-primary"
-                  >@rashida_jones</small
-                >
-                <small class="font-weight-bold">
-                  <div id="truncateLongTexts">test test test test</div>
-                </small></span
-              >
-            </div>
-            <div class="font-bold col-sm-2">
-              <small>3 days ago</small>
-            </div>
-          </div>
-        </div> -->
         <div v-for="komen in Komentar" :key="komen.id" class="card p-3 mt-2">
-          <div class="row d-flex justify-content-between align-items-center">
+          <div
+            class="row d-flex justify-content-between align-items-center card-body"
+          >
             <div
               class="col-lg-11 col-md-10 py-2 col-sm-10 user d-flex flex-row align-items-center"
             >
@@ -179,9 +151,9 @@
                 </small>
               </span>
             </div>
-            <div class="font-bold col-sm-2">
+            <!-- <div class="font-bold col-sm-2">
               <small>3 days ago</small>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -194,13 +166,6 @@
               <h5>Beri Feedback Untuk Kami {{ user }}</h5>
             </div>
             <div class="d-flex flex-row align-items-start">
-              <img
-                class="rounded-circle"
-                src="https://i.imgur.com/RpzrMR2.jpg"
-                width="40"
-              />
-              <!-- <textarea style="height:200px" class="form-control ml-1 shadow-none textarea"
-                v-model="postKomentar.komentar"></textarea> -->
               <b-form-textarea
                 id="textarea"
                 v-model="postKomentar.komentar"
@@ -232,6 +197,15 @@
   </b-card> -->
 </template>
 
+<!-- eslint-disable prettier/prettier -->
+<style scoped>
+
+body {
+  font-family: 'Averia Serif Libre', cursive;
+  background-color: rgb(19, 18, 21);
+  color: #ffffff;
+}
+</style>
 <!-- eslint-disable prettier/prettier -->
 
 <script>
