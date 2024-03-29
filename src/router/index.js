@@ -266,17 +266,6 @@ router.beforeEach((to, from, next) => {
       next({ name: 'Overview' })
     }
   } else next()
-  //Sekarang ke tahap posttest
-
-  // if (
-  //   (to.name !== 'Login' || to.name !== 'Register') &&
-  //   isAuthenticated &&
-  //   !isPretest
-  // ) {
-  //   //buat kondisional jika user blum pretest dan sudah pretest, tricky ny di filter nnti trus akan pop up array  pretest
-  //   next({ name: 'Pretest' }) // kita buat kondisional semnetara ke Pretest dulu
-  // }
-  // if (to.name === 'Login' && isAuthenticated) next({ name: 'Overview' })
 })
 
 export default router

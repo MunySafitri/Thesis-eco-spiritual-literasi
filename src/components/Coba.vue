@@ -86,35 +86,4 @@ export default {
     }
   }
 }
-// import { XlsxRead, XlsxTable, XlsxSheets, XlsxJson, XlsxWorkbook, XlsxSheet, XlsxDownload } from "vue3-xlsx/dist/vue3-xlsx.cjs.prod.js";
-
-// export default {
-//   components: {
-//     XlsxRead,
-//     XlsxTable,
-//     XlsxSheets,
-//     XlsxJson,
-//     XlsxWorkbook,
-//     XlsxSheet,
-//     XlsxDownload
-//   },
-//   data() {
-//     return {
-//       file: null,
-//       selectedSheet: null,
-//       sheetName: null,
-//       sheets: [{ name: "SheetOne", data: [{ c: 2 }] }],
-//       collection: [{ a: 1, b: 2 }]
-//     };
-//   },
-//   methods: {
-//     onChange(event) {
-//       this.file = event.target.files ? event.target.files[0] : null;
-//     },
-//     addSheet() {
-//       this.sheets.push({ name: this.sheetName, data: [...this.collection] });
-//       this.sheetName = null;
-//     }
-//   }
-// };
 </script>

@@ -1,12 +1,10 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <Navbar />
-  <div class="container pb-5 ">
+  <div class="container pb-5 overflow-auto ">
     <h1>Aspek Spritual</h1>
     <br/>
-    <button type="button"  class="btn btn-secondary" @click="reload">
-   Reload Page
-</button>
+    
 
     <div class="row p-2">
       <section class="radio-section overflow-auto">
@@ -318,8 +316,17 @@ export default {
       this.$router.push({ path: '/overview' })
     },
   },
-  mounted() {
-    
-  },
+   mounted() {
+    //reload sekali
+    if (localStorage.getItem('reloaded')) {
+      // The page was just reloaded. Clear the value from local storage
+      // so that it will reload the next time this page is visited.
+      localStorage.removeItem('reloaded');
+    } else {
+      // Set a flag so that we know not to reload the page twice.
+      localStorage.setItem('reloaded', '1');
+      location.reload();
+    }
+  }
 }
 </script>

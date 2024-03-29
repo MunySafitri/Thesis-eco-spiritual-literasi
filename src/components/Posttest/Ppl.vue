@@ -1,7 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <Navbar />
-  <div class="container pb-5">
+  <div class="container pb-5 overflow-auto">
     <h1>Perilaku Peduli Lingkungan</h1>
 
     <div class="card">
@@ -51,7 +51,8 @@
                         :class="choose ? '' : 'disabled'"
                         @click="
                           () => {
-                            visibleScrollableDemo = true
+                            visibleScrollableDemo = true,
+                            nextModal()
                           }
                         "
                         >Selesai &#8250;</CButton
@@ -113,9 +114,9 @@
     </CModal>
   </div>
 
-  <div v-if="jawaban">
+  <!-- <div v-if="jawaban">
     {{ jawaban }}
-  </div>
+  </div> -->
 </template>
 <!-- eslint-disable prettier/prettier -->
 <style scoped>
@@ -211,42 +212,6 @@ h1 {
   /* width: 80%; */
 }
 
-/* .option {
-  display: flex;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.option-label {
-  background-color: bisque;
-  width: 50px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.option-value {
-  
-  width: 80%;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  
-  padding: 0 20px
-}
-
-.option-value:hover {
-  background-color: rgb(244, 239, 239);
-}
-
-.active {
-  background-color: rgb(244, 239, 239);
-  color: red; */
-
-/* } */
 </style>
 <!-- eslint-disable prettier/prettier -->
 <script>
@@ -649,7 +614,11 @@ export default {
     //ButtonPpl,
   },
   methods: {
-    async addData() {
+    async addData(no,jawaban) {
+      this.temp = []
+      this.temp.push([no, jawaban])
+      
+      this.choose = true
       const datas = {
         id: uuid.v1(),
         id_user: JSON.parse(localStorage.getItem('id_user')),
@@ -669,10 +638,17 @@ export default {
     emitSelectedOption(no, jawaban) {
       this.temp = []
       this.temp.push([no, jawaban])
-      // this.active = !this.active
+      
       this.choose = true
       // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
       // this.questionIndex++
+    },
+    nextModal() {
+      // this.temp.push([no, jawaban])
+      this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
+      // this.questionIndex++
+      this.temp = []
+      this.choose = false
     },
     next: function () {
       this.questionIndex++
@@ -680,34 +656,23 @@ export default {
       this.temp = []
       this.choose = false
     },
-    // prev: function () {
-    //   this.questionIndex--;
-    // },
-    // Return "true" count in userResponses
-    // score: function () {
-    //   let correctCount = 0;
-    //   let self = this;
-
-    //   this.quiz.questions.filter(function (val, i) {
-    //     val.userAnswerCorrect = false;
-    //     val.userAnswer = self.userResponses[i];
-
-    //     val.responses.filter(function (ans) {
-    //       if (ans.correct == true && val.userAnswer == ans.text) {
-    //         correctCount++;
-    //       }
-
-    //     })
-    //   });
-
-    //   return correctCount;
-    // },
-
+  
     // Restart quiz
     start: function () {
       this.userResponses = []
       this.questionIndex = 0
     },
   },
+  mounted(){
+    if (localStorage.getItem('reloaded')) {
+        // The page was just reloaded. Clear the value from local storage
+        // so that it will reload the next time this page is visited.
+        localStorage.removeItem('reloaded');
+    } else {
+        // Set a flag so that we know not to reload the page twice.
+        localStorage.setItem('reloaded', '1');
+        location.reload();
+    }
+  }
 }
 </script>

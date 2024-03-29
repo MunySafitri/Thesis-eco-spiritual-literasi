@@ -4,8 +4,8 @@
   <Navbar />
   <!-- <div>{{ kognitif[0]}}</div> -->
   <div v-if="kognitif[questionIndex]">
-    <div class="container p-2">
-      <div class="card">
+    <div class="container p-2 overflow-auto">
+      <div class="card ">
         <div class="row p-5 card-body">
           <section class="radio-section">
             <div class="px-2">
@@ -69,7 +69,8 @@
               color="success"
               @click="
                 () => {
-                  visibleScrollableDemo = true
+                  visibleScrollableDemo = true,
+                  nextModal()
                 }
               "
               >Selesai &#8250;</CButton
@@ -125,9 +126,9 @@
     </CModal>
   </div>
 
-  <div v-if="jawaban">
+  <!-- <div v-if="jawaban">
     {{ jawaban }}
-  </div>
+  </div> -->
 </template>
 <!-- eslint-disable prettier/prettier -->
 
@@ -224,42 +225,6 @@ h1 {
   /* width: 80%; */
 }
 
-/* .option {
-  display: flex;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.option-label {
-  background-color: bisque;
-  width: 50px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.option-value {
-  
-  width: 80%;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  
-  padding: 0 20px
-}
-
-.option-value:hover {
-  background-color: rgb(244, 239, 239);
-}
-
-.active {
-  background-color: rgb(244, 239, 239);
-  color: red; */
-
-/* } */
 </style>
 <!-- eslint-disable prettier/prettier -->
 
@@ -791,20 +756,17 @@ export default {
       choose: false,
     }
   },
+
   methods: {
     setKognitif(data) {
       this.kognitif = data
     },
-    // setUser(data) {
-    //   this.user = data.filter(d => d.id === JSON.parse(localStorage.getItem('id_user')))
-    // },
+   
     emitSelectedOption(no, jawaban) {
       this.temp = []
       this.temp.push([no, jawaban])
       this.choose = true
-      // this.active = !this.active
-      // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
-      // this.questionIndex++
+     
     },
     nextQuestion() {
       // this.temp.push([no, jawaban])
@@ -813,7 +775,15 @@ export default {
       this.temp = []
       this.choose = false
     },
+    nextModal() {
+      // this.temp.push([no, jawaban])
+      this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
+      // this.questionIndex++
+      this.temp = []
+      this.choose = false
+    },
     async addData() {
+
       const datas = {
         id: uuid.v1(),
         id_user: JSON.parse(localStorage.getItem('id_user')),
@@ -826,16 +796,21 @@ export default {
         .post('http://localhost:3000/jawabanKognitif/', datas)
         .then(() => console.log('Berhasil'))
         .catch((error) => console.log('Gagal : ', error))
-      //kita coba set true dulu nnti di akalin dengan make api
-      // localStorage.setItem('isPretest', true)
+  
       this.$router.push({ path: '/ppl-pretest' })
     },
   },
   mounted() {
-    // axios
-    //   .get('http://localhost:3000/kognitif')
-    //   .then((response) => this.setKognitif(response.data))
-    //   .catch((error) => console.log('Gagal : ', error))
+    //reload sekali
+    if (localStorage.getItem('reloaded')) {
+        // The page was just reloaded. Clear the value from local storage
+        // so that it will reload the next time this page is visited.
+        localStorage.removeItem('reloaded');
+    } else {
+        // Set a flag so that we know not to reload the page twice.
+        localStorage.setItem('reloaded', '1');
+        location.reload();
+    }
 
     axios
       .get('http://localhost:3000/user')

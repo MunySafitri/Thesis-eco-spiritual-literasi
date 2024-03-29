@@ -1,28 +1,32 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
     <Navbar />
-    <div class="container p-2">
-        <div class="card bg-white overflow-auto">
-            <div class="card-header row justify-content-between">
-                <div class="col-4">
-                    Halaman Administrator
-                </div>
-                <div class="col-6 col-sm-8 col-lg-4">
-                    <div class="row justify-content-end overflow-auto">
-                        <div class="col-3">
 
-                            <button type="button" class="btn btn-secondary btn-sm disabled">Export Ekoliterasi</button>
-                        </div>
-                        <div class="col-3">
-    
-                            <button type="button" class="btn btn-info btn-sm" @click="ExportSpritual('xlsx')">Export Spritual</button>
-                        </div>
-                        <div class="col-3">
-    
-                            <button type="button" class="btn btn-dark btn-sm disabled">Export Kognitif</button>
-                        </div>
-                    </div>
-                </div>
+    <div class="container py-5">
+        <div class="card bg-white overflow-auto">
+            <div class="card-header  ">
+                <b-row>
+                    <b-col>
+                        <h1>Halaman Administrator</h1>
+                    </b-col>
+                    <b-col cols="12" md="auto"></b-col>
+                    <b-col col lg="2" align-self="end">
+                        <b-dropdown id="dropdown-left" offset="25" text="Pretest" variant="dark" class=" col-6">
+                            <b-dropdown-item href="#" @click="exportExcelPretestKognitif">Kognitif</b-dropdown-item>
+                            <b-dropdown-item href="#"
+                                @click="exportExcelPretestEkoliterasi">Ekoliterasi</b-dropdown-item>
+                            <b-dropdown-item href="#" @click="exportExcelPretestSpritual">Spritual</b-dropdown-item>
+                        </b-dropdown>
+
+                        <b-dropdown id="dropdown-right" offset="25" right text="Postest" variant="dark"
+                            class=" col-6 px-2">
+                            <b-dropdown-item href="#" @click="exportExcelPosttestKognitif">Kognitif</b-dropdown-item>
+                            <b-dropdown-item href="#"
+                                @click="exportExcelPosttestEkoliterasi">Ekoliterasi</b-dropdown-item>
+                            <b-dropdown-item href="#" @click="exportExcelPosttestSpritual">Spritual</b-dropdown-item>
+                        </b-dropdown>
+                    </b-col>
+                </b-row>
             </div>
             <div class="card-body ">
                 <table class=" table table-responsive table-bordered table-striped" id="myTable">
@@ -46,7 +50,8 @@
             </div>
 
         </div>
-        ini halaman admin btw
+
+        <!-- ini halaman admin btw
         {{ user }}
         <br />
         {{ jawabanKognitif }}
@@ -54,7 +59,15 @@
         {{ jawabanSpritual }}
         <br />
         {{ jawabanPPL }}
-        <br />
+        <br /> -->
+    </div>
+    <div class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body"><span> </span>SupporterC</a>
+        </div>
+        <!-- Copyright -->
     </div>
 </template>
 <!-- eslint-disable prettier/prettier -->
@@ -64,13 +77,7 @@ import axios from 'axios'
 import Navbar from '@/components/Pretest/Navbar.vue'
 var $ = require('jquery');
 
-// $('#myTable').DataTable( {
-
-// } )
-// $(document).ready(function () {
-//     $('#myTable').DataTable()
-// })
-
+import xlsx from 'xlsx/dist/xlsx.full.min'
 export default {
     name: "Admin",
     data() {
@@ -81,6 +88,7 @@ export default {
             jawabanKognitif: [],
             jawabanSpritual: [],
             jawabanPPL: [],
+            framework: [],
         }
     },
     components: {
@@ -100,9 +108,241 @@ export default {
         setPPL(data) {
             this.jawabanPPL = data
         },
-        ExportSpritual(){
-            alert("export Spritual")
+        searchId(data, id) {
+            return data.filter((d) => d.id === id)
+            // console.log(data.filter((nama) => nama.id_user === id))
+        },
+        exportExcelPosttestKognitif() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanKognitif.length; i++) {
+                let user = this.searchId(this.user, this.jawabanKognitif[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah posttest kognitif
+                if (this.jawabanKognitif[i].isKognitifPosttest === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanKognitif[i].jawabanKognitif)        
+                    console.log("nama :", user[0].name)
+                    data.push({ "nama_siswa": user[0].name })
+
+                    for (let j = 0; j < this.jawabanKognitif[i].jawabanKognitif.length; j++) {
+                        let num = this.jawabanKognitif[i].jawabanKognitif[j][0][0].toString()
+                        // console.log("no: ", this.jawabanKognitif[i].jawabanKognitif[j][0][0]," jawaban: ",this.jawabanKognitif[i].jawabanKognitif[j][0][1])
+                        data[idx][num] = this.jawabanKognitif[i].jawabanKognitif[j][0][1]
+                    }
+                    // data[idx]["nama_siswa"] = user[0].name
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Kognitif-Posttest_" + today + ".xlsx")
+        },
+        exportExcelPretestKognitif() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanKognitif.length; i++) {
+                let user = this.searchId(this.user, this.jawabanKognitif[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah pretest kognitif
+                if (this.jawabanKognitif[i].isKognitif === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanKognitif[i].jawabanKognitif)        
+                    // console.log("no: ", no, "nama :", user[0].name)
+                    data.push({ "nama_siswa": user[0].name })
+
+                    for (let j = 0; j < this.jawabanKognitif[i].jawabanKognitif.length; j++) {
+                        let num = this.jawabanKognitif[i].jawabanKognitif[j][0][0].toString()
+                        // console.log("no: ", this.jawabanKognitif[i].jawabanKognitif[j][0][0]," jawaban: ",this.jawabanKognitif[i].jawabanKognitif[j][0][1])
+                        data[idx][num] = this.jawabanKognitif[i].jawabanKognitif[j][0][1]
+                    }
+
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Kognitif-Pretest_" + today + ".xlsx")
+        },
+        exportExcelPretestEkoliterasi() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanPPL.length; i++) {
+                let user = this.searchId(this.user, this.jawabanPPL[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah pretest kognitif
+                if (this.jawabanPPL[i].isPPL === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanPPL[i].jawabanPPL)        
+                    // console.log("no: ", no, "nama :", user[0].name)
+                    data.push({ "nama_siswa": user[0].name })
+                    for (let j = 0; j < this.jawabanPPL[i].jawabanPPL.length; j++) {
+                        let num = this.jawabanPPL[i].jawabanPPL[j][0][0].toString()
+                        // console.log("no: ", this.jawabanPPL[i].jawabanPPL[j][0][0]," jawaban: ",this.jawabanPPL[i].jawabanPPL[j][0][1])
+                        data[idx][num] = this.jawabanPPL[i].jawabanPPL[j][0][1]
+                    }
+                    // data[idx]["nama_siswa"] = user[0].name
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Ekoliterasi-Pretest_" + today + ".xlsx")
+        },
+        exportExcelPosttestEkoliterasi() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanPPL.length; i++) {
+                let user = this.searchId(this.user, this.jawabanPPL[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah pretest kognitif
+                if (this.jawabanPPL[i].isPPLPosttest === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanPPL[i].jawabanPPL)        
+                    // console.log("no: ", no, "nama :", user[0].name)
+                    data.push({ "nama_siswa": user[0].name })
+                    for (let j = 0; j < this.jawabanPPL[i].jawabanPPL.length; j++) {
+                        let num = this.jawabanPPL[i].jawabanPPL[j][0][0].toString()
+                        // console.log("no: ", this.jawabanPPL[i].jawabanPPL[j][0][0]," jawaban: ",this.jawabanPPL[i].jawabanPPL[j][0][1])
+                        data[idx][num] = this.jawabanPPL[i].jawabanPPL[j][0][1]
+                    }
+                    // data[idx]["nama_siswa"] = user[0].name
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Ekoliterasi-Posttest_" + today + ".xlsx")
+        },
+        exportExcelPosttestSpritual() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanSpritual.length; i++) {
+                let user = this.searchId(this.user, this.jawabanSpritual[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah pretest kognitif
+                console.log(this.jawabanSpritual[i])
+                if (this.jawabanSpritual[i].isSpritualPosttest === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanSpritual[i].jawabanSpritual)        
+                    console.log("berhasil msuk kondisi")
+                    data.push({ "nama_siswa": user[0].name })
+                    for (let j = 0; j < this.jawabanSpritual[i].jawabanSpritual.length; j++) {
+                        console.log("berhasil msuk looping")
+                        let num = this.jawabanSpritual[i].jawabanSpritual[j][0].toString()
+                        console.log("berhasil msuk num")
+                        // console.log("no: ", this.jawabanSpritual[i].jawabanSpritual[j][0][0]," jawaban: ",this.jawabanSpritual[i].jawabanSpritual[j][0][1])
+                        data[idx][num] = this.jawabanSpritual[i].jawabanSpritual[j][1].toString()
+                    }
+                    console.log(data)
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Spritual-Posttest_" + today + ".xlsx")
+        },
+        exportExcelPretestSpritual() {
+            // let no = 1
+            let data = []
+            //simpan nama, kelas, semeseter, jawaban nya
+            let idx = 0
+            for (let i = 0; i < this.jawabanSpritual.length; i++) {
+                let user = this.searchId(this.user, this.jawabanSpritual[i].id_user) //set user data untuk diambil pert data user
+                //jika sudah pretest kognitif
+                console.log(this.jawabanSpritual[i])
+                if (this.jawabanSpritual[i].isSpritual === true) {
+                    // console.log("id :", user[0].id,"nama :", user[0].name,", jawaban kognitif: ",this.jawabanSpritual[i].jawabanSpritual)        
+                    console.log("berhasil msuk kondisi")
+                    data.push({ "nama_siswa": user[0].name })
+                    for (let j = 0; j < this.jawabanSpritual[i].jawabanSpritual.length; j++) {
+                        console.log("berhasil msuk looping")
+                        let num = this.jawabanSpritual[i].jawabanSpritual[j][0].toString()
+                        console.log("berhasil msuk num")
+                        // console.log("no: ", this.jawabanSpritual[i].jawabanSpritual[j][0][0]," jawaban: ",this.jawabanSpritual[i].jawabanSpritual[j][0][1])
+                        data[idx][num] = this.jawabanSpritual[i].jawabanSpritual[j][1].toString()
+                    }
+                    console.log(data)
+                    idx++
+                    // no++
+
+                }
+            }
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = mm + '-' + dd + '-' + yyyy;
+            // this.framework = data
+            console.log(data)
+            const XLSX = xlsx;
+            const workbook = XLSX.utils.book_new();
+            const worksheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
+            XLSX.writeFile(workbook, "Spritual-Pretest_" + today + ".xlsx")
         }
+
     },
     mounted() {
         setTimeout(() => {
@@ -194,7 +434,7 @@ export default {
                 .get('http://localhost:3000/jawabanPPL')
                 .then((response) => this.setPPL(response.data))
                 .catch((error) => console.log('Gagal : ', error))
-        }, 1000);
+        }, 2000);
     },
 }
 

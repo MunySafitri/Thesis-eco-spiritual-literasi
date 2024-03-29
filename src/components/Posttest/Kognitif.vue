@@ -4,7 +4,7 @@
   <Navbar />
   <!-- <div>{{ kognitif[0]}}</div> -->
   <div v-if="kognitif[questionIndex]">
-    <div class="container p-2">
+    <div class="container p-2 overflow-auto">
       <div class="card">
         <div class="row p-5 card-body">
           <section class="radio-section">
@@ -67,7 +67,8 @@
               color="success"
               @click="
                 () => {
-                  visibleScrollableDemo = true
+                  visibleScrollableDemo = true,
+                  nextModal()
                 }
               "
               >Selesai &#8250;</CButton
@@ -127,9 +128,9 @@
     </div>
   </div>
 
-  <div v-if="jawaban">
+  <!-- <div v-if="jawaban">
     {{ jawaban }}
-  </div>
+  </div> -->
 </template>
 <!-- eslint-disable prettier/prettier -->
 
@@ -226,42 +227,7 @@ h1 {
   /* width: 80%; */
 }
 
-/* .option {
-  display: flex;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
 
-.option-label {
-  background-color: bisque;
-  width: 50px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.option-value {
-  
-  width: 80%;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  
-  padding: 0 20px
-}
-
-.option-value:hover {
-  background-color: rgb(244, 239, 239);
-}
-
-.active {
-  background-color: rgb(244, 239, 239);
-  color: red; */
-
-/* } */
 </style>
 <!-- eslint-disable prettier/prettier -->
 
@@ -797,21 +763,22 @@ export default {
     setKognitif(data) {
       this.kognitif = data
     },
-    // setUser(data) {
-    //   this.user = data.filter(d => d.id === JSON.parse(localStorage.getItem('id_user')))
-    // },
     emitSelectedOption(no, jawaban) {
       this.temp = []
       this.temp.push([no, jawaban])
       this.choose = true
-      // this.active = !this.active
-      // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
-      // this.questionIndex++
     },
     nextQuestion() {
       // this.temp.push([no, jawaban])
       this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
       this.questionIndex++
+      this.temp = []
+      this.choose = false
+    },
+    nextModal() {
+      // this.temp.push([no, jawaban])
+      this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
+      // this.questionIndex++
       this.temp = []
       this.choose = false
     },
@@ -822,7 +789,7 @@ export default {
         jawabanKognitif: this.jawaban,
         isKognitifPosttest: true,
       }
-      console.log(datas)
+      // console.log(datas)
 
       axios
         .post('http://localhost:3000/jawabanKognitif/', datas)
@@ -834,11 +801,15 @@ export default {
     },
   },
   mounted() {
-    // axios
-    //   .get('http://localhost:3000/kognitif')
-    //   .then((response) => this.setKognitif(response.data))
-    //   .catch((error) => console.log('Gagal : ', error))
-
+    if (localStorage.getItem('reloaded')) {
+        // The page was just reloaded. Clear the value from local storage
+        // so that it will reload the next time this page is visited.
+        localStorage.removeItem('reloaded');
+    } else {
+        // Set a flag so that we know not to reload the page twice.
+        localStorage.setItem('reloaded', '1');
+        location.reload();
+    }
     axios
       .get('http://localhost:3000/user')
       .then((response) => this.setUser(response.data))

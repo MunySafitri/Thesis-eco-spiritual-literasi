@@ -11,60 +11,30 @@
             <div class="radio-list" style="font-size: 2vw">
               <!-- <img src="../../assets/img/logo.png" alt="" width="400"> -->
 
-              <div
-                v-for="(ppl, index) in ekoliterasi"
-                :key="ppl.id"
-                class="question-content"
-              >
-                <div
-                  v-show="index === questionIndex"
-                  class="question question-box"
-                >
+              <div v-for="(ppl, index) in ekoliterasi" :key="ppl.id" class="question-content">
+                <div v-show="index === questionIndex" class="question question-box">
                   <h4>{{ index + 1 }}. {{ ppl.pernyataan }}</h4>
                   <ul>
-                    <li
-                      class="radio-item"
-                      v-for="response in ppl.opsi"
-                      :key="response.id"
-                    >
-                      <input
-                        @click="emitSelectedOption(index + 1, response.id)"
-                        :id="response.id + ppl.pernyataan"
-                        type="radio"
-                        v-bind:value="response.isi"
-                        v-bind:name="response.isi"
-                        v-model="userResponses[index]"
-                      />
-                      <label :for="response.id + ppl.pernyataan"
-                        >{{ response.id }}. {{ response.isi }}
+                    <li class="radio-item" v-for="response in ppl.opsi" :key="response.id">
+                      <input @click="emitSelectedOption(index + 1, response.id)" :id="response.id + ppl.pernyataan"
+                        type="radio" v-bind:value="response.isi" v-bind:name="response.isi"
+                        v-model="userResponses[index]" />
+                      <label :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
                       </label>
                     </li>
                   </ul>
                   <div class="col d-flex justify-content-between">
-                    <div
-                      v-if="questionIndex === ekoliterasi.length - 1"
-                      class="d-flex justify-content-sm-end pt-5"
-                    >
-                      <CButton
-                        color="success"
-                        class="btn-lg"
-                        :class="choose ? '' : 'disabled'"
-                        @click="
-                          () => {
-                            visibleScrollableDemo = true
-                          }
-                        "
-                        >Selesai &#8250;</CButton
-                      >
+                    <div v-if="questionIndex === ekoliterasi.length - 1" class="d-flex justify-content-sm-end pt-5">
+                      <CButton color="success" class="btn-lg" :class="choose ? '' : 'disabled'" @click="() => {
+                  visibleScrollableDemo = true,
+                    nextModal()
+                }
+                ">Selesai &#8250;</CButton>
 
                       <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
                     </div>
                     <div v-else class="row d-flex justify-content-sm-end pt-5">
-                      <button
-                        class="btn btn-lg btn-secondary"
-                        :class="choose ? '' : 'disabled'"
-                        v-on:click="next"
-                      >
+                      <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'" v-on:click="next">
                         Berikutnya &#8250;
                       </button>
                     </div>
@@ -77,21 +47,12 @@
       </div>
     </div>
     <!-- modal -->
-    <CModal
-      scrollable
-      size="lg"
-      :visible="visibleScrollableDemo"
-      @close="
-        () => {
-          visibleScrollableDemo = false
-        }
-      "
-      aria-labelledby="ScrollingLongContentExampleLabel2"
-    >
+    <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+                  visibleScrollableDemo = false
+                }
+                " aria-labelledby="ScrollingLongContentExampleLabel2">
       <CModalHeader>
-        <CModalTitle id="ScrollingLongContentExampleLabel2"
-          >Peringatan</CModalTitle
-        >
+        <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
       </CModalHeader>
       <CModalBody>
         <div class="accordion-body">
@@ -112,9 +73,9 @@
     </CModal>
   </div>
 
-  <div v-if="jawaban">
+  <!-- <div v-if="jawaban">
     {{ jawaban }}
-  </div>
+  </div> -->
 </template>
 <!-- eslint-disable prettier/prettier -->
 <style scoped>
@@ -146,7 +107,7 @@ h1 {
   /* width: 80%; */
 }
 
-.radio-item + .radio-item {
+.radio-item+.radio-item {
   margin-top: 15px;
 }
 
@@ -193,7 +154,7 @@ h1 {
   transition: 0.4s ease-in-out 0s;
 }
 
-.radio-item [type='radio']:checked ~ label::before {
+.radio-item [type='radio']:checked~label::before {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
@@ -669,10 +630,15 @@ export default {
     emitSelectedOption(no, jawaban) {
       this.temp = []
       this.temp.push([no, jawaban])
-      // this.active = !this.active
       this.choose = true
-      // this.jawaban.push([no, jawaban]) //formatnya no soal dan jawaban yang di pilih user
+
+    },
+    nextModal() {
+      // this.temp.push([no, jawaban])
+      this.jawaban.push(this.temp) //formatnya no soal dan jawaban yang di pilih user
       // this.questionIndex++
+      this.temp = []
+      this.choose = false
     },
     next: function () {
       this.questionIndex++
@@ -680,28 +646,7 @@ export default {
       this.temp = []
       this.choose = false
     },
-    // prev: function () {
-    //   this.questionIndex--;
-    // },
-    // Return "true" count in userResponses
-    // score: function () {
-    //   let correctCount = 0;
-    //   let self = this;
 
-    //   this.quiz.questions.filter(function (val, i) {
-    //     val.userAnswerCorrect = false;
-    //     val.userAnswer = self.userResponses[i];
-
-    //     val.responses.filter(function (ans) {
-    //       if (ans.correct == true && val.userAnswer == ans.text) {
-    //         correctCount++;
-    //       }
-
-    //     })
-    //   });
-
-    //   return correctCount;
-    // },
 
     // Restart quiz
     start: function () {
@@ -709,5 +654,17 @@ export default {
       this.questionIndex = 0
     },
   },
+  mounted() {
+    //reload sekali
+    if (localStorage.getItem('reloaded')) {
+      // The page was just reloaded. Clear the value from local storage
+      // so that it will reload the next time this page is visited.
+      localStorage.removeItem('reloaded');
+    } else {
+      // Set a flag so that we know not to reload the page twice.
+      localStorage.setItem('reloaded', '1');
+      location.reload();
+    }
+  }
 }
 </script>
