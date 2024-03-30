@@ -6,17 +6,17 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-12">
             <div class="overview-content">
-              <div class="card">
+              <div class="card3">
                 <span class="sub-title"
-                  >Selamat Belajar & Jangan Lupa Berdo'a</span
+                  >Selamat Belajar & Jangan Lupa Berdo'a<br /><br /></span
                 >
-                <h1>E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an</h1>
+                <h1>E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an<br /></h1>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="overview-img">
-              <div class="card">
+              <div class="card2">
                 <video
                   class="vid1"
                   autoplay
