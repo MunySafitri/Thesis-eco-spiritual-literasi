@@ -9,7 +9,7 @@ video {
   <div id="Informasi" class="process-style-area1 ptb-100">
     <div class="container">
       <div class="d-flex justify-content-center">
-        <video class="vid2" loop controls id="myVideo">
+        <video class="vid2" play loop controls id="myVideo">
           <source src="../assets/Surat-ALbaqarah.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
@@ -19,7 +19,7 @@ video {
       </RouterLink> -->
       <div class="main-section-title">
         <div class="card">
-          <span class="sub-title"># STEPS & PROCESS</span>
+          <!-- <span class="sub-title"># STEPS & PROCESS</span> -->
           <h2>Informasi Umum</h2>
         </div>
       </div>
@@ -130,53 +130,45 @@ video {
             </b-tab>
             <b-tab title="Materi Esensial">
               <b-card
-                ><h6>1. Fenomena Hujan</h6>
-                <ol type="a">
-                  <li>Daya guna,</li>
-                  <li>Daya Rusak,</li>
-                  <li>Konservasi</li>
-                </ol>
+                ><h6>
+                  <ol type="1">
+                    <li>Fenomena Hujan</li>
+                    <li>Siklus Hydrology</li>
+                    <li>Manfaat Siklus Hydrology</li>
+                    <li>Penanaman Sikap Spiritual</li>
+                  </ol>
+                </h6>
               </b-card>
-              <b-card
-                ><h6>2. Siklus Hydrology</h6>
-                <ol type="a">
-                  <li>Ayat....</li>
-                  <li>Ayat....</li>
-                </ol>
-              </b-card>
-              <b-card><h6>3. Manfaat Siklus Hydrology</h6></b-card>
-              <b-card><h6>4. Penanaman Sikap Spiritual</h6></b-card>
             </b-tab>
             <b-tab title="Sarana & Prasarana"
               ><ul class="bold">
                 <li>Laptop, Android atau Perangkat elektronik</li>
-                <li>LCD projector,</li>
-                <li>Jaringan internet,</li>
-                <li>papan tulis,</li>
-                <li>alat tulis.</li>
+                <li>LCD projector</li>
+                <li>Jaringan internet</li>
+                <li>papan tulis</li>
+                <li>alat tulis</li>
               </ul></b-tab
             >
-            <b-tab title="Target PD & Model Pheno BL">
+            <b-tab title="Target Peserta didik dan Model Pembelajaran">
               <b-card1 no-body>
                 <b-tabs pills card vertical nav-wrapper-class="w-30">
                   <b-tab title="Target Peserta Didik" active
                     ><b-card-text>
-                      <p class="bold">
-                        Siswa reguler sudah benar.
-                      </p></b-card-text
+                      <p class="bold">Siswa reguler.</p></b-card-text
                     ></b-tab
                   >
-                  <b-tab title="Phenomena Base learning"
+                  <b-tab title="Model Pembelajaran"
                     ><b-card-text>
-                      <p class="bold">Model 1</p>
+                      <p class="bold">Phenomena base learning</p>
                     </b-card-text></b-tab
                   >
                 </b-tabs>
               </b-card1></b-tab
             >
             <b-tab title="Glosarium & Daftar Pustaka"
-              ><b-card
-                >1. Siklus Air:
+              ><b-card>
+                <strong> <p class="bold">Glosarium</p></strong>
+                1. Siklus Air:
                 <ol type="a">
                   <li>
                     Evaporasi: Proses perubahan air dari bentuk cair menjadi uap
@@ -283,7 +275,7 @@ video {
                 </ol>
               </b-card>
               <b-card>
-                <p class="bold">Daftar Pustaka</p>
+                <strong> <p class="bold">Daftar Pustaka</p></strong>
                 <p>
                   Mauliddin, A. I. (2018). Telaah kritis makna hujan dalam
                   Alquran. Al-Quds: Jurnal Studi Alquran Dan Hadis, 2(1),

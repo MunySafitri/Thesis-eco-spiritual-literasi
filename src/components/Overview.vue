@@ -10,10 +10,7 @@
                 <span class="sub-title"
                   >Selamat Belajar & Jangan Lupa Berdo'a</span
                 >
-                <h1>
-                  E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an &
-                  Lingkungan
-                </h1>
+                <h1>E-Modul Siklus Hidrologi Terintegrasi Ayat Al-Qur'an</h1>
               </div>
             </div>
           </div>
