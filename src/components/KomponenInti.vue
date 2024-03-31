@@ -4,7 +4,7 @@
     <div class="container">
       <div class="main-section-title">
         <div class="card">
-          <span class="sub-title"># STEPS & PROCESS</span>
+          <!-- <span class="sub-title"># STEPS & PROCESS</span> -->
           <h2>Komponen Inti</h2>
         </div>
       </div>

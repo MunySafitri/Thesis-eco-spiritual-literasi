@@ -8,7 +8,7 @@
       </RouterLink> -->
       <div class="main-section-title">
         <div class="card">
-          <span class="sub-title"># P5</span>
+          <!-- <span class="sub-title"># P5</span> -->
           <h2>Profil Pancasila</h2>
         </div>
       </div>
