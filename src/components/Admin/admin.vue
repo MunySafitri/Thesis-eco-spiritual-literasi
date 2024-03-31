@@ -11,7 +11,7 @@
                     </b-col>
                     <b-col cols="12" md="auto"></b-col>
                     <b-col col lg="2" align-self="end">
-                        <b-dropdown id="dropdown-left" offset="25" text="Pretest" variant="dark" class=" col-6">
+                        <b-dropdown id="dropdown-lef" offset="25" text="Pretest" variant="dark" class=" col-6">
                             <b-dropdown-item href="#" @click="exportExcelPretestKognitif">Kognitif</b-dropdown-item>
                             <b-dropdown-item href="#"
                                 @click="exportExcelPretestEkoliterasi">Ekoliterasi</b-dropdown-item>
