@@ -28,7 +28,7 @@
                     </b-col>
                 </b-row>
             </div>
-            <div class="card-body ">
+            <div class="card-body overflow-auto ">
                 <table class=" table table-responsive table-bordered table-striped" id="myTable">
                     <thead>
                         <tr>

@@ -1,71 +1,40 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <Navbar />
-  <div class="container pb-5 overflow-auto">
-    <h1>Perilaku Peduli Lingkungan</h1>
+  <div class="container pb-5">
+    <h1 class="p-3">Perilaku Peduli Lingkungan</h1>
 
     <div class="card">
       <div class="row p-5 card-body">
-        <section class="radio-section">
+        <section class="radio-section col-sm">
           <div class="px-2">
-            <div class="radio-list" style="font-size: 2vw">
+            <div class="radio-list" style="font-size: 10px">
               <!-- <img src="../../assets/img/logo.png" alt="" width="400"> -->
-
-              <div
-                v-for="(ppl, index) in ekoliterasi"
-                :key="ppl.id"
-                class="question-content"
-              >
-                <div
-                  v-show="index === questionIndex"
-                  class="question question-box"
-                >
-                  <h4>{{ index + 1 }}. {{ ppl.pernyataan }}</h4>
+       
+              <div v-for="(ppl, index) in ekoliterasi" :key="ppl.id" class="question-content">
+                <div v-show="index === questionIndex" class="question question-box">
+                  <p style="font-size: 15px">{{ index + 1 }}. {{ ppl.pernyataan }}</p>
                   <ul>
-                    <li
-                      class="radio-item"
-                      v-for="response in ppl.opsi"
-                      :key="response.id"
-                    >
-                      <input
-                        @click="emitSelectedOption(index + 1, response.id)"
-                        :id="response.id + ppl.pernyataan"
-                        type="radio"
-                        v-bind:value="response.isi"
-                        v-bind:name="response.isi"
-                        v-model="userResponses[index]"
-                      />
-                      <label :for="response.id + ppl.pernyataan"
-                        >{{ response.id }}. {{ response.isi }}
+                    <li  class="radio-item form-check py-2 " v-for="response in ppl.opsi" :key="response.id">
+                      <input @click="emitSelectedOption(index + 1, response.id)" :id="response.id + ppl.pernyataan"
+                        type="radio" v-bind:value="response.isi" v-bind:name="response.isi"
+                        v-model="userResponses[index]" class="form-check-input"/>
+                        <label class="form-check-label justify-content-start" :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
                       </label>
                     </li>
                   </ul>
                   <div class="col d-flex justify-content-between">
-                    <div
-                      v-if="questionIndex === ekoliterasi.length - 1"
-                      class="d-flex justify-content-sm-end pt-5"
-                    >
-                      <CButton
-                        color="success"
-                        class="btn-lg"
-                        :class="choose ? '' : 'disabled'"
-                        @click="
-                          () => {
-                            visibleScrollableDemo = true,
-                            nextModal()
-                          }
-                        "
-                        >Selesai &#8250;</CButton
-                      >
+                    <div v-if="questionIndex === ekoliterasi.length - 1" class="d-flex justify-content-sm-end pt-5">
+                      <CButton color="success" class="btn-lg" :class="choose ? '' : 'disabled'" @click="() => {
+                  visibleScrollableDemo = true,
+                    nextModal()
+                }
+                ">Selesai &#8250;</CButton>
 
                       <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
                     </div>
                     <div v-else class="row d-flex justify-content-sm-end pt-5">
-                      <button
-                        class="btn btn-lg btn-secondary"
-                        :class="choose ? '' : 'disabled'"
-                        v-on:click="next"
-                      >
+                      <button class="btn btn-lg btn-secondary" style ="font-size:10px" :class="choose ? '' : 'disabled'" v-on:click="next">
                         Berikutnya &#8250;
                       </button>
                     </div>
@@ -77,23 +46,13 @@
         </section>
       </div>
     </div>
-
     <!-- modal -->
-    <CModal
-      scrollable
-      size="lg"
-      :visible="visibleScrollableDemo"
-      @close="
-        () => {
-          visibleScrollableDemo = false
-        }
-      "
-      aria-labelledby="ScrollingLongContentExampleLabel2"
-    >
+    <CModal scrollable size="lg" :visible="visibleScrollableDemo" @close="() => {
+                  visibleScrollableDemo = false
+                }
+                " aria-labelledby="ScrollingLongContentExampleLabel2">
       <CModalHeader>
-        <CModalTitle id="ScrollingLongContentExampleLabel2"
-          >Peringatan</CModalTitle
-        >
+        <CModalTitle id="ScrollingLongContentExampleLabel2">Peringatan</CModalTitle>
       </CModalHeader>
       <CModalBody>
         <div class="accordion-body">
@@ -132,39 +91,20 @@ body {
   color: #ffffff;
 }
 
-.radio-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
 h1 {
   margin-bottom: 20px;
 }
 
-.radio-item [type='radio'] {
-  display: none;
-  /* width: 80%; */
-}
-
-.radio-item + .radio-item {
-  margin-top: 15px;
-}
 
 .radio-item label {
   display: block;
-  padding: 15px 60px;
-  background: rgb(255, 255, 255);
-  border: 2px solid rgb(244, 239, 239);
+  padding: 0px 10px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 250px;
-  white-space: nowrap;
   position: relative;
-  transition: 0.4s ease-in-out 0s;
+
 }
 
 .radio-item label:after,
@@ -177,14 +117,11 @@ h1 {
 .radio-item label:after {
   height: 19px;
   width: 19px;
-  border: 2px solid rgb(0, 0, 0);
+
   left: 19px;
-  top: calc(50% - 12px);
 }
 
 .radio-item label:before {
-  background: rgb(161, 100, 100);
-  border-color: rgb(244, 239, 239);
   height: 20px;
   width: 20px;
   left: 21px;
@@ -200,22 +137,10 @@ h1 {
   visibility: visible;
   transform: scale(1);
 }
-
-/* .?? */
-.question-container {
-  margin-top: 20px;
-}
-
-.question {
-  font-size: 16px;
-  margin-bottom: 20px;
-  /* width: 80%; */
-}
-
 </style>
 <!-- eslint-disable prettier/prettier -->
 <script>
-import Navbar from '@/components/Layouts/Navbar.vue'
+import Navbar from '@/components/Posttest/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 //import ButtonPpl from '@/components/Test/pplChoice.vue'

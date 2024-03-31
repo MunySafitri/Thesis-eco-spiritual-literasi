@@ -236,8 +236,7 @@ var spritual= [
       }
     ]
   
-
-import Navbar from '@/components/Layouts/Navbar.vue'
+import Navbar from '@/components/Posttest/Navbar.vue'
 import axios from 'axios'
 import { uuid } from 'vue-uuid'
 // var ppl =[]

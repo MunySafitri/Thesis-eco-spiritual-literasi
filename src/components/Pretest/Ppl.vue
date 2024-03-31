@@ -2,24 +2,24 @@
 <template>
   <Navbar />
   <div class="container pb-5">
-    <h1>Perilaku Peduli Lingkungan</h1>
+    <h1 class="p-3">Perilaku Peduli Lingkungan</h1>
 
     <div class="card">
       <div class="row p-5 card-body">
-        <section class="radio-section">
+        <section class="radio-section col-sm">
           <div class="px-2">
-            <div class="radio-list" style="font-size: 2vw">
+            <div class="radio-list" style="font-size: 10px">
               <!-- <img src="../../assets/img/logo.png" alt="" width="400"> -->
-
+       
               <div v-for="(ppl, index) in ekoliterasi" :key="ppl.id" class="question-content">
                 <div v-show="index === questionIndex" class="question question-box">
-                  <h4>{{ index + 1 }}. {{ ppl.pernyataan }}</h4>
+                  <p style="font-size: 15px">{{ index + 1 }}. {{ ppl.pernyataan }}</p>
                   <ul>
-                    <li class="radio-item" v-for="response in ppl.opsi" :key="response.id">
+                    <li  class="radio-item form-check py-2 " v-for="response in ppl.opsi" :key="response.id">
                       <input @click="emitSelectedOption(index + 1, response.id)" :id="response.id + ppl.pernyataan"
                         type="radio" v-bind:value="response.isi" v-bind:name="response.isi"
-                        v-model="userResponses[index]" />
-                      <label :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
+                        v-model="userResponses[index]" class="form-check-input"/>
+                        <label class="form-check-label justify-content-start" :for="response.id + ppl.pernyataan">{{ response.id }}. {{ response.isi }}
                       </label>
                     </li>
                   </ul>
@@ -34,7 +34,7 @@
                       <!-- <button class="btn btn-success" @click="addData">Selesai &#8250;</button> -->
                     </div>
                     <div v-else class="row d-flex justify-content-sm-end pt-5">
-                      <button class="btn btn-lg btn-secondary" :class="choose ? '' : 'disabled'" v-on:click="next">
+                      <button class="btn btn-lg btn-secondary" style ="font-size:10px" :class="choose ? '' : 'disabled'" v-on:click="next">
                         Berikutnya &#8250;
                       </button>
                     </div>
@@ -91,39 +91,20 @@ body {
   color: #ffffff;
 }
 
-.radio-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
 h1 {
   margin-bottom: 20px;
 }
 
-.radio-item [type='radio'] {
-  display: none;
-  /* width: 80%; */
-}
-
-.radio-item+.radio-item {
-  margin-top: 15px;
-}
 
 .radio-item label {
   display: block;
-  padding: 15px 60px;
-  background: rgb(255, 255, 255);
-  border: 2px solid rgb(244, 239, 239);
+  padding: 0px 10px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 250px;
-  white-space: nowrap;
   position: relative;
-  transition: 0.4s ease-in-out 0s;
+
 }
 
 .radio-item label:after,
@@ -136,14 +117,11 @@ h1 {
 .radio-item label:after {
   height: 19px;
   width: 19px;
-  border: 2px solid rgb(0, 0, 0);
+
   left: 19px;
-  top: calc(50% - 12px);
 }
 
 .radio-item label:before {
-  background: rgb(161, 100, 100);
-  border-color: rgb(244, 239, 239);
   height: 20px;
   width: 20px;
   left: 21px;
@@ -154,59 +132,11 @@ h1 {
   transition: 0.4s ease-in-out 0s;
 }
 
-.radio-item [type='radio']:checked~label::before {
+.radio-item [type='radio']:checked ~ label::before {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
 }
-
-/* .?? */
-.question-container {
-  margin-top: 20px;
-}
-
-.question {
-  font-size: 16px;
-  margin-bottom: 20px;
-  /* width: 80%; */
-}
-
-/* .option {
-  display: flex;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.option-label {
-  background-color: bisque;
-  width: 50px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.option-value {
-  
-  width: 80%;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  
-  padding: 0 20px
-}
-
-.option-value:hover {
-  background-color: rgb(244, 239, 239);
-}
-
-.active {
-  background-color: rgb(244, 239, 239);
-  color: red; */
-
-/* } */
 </style>
 <!-- eslint-disable prettier/prettier -->
 <script>

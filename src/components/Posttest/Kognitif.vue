@@ -1,39 +1,45 @@
 <!-- eslint-disable prettier/prettier -->
 
+
 <template>
   <Navbar />
   <!-- <div>{{ kognitif[0]}}</div> -->
   <div v-if="kognitif[questionIndex]">
     <div class="container p-2 overflow-auto">
-      <div class="card">
+      <div class="card ">
         <div class="row p-5 card-body">
-          <section class="radio-section">
+          <section class="radio-section col-sm">
             <div class="px-2">
-              <div class="radio-list" style="font-size: 2vw">
-                <img
-                  v-if="kognitif[questionIndex].gambar !== null"
-                  :src="
-                    require(
-                      `../../assets/img/ujian/${kognitif[questionIndex].gambar}`,
-                    )
-                  "
-                  alt=""
-                  width="400"
-                />
+              <div class="radio-list" style="font-size: 10px">
+                <center>
+                  <img
+                    v-if="kognitif[questionIndex].gambar !== null"
+                    :src="
+                      require(
+                        `../../assets/img/ujian/${kognitif[questionIndex].gambar}`,
+                      )
+                    "
+                    alt=""
+                    width="400"
+                  />
+                </center>
                 <br />
-                <div
+                <div 
                   v-for="(k, index) in kognitif"
                   :key="k.id"
-                  class="question-content"
+                  class=""
                 >
                   <div
                     v-show="index === questionIndex"
-                    class="question question-box"
+                    class="question"
                   >
-                    <h4>{{ index + 1 }}. {{ k.pertanyaan }}</h4>
-                    <ul>
+                  <div class="">
+
+                  
+                    <p style="font-size: 15px">{{ index + 1 }}. {{ k.pertanyaan }}</p>
+                    <ul >
                       <li
-                        class="radio-item"
+                        class="radio-item form-check py-2"
                         v-for="response in k.opsi"
                         :key="response.id"
                       >
@@ -44,12 +50,14 @@
                           v-bind:value="response.isi"
                           v-bind:name="response.isi"
                           v-model="userResponses[index]"
+                          class="form-check-input" 
                         />
-                        <label :for="response.id + k.pertanyaan"
+                        <label class="form-check-label justify-content-start" :for="response.id + k.pertanyaan"
                           >{{ response.id }}. {{ response.isi }}
                         </label>
                       </li>
                     </ul>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -81,51 +89,48 @@
               class="btn btn-lg btn-secondary"
               :class="choose ? '' : 'disabled'"
               @click="nextQuestion"
+              style="font-size: 10px"
             >
               Berikutnya &#8250;
             </button>
           </div>
         </div>
       </div>
-      <!-- modal -->
-      <CModal
-        scrollable
-        size="lg"
-        :visible="visibleScrollableDemo"
-        @close="
-          () => {
-            visibleScrollableDemo = false
-          }
-        "
-        aria-labelledby="ScrollingLongContentExampleLabel2"
-      >
-        <CModalHeader>
-          <CModalTitle id="ScrollingLongContentExampleLabel2"
-            >Peringatan</CModalTitle
-          >
-        </CModalHeader>
-        <CModalBody>
-          <div class="accordion-body">
-            <p>Lanjut Aspek Perilaku Ekoliterasi?</p>
-            <p>16 soal</p>
-          </div>
-          <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
-          <br />
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Tidak
-            </button>
-            <button type="button" @click="addData" class="btn btn-primary">
-              Mulai
-            </button>
-          </div>
-        </CModalBody>
-      </CModal>
     </div>
+    <!-- modal -->
+    <CModal
+      scrollable
+      size="lg"
+      :visible="visibleScrollableDemo"
+      @close="
+        () => {
+          visibleScrollableDemo = false
+        }
+      "
+      aria-labelledby="ScrollingLongContentExampleLabel2"
+    >
+      <CModalHeader>
+        <CModalTitle id="ScrollingLongContentExampleLabel2"
+          >Peringatan</CModalTitle
+        >
+      </CModalHeader>
+      <CModalBody>
+        <div class="accordion-body">
+          <p>Lanjut Aspek Perilaku Ekoliterasi?</p>
+          <p>16 soal</p>
+        </div>
+        <p>⮚ Jika halaman mengalami kejanggalan segera refresh</p>
+      <br />
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Tidak
+          </button>
+          <button type="submit" @click="addData" class="btn btn-primary" >
+            Mulai
+          </button>
+        </div>
+      </CModalBody>
+    </CModal>
   </div>
 
   <!-- <div v-if="jawaban">
@@ -147,39 +152,20 @@ body {
   color: #ffffff;
 }
 
-.radio-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
 h1 {
   margin-bottom: 20px;
 }
 
-.radio-item [type='radio'] {
-  display: none;
-  /* width: 80%; */
-}
-
-.radio-item + .radio-item {
-  margin-top: 15px;
-}
 
 .radio-item label {
   display: block;
-  padding: 15px 60px;
-  background: rgb(255, 255, 255);
-  border: 2px solid rgb(244, 239, 239);
+  padding: 0px 10px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 250px;
-  white-space: nowrap;
   position: relative;
-  transition: 0.4s ease-in-out 0s;
+
 }
 
 .radio-item label:after,
@@ -192,14 +178,11 @@ h1 {
 .radio-item label:after {
   height: 19px;
   width: 19px;
-  border: 2px solid rgb(0, 0, 0);
+
   left: 19px;
-  top: calc(50% - 12px);
 }
 
 .radio-item label:before {
-  background: rgb(161, 100, 100);
-  border-color: rgb(244, 239, 239);
   height: 20px;
   width: 20px;
   left: 21px;
@@ -214,17 +197,6 @@ h1 {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
-}
-
-/* .?? */
-.question-container {
-  margin-top: 20px;
-}
-
-.question {
-  font-size: 16px;
-  margin-bottom: 20px;
-  /* width: 80%; */
 }
 
 

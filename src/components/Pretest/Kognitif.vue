@@ -7,9 +7,9 @@
     <div class="container p-2 overflow-auto">
       <div class="card ">
         <div class="row p-5 card-body">
-          <section class="radio-section">
+          <section class="radio-section col-sm">
             <div class="px-2">
-              <div class="radio-list" style="font-size: 2vw">
+              <div class="radio-list" style="font-size: 10px">
                 <center>
                   <img
                     v-if="kognitif[questionIndex].gambar !== null"
@@ -23,19 +23,22 @@
                   />
                 </center>
                 <br />
-                <div
+                <div 
                   v-for="(k, index) in kognitif"
                   :key="k.id"
-                  class="question-content"
+                  class=""
                 >
                   <div
                     v-show="index === questionIndex"
-                    class="question question-box"
+                    class="question"
                   >
-                    <h4>{{ index + 1 }}. {{ k.pertanyaan }}</h4>
-                    <ul>
+                  <div class="">
+
+                  
+                    <p style="font-size: 15px">{{ index + 1 }}. {{ k.pertanyaan }}</p>
+                    <ul >
                       <li
-                        class="radio-item"
+                        class="radio-item form-check py-2"
                         v-for="response in k.opsi"
                         :key="response.id"
                       >
@@ -46,12 +49,14 @@
                           v-bind:value="response.isi"
                           v-bind:name="response.isi"
                           v-model="userResponses[index]"
+                          class="form-check-input" 
                         />
-                        <label :for="response.id + k.pertanyaan"
+                        <label class="form-check-label justify-content-start" :for="response.id + k.pertanyaan"
                           >{{ response.id }}. {{ response.isi }}
                         </label>
                       </li>
                     </ul>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -83,6 +88,7 @@
               class="btn btn-lg btn-secondary"
               :class="choose ? '' : 'disabled'"
               @click="nextQuestion"
+              style="font-size: 10px"
             >
               Berikutnya &#8250;
             </button>
@@ -118,7 +124,7 @@
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
             Tidak
           </button>
-          <button type="button" @click="addData" class="btn btn-primary">
+          <button type="submit" @click="addData" class="btn btn-primary" >
             Mulai
           </button>
         </div>
@@ -145,39 +151,20 @@ body {
   color: #ffffff;
 }
 
-.radio-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-
 h1 {
   margin-bottom: 20px;
 }
 
-.radio-item [type='radio'] {
-  display: none;
-  /* width: 80%; */
-}
-
-.radio-item + .radio-item {
-  margin-top: 15px;
-}
 
 .radio-item label {
   display: block;
-  padding: 15px 60px;
-  background: rgb(255, 255, 255);
-  border: 2px solid rgb(244, 239, 239);
+  padding: 0px 10px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 250px;
-  white-space: nowrap;
   position: relative;
-  transition: 0.4s ease-in-out 0s;
+
 }
 
 .radio-item label:after,
@@ -190,14 +177,11 @@ h1 {
 .radio-item label:after {
   height: 19px;
   width: 19px;
-  border: 2px solid rgb(0, 0, 0);
+
   left: 19px;
-  top: calc(50% - 12px);
 }
 
 .radio-item label:before {
-  background: rgb(161, 100, 100);
-  border-color: rgb(244, 239, 239);
   height: 20px;
   width: 20px;
   left: 21px;
@@ -214,16 +198,6 @@ h1 {
   transform: scale(1);
 }
 
-/* .?? */
-.question-container {
-  margin-top: 20px;
-}
-
-.question {
-  font-size: 16px;
-  margin-bottom: 20px;
-  /* width: 80%; */
-}
 
 </style>
 <!-- eslint-disable prettier/prettier -->

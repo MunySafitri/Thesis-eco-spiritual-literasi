@@ -1,6 +1,34 @@
 <!-- eslint-disable prettier/prettier -->
 
 <template>
+  <div class="container">
+    <h1>Quiz Title</h1>
+    <div id="quiz">
+      <div id="question">
+        <h2>Question 1:</h2>
+        <p>What is the capital of France?</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="question1" id="option1" value="option1">
+          <label class="form-check-label" for="option1">
+            Paris What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="question1" id="option2" value="option2">
+          <label class="form-check-label" for="option2">
+            Rome
+          </label>
+        </div>
+        <!-- Add more options as needed -->
+      </div>
+      <button id="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div id="result" style="display:none;">
+      <!-- Result will be displayed here -->
+    </div>
+  </div>
+
+  
     <div>
     <a href="https://vitejs.dev" target="_blank">
       <img  class="logo" alt="Vite logo"/>
@@ -10,80 +38,40 @@
     </a>
   </div>
   <!-- <HelloWorld msg="Vite + Vue"/> -->
-  <button @click.prevent="exportExcel">excel</button>
-    <!-- <div>
-      <section>
-        <h3>Create XLSX</h3>
-        <div>
-          <input v-model="sheetName" placeholder="type a new sheet name" />
-          <button v-if="sheetName" @click="addSheet">Add Sheet</button>
-        </div>
-  
-        <div>Sheets: {{ sheets }}</div>
-  
-        <xlsx-workbook>
-          <xlsx-sheet
-            :collection="sheet.data"
-            v-for="sheet in sheets"
-            :key="sheet.name"
-            :sheet-name="sheet.name"
-          />
-          <xlsx-download>
-            <button>Download</button>
-          </xlsx-download>
-        </xlsx-workbook>
-      </section>
-      <hr />
-      <section>
-        <h3>Import XLSX</h3>
-        <input type="file" @change="onChange" />
-        <xlsx-read :file="file">
-          <xlsx-sheets>
-            <template #default="{sheets}">
-              <select v-model="selectedSheet">
-                <option v-for="sheet in sheets" :key="sheet" :value="sheet">
-                  {{ sheet }}
-                </option>
-              </select>
-            </template>
-          </xlsx-sheets>
-          <xlsx-table :sheet="selectedSheet" />
-          <xlsx-json :sheet="selectedSheet">
-            <template #default="{collection}">
-              <div>
-                {{ collection }}
-              </div>
-            </template>
-          </xlsx-json>
-        </xlsx-read>
-      </section>
-    </div> -->
+  <button @click.prevent="exportExcel">excel</button> 
   </template>
 <!-- eslint-disable prettier/prettier -->
 
-
 <script>
+// import Navbar from '@/components/Pretest/Navbar.vue'
+var $ = require('jquery')
+$('#submit').click(function () {
+  // Logic to check answers and display result
+  // Example: You can use jQuery to get the selected answer and compare it with the correct answer
+  // Display result accordingly
+})
+
 import xlsx from 'xlsx/dist/xlsx.full.min'
 export default {
   name: 'App',
   data() {
     return {
       framework: [
-        {name: "George Washington", birthday: "1732-02-22"},
-        {name: "John Adams", birthday: "1735-10-19"},
-        {name: "John Adams", birthday: "1735-10-19"},
-        {name: "John Adams", birthday: "1735-10-19"},
-      ]
+        { name: 'George Washington', birthday: '1732-02-22' },
+        { name: 'John Adams', birthday: '1735-10-19' },
+        { name: 'John Adams', birthday: '1735-10-19' },
+        { name: 'John Adams', birthday: '1735-10-19' },
+      ],
     }
   },
   methods: {
     exportExcel() {
-      const XLSX = xlsx;
-      const workbook = XLSX.utils.book_new();
-      const worksheet = XLSX.utils.json_to_sheet(this.framework);
-      XLSX.utils.book_append_sheet(workbook, worksheet, "framework");
-      XLSX.writeFile(workbook, "framework.xlsx");
-    }
-  }
+      const XLSX = xlsx
+      const workbook = XLSX.utils.book_new()
+      const worksheet = XLSX.utils.json_to_sheet(this.framework)
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'framework')
+      XLSX.writeFile(workbook, 'framework.xlsx')
+    },
+  },
 }
 </script>
