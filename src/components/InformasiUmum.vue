@@ -29,43 +29,47 @@ video {
         <b-card no-body>
           <b-tabs v-model="tabIndex" small card>
             <b-tab title="Identitas modul">
-              <table class="bold" style="width: 100%">
-                <tr>
-                  <td style="width: 35%">Perancang Modul</td>
-                  <td style="width: 5%">:</td>
-                  <td style="width: 60%">Muhammad Khairul</td>
-                </tr>
-                <tr>
-                  <td>NAMA GURU</td>
-                  <td>:</td>
-                  <td>.....</td>
-                </tr>
-                <tr>
-                  <td>SEKOLAH</td>
-                  <td>:</td>
-                  <td>MAN 1 Pidie Jaya, Prov. Aceh</td>
-                </tr>
-                <tr>
-                  <td>MATA PELAJARAN</td>
-                  <td>:</td>
-                  <td>Geografi</td>
-                </tr>
-                <tr>
-                  <td>ALOKASI WAKTU</td>
-                  <td>:</td>
-                  <td>2 x 45 Menit / Petemuan</td>
-                </tr>
-                <tr>
-                  <td>KELAS/ FASE</td>
-                  <td>:</td>
-                  <td>X / Fase F</td>
-                </tr>
-                <tr>
-                  <td>SEMESTER</td>
-                  <td>:</td>
-                  <td>2 (semeserter genap)</td>
-                </tr>
-              </table></b-tab
+              <div class="card2">
+                <CCallout color="info">
+                  <table class="bold" style="width: 100%">
+                    <tr>
+                      <td style="width: 35%">Perancang Modul</td>
+                      <td style="width: 5%">:</td>
+                      <td style="width: 60%">Muhammad Khairul</td>
+                    </tr>
+                    <tr>
+                      <td>NAMA GURU</td>
+                      <td>:</td>
+                      <td>.....</td>
+                    </tr>
+                    <tr>
+                      <td>SEKOLAH</td>
+                      <td>:</td>
+                      <td>MAN 1 Pidie Jaya, Prov. Aceh</td>
+                    </tr>
+                    <tr>
+                      <td>MATA PELAJARAN</td>
+                      <td>:</td>
+                      <td>Geografi</td>
+                    </tr>
+                    <tr>
+                      <td>ALOKASI WAKTU</td>
+                      <td>:</td>
+                      <td>2 x 45 Menit / Petemuan</td>
+                    </tr>
+                    <tr>
+                      <td>KELAS/ FASE</td>
+                      <td>:</td>
+                      <td>X / Fase F</td>
+                    </tr>
+                    <tr>
+                      <td>SEMESTER</td>
+                      <td>:</td>
+                      <td>2 (semeserter genap)</td>
+                    </tr>
+                  </table>
+                </CCallout>
+              </div></b-tab
             >
             <b-tab title="CP dan TP">
               <b-card1 no-body>
@@ -73,34 +77,42 @@ video {
                   <b-tab title="CP" active
                     ><b-card-text>
                       <h6>Capaian Pembelajaran</h6>
-                      <ul>
-                        <li>
-                          Mengidentifikasi keterkaitan antar gejala geosfer dari
-                          suatu peristiwa dalam kehidupan sehari-hari.
-                        </li>
-                        <li>
-                          Peserta didik mampu menyampaikan, mengomunikasikan ide
-                          antar mereka, dan mampu bekerja secara kelompok atau
-                          pun mandiri.
-                        </li>
-                      </ul></b-card-text
+                      <div class="card2">
+                        <CCallout color="info">
+                          <ul>
+                            <li>
+                              Mengidentifikasi keterkaitan antar gejala geosfer
+                              dari suatu peristiwa dalam kehidupan sehari-hari.
+                            </li>
+                            <li>
+                              Peserta didik mampu menyampaikan, mengomunikasikan
+                              ide antar mereka, dan mampu bekerja secara
+                              kelompok atau pun mandiri.
+                            </li>
+                          </ul>
+                        </CCallout>
+                      </div></b-card-text
                     ></b-tab
                   >
                   <b-tab title="TP"
                     ><b-card-text>
                       <h6>Tujuan Pembelajaran</h6>
-                      <ul>
-                        <li>
-                          Mengidentifikasi keterkaitan antar gejala geosfer dari
-                          suatu peristiwa dalam kehidupan sehari-hari.
-                        </li>
-                        <li>
-                          Menganalisis gejala geosfer (litosfer, hidrosfer,
-                          atmosfer) secara komprehensif dari suatu studi kasus
-                          peristiwa atau kejadian dalam kehidupan sehari-hari
-                          pada konteks keruangan dan kewilayahan
-                        </li>
-                      </ul></b-card-text
+                      <div class="card2">
+                        <CCallout color="info">
+                          <ul>
+                            <li>
+                              Mengidentifikasi keterkaitan antar gejala geosfer
+                              dari suatu peristiwa dalam kehidupan sehari-hari.
+                            </li>
+                            <li>
+                              Menganalisis gejala geosfer (litosfer, hidrosfer,
+                              atmosfer) secara komprehensif dari suatu studi
+                              kasus peristiwa atau kejadian dalam kehidupan
+                              sehari-hari pada konteks keruangan dan kewilayahan
+                            </li>
+                          </ul>
+                        </CCallout>
+                      </div></b-card-text
                     ></b-tab
                   >
                 </b-tabs>
@@ -108,37 +120,51 @@ video {
               <!-- <b-card>I'm the card in tab</b-card> -->
             </b-tab>
             <b-tab title="Materi Esensial">
-              <b-card
-                ><h6>
-                  <ol type="1">
-                    <li>Fenomena Hujan</li>
-                    <li>Siklus Hydrology</li>
-                    <li>Manfaat Siklus Hydrology</li>
-                    <li>Penanaman Sikap Spiritual</li>
-                  </ol>
-                </h6>
-              </b-card>
+              <div class="card2">
+                <CCallout color="info">
+                  <h6>
+                    <ol type="1">
+                      <li>Fenomena Hujan</li>
+                      <li>Siklus Hydrology</li>
+                      <li>Manfaat Siklus Hydrology</li>
+                      <li>Penanaman Sikap Spiritual</li>
+                    </ol>
+                  </h6>
+                </CCallout>
+              </div>
             </b-tab>
-            <b-tab title="Sarana & Prasarana"
-              ><ul class="bold">
-                <li>Laptop, Android atau Perangkat elektronik</li>
-                <li>LCD projector</li>
-                <li>Jaringan internet</li>
-                <li>papan tulis</li>
-                <li>alat tulis</li>
-              </ul></b-tab
+            <b-tab title="Sarana & Prasarana">
+              <div class="card2">
+                <CCallout color="info"
+                  ><ul class="bold">
+                    <li>Laptop, Android atau Perangkat elektronik</li>
+                    <li>LCD projector</li>
+                    <li>Jaringan internet</li>
+                    <li>papan tulis</li>
+                    <li>alat tulis</li>
+                  </ul></CCallout
+                >
+              </div></b-tab
             >
             <b-tab title="Target Peserta didik dan Model Pembelajaran">
               <b-card1 no-body>
                 <b-tabs pills card vertical nav-wrapper-class="w-30">
                   <b-tab title="Target Peserta Didik" active
-                    ><b-card-text>
-                      <p class="bold">Siswa reguler.</p></b-card-text
+                    ><b-card-text
+                      ><div class="card2">
+                        <CCallout color="info">
+                          <p class="bold">Siswa reguler.</p>
+                        </CCallout>
+                      </div></b-card-text
                     ></b-tab
                   >
                   <b-tab title="Model Pembelajaran"
-                    ><b-card-text>
-                      <p class="bold">Phenomena base learning</p>
+                    ><b-card-text
+                      ><div class="card2">
+                        <CCallout color="info">
+                          <p class="bold">Phenomena base learning</p>
+                        </CCallout>
+                      </div>
                     </b-card-text></b-tab
                   >
                 </b-tabs>
@@ -173,7 +199,6 @@ video {
                     </li>
                   </ol>
                   2. Ekoliterasi:
-
                   <ol type="a">
                     <li>
                       Sistem: Komunitas organisme hidup dan lingkungannya yang
@@ -198,7 +223,6 @@ video {
                     </li>
                   </ol>
                   3. Sumber Daya Air:
-
                   <ol type="a">
                     <li>
                       Akuifer: Lapisan tanah atau batuan yang dapat menyimpan
@@ -219,7 +243,6 @@ video {
                     </li>
                   </ol>
                   4. Pencemaran Air:
-
                   <ol type="a">
                     <li>
                       Eutrofikasi: Peningkatan nutrien dalam air yang dapat

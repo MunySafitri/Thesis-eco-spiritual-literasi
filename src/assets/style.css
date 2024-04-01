@@ -10588,6 +10588,7 @@ button:focus {
 .card3:hover {
   box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
 }
+
 .overview-content {
   position: relative;
   top: -20px;
