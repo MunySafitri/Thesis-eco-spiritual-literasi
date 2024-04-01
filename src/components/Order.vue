@@ -14,8 +14,6 @@
               <img src="../assets/img/1_2.png" alt="image" />
             </div>
             <div class="choose-content">
-              <!-- <a :href="'/posttest'" class=" btn btn-success btn-lg " :class="postTest ? 'disabled' : '' "  
-                >Kerjakan Posttest</a> -->
               <CButton
                 color="info"
                 shape="rounded-pill"
@@ -73,9 +71,8 @@
       >
         Kembali
       </CButton>
-      <RouterLink to="/posttest">
-        <CButton color="primary"> Mulai </CButton>
-      </RouterLink>
+      <a :href="'/posttest'" class=" btn btn-success btn-lg " :class="postTest ? 'disabled' : '' "  
+                >Kerjakan Posttest</a>
     </CModalFooter>
   </CModal>
 </template>
