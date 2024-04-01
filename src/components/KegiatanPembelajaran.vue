@@ -248,7 +248,7 @@
     <CModalBody>
       <center><CIcon :icon="cilBellExclamation" size="8xl" /></center>
       <br />
-      <h6>ini belum tersedia, nantikan update berikutnya!</h6></CModalBody
+      <h6>Materi ini belum tersedia, nantikan update berikutnya!</h6></CModalBody
     >
     <CModalFooter>
       <CButton
