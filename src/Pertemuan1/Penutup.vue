@@ -3,7 +3,7 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Kesimpulan</strong>
+          <strong>Penutup</strong>
         </CCardHeader>
         <CCardBody>
           <h6>

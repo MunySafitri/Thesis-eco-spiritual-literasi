@@ -179,12 +179,12 @@
               <button class="btn btn-primary btn-sm shadow-none" type="submit">
                 Post comment
               </button>
-              <button
+              <!-- <button
                 class="px-2 btn btn-outline-danger btn-sm ml-1 shadow-none"
                 type="button"
               >
                 Cancel
-              </button>
+              </button> -->
             </div>
           </div>
         </div>

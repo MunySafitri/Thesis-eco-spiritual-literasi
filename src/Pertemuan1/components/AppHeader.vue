@@ -11,7 +11,7 @@
           style="height: 5rcap"
           src="../../assets/img/logo.png"
           alt="Logo"
-        />
+        />{{ user }}
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
         <CNavItem>

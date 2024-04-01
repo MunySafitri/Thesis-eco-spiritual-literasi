@@ -172,7 +172,10 @@ video {
             >
             <b-tab title="Glosarium & Daftar Pustaka"
               ><div class="card2">
-                <CCallout color="info">
+                <CCallout
+                  color="info"
+                  style="position: relative; height: 200px; overflow-y: scroll"
+                >
                   <strong> <p class="bold">Glosarium</p></strong>
                   1. Siklus Air:
                   <ol type="a">
@@ -272,7 +275,10 @@ video {
                 </CCallout>
               </div>
               <div class="card2">
-                <CCallout color="info">
+                <CCallout
+                  color="info"
+                  style="position: relative; height: 200px; overflow-y: scroll"
+                >
                   <strong> <p class="bold">Daftar Pustaka</p></strong>
                   <p>
                     Mauliddin, A. I. (2018). Telaah kritis makna hujan dalam
