@@ -33,9 +33,11 @@
                   >
                     <div class="accordion-body">
                       <div class="choose-content">
+                        <RouterLink to="/pertemuan1">
                         <CButton color="info" shape="rounded-pill"
                           >Mulai
                         </CButton>
+                      </RouterLink>
                       </div>
                     </div>
                   </div>
