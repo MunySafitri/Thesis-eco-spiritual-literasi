@@ -13,8 +13,8 @@
             <thead class="thead-light text-center">
               <tr>
                 <th rowspan="2">No</th>
-                <th rowspan="2">Indikator</th>
-                <th rowspan="4">Butir Angket</th>
+                <!-- <th rowspan="2">Indikator</th> -->
+                <th rowspan="4">Pertanyaan</th>
                 <th colspan="10">Tidak -------------- Iya</th>
               </tr>
               <tr>
@@ -36,9 +36,9 @@
                 <td scope="row">
                   <label :for="field.angket">{{ index+1 }}</label>
                 </td>
-                <td scope="row">
+                <!-- <td scope="row">
                   <label :for="field.angket">{{ field.indikator }}</label>
-                </td>
+                </td> -->
                 <td scope="row">
                   <label :for="field.angket">{{ field.angket }}</label>
                 </td>
