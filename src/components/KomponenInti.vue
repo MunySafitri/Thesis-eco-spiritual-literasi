@@ -3,7 +3,7 @@
   <div id="Komponen" class="process-style-area3 ptb-100">
     <div class="container">
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># STEPS & PROCESS</span> -->
           <h2>Komponen Inti</h2>
         </div>

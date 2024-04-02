@@ -7,7 +7,7 @@
         <button>awikwok</button>
       </RouterLink> -->
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># P5</span> -->
           <h2>Profil Pancasila</h2>
         </div>

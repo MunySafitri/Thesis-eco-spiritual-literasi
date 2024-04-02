@@ -4,7 +4,7 @@
   <div id="Kegiatan" class="process-style-area2 ptb-100">
     <div class="container">
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># Kegiatan</span> -->
           <h2>Kegiatan Pembelajaran</h2>
         </div>
@@ -12,7 +12,7 @@
 
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card4">
             <div class="process-style-accordion">
               <div class="accordion" id="ProcessAccordion">
                 <div class="accordion-item">
@@ -180,7 +180,7 @@
         </div>
 
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card4">
             <div class="process-style-image">
               <img src="../assets/img//no2.jpg" alt="image" />
             </div>

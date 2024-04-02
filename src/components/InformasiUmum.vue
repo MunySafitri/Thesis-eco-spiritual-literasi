@@ -18,7 +18,7 @@ video {
         <button>awikwok</button>
       </RouterLink> -->
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># STEPS & PROCESS</span> -->
           <h2>Informasi Umum</h2>
         </div>

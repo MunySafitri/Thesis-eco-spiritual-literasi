@@ -10543,9 +10543,29 @@ button:focus {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 3px solid rgba(67, 174, 250, 0.18);
+  border: 5px solid rgba(67, 174, 250, 0.48);
 }
 .card:hover {
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.card4 {
+  box-shadow: 0 10px 18px 0 #f9fafb;
+  transition: 0.3s;
+  background-color: rgba(255,255,255,0.75);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 30px;
+  margin-top: 25px;
+  align-items: left;
+  /* background: rgba(76, 210, 224,0.15); */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 3px solid rgba(67, 174, 250, 0.18);
+}
+.card4:hover {
   box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
 }
 .card2 {
