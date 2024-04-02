@@ -418,7 +418,10 @@ export default {
         delete data.passwordConfirm
         //langsung di post ke dalam localhost/users
         axios
-          .post('http://localhost:3000/user/', data)
+          .post(
+            'https://project-data-eco-spritual-literasi-thesis.vercel.app/user/',
+            data,
+          )
           .then(() => console.log('Berhasil'))
           .catch((error) => console.log('Gagal : ', error))
         this.$router.push({ path: '/login' })
@@ -451,7 +454,7 @@ export default {
     }, 2000)
     // Make a request for a user with a given ID
     axios
-      .get('http://localhost:3000/user')
+      .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
   },

@@ -334,7 +334,9 @@ export default {
       // Make a request for a user with a given ID
       // alert('ini pop up yang isinya aturan modul')
       axios
-        .get('http://localhost:3000/user')
+        .get(
+          'https://project-data-eco-spritual-literasi-thesis.vercel.app/user',
+        )
         .then((response) => this.setData(response.data))
         .catch((error) => console.log('Gagal : ', error))
   },

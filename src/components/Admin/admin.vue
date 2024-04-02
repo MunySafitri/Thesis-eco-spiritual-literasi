@@ -357,7 +357,7 @@ export default {
             }
 
             axios
-                .get("http://localhost:3000/user")
+                .get("https://project-data-eco-spritual-literasi-thesis.vercel.app/user")
                 .then((response) => {
                     $("#myTable").DataTable({
                         // dom: "Bfrtip",
@@ -429,19 +429,19 @@ export default {
                 })
                 .catch((error) => console.log(error.response));
             axios
-                .get('http://localhost:3000/user')
+                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/user')
                 .then((response) => this.setUser(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanKognitif')
+                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanKognitif')
                 .then((response) => this.setKognitif(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanSpritual')
+                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanSpritual')
                 .then((response) => this.setSpritual(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanPPL')
+                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanPPL')
                 .then((response) => this.setPPL(response.data))
                 .catch((error) => console.log('Gagal : ', error))
         }, 2000);

@@ -298,7 +298,7 @@ export default {
         "isSpritualPosttest": true
       }
       console.log(datas)
-      axios.patch(`http://localhost:3000/user/${id_user}`, 
+      axios.patch(`https://project-data-eco-spritual-literasi-thesis.vercel.app/user/${id_user}`, 
         { 
           isPosttest: true 
         }
@@ -307,7 +307,7 @@ export default {
       .catch((error) => console.log('Gagal Update user: ', error));
 
       axios
-        .post('http://localhost:3000/jawabanSpritual/', datas)
+        .post('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanSpritual/', datas)
         .then(() => console.log('Berhasil tambahkan spritual'))
         .catch((error) => console.log('Gagal tambahkan spritual : ', error))
       //kita coba set true dulu nnti di akalin dengan make api

@@ -549,7 +549,7 @@ export default {
       console.log(datas)
 
       axios
-        .post('http://localhost:3000/jawabanPPL/', datas)
+        .post('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanPPL/', datas)
         .then(() => console.log('Berhasil'))
         .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
