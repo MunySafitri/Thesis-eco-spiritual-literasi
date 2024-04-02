@@ -3,7 +3,7 @@
   <div id="Komponen" class="process-style-area3 ptb-100">
     <div class="container">
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># STEPS & PROCESS</span> -->
           <h2>Komponen Inti</h2>
         </div>
@@ -11,7 +11,7 @@
       <!-- ini untuk isi -->
       <div class="timeline">
         <div class="container1 left">
-          <div class="content1">
+          <div class="content1" style="position:relative; height:300px; overflow-y:scroll;">
             <h5>01. Tujuan Pembelajaran</h5>
             <p class="bold">Memahami Konsep Siklus Hidrologi :
             <ul class="bold">
@@ -239,7 +239,7 @@ export default {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: rgba(76, 210, 224,0.15);
+  background-color: rgba(236, 244, 245, 0.80);
   position: relative;
   border-radius: 6px;
 }
@@ -248,7 +248,7 @@ export default {
 }
 .content1 {
   padding: 20px 30px;
-  background-color: rgba(76, 210, 224,0.15);
+  background-color: rgba(236, 244, 245, 0.80);
   position: relative;
   border-radius: 6px;
 }
@@ -273,9 +273,9 @@ export default {
   /* Make sure that all arrows are pointing leftwards */
   .container1::before {
   left: 60px;
-  border: medium solid rgba(76, 210, 224,0.15);
+  border: medium solid rgba(76, 210, 224,0.30);
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(76, 210, 224,0.15) transparent transparent;
+  border-color: transparent #b7b7b8 transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */

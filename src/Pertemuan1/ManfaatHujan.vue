@@ -3,55 +3,72 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Manfaat Siklus Air</strong>
+          <strong>Manfaat Hujan Bagi Tumbuhan dan Manusia</strong>
         </CCardHeader>
         <CCardBody>
-          <h6>Begitu besar manfaat dari Siklus Hidrologi</h6>
+          <h6>
+            ⮚ Jika kita melihat, hujan sangatlah bermanfaat bagi kehidupan
+            makhluk hidup. Salah satunya yaitu pada tumbuhan.
+          </h6>
+          <strong>Dalam Al-Qur'an dijelaskan.</strong>
           <br />
           <p>
-            ⮚ Terjadinya siklus air memberikan manfaat bagi makhluk hidup:
-            manusia, hewan dan tumbuhan, yaitu:
+            “Dan Dialah yang menurunkan hujan setelah mereka berputus asa dan
+            menyebarkan rahmat-Nya. Dan Dialah Maha Pelindung, Maha Terpuji.”
+            <strong>(QS. Asy-Syura: 28)</strong>
           </p>
-          <ul style="list-style-type: disc">
-            <li>
-              Untuk merjaga ketersediaan air di bumi, mendistribusikan air
-              keseluruh penjuru muka bumi baik yang berada di dataran tinggi
-              maupun dataran rendah. Menyediakan air bersih yang sangat
-              dibutuhkan untuk kehidupan makhluk hidup.
-            </li>
-            <li>
-              Pada tumbuhan menghasilkan berbagai macam buah-buahan, biji-bijian
-              dan tanaman lain, hal ini adalah rezeki pemberian Tuhan yang Maha
-              pemurah dan kuasa kepada Makhluk lainnya baik dimnafaatkan manusia
-              atau ternak.
-            </li>
-            <li>
-              Selain itu air hujan akan menyerap ke dalam tanam, dan mengalir
-              membentuk sungai dari daratan tinggi (gunung) menuju ke daerah
-              rendah kemudian terkumpul yaitu terbentuk danau dan air laut.
-            </li>
-            <li>
-              Yang menariknya dari siklus hidrologi ini yaitu bahwa hujan tidak
-              akan pernah berhenti. Dari proses tersebut hujan dapat diprediksi
-              kapan akan turunnya dan kapan akan berakhirnya. Namun hujan tidak
-              akan berhenti selamanya. Karena hujan meruapan salah satu ciptaan
-              Tuhan yang Maha Besar untuk alam semesta ini.
-            </li>
-          </ul>
-          <p>
-            ⮚ Hal ini bearti air senantiasa berputar dalam suatu siklus yang
-            seimbang menurut ukuran dan kadarnya. Sehingga kehidupan di Bumi
-            bergantung pada siklus air ini.
-          </p>
-          <br />>
-          <strong>Manfaat siklus hidrologi terdapat dalam surat :</strong>
           <br />
-          <ol type="A">
-            <li>Al-A’raf ayat 57</li>
-            <li>Al- Anfal ayat 11</li>
-            <li>An-Nahl ayat 10</li>
-            <li>Az-Zukhruf ayat 11</li>
-          </ol>
+          <h6>
+            ⮚ Dengan turunnya air hujan, tanaman dapat tumbuh dengan subur,
+            kemudian menghasilkan banyak daun dan buah serta biji-bijian.
+          </h6>
+          <CAccordion>
+            <p>
+              <strong>Dalam Al-Qur'an dijelaskan.</strong>
+              <br />
+              (Dialah) yang menjadikan bumi sebagai hamparan bagimu dan langit
+              sebagai atap, dan Dialah yang menurunkan air (hujan) dari langit,
+              lalu
+              <u
+                >Dia hasilkan dengan (hujan) itu buah-buahan sebagai rezeki
+                untukmu.</u
+              >
+              Karena itu janganlah kamu mengadakan tandingan-tandingan bagi
+              Allah, padahal kamu mengetahui”
+              <strong>(Q.S AL Baqarah (2): Ayat 22)</strong>
+            </p>
+            <br />
+            <h6>
+              ⮚ Hal ini menjadi sumber rezeki bagi manusia, karena tanaman yang
+              berkembang dengan baik memberikan manfaat untuk kebutuhan makanan
+              dan lainnya.
+            </h6>
+            <p>
+              <br />
+              <strong>Dalam Al-Qur'an dijelaskan.</strong><br />
+              Dan dari langit Kami turunkan air yang memberi berkah lalu
+              <u
+                >Kami tumbuhkan dengan (air) itu pepohonan yang rindang dan
+                biji-bijian yang dapat dipanen</u
+              >” <strong>(Q.S Qaff (50) : Ayat 9)</strong>
+            </p>
+            <br />
+            <div>
+              <h1>mines video bener</h1>
+              <p>
+                (+Video Pendek tumbuhan subur/tumbuh dengan kena air hujan) (+
+                Slide Video (3 video)) video cek di grup wa
+              </p>
+              <!-- <video class="vid2" autoplay muted loop width="300" id="myVideo">
+                <source
+                  src="@/assets/img/VideoLatarBelakang.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML5 video.
+              </video> -->
+            </div>
+            <br />
+          </CAccordion>
         </CCardBody>
       </CCard>
     </CCol>

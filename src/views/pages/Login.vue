@@ -199,7 +199,7 @@
                 </b-row>
 
                 <b-button class="mx-2" type="submit" variant="primary"
-                  >Submit</b-button
+                  >Login</b-button
                 >
                 <b-button type="reset" variant="danger">Reset</b-button>
               </b-form>

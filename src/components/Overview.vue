@@ -16,7 +16,7 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="overview-img">
-              <div class="card2">
+              <div class="carddd">
                 <video
                   class="vid1"
                   autoplay

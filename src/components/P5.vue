@@ -7,14 +7,20 @@
         <button>awikwok</button>
       </RouterLink> -->
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># P5</span> -->
           <h2>Profil Pancasila</h2>
         </div>
       </div>
       <div>
         <b-card no-body>
-          <b-tabs pills card vertical nav-wrapper-class="w-35">
+          <b-tabs
+            pills
+            card
+            vertical
+            nav-wrapper-class="w-45"
+            style="position: relative; height: 425px; overflow-y: scroll hide"
+          >
             <b-tab title="01. Beriman, bertakwa dan berakhlak mulia" active
               ><b-card-text>
                 <p class="bold">

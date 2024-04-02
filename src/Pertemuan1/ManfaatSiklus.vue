@@ -3,18 +3,50 @@
     <CCol :xs="12">
       <CCard class="mb-4">
         <CCardHeader>
-          <strong>Manfaat Hujan Bagi Tumbuhan dan Manusia </strong
-          ><small>(element Daya Guna Air)</small>
+          <strong>Manfaat Siklus Air </strong
+          ><small>(Element Daya Guna Air)</small>
         </CCardHeader>
         <CCardBody>
           <p>
-            Jika kita melihat, Hujan sangatlah bermanfaat bagi kehidupan makhluk
-            hidup. Salah satunya yaitu pada tumbuhan. Dengan turunnya air hujan,
-            tanaman dapat tumbuh dengan subur, menghasilkan banyak daun dan
-            buah. Hal ini menjadi sumber rezeki bagi manusia, karena tanaman
-            yang berkembang dengan baik memberikan manfaat untuk kebutuhan
-            makanan dan lainnya.
+            <strong>Begitu besar manfaat dari Siklus Hidrologi</strong>
           </p>
+          <h6>
+            ⮚ Terjadinya siklus air memberikan manfaat bagi makhluk hidup:
+            manusia, hewan dan tumbuhan, yaitu :
+          </h6>
+          <h6>
+            <ul type="square">
+              <li>
+                Untuk merjaga ketersediaan air di bumi, mendistribusikan air
+                keseluruh penjuru muka bumi baik yang berada di dataran tinggi
+                maupun dataran rendah. Menyediakan air bersih yang sangat
+                dibutuhkan untuk kehidupan makhluk hidup.
+              </li>
+              <li>
+                Pada Tumbuhan menghasilkan berbagai macam buah-buahan,
+                biji-bijian dan tanaman lain, hal ini adalah rezeki pemberian
+                Tuhan yang Maha pemurah dan kuasa kepada Makhluk lainnya baik
+                dimnafaatkan manusia atau ternak.
+              </li>
+              <li>
+                Selain itu air hujan akan menyerap ke dalam tanam, dan mengalir
+                membentuk sungai dari daratan tinggi (gunung) menuju ke daerah
+                rendah kemudian terkumpul yaitu terbentuk danau dan air laut.
+              </li>
+              <li>
+                Yang menariknya dari siklus hidrologi ini yaitu bahwa hujan
+                tidak akan pernah berhenti. Dari proses tersebut hujan dapat
+                diprediksi kapan akan turunnya dan kapan akan berakhirnya. Namun
+                hujan tidak akan berhenti selamanya. Karena hujan meruapan salah
+                satu ciptaan Tuhan yang Maha Besar untuk alam semesta ini.
+              </li>
+            </ul>
+          </h6>
+          <h6>
+            ⮚ Hal ini bearti air senantiasa berputar dalam suatu siklus yang
+            seimbang menurut ukuran dan kadarnya. Sehingga kehidupan dibumi
+            bergantung pada siklus air ini.
+          </h6>
           <strong>Dalam Al-Qur'an dijelaskan.</strong>
           <br />
           <p>

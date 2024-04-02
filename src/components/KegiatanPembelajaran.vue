@@ -4,7 +4,7 @@
   <div id="Kegiatan" class="process-style-area2 ptb-100">
     <div class="container">
       <div class="main-section-title">
-        <div class="card">
+        <div class="card4">
           <!-- <span class="sub-title"># Kegiatan</span> -->
           <h2>Kegiatan Pembelajaran</h2>
         </div>
@@ -12,7 +12,7 @@
 
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card4">
             <div class="process-style-accordion">
               <div class="accordion" id="ProcessAccordion">
                 <div class="accordion-item">
@@ -33,7 +33,11 @@
                   >
                     <div class="accordion-body">
                       <div class="choose-content">
-                        <a :href="'/pertemuan1'" :class="'choose-btn'">Mulai</a>
+                        <RouterLink to="/pertemuan1">
+                        <CButton color="info" shape="rounded-pill"
+                          >Mulai
+                        </CButton>
+                      </RouterLink>
                       </div>
                     </div>
                   </div>
@@ -56,7 +60,16 @@
                   >
                     <div class="accordion-body">
                       <div class="choose-content">
-                        <a :href="''" :class="'choose-btn'">Comming Soon</a>
+                        <CButton
+                          color="info"
+                          shape="rounded-pill"
+                          @click="
+                            () => {
+                              Soon = true
+                            }
+                          "
+                          >Comming Soon
+                        </CButton>
                       </div>
                     </div>
                   </div>
@@ -84,7 +97,8 @@
                           Siklus Hidrologi :
                         </p> -->
                         <CButton
-                          color="primary"
+                          color="info"
+                          shape="rounded-pill"
                           @click="
                             () => {
                               Aktifitas = true
@@ -115,7 +129,8 @@
                     <div class="accordion-body">
                       <div class="choose-content">
                         <CButton
-                          color="primary"
+                          color="info"
+                          shape="rounded-pill"
                           @click="
                             () => {
                               Pengayaan = true
@@ -146,7 +161,8 @@
                     <div class="accordion-body">
                       <div class="choose-content">
                         <CButton
-                          color="primary"
+                          color="info"
+                          shape="rounded-pill"
                           @click="
                             () => {
                               Refleksi = true
@@ -164,7 +180,7 @@
         </div>
 
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card4">
             <div class="process-style-image">
               <img src="../assets/img//no2.jpg" alt="image" />
             </div>
@@ -186,35 +202,66 @@
     aria-labelledby="ScrollingLongContentExampleLabel2"
   >
     <CModalHeader>
-      <CModalTitle id="ScrollingLongContentExampleLabel2">Aktivitas Siswa</CModalTitle>
+      <CModalTitle id="ScrollingLongContentExampleLabel2"
+        >Aktivitas Siswa</CModalTitle
+      >
     </CModalHeader>
     <CModalBody>
       <h6>
         <ul class="bold">
-                          <li>
-                            Lakukan pengamatan bersama guru dengan memperhatikan
-                            kondisi atmosfer diluar rungan, Apakah ada terbentuk
-                            awan yang bergumpal-gumpal dengan kilat yang masuk
-                            kedalam salah satu proses siklus air atau tidak?
-                          </li>
-                          <li>
-                            Penanaman Tanaman: Melibatkan siswa dalam kegiatan
-                            penanaman tanaman sebagai bagian dari siklus
-                            hidrologi. Mereka dapat memahami betapa pentingnya
-                            air untuk pertumbuhan tanaman dan bagaimana tanaman
-                            juga berperan dalam menjaga siklus hidrologi.
-                          </li>
-                          <li>
-                            Diskusi Kelompok: Mengadakan diskusi kelompok
-                            tentang tanggung jawab kita terhadap sumber daya air
-                            dan bagaimana kita dapat berkontribusi dalam menjaga
-                            keseimbangan siklus hidrologi. Siswa dapat berbagi
-                            pandangan mereka dan mencari solusi berbasis
-                            nilai-nilai spiritual.
-                          </li>
-                        </ul>
+          <li>
+            Lakukan pengamatan bersama guru dengan memperhatikan kondisi
+            atmosfer diluar rungan, Apakah ada terbentuk awan yang
+            bergumpal-gumpal dengan kilat yang masuk kedalam salah satu proses
+            siklus air atau tidak?
+          </li>
+          <li>
+            Penanaman Tanaman: Melibatkan siswa dalam kegiatan penanaman tanaman
+            sebagai bagian dari siklus hidrologi. Mereka dapat memahami betapa
+            pentingnya air untuk pertumbuhan tanaman dan bagaimana tanaman juga
+            berperan dalam menjaga siklus hidrologi.
+          </li>
+          <li>
+            Diskusi Kelompok: Mengadakan diskusi kelompok tentang tanggung jawab
+            kita terhadap sumber daya air dan bagaimana kita dapat berkontribusi
+            dalam menjaga keseimbangan siklus hidrologi. Siswa dapat berbagi
+            pandangan mereka dan mencari solusi berbasis nilai-nilai spiritual.
+          </li>
+        </ul>
       </h6>
     </CModalBody>
+  </CModal>
+  <!-- modal untuk coming soon -->
+  <CModal
+    backdrop="static"
+    :visible="Soon"
+    @close="
+      () => {
+        Soon = false
+      }
+    "
+    aria-labelledby="StaticBackdropExampleLabel"
+  >
+    <CModalHeader>
+      <CModalTitle id="StaticBackdropExampleLabel">Pertemuan 2</CModalTitle>
+    </CModalHeader>
+    <CModalBody>
+      <center><CIcon :icon="cilBellExclamation" size="8xl" /></center>
+      <br />
+      <h6>Materi ini belum tersedia, nantikan update berikutnya!</h6></CModalBody
+    >
+    <CModalFooter>
+      <CButton
+        color="primary"
+        @click="
+          () => {
+            Soon = false
+          }
+        "
+      >
+        Mengerti
+      </CButton>
+    </CModalFooter>
   </CModal>
   <!-- modal untuk pengayaan -->
   <CModal
@@ -420,15 +467,22 @@
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script>
+import { CIcon } from '@coreui/icons-vue'
+import { cilBellExclamation } from '@coreui/icons'
 export default {
   name: 'AppKegiatan',
+  components: {
+    CIcon,
+  },
   data() {
     return {
       slide: 0,
       sliding: null,
       Aktifitas: false,
+      Soon: false,
       Pengayaan: false,
       Refleksi: false,
+      cilBellExclamation,
     }
   },
   methods: {
