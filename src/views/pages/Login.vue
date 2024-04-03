@@ -213,12 +213,12 @@
                   >
                 </p>
               </div>
-              <b-card class="mt-3" header="Form Data Result">
+              <!-- <b-card class="mt-3" header="Form Data Result">
                 <div v-for="err in errors" :key="err"> {{ err }}</div>
                 <pre class="m-0">
                   {{ form }} </pre>
                 {{ datas }}
-              </b-card>
+              </b-card> -->
             </div>
           </div>
         </div>
@@ -328,26 +328,15 @@ export default {
     },
   },
   mounted() {
-    if (localStorage.getItem('reloaded')) {
-      // The page was just reloaded. Clear the value from local storage
-      // so that it will reload the next time this page is visited.
-      localStorage.removeItem('reloaded')
-    } else {
-      // Set a flag so that we know not to reload the page twice.
-      localStorage.setItem('reloaded', '1')
-      location.reload()
-    }
     setTimeout(() => {
       this.isLoading = false
     }, 2000),
       // Make a request for a user with a given ID
       // alert('ini pop up yang isinya aturan modul')
       axios
-        .get('https://localhost:3000/user')
-        // .get('https://localhost:3000' + '/user')
+        .get('http://localhost:3000/user')
         .then((response) => this.setData(response.data))
         .catch((error) => console.log('Gagal : ', error))
-    console.log('data ', this.datas)
   },
 }
 </script>

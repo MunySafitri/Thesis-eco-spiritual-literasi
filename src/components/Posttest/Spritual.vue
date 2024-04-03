@@ -12,8 +12,8 @@
             <thead class="thead-light text-center">
               <tr>
                 <th rowspan="2">No</th>
-                <!-- <th rowspan="2">Indikator</th> -->
-                <th rowspan="4">Pertanyaan</th>
+                <th rowspan="2">Indikator</th>
+                <th rowspan="4">Butir Angket</th>
                 <th colspan="10">Tidak -------------- Iya</th>
               </tr>
               <tr>
@@ -35,9 +35,9 @@
                 <td scope="row">
                   <label :for="field.angket">{{ index+1 }}</label>
                 </td>
-                <!-- <td scope="row">
+                <td scope="row">
                   <label :for="field.angket">{{ field.indikator }}</label>
-                </td> -->
+                </td>
                 <td scope="row">
                   <label :for="field.angket">{{ field.angket }}</label>
                 </td>
@@ -298,7 +298,7 @@ export default {
         "isSpritualPosttest": true
       }
       console.log(datas)
-      axios.patch(`${process.env.VUE_APP_API_BASE_URL}/user/${id_user}`, 
+      axios.patch(`http://localhost:3000/user/${id_user}`, 
         { 
           isPosttest: true 
         }
@@ -307,7 +307,7 @@ export default {
       .catch((error) => console.log('Gagal Update user: ', error));
 
       axios
-        .post(process.env.VUE_APP_API_BASE_URL + '/jawabanSpritual/', datas)
+        .post('http://localhost:3000/jawabanSpritual/', datas)
         .then(() => console.log('Berhasil tambahkan spritual'))
         .catch((error) => console.log('Gagal tambahkan spritual : ', error))
       //kita coba set true dulu nnti di akalin dengan make api

@@ -357,7 +357,7 @@ export default {
             }
 
             axios
-                .get(process.env.VUE_APP_API_BASE_URL + "/user")
+                .get("http://localhost:3000/user")
                 .then((response) => {
                     $("#myTable").DataTable({
                         // dom: "Bfrtip",
@@ -429,19 +429,19 @@ export default {
                 })
                 .catch((error) => console.log(error.response));
             axios
-                .get(process.env.VUE_APP_API_BASE_URL +'/user')
+                .get('http://localhost:3000/user')
                 .then((response) => this.setUser(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanKognitif')
+                .get('http://localhost:3000/jawabanKognitif')
                 .then((response) => this.setKognitif(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanSpritual')
+                .get('http://localhost:3000/jawabanSpritual')
                 .then((response) => this.setSpritual(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanPPL')
+                .get('http://localhost:3000/jawabanPPL')
                 .then((response) => this.setPPL(response.data))
                 .catch((error) => console.log('Gagal : ', error))
         }, 2000);

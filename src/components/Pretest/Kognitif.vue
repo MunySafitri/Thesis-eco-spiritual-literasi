@@ -767,7 +767,7 @@ export default {
       console.log(datas)
 
       axios
-        .post(process.env.VUE_APP_API_BASE_URL + '/jawabanKognitif/', datas)
+        .post('http://localhost:3000/jawabanKognitif/', datas)
         .then(() => console.log('Berhasil'))
         .catch((error) => console.log('Gagal : ', error))
   
@@ -787,7 +787,7 @@ export default {
     }
 
     axios
-      .get(process.env.VUE_APP_API_BASE_URL+ '/user')
+      .get('http://localhost:3000/user')
       .then((response) => this.setUser(response.data))
       .catch((error) => console.log('Gagal : ', error))
   },

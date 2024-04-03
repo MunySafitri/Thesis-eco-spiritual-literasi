@@ -418,11 +418,9 @@ export default {
         delete data.passwordConfirm
         //langsung di post ke dalam localhost/users
         axios
-          // .post(process.env.VUE_APP_API_BASE_URL + '/user/', data),
-          .post(process.env.VUE_APP_API_BASE_URL + 'user', data)
-          .then(() => console.log('Data Berhasil di update'))
+          .post('http://localhost:3000/user/', data)
+          .then(() => console.log('Berhasil'))
           .catch((error) => console.log('Gagal : ', error))
-
         this.$router.push({ path: '/login' })
         // alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
       }
@@ -453,10 +451,9 @@ export default {
     }, 2000)
     // Make a request for a user with a given ID
     axios
-      .get(process.env.VUE_APP_API_BASE_URL + '/user')
+      .get('http://localhost:3000/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
-    console.log('Data registrasi berhasil dibaca : ', this.datas)
   },
 }
 </script>

@@ -553,7 +553,7 @@ export default {
       console.log(datas)
 
       axios
-        .post(process.env.VUE_APP_API_BASE_URL + '/jawabanPPL/', datas)
+        .post('http://localhost:3000/jawabanPPL/', datas)
         .then(() => console.log('Berhasil'))
         .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
