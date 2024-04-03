@@ -764,11 +764,13 @@ export default {
         jawabanKognitif: this.jawaban,
         isKognitif: true,
       }
-      console.log(datas)
+      // console.log(datas)
 
       axios
-        .post('http://localhost:3000/jawabanKognitif/', datas)
-        .then(() => console.log('Berhasil'))
+        .post('http://localhost:5000/jawabanKognitif/', datas)
+        .then((response) => {
+          console.log("berhasil:",response.data)
+        })
         .catch((error) => console.log('Gagal : ', error))
   
       this.$router.push({ path: '/ppl-pretest' })
@@ -787,7 +789,7 @@ export default {
     }
 
     axios
-      .get('http://localhost:3000/user')
+      .get('http://localhost:5000/user')
       .then((response) => this.setUser(response.data))
       .catch((error) => console.log('Gagal : ', error))
   },

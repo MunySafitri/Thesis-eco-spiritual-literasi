@@ -12,8 +12,8 @@
             <thead class="thead-light text-center">
               <tr>
                 <th rowspan="2">No</th>
-                <th rowspan="2">Indikator</th>
-                <th rowspan="4">Butir Angket</th>
+                <!-- <th rowspan="2">Indikator</th> -->
+                <th rowspan="4">Pertanyaan</th>
                 <th colspan="10">Tidak -------------- Iya</th>
               </tr>
               <tr>
@@ -35,9 +35,9 @@
                 <td scope="row">
                   <label :for="field.angket">{{ index+1 }}</label>
                 </td>
-                <td scope="row">
-                  <label :for="field.angket">{{ field.indikator }}</label>
-                </td>
+                <!-- <td scope="row"> -->
+                  <!-- <label :for="field.angket">{{ field.indikator }}</label> -->
+                <!-- </td> -->
                 <td scope="row">
                   <label :for="field.angket">{{ field.angket }}</label>
                 </td>
@@ -297,19 +297,19 @@ export default {
         "jawabanSpritual": this.jawaban,
         "isSpritualPosttest": true
       }
-      console.log(datas)
-      axios.patch(`http://localhost:3000/user/${id_user}`, 
+      // console.log(datas)
+      axios.patch(`http://localhost:5000/user/${id_user}`, 
         { 
-          isPosttest: true 
+          isPretest: true 
         }
       )
-      .then(() => console.log('Berhasil Update user'))
-      .catch((error) => console.log('Gagal Update user: ', error));
+      .then((response) => console.log("berhasil:",response.data))
+        .catch((error) => console.log('Gagal : ', error))
 
       axios
-        .post('http://localhost:3000/jawabanSpritual/', datas)
-        .then(() => console.log('Berhasil tambahkan spritual'))
-        .catch((error) => console.log('Gagal tambahkan spritual : ', error))
+        .post('http://localhost:5000/jawabanSpritualPosttest/', datas)
+        .then((response) => console.log("berhasil:",response.data))
+        .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
       localStorage.setItem('isPosttest', true)
       this.$router.push({ path: '/overview' })

@@ -13,8 +13,8 @@
             <thead class="thead-light text-center">
               <tr>
                 <th rowspan="2">No</th>
-                <th rowspan="2">Indikator</th>
-                <th rowspan="4">Butir Angket</th>
+                <!-- <th rowspan="2">Indikator</th> -->
+                <th rowspan="4">Pertanyaan</th>
                 <th colspan="10">Tidak -------------- Iya</th>
               </tr>
               <tr>
@@ -36,9 +36,9 @@
                 <td scope="row">
                   <label :for="field.angket">{{ index+1 }}</label>
                 </td>
-                <td scope="row">
+                <!-- <td scope="row">
                   <label :for="field.angket">{{ field.indikator }}</label>
-                </td>
+                </td> -->
                 <td scope="row">
                   <label :for="field.angket">{{ field.angket }}</label>
                 </td>
@@ -299,19 +299,20 @@ export default {
         "isSpritual": true
       }
       console.log(datas)
-      axios.patch(`http://localhost:3000/user/${id_user}`, 
+      //tambah data spritual
+      axios
+        .post('http://localhost:5000/jawabanSpritual/', datas)
+        .then((response) => console.log("berhasil:",response.data))
+        .catch((error) => console.log('Gagal : ', error))
+        //modif atribut user
+      axios.patch(`http://localhost:5000/user/${id_user}`, 
         { 
           isPretest: true 
         }
       )
-      .then(() => console.log('Berhasil Update user'))
-      .catch((error) => console.log('Gagal Update user: ', error));
+      .then((response) => console.log("berhasil:",response.data))
+        .catch((error) => console.log('Gagal : ', error))
 
-      axios
-        .post('http://localhost:3000/jawabanSpritual/', datas)
-        .then(() => console.log('Berhasil tambahkan spritual'))
-        .catch((error) => console.log('Gagal tambahkan spritual : ', error))
-      //kita coba set true dulu nnti di akalin dengan make api
       localStorage.setItem('isPretest', true)
       this.$router.push({ path: '/overview' })
     },

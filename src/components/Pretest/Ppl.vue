@@ -549,11 +549,10 @@ export default {
       console.log(datas)
 
       axios
-        .post('http://localhost:3000/jawabanPPL/', datas)
-        .then(() => console.log('Berhasil'))
+        .post('http://localhost:5000/jawabanPPL/', datas)
+        .then((response) => console.log("berhasil:",response.data))
         .catch((error) => console.log('Gagal : ', error))
-      //kita coba set true dulu nnti di akalin dengan make api
-      // localStorage.setItem('isPretest', true)
+      
       this.$router.push({ path: '/spritual-pretest' })
       // location.reload()
     },

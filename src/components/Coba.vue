@@ -39,6 +39,22 @@
   </div>
   <!-- <HelloWorld msg="Vite + Vue"/> -->
   <button @click.prevent="exportExcel">excel</button> 
+
+
+
+<div>
+  <p>Percobaan Mongodb</p>
+  <h1 v-for= "d in data" :key="d">
+    <b>{{ d.name }}</b>
+    <b>{{ d.pelajaran }}</b>
+    <b>{{ d.kelas }}</b>
+
+  </h1>
+
+</div>
+
+
+
   </template>
 <!-- eslint-disable prettier/prettier -->
 
@@ -52,6 +68,8 @@ $('#submit').click(function () {
 })
 
 import xlsx from 'xlsx/dist/xlsx.full.min'
+import axios from 'axios'
+// const API_URL = "http://localhost:5000"
 export default {
   name: 'App',
   data() {
@@ -62,6 +80,7 @@ export default {
         { name: 'John Adams', birthday: '1735-10-19' },
         { name: 'John Adams', birthday: '1735-10-19' },
       ],
+      data:[],
     }
   },
   methods: {
@@ -72,6 +91,19 @@ export default {
       XLSX.utils.book_append_sheet(workbook, worksheet, 'framework')
       XLSX.writeFile(workbook, 'framework.xlsx')
     },
+    async refreshData(){
+      // fetch('http://localhost:5000/api/ecoliterasi/GetEcoliterasi')
+      // .then((response) =>response.json())
+      // .then((json) =>  this.data = json)
+      axios
+      .get("http://localhost:5000/api/ecoliterasi/GetEcoliterasi")
+      .then((response) => this.data =response.data)
+    .catch((error) => console.log('Gagal : ', error))
+   }
   },
+  mounted(){
+    this.refreshData()
+  }
+
 }
 </script>

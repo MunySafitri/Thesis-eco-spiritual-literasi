@@ -357,7 +357,7 @@ export default {
             }
 
             axios
-                .get("http://localhost:3000/user")
+                .get("http://localhost:5000/user")
                 .then((response) => {
                     $("#myTable").DataTable({
                         // dom: "Bfrtip",
@@ -429,22 +429,23 @@ export default {
                 })
                 .catch((error) => console.log(error.response));
             axios
-                .get('http://localhost:3000/user')
+                .get('http://localhost:5000/user')
                 .then((response) => this.setUser(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanKognitif')
+                .get('http://localhost:5000/jawabanKognitif')
                 .then((response) => this.setKognitif(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanSpritual')
+                .get('http://localhost:5000/jawabanSpritual')
                 .then((response) => this.setSpritual(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('http://localhost:3000/jawabanPPL')
+                .get('http://localhost:5000/jawabanPPL')
                 .then((response) => this.setPPL(response.data))
                 .catch((error) => console.log('Gagal : ', error))
         }, 2000);
+        console.log(this.user)
     },
 }
 

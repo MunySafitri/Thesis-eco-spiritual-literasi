@@ -293,8 +293,6 @@ export default {
       //jika tidak ada error
       if (this.errors.length === 0) {
         let user = this.datas.find((o) => o.email === this.form.email)
-
-        // alert(JSON.stringify(this.form)) //tampilkan notif toast atau navbar bahwa aberhasil di daftrkan
         localStorage.setItem('isLogin', true)
 
         //kita coba set false dulu nnti diganti
@@ -306,12 +304,6 @@ export default {
           localStorage.setItem('isAdmin', user.isAdmin)
           this.$router.push({ path: '/admin' })
         }
-        // localStorage.setItem('isKognitif', JSON.stringify(user.isKognitif))
-        // localStorage.setItem(
-        //   'isKognitif',
-        //   this.datas.filter((d) => d.id === JSON.stringify(user.id)).isKognitif,
-        // )
-        // localStorage.setItem('isPss', JSON.stringify(user.isPss ? true : false))
         this.$router.push({ path: '/overview' })
       }
     },
@@ -334,7 +326,7 @@ export default {
       // Make a request for a user with a given ID
       // alert('ini pop up yang isinya aturan modul')
       axios
-        .get('http://localhost:3000/user')
+        .get('http://localhost:5000/user')
         .then((response) => this.setData(response.data))
         .catch((error) => console.log('Gagal : ', error))
   },

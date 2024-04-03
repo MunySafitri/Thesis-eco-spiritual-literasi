@@ -417,9 +417,15 @@ export default {
         let data = this.form
         delete data.passwordConfirm
         //langsung di post ke dalam localhost/users
+        // axios
+        //   .post('http://localhost:3000/user/', data)
+        //   .then(() => console.log('Berhasil'))
+        //   .catch((error) => console.log('Gagal : ', error))
         axios
-          .post('http://localhost:3000/user/', data)
-          .then(() => console.log('Berhasil'))
+          .post('http://localhost:5000/user/', data)
+          .then((response) => {
+            console.log('berhasil:', response.data)
+          })
           .catch((error) => console.log('Gagal : ', error))
         this.$router.push({ path: '/login' })
         // alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
@@ -440,18 +446,13 @@ export default {
       })
     },
   },
-  // computed: {
-  //   isConfirmPass() {
-  //     return this.form.password === this.form.passwordConfirm
-  //   },
-  // },
   mounted() {
     setTimeout(() => {
       this.isLoading = false
     }, 2000)
     // Make a request for a user with a given ID
     axios
-      .get('http://localhost:3000/user')
+      .get('http://localhost:5000/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
   },
