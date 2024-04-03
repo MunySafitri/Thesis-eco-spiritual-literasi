@@ -343,15 +343,8 @@ export default {
       // Make a request for a user with a given ID
       // alert('ini pop up yang isinya aturan modul')
       axios
-        .get(process.env.VUE_APP_API_BASE_URL + 'user', {
-          headers: {
-            'Access-Control-Allow-Headers': 'allow_headers',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'PUT,GET,POST,DELETE,OPTIONS',
-            'Content-Type': 'application/x-www-form-urlencoded',
-            Accept: 'application/json',
-          },
-        })
+        .get('https://localhost:3000/user')
+        // .get('https://localhost:3000' + '/user')
         .then((response) => this.setData(response.data))
         .catch((error) => console.log('Gagal : ', error))
     console.log('data ', this.datas)

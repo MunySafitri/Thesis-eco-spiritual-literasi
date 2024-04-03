@@ -419,20 +419,7 @@ export default {
         //langsung di post ke dalam localhost/users
         axios
           // .post(process.env.VUE_APP_API_BASE_URL + '/user/', data),
-          .post(process.env.VUE_APP_API_BASE_URL + 'user', data, {
-            // headers: {
-            //   'Access-Control-Allow-Origin': '*',
-            //   'X-API-KEY': process.env.VUE_APP_X_API_KEY,
-
-            // },
-            headers: {
-              'Access-Control-Allow-Headers': 'allow_headers',
-              // 'Access-Control-Allow-Origin': process.env.VUE_APP_API_BASE_URL,
-              'Access-Control-Allow-Methods': 'PUT,GET,POST,DELETE,OPTIONS',
-              'Content-Type': 'application/x-www-form-urlencoded',
-              Accept: 'application/json',
-            },
-          })
+          .post(process.env.VUE_APP_API_BASE_URL + 'user', data)
           .then(() => console.log('Data Berhasil di update'))
           .catch((error) => console.log('Gagal : ', error))
 
