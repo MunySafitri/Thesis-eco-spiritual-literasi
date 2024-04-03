@@ -357,7 +357,7 @@ export default {
             }
 
             axios
-                .get("https://project-data-eco-spritual-literasi-thesis.vercel.app/user")
+                .get(process.env.VUE_APP_API_BASE_URL + "/user")
                 .then((response) => {
                     $("#myTable").DataTable({
                         // dom: "Bfrtip",
@@ -429,19 +429,19 @@ export default {
                 })
                 .catch((error) => console.log(error.response));
             axios
-                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/user')
+                .get(process.env.VUE_APP_API_BASE_URL +'/user')
                 .then((response) => this.setUser(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanKognitif')
+                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanKognitif')
                 .then((response) => this.setKognitif(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanSpritual')
+                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanSpritual')
                 .then((response) => this.setSpritual(response.data))
                 .catch((error) => console.log('Gagal : ', error))
             axios
-                .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanPPL')
+                .get(process.env.VUE_APP_API_BASE_URL + '/jawabanPPL')
                 .then((response) => this.setPPL(response.data))
                 .catch((error) => console.log('Gagal : ', error))
         }, 2000);

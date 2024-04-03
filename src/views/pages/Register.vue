@@ -418,12 +418,24 @@ export default {
         delete data.passwordConfirm
         //langsung di post ke dalam localhost/users
         axios
-          .post(
-            'https://project-data-eco-spritual-literasi-thesis.vercel.app/user/',
-            data,
-          )
-          .then(() => console.log('Berhasil'))
+          // .post(process.env.VUE_APP_API_BASE_URL + '/user/', data),
+          .post(process.env.VUE_APP_API_BASE_URL + 'user', data, {
+            // headers: {
+            //   'Access-Control-Allow-Origin': '*',
+            //   'X-API-KEY': process.env.VUE_APP_X_API_KEY,
+
+            // },
+            headers: {
+              'Access-Control-Allow-Headers': 'allow_headers',
+              // 'Access-Control-Allow-Origin': process.env.VUE_APP_API_BASE_URL,
+              'Access-Control-Allow-Methods': 'PUT,GET,POST,DELETE,OPTIONS',
+              'Content-Type': 'application/x-www-form-urlencoded',
+              Accept: 'application/json',
+            },
+          })
+          .then(() => console.log('Data Berhasil di update'))
           .catch((error) => console.log('Gagal : ', error))
+
         this.$router.push({ path: '/login' })
         // alert(JSON.stringify(data)) //tampilkan notif toast atau navbar bahw aberhasil di daftrkan
       }
@@ -454,9 +466,10 @@ export default {
     }, 2000)
     // Make a request for a user with a given ID
     axios
-      .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/user')
+      .get(process.env.VUE_APP_API_BASE_URL + '/user')
       .then((response) => this.setData(response.data))
       .catch((error) => console.log('Gagal : ', error))
+    console.log('Data registrasi berhasil dibaca : ', this.datas)
   },
 }
 </script>

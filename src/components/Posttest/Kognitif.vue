@@ -764,7 +764,7 @@ export default {
       // console.log(datas)
 
       axios
-        .post('https://project-data-eco-spritual-literasi-thesis.vercel.app/jawabanKognitif/', datas)
+        .post(process.env.VUE_APP_API_BASE_URL + '/jawabanKognitif/', datas)
         .then(() => console.log('Berhasil'))
         .catch((error) => console.log('Gagal : ', error))
       //kita coba set true dulu nnti di akalin dengan make api
@@ -783,7 +783,7 @@ export default {
         location.reload();
     }
     axios
-      .get('https://project-data-eco-spritual-literasi-thesis.vercel.app/user')
+      .get(process.env.VUE_APP_API_BASE_URL+ '/user')
       .then((response) => this.setUser(response.data))
       .catch((error) => console.log('Gagal : ', error))
   },

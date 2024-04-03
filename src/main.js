@@ -27,6 +27,13 @@ app.use(Vuelidate)
 app.config.productionTip = false
 DataTable.use(DataTablesCore)
 
+// var cors = require('cors')
+// const corsOptions = {
+//   origin: '*',
+//   credentials: true, //access-control-allow-credentials:true
+//   optionSuccessStatus: 200,
+// }
+// app.use(cors(corsOptions))
 app.use(router)
 app.use(CoreuiVue)
 app.provide('icons', icons)
