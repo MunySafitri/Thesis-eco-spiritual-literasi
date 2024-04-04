@@ -11,6 +11,7 @@ tests/e2e/reports/
 /node_modules
 package-lock.json
 yarn.lock
+data.json
 
 # OS or Editor folders
 ._*

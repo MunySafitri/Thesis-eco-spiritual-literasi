@@ -1,4 +1,5 @@
 <template>
+  <Preloader v-if="isLoading" />
   <CRow>
     <CCol :xs="12">
       <CCard class="mb-4">
@@ -40,13 +41,15 @@
               11-13)
             </p>
             <br />
-            <h6>⮚ Apa yang bisa kita amati?</h6>
+            <h6>
+              ⮚ Bila kita amati, pada saat musim hujan air sangat berlimpah
+              bahkan menimbulkan banjir di beberapa daerah. Sebaliknya, apabila
+              musim kemarau datang banyak tempat di sekitar kita yang kekurangan
+              air, kemanakah air tersebut? apakah jumlah air dari semenjak
+              diciptakan oleh Tuhan YME hingga sekarang berkurang jumlahnya?
+            </h6>
             <p>
-              Bila kita amati, pada saat musim hujan air sangat berlimpah bahkan
-              menimbulkan banjir di beberapa daerah. Sebaliknya, apabila musim
-              kemarau datang banyak tempat di sekitar kita yang kekurangan air,
-              kemanakah air tersebut? apakah jumlah air dari semenjak diciptakan
-              oleh Tuhan YME hingga sekarang berkurang jumlahnya?<br /><br />
+              <br />
               <strong>Dalam Al-Qur'an dijelaskan.</strong><br />
               Dia (anaknya) menjawab, “Aku akan mencari perlindungan ke gunung
               yang dapat menghindarkan aku dari air bah!” (Nuh) berkata, “Tidak
@@ -58,23 +61,39 @@
             <br />
             <strong>
               <p class="bold">
-                Mari, kita cari tahu lebih banyak tentang keistimewaan air
+                ⮚ Mari, kita cari tahu lebih banyak tentang keistimewaan air
                 melalui e-modul ini. Agar dapat membantu kita menemukan
                 fakta-fakta ilmiah yang menarik seputar air dan air dijelasakan
                 di dalam Al-Qur’an.
               </p>
             </strong>
             <div>
-              <p>+ Video Pendek tentang Banjir</p>
-              <video class="vid2" autoplay muted loop width="300" id="myVideo">
+              <h1>mines video bener</h1>
+              <p>Banjir</p>
+              <!-- <video class="vid2" autoplay muted loop width="300" id="myVideo">
                 <source
                   src="@/assets/img/VideoLatarBelakang.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support HTML5 video.
-              </video>
+              </video> -->
+              <div class="d-flex justify-content-md-center">
+                <video class="vid2" play loop controls id="myVideo">
+                  <source
+                    src="../assets/Surat-ALbaqarah.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
             </div>
             <br />
+            <iframe
+              width="420"
+              height="345"
+              src="https://www.youtube.com/embed/Ve7zncHZxvQ?si=gw-cCzm80GYybyv5"
+            >
+            </iframe>
             <div>
               <p>+ Video Pendek tentang kekeringan</p>
               <video class="vid2" autoplay muted loop width="300" id="myVideo">
@@ -150,8 +169,22 @@
 
 <script>
 import { ref } from 'vue'
+import Preloader from '@/components/Layouts/Preloader'
 export default {
   name: 'Accordion',
+  components: {
+    Preloader,
+  },
+  data() {
+    return {
+      isLoading: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000)
+  },
   setup() {
     const activeKey = ref(1)
     const flushActiveKey = ref(1)

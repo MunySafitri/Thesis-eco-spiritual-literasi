@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
+
 <template>
-  <nav
+  <nav toggleable="lg"
     :class="[
       'main-navbar navbar navbar-expand-md navbar-light',
       { 'is-sticky': isSticky },
@@ -15,6 +16,8 @@
           alt="Logo"
         />
       </router-link>
+
+      <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
       <div
         class="navbar-toggler"
@@ -82,21 +85,22 @@
               >Assessment</a
             >
           </li>
+          <li @click="logout" class="nav-item">
+            <a
+              class="nav-link"
+              >Logout</a>
+          </li>
         </ul>
       </div>
-      <!-- <div class="side-nav">
-        <CHeaderNav> <AppHeaderDropdownAccnt /></CHeaderNav>
-      </div> -->
-      <!-- <div class="side-nav">
-        <a class="side-nav-left log-in" href="">Login</a>
-        <a class="side-nav-right cd-signup sign-up" href="">Register</a>
-      </div> -->
     </div>
   </nav>
 </template>
 <!-- eslint-disable prettier/prettier -->
 <script>
+import router from '@/router'
+
 // import AppHeaderDropdownAccnt from '@/Pertemuan1/components/AppHeaderDropdownAccnt.vue'
+
 export default {
   name: 'AppNavbar',
   components: {
@@ -121,6 +125,10 @@ export default {
     })
   },
   methods: {
+    logout() {
+      localStorage.clear()
+      router.push({ name: 'Login' })
+    },
     scroll(refName) {
       const element = document.getElementById(refName)
       if (element) {

@@ -9780,8 +9780,8 @@ button:focus {
 }
 .one-section-title .sub-title {
   display: inline-block;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 20px;
   background: linear-gradient(90deg, #d42953 23%, #ff8989 64%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -10002,7 +10002,7 @@ button:focus {
   z-index: 10;
 }
 .back-to-top-btn i {
-  background: #eb455f;
+  background: #13DEE0;
   color: #fff;
   height: 50px;
   width: 50px;
@@ -10015,7 +10015,7 @@ button:focus {
   margin-right: 28px;
 }
 .back-to-top-btn i:hover {
-  background: #ff8989;
+  background: #77E0DD;
   color: #fff;
 }
 .back-to-top-btn.go-top {
@@ -10023,7 +10023,7 @@ button:focus {
   transition: all 0.5s ease;
 }
 .back-to-top-btn.go-top i {
-  box-shadow: 0 0 14px 0 #d42953;
+  box-shadow: 0 0 14px 0 #B3E0E0;
 }
 
 .main-section-title {
@@ -10520,10 +10520,18 @@ button:focus {
   padding-right: 30px;
 }
 
+
+.kognitif{
+  color: #0d1820;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
+ 
+}
 .card {
   box-shadow: 0 10px 18px 0 #f9fafb;
   transition: 0.3s;
-  /* background-color: rgba(255,255,255,0.55); */
+  background-color: rgba(255,255,255,0.75);
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -10531,15 +10539,77 @@ button:focus {
   border-radius: 30px;
   margin-top: 25px;
   align-items: left;
-  background: rgba(255,255,255,0.55);
+  /* background: rgba(76, 210, 224,0.15); */
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 5px solid rgba(67, 174, 250, 0.48);
 }
 .card:hover {
-  box-shadow: 30px 24px 30px 0 rgba(255, 255, 255, 0.55);
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
 }
+.card4 {
+  box-shadow: 0 10px 18px 0 #f9fafb;
+  transition: 0.3s;
+  background-color: rgba(255,255,255,0.75);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 30px;
+  margin-top: 25px;
+  align-items: left;
+  /* background: rgba(76, 210, 224,0.15); */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 3px solid rgba(67, 174, 250, 0.18);
+}
+.card4:hover {
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.card2 {
+  /* box-shadow: 0 10px 18px 0 #f9fafb; */
+  transition: 0.3s;
+  background-color: rgba(255,255,255);
+  /* padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  margin-top: 50px; */
+  border-radius: 30px;
+  
+  align-items: left;
+  /* background: rgba(76, 210, 224,0.15); */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  /* border-radius: 10px;
+  border: 3px solid rgba(67, 174, 250, 0.18); */
+}
+.card2:hover {
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.card3 {
+  box-shadow: 0 10px 18px 0 #f9fafb;
+  transition: 0.3s;
+  /* background-color: rgba(255,255,255,0.55); */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  border-radius: 30px;
+  margin-top: 50px;
+  align-items: left;
+  background: rgba(76, 210, 224,0.15);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 3px solid rgba(67, 174, 250, 0.18);
+}
+.card3:hover {
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
 .overview-content {
   position: relative;
   top: -20px;
@@ -10679,18 +10749,21 @@ button:focus {
 }
 .process-style-area1 {
   background-image: url(../assets/img/Background-no2.jpeg);
+  /* background-color: #f3f5e7; */
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .process-style-area2 {
   background-image: url(../assets/img/Background3.jpg);
+  /* background-color: #f3f5e7; */
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .process-style-area3 {
   background-image: url(../assets/img/Background-no2.jpeg);
+  /* background-color: #f3f5e7; */
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10823,7 +10896,7 @@ button:focus {
   .navbar-light .side-nav {
     position: absolute;
     top: 23px;
-    right: 50px;
+    right: 30px;
   }
   .navbar-light .side-nav .side-nav-left {
     font-size: 12px;
@@ -11244,7 +11317,7 @@ button:focus {
     margin-bottom: 20px;
   }
   .overview-image {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
   }
   .why-choose-us-item {
@@ -11402,7 +11475,7 @@ button:focus {
     font-size: 32px;
   }
   .main-navbar.navbar.navbar-light .side-nav .side-nav-right {
-    padding: 7px 10px 8px;
+    padding: 7px 5px 8px;
     font-size: 13px;
   }
   .main-navbar .navbar .container-fluid {
@@ -11442,7 +11515,7 @@ button:focus {
     .others-option
     .option-item
     .sign-up {
-    background: #00c195;
+    background: #13DEE0;
     color: #fff;
   }
   .main-navbar .navbar.navbar-style-black-color.navbar-light .navbar-toggler {
