@@ -47,15 +47,16 @@
             seimbang menurut ukuran dan kadarnya. Sehingga kehidupan dibumi
             bergantung pada siklus air ini.
           </h6>
-          <strong>Dalam Al-Qur'an dijelaskan.</strong>
+          <strong>Manfaat siklus hidrologi terdapat dalam surat :</strong>
           <br />
-          <p>
-            “Dan Dialah yang menurunkan hujan setelah mereka berputus asa dan
-            menyebarkan rahmat-Nya. Dan Dialah Maha Pelindung, Maha Terpuji.”
-            (QS. Asy-Syura: 28)
-          </p>
+          <ol type="1">
+            <li>Al-A’raf ayat 57</li>
+            <li>Al- Anfal ayat 11</li>
+            <li>An-Nahl ayat 10</li>
+            <li>Az-Zukhruf ayat 11</li>
+          </ol>
           <div>
-            <p>+ Video Pendek tumbuhan subur/tumbuh dengan kena air hujan</p>
+            <h6>Ilustrasi Manfaat Sikllus</h6>
             <video class="vid2" autoplay muted loop width="300" id="myVideo">
               <source src="@/assets/video/overview2.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
